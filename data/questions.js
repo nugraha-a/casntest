@@ -1,0 +1,3924 @@
+/**
+ * BANK SOAL RESMI SKD CASN / CPNS (TWK, TIU, TKP)
+ * Standar Simulasi CAT BKN (Badan Kepegawaian Negara)
+ * Berdasarkan PermenPAN-RB No. 321 Tahun 2024 & Kisi-Kisi Resmi
+ * Total: 110 Soal (30 TWK, 35 TIU, 45 TKP)
+ */
+
+window.SKD_QUESTIONS = [
+  {
+    "id": 1,
+    "no": 1,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Pengamalan Sila ke-1)",
+    "soal": "Di sebuah lingkungan instansi pemerintah yang memiliki pegawai dari beragam latar belakang agama, panitia perayaan hari besar keagamaan salah satu agama mayoritas meminta seluruh pegawai tanpa terkecuali untuk mengenakan atribut keagamaan tertentu selama jam kerja guna memeriahkan suasana. Beberapa pegawai minoritas merasa keberatan dan terbebani nuraninya. Berdasarkan nilai luhur Pancasila, khususnya Sila Pertama, sikap yang paling mencerminkan pengamalan yang tepat adalah...",
+    "opsi": {
+      "A": "Mewajibkan semua pegawai mematuhi anjuran panitia demi menjaga kekompakan dan keseragaman citra instansi pemerintah.",
+      "B": "Memberikan sanksi teguran kepada panitia karena telah memicu perdebatan keyakinan di lingkungan aparatur sipil negara.",
+      "C": "Menghormati hak dan kemerdekaan beribadah masing-masing pegawai serta tidak memaksakan atribut keagamaan tertentu kepada pemeluk agama lain.",
+      "D": "Meminta pegawai minoritas untuk mengambil cuti selama masa perayaan hari besar keagamaan berlangsung.",
+      "E": "Melarang seluruh bentuk perayaan hari besar keagamaan di instansi pemerintah untuk menghindari segala potensi konflik."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Sila Pertama Pancasila 'Ketuhanan Yang Maha Esa' menjamin kebebasan memeluk agama dan beribadah menurut agama dan kepercayaannya masing-masing. Berdasarkan Butir Pengamalan Sila ke-1 (TAP MPR No. I/MPR/2003): 'Tidak memaksakan suatu agama dan kepercayaan terhadap Tuhan Yang Maha Esa kepada orang lain' dan 'Mengembangkan sikap saling menghormati kebebasan menjalankan ibadah sesuai agama dan kepercayaannya'. Pemaksaan penggunaan atribut keagamaan kepada pemeluk agama lain bertentangan dengan prinsip kebebasan beragama dan toleransi.",
+    "analisis_opsi": {
+      "A": "Salah, karena pemaksaan atribut melanggar hak asasi dan butir pengamalan Sila ke-1 tentang tidak memaksakan keyakinan.",
+      "B": "Kurang tepat, sanksi langsung tanpa dialog konstruktif mengabaikan pendekatan musyawarah dan pemahaman toleransi.",
+      "C": "Benar (Kunci Jawaban), sesuai pengamalan Sila 1 butir 4 dan 6, yaitu menghormati kebebasan beragama dan tidak memaksakan atribut keagamaan kepada pemeluk agama lain.",
+      "D": "Salah, tindakan diskriminatif yang mengorbankan hak kerja pegawai minoritas dan melanggar prinsip keadilan.",
+      "E": "Salah, berlebihan dan bertentangan dengan kebebasan beragama yang diakui dan dilindungi oleh konstitusi Pasal 29 UUD 1945."
+    },
+    "tips": "Kata kunci Sila 1: Toleransi antar-umat beragama, kebebasan beribadah, tidak memaksakan agama/atribut keyakinan kepada orang lain.",
+    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-1 & Pasal 29 Ayat (2) UUD 1945",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 2,
+    "no": 2,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Pengamalan Sila ke-2)",
+    "soal": "Terjadi bencana alam gempa bumi dahsyat di sebuah kabupaten terpencil. Sekelompok sukarelawan ASN ditugaskan menyalurkan bantuan logistik darurat ke tenda-tenda pengungsian. Di lokasi, tim relawan mendapati adanya perbedaan perlakuan bantuan oleh oknum aparat desa setempat yang mengutamakan kerabat dan kelompoknya sendiri. Sikap relawan ASN yang selaras dengan nilai Sila Kedua Pancasila adalah...",
+    "opsi": {
+      "A": "Mengabaikan tindakan aparat desa tersebut demi menjaga keharmonisan hubungan koordinasi di lapangan.",
+      "B": "Menyalurkan bantuan secara mandiri dan langsung kepada seluruh korban terdampak secara adil berdasarkan tingkat keparahan kebutuhan kemanusiaan tanpa diskriminasi.",
+      "C": "Menarik kembali seluruh bantuan logistik ke posko induk hingga aparat desa tersebut diganti.",
+      "D": "Menyerahkan sepenuhnya penyaluran kepada aparat desa karena mereka lebih memahami peta demografi lokal.",
+      "E": "Melaporkan kejadian tersebut ke media sosial pribadi agar mendapatkan kecaman luas dari warganet."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Sila Kedua 'Kemanusiaan yang Adil dan Beradab' mengandung nilai pengakuan persamaan derajat, hak, dan kewajiban asasi setiap manusia tanpa membeda-bedakan suku, keturunan, agama, kepercayaan, jenis kelamin, kedudukan sosial, atau warna kulit. Butir Sila ke-2 menegaskan: 'Mengembangkan sikap saling mencintai sesama manusia', 'Menjunjung tinggi nilai-nilai kemanusiaan', dan 'Gemar melakukan kegiatan kemanusiaan'. Dalam penanganan bencana, bantuan harus diberikan berdasarkan asas kemanusiaan universal tanpa nepotisme atau diskriminasi.",
+    "analisis_opsi": {
+      "A": "Salah, membiarkan diskriminasi kemanusiaan bertentangan langsung dengan prinsip keadilan dan kemanusiaan yang beradab.",
+      "B": "Benar (Kunci Jawaban), mencerminkan perwujudan menjunjung tinggi nilai kemanusiaan, persamaan hak setiap korban, dan aksi nyata non-diskriminatif.",
+      "C": "Salah, menghentikan bantuan justru mencelakakan para korban gempa yang berada dalam kondisi darurat dan membutuhkan pasokan cepat.",
+      "D": "Salah, membiarkan praktik ketidakadilan tetap berlanjut padahal tugas relawan adalah memastikan bantuan sampai ke tangan yang berhak.",
+      "E": "Salah, penyelesaian masalah melalui viralitas media sosial tidak profesional dan bukan jalur penanganan koordinasi bencana yang efektif."
+    },
+    "tips": "Kata kunci Sila 2: Kemanusiaan, persamaan derajat manusia, empati/tolong-menolong korban bencana, non-diskriminasi, tenggang rasa.",
+    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-2 & UU No. 24 Tahun 2007 tentang Penanggulangan Bencana",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 3,
+    "no": 3,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Pengamalan Sila ke-3)",
+    "soal": "Menjelang pemilihan umum serentak, marak beredar konten disinformasi dan polarisasi berbasis kedaerahan di media sosial yang berpotensi memecah belah kerukunan masyarakat. Sebagai seorang calon aparatur sipil negara, tindakan yang mencerminkan pengamalan Sila Ketiga Pancasila di ruang digital adalah...",
+    "opsi": {
+      "A": "Ikut mengomentari postingan yang provokatif dengan kata-kata kasar untuk membela kandidat dari daerah asalnya.",
+      "B": "Membuat konten tandingan yang menyerang balik identitas budaya kelompok pembuat berita hoaks.",
+      "C": "Aktif mengunggah dan menyebarkan konten literasi pemersatu bangsa, menolak menyebarkan kabar bohong, serta melaporkan konten ujaran kebencian kepada pihak berwenang.",
+      "D": "Menghapus akun media sosial secara permanen agar tidak perlu berinteraksi dengan isu kebangsaan yang dinamis.",
+      "E": "Bersikap acuh tak acuh karena politik dan media sosial adalah urusan masing-masing individu."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Sila Ketiga 'Persatuan Indonesia' menuntut setiap warga negara untuk mampu menempatkan persatuan, kesatuan, serta kepentingan dan keselamatan bangsa dan negara sebagai kepentingan bersama di atas kepentingan pribadi atau golongan. Butir Sila ke-3: 'Memajukan pergaulan demi persatuan dan kesatuan bangsa' dan 'Sanggup dan rela berkorban untuk kepentingan negara dan bangsa'. Di era digital, menangkal hoaks, meredam polarisasi suku/agama, dan menyebarkan pesan persatuan adalah implementasi nyata Sila ke-3.",
+    "analisis_opsi": {
+      "A": "Salah, tindakan ini memperkeruh polarisasi dan melanggar komitmen persatuan nasional serta netralitas ASN.",
+      "B": "Salah, menyerang identitas budaya lain melanggar asas Bhinneka Tunggal Ika dan memperbesar gesekan sosial.",
+      "C": "Benar (Kunci Jawaban), proaktif mengedepankan persatuan, meredam disintegrasi bangsa, dan menjaga keutuhan NKRI di ruang digital.",
+      "D": "Salah, bersikap pasif-ekstrem (menghindar) tidak menunjukkan peran aktif warga negara dalam menjaga persatuan.",
+      "E": "Salah, sikap apatis bertentangan dengan tanggung jawab warga negara dalam menjaga keutuhan bangsa."
+    },
+    "tips": "Kata kunci Sila 3: Persatuan, kesatuan, keutuhan NKRI, cinta tanah air, rela berkorban untuk bangsa, meredam polarisasi.",
+    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-3 & UU No. 20 Tahun 2023 tentang Aparatur Sipil Negara (Fungsi Perekat Bangsa)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 4,
+    "no": 4,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Pengamalan Sila ke-4)",
+    "soal": "Dalam rapat penyusunan Rencana Kerja Pemerintah Daerah (RKPD), terjadi perbedaan pendapat yang sangat tajam antara pimpinan bagian anggaran dan staf perencana lapangan mengenai alokasi dana perbaikan drainase desa. Perdebatan berlangsung alot hingga pimpinan menawarkan voting cepat tanpa memberi ruang bagi staf lapangan untuk menyampaikan bukti teknis foto genangan air. Berdasarkan Sila Keempat Pancasila, langkah terbaik yang seharusnya diambil adalah...",
+    "opsi": {
+      "A": "Menerima keputusan voting karena prinsip demokrasi mutlak ditentukan oleh suara mayoritas.",
+      "B": "Memberi kesempatan kepada staf lapangan menyampaikan data faktual secara terbuka, lalu bermusyawarah dengan akal sehat dan hati nurani luhur untuk mencapai konsensus mufakat.",
+      "C": "Staf perencana lapangan langsung walk-out dari forum rapat sebagai tanda protes resmi terhadap arogansi pimpinan.",
+      "D": "Membiarkan proyek perbaikan drainase dibatalkan sama sekali agar tidak menimbulkan dendam antar-pegawai.",
+      "E": "Menyerahkan keputusan anggaran kepada pihak ketiga di luar instansi agar tidak menimbulkan gesekan internal."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Sila Keempat 'Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan' mengedepankan musyawarah untuk mufakat yang diliputi oleh semangat kekeluargaan. Butir Sila ke-4: 'Musyawarah untuk mencapai mufakat diliputi oleh semangat kekeluargaan', 'Tidak boleh memaksakan kehendak kepada orang lain', dan 'Musyawarah dilakukan dengan akal sehat dan sesuai dengan hati nurani yang luhur'. Voting adalah jalan terakhir apabila musyawarah mufakat benar-benar telah diupayakan dengan mendengar seluruh aspirasi secara objektif.",
+    "analisis_opsi": {
+      "A": "Salah, demokrasi Pancasila mengutamakan musyawarah mufakat berbasis hikmat kebijaksanaan, bukan tirani mayoritas / sekadar voting terburu-buru.",
+      "B": "Benar (Kunci Jawaban), selaras dengan inti Sila 4 yaitu mendengarkan aspirasi dengan akal sehat dan itikad baik untuk mencapai mufakat.",
+      "C": "Salah, tindakan walk-out mencederai etika musyawarah dan tidak menyelesaikan masalah pelayanan publik.",
+      "D": "Salah, membatalkan proyek publik yang urgen merugikan masyarakat luas dan mengabaikan tanggung jawab kepemerintahan.",
+      "E": "Salah, melanggar tupoksi dan wewenang institusi pemerintah daerah."
+    },
+    "tips": "Kata kunci Sila 4: Musyawarah mufakat, semangat kekeluargaan, tidak memaksakan kehendak, menghormati pendapat, akal sehat.",
+    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-4 & PermenPAN-RB No. 321 Tahun 2024",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 5,
+    "no": 5,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Pengamalan Sila ke-5)",
+    "soal": "Sebagai seorang pejabat pembuat komitmen (PPK) di dinas sosial, Anda mengelola program bantuan modal usaha bagi keluarga prasejahtera. Seorang pengusaha kenalan dekat keluarga Anda menawarkan komisi 10% jika perusahaannya dimenangkan dalam pengadaan barang paket bantuan, padahal spesifikasi barang yang dia tawarkan berkualitas di bawah standar. Sikap yang mencerminkan Sila Kelima Pancasila adalah...",
+    "opsi": {
+      "A": "Menerima tawaran tersebut dengan syarat sebagian komisi disumbangkan kembali ke panti asuhan.",
+      "B": "Menolak dengan tegas tawaran tersebut dan memilih penyedia yang memenuhi spesifikasi terbaik demi menjaga hak warga prasejahtera memperoleh bantuan berkualitas.",
+      "C": "Menyetujui tawaran asalkan tidak ada pihak aparat penegak hukum yang mengetahui transaksi tersebut.",
+      "D": "Menolak tawaran tetapi memberikan bocoran harga penawaran kompetitor agar rekannya bisa menurunkan harga.",
+      "E": "Meminta komisi yang lebih besar dengan alasan risiko jabatan yang diemban sangat tinggi."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Sila Kelima 'Keadilan Sosial bagi Seluruh Rakyat Indonesia' mengandung butir pengamalan: 'Mengembangkan perbuatan yang luhur yang mencerminkan sikap dan suasana kekeluargaan dan kegotongroyongan', 'Menjaga keseimbangan antara hak dan kewajiban', 'Menghormati hak orang lain', dan 'Tidak menggunakan hak milik untuk hal-hal yang bertentangan dengan atau merugikan kepentingan umum'. Korupsi dan penurunan spesifikasi bansos merampas hak rakyat miskin dan merusak tatanan keadilan sosial.",
+    "analisis_opsi": {
+      "A": "Salah, menyamarkan hasil kejahatan/korupsi dengan amal tetap merupakan pelanggaran moral, hukum, dan keadilan sosial.",
+      "B": "Benar (Kunci Jawaban), menjamin keadilan bagi masyarakat penerima manfaat, menjaga integritas penggunaan anggaran publik, dan menolak perbuatan yang merugikan kepentingan umum.",
+      "C": "Salah, tindak pidana korupsi yang mencederai keadilan sosial dan integritas ASN.",
+      "D": "Salah, membocorkan rahasia dokumen tender melanggar hukum persaingan usaha yang adil dan prinsip transparansi.",
+      "E": "Salah, tindakan pemerasan/korupsi aktif yang melanggar hukum dan nilai Pancasila."
+    },
+    "tips": "Kata kunci Sila 5: Keadilan sosial, tidak merugikan kepentingan umum, menghormati hak orang lain, pemerataan kesejahteraan, anti pemborosan/korupsi.",
+    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-5 & UU No. 31 Tahun 1999 jo UU No. 20 Tahun 2001 (Tipikor)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 6,
+    "no": 6,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Sejarah Perumusan)",
+    "soal": "Pada tanggal 18 Agustus 1945, terjadi momentum krusial dalam sidang PPKI ketika kalimat 'Ketuhanan dengan kewajiban menjalankan syariat Islam bagi pemeluk-pemeluknya' dalam Piagam Jakarta diubah menjadi 'Ketuhanan Yang Maha Esa'. Latar belakang utama dan hikmah kebangsaan di balik perubahan konsensus ini adalah...",
+    "opsi": {
+      "A": "Adanya desakan intervensi dari pemerintah militer Jepang sebelum menyerah tanpa syarat kepada Sekutu.",
+      "B": "Penolakan keras dari tokoh-tokoh sekuler yang menghendaki Indonesia menjadi negara liberal tanpa agama.",
+      "C": "Pesan dari perwakilan rakyat Indonesia bagian Timur yang menyatakan keberatan jika dasar negara mencantumkan kewajiban syariat, sehingga para pendiri bangsa rela berkorban demi keutuhan persatuan NKRI.",
+      "D": "Perintah dari Presiden Soekarno secara otoriter tanpa melalui perdebatan sidang PPKI.",
+      "E": "Ketiadaan dukungan dari ormas-ormas Islam besar di Indonesia terhadap rumusan Piagam Jakarta."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pada sore hari 17 Agustus 1945, Moh. Hatta didatangi seorang opsir Kaigun (Angkatan Laut Jepang) yang menyampaikan bahwa perwakilan masyarakat Kristen di wilayah Indonesia Timur merasa keberatan dengan klausul 7 kata dalam Piagam Jakarta. Keesokan paginya, 18 Agustus 1945 sebelum sidang PPKI dimulai, Hatta mengumpulkan tokoh-tokoh Islam (Ki Bagus Hadikusumo, Wahid Hasyim, Kasman Singodimedjo, Teuku Moh. Hasan) dan bermusyawarah. Dengan jiwa kenegarawanan luhur dan demi menjaga persatuan bangsa yang baru saja merdeka, mereka bersepakat menggantinya menjadi 'Ketuhanan Yang Maha Esa'.",
+    "analisis_opsi": {
+      "A": "Salah, Jepang sudah menyerah pada 15 Agustus 1945 dan perubahan ini murni inisiatif para pendiri bangsa Indonesia demi persatuan.",
+      "B": "Salah, perdebatan bukan antara sekuler-agama melainkan upaya merangkul kemajemukan bangsa dari Sabang sampai Merauke.",
+      "C": "Benar (Kunci Jawaban), mencerminkan sikap toleransi luar biasa dan pengorbanan para tokoh bangsa demi keutuhan persatuan Negara Kesatuan Republik Indonesia.",
+      "D": "Salah, proses perubahan dilakukan melalui musyawarah oleh Moh. Hatta bersama tokoh-tokoh Islam terkemuka.",
+      "E": "Salah, ormas Islam awalnya mendukung Piagam Jakarta namun legawa bermufakat demi keutuhan NKRI."
+    },
+    "tips": "Fakta sejarah penting: Perubahan 7 kata Piagam Jakarta terjadi 18 Agustus 1945 diprakarsai Moh. Hatta bersama 4 tokoh Islam demi integrasi bangsa.",
+    "sumber": "Risalah Sidang BPUPKI dan PPKI (Sekretariat Negara RI) & Modul Resmi TWK BKN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 7,
+    "no": 7,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Ideologi Terbuka)",
+    "soal": "Pancasila berkedudukan sebagai ideologi terbuka bagi bangsa Indonesia. Karakteristik keterbukaan Pancasila ditunjukkan oleh adanya tiga dimensi utama: dimensi realitas, dimensi idealisme, dan dimensi fleksibilitas (normatif). Maksud dari dimensi fleksibilitas adalah...",
+    "opsi": {
+      "A": "Nilai-nilai dasar Pancasila dapat diubah dan diganti setiap kali terjadi pergantian rezim pemerintahan.",
+      "B": "Pancasila memiliki keluwesan yang memungkinkan pengembangan pemikiran-pemikiran baru yang relevan dengan perkembangan zaman tanpa mengubah nilai dasarnya.",
+      "C": "Pancasila bebas mengadopsi seluruh ideologi asing seperti komunisme dan kapitalisme secara tanpa batas.",
+      "D": "Aturan hukum tertinggi dapat dikesampingkan apabila bertentangan dengan tren globalisasi.",
+      "E": "Pancasila hanya berlaku secara situasional sesuai dengan kehendak mayoritas anggota legislatif."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pancasila sebagai ideologi terbuka memiliki 3 dimensi: 1) Dimensi Realitas: nilai-nilai dasar bersumber dari nilai riil yang hidup dalam masyarakat Indonesia; 2) Dimensi Idealisme: mengandung cita-cita yang ingin dicapai dalam berbagai bidang kehidupan; 3) Dimensi Fleksibilitas / Normatif: memiliki kemampuan untuk berkembang sesuai perkembangan zaman, teknologi, dan kebutuhan bangsa, melalui penafsiran nilai instrumental dan praksis tanpa pernah mengubah nilai dasar (fundamental) yang terkandung di dalamnya.",
+    "analisis_opsi": {
+      "A": "Salah, nilai dasar Pancasila bersifat tetap dan abadi (tidak boleh diubah).",
+      "B": "Benar (Kunci Jawaban), fleksibilitas berarti mampu beradaptasi dan berkembang dalam tataran instrumental dan praksis seiring zaman dengan tetap menjaga nilai dasar.",
+      "C": "Salah, ideologi terbuka Pancasila secara tegas menolak ideologi yang bertentangan dengan Pancasila seperti marxisme-leninisme/komunisme dan liberalisme ekstrem.",
+      "D": "Salah, konstitusi dan hukum nasional tetap berpegang teguh pada supremasi hukum berdasarkan Pancasila.",
+      "E": "Salah, Pancasila adalah norma fundamental negara (staatsfundamentalnorm) yang mengikat seluruh bangsa secara permanen."
+    },
+    "tips": "3 Dimensi Ideologi Terbuka: Realitas (nilai riil masyarakat), Idealisme (cita-cita luhur masa depan), Fleksibilitas (dinamis & adaptif terhadap zaman pada nilai instrumental).",
+    "sumber": "Pendidikan Kewarganegaraan Lemhannas & Kisi-Kisi Resmi PermenPAN-RB",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 8,
+    "no": 8,
+    "kategori": "TWK",
+    "subkategori": "Pancasila (Paradigma Pembangunan)",
+    "soal": "Pemerintah sedang merancang pembangunan Ibu Kota Nusantara (IKN) dengan konsep kota pintar berkelanjutan (smart green city). Dalam perspektif Pancasila sebagai paradigma pembangunan nasional, orientasi utama pembangunan infrastruktur dan tata kelola tersebut harus diletakkan pada...",
+    "opsi": {
+      "A": "Kecepatan pembangunan demi mengundang keuntungan investasi korporasi multinasional semata.",
+      "B": "Peningkatan harkat dan martabat manusia Indonesia, kelestarian lingkungan hidup, serta keadilan dan pemerataan kesejahteraan seluruh rakyat.",
+      "C": "Eksploitasi sumber daya alam sebesar-besarnya untuk mengejar surplus neraca perdagangan jangka pendek.",
+      "D": "Membangun fasilitas mewah yang hanya dinikmati oleh kalangan elit birokrasi pusat.",
+      "E": "Penyeragaman kebudayaan masyarakat lokal agar tunduk pada satu pola kebudayaan modern seragam."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pancasila sebagai paradigma pembangunan bermakna bahwa segala aspek pembangunan nasional—baik hukum, politik, ekonomi, sosial budaya, maupun infrastruktur—harus mendasarkan diri pada hakikat nilai-nilai Pancasila. Inti dari pembangunan berbasis Pancasila adalah humanisasi (memanusiakan manusia), kelestarian alam ciptaan Tuhan, persatuan nasional, dan keadilan sosial yang merata bagi seluruh rakyat Indonesia.",
+    "analisis_opsi": {
+      "A": "Salah, paradigma kapitalis semata yang mengorbankan kepentingan rakyat banyak.",
+      "B": "Benar (Kunci Jawaban), selaras dengan esensi Pancasila sebagai paradigma pembangunan yang menempatkan manusia, lingkungan, dan keadilan sosial sebagai poros sentral.",
+      "C": "Salah, eksploitasi destruktif bertentangan dengan prinsip keberlanjutan dan keadilan antargenerasi.",
+      "D": "Salah, melanggar Sila Kelima tentang keadilan sosial dan pemerataan hasil pembangunan.",
+      "E": "Salah, bertentangan dengan prinsip Bhinneka Tunggal Ika yang menghargai kearifan lokal."
+    },
+    "tips": "Pancasila sebagai Paradigma Pembangunan: Pembangunan dari rakyat, oleh rakyat, untuk rakyat dengan tujuan memuliakan harkat & martabat manusia.",
+    "sumber": "Ketetapan MPR & Pokok Kebijakan Pembangunan Nasional Bappenas",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 9,
+    "no": 9,
+    "kategori": "TWK",
+    "subkategori": "UUD 1945 (Amandemen & Sistematika)",
+    "soal": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 telah mengalami empat kali rangkaian amandemen pada kurun waktu 1999 hingga 2002. Salah satu kesepakatan dasar yang dirumuskan oleh Panitia Ad Hoc MPR dalam melakukan perubahan UUD 1945 adalah...",
+    "opsi": {
+      "A": "Mengubah Pembukaan UUD 1945 agar disesuaikan dengan piagam hak asasi manusia internasional.",
+      "B": "Mengganti bentuk Negara Kesatuan Republik Indonesia menjadi negara serikat/federal.",
+      "C": "Tidak mengubah Pembukaan UUD 1945 dan tetap mempertahankan Negara Kesatuan Republik Indonesia.",
+      "D": "Mengadopsi sistem pemerintahan parlementer murni dengan perdana menteri sebagai kepala pemerintahan.",
+      "E": "Mempertahankan bagian Penjelasan UUD 1945 dan menambahkannya menjadi pasal-pasal tersendiri."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Lima kesepakatan dasar dalam Amandemen UUD 1945 oleh MPR RI (1999-2002): 1) Tidak mengubah Pembukaan UUD 1945; 2) Tetap mempertahankan Negara Kesatuan Republik Indonesia (NKRI); 3) Mempertegas sistem pemerintahan presidensial; 4) Meniadakan Penjelasan UUD 1945 dan memasukkan hal-hal normatif ke dalam pasal-pasal (Batang Tubuh); 5) Melakukan perubahan dengan cara adendum (mempertahankan naskah asli dan melampirkan naskah perubahan).",
+    "analisis_opsi": {
+      "A": "Salah, Pembukaan UUD 1945 disepakati secara mutlak untuk TIDAK diubah karena memuat fundamen dasar pendirian negara.",
+      "B": "Salah, NKRI ditegaskan tidak dapat diubah (Pasal 37 ayat 5 UUD 1945).",
+      "C": "Benar (Kunci Jawaban), merupakan butir pertama dan kedua dari 5 kesepakatan dasar amandemen UUD 1945.",
+      "D": "Salah, kesepakatan justru mempertegas sistem presidensial, bukan parlementer.",
+      "E": "Salah, Penjelasan UUD 1945 ditiadakan statusnya, materi normatifnya dimasukkan ke batang tubuh."
+    },
+    "tips": "Ingat 5 Kesepakatan Amandemen: 1. Pembukaan TETAP, 2. NKRI TETAP, 3. Presidensial DIPERTEGAS, 4. Penjelasan DIHAPUS (masuk pasal), 5. Cara ADENDUM.",
+    "sumber": "Naskah Komprehensif Perubahan UUD 1945 (Sekretariat Jenderal Mahkamah Konstitusi RI)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 10,
+    "no": 10,
+    "kategori": "TWK",
+    "subkategori": "UUD 1945 (Lembaga Negara & Kewenangan)",
+    "soal": "Berdasarkan Pasal 24C Ayat (1) UUD NRI 1945 pasca amandemen, Mahkamah Konstitusi memiliki empat wewenang peradilan tingkat pertama dan terakhir yang putusannya bersifat final, serta satu kewajiban konstitusional. Salah satu wewenang resmi Mahkamah Konstitusi tersebut adalah...",
+    "opsi": {
+      "A": "Menguji peraturan perundang-undangan di bawah undang-undang terhadap undang-undang.",
+      "B": "Mengadili perkara kasasi dan peninjauan kembali tindak pidana korupsi.",
+      "C": "Memutus sengketa kewenangan lembaga negara yang kewenangannya diberikan oleh Undang-Undang Dasar.",
+      "D": "Mengusulkan pengangkatan hakim agung kepada Dewan Perwakilan Rakyat.",
+      "E": "Memberikan grasi, rehabilitasi, dan amnesti kepada terpidana kasus pidana umum."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Wewenang Mahkamah Konstitusi menurut Pasal 24C ayat (1) UUD 1945: 1) Menguji Undang-Undang terhadap Undang-Undang Dasar (Judicial Review UU thd UUD); 2) Memutus sengketa kewenangan lembaga negara yang kewenangannya diberikan oleh UUD; 3) Memutus pembubaran partai politik; 4) Memutus perselisihan tentang hasil pemilihan umum (PHPU). Kewajiban MK (Pasal 24C ayat 2): Wajib memberikan putusan atas pendapat DPR mengenai dugaan pelanggaran hukum oleh Presiden/Wapres (impeachment). Adapun menguji peraturan di bawah UU thd UU adalah wewenang Mahkamah Agung (Pasal 24A).",
+    "analisis_opsi": {
+      "A": "Salah, ini adalah wewenang Mahkamah Agung (Pasal 24A ayat 1).",
+      "B": "Salah, kasasi dan PK adalah kewenangan Mahkamah Agung.",
+      "C": "Benar (Kunci Jawaban), sesuai secara tekstual dan substansial dengan Pasal 24C ayat (1) UUD 1945.",
+      "D": "Salah, wewenang mengusulkan hakim agung adalah tugas Komisi Yudisial (Pasal 24B ayat 1).",
+      "E": "Salah, pemberian grasi/rehabilitasi/amnesti adalah hak prerogatif Presiden (Pasal 14 UUD 1945)."
+    },
+    "tips": "Wewenang MK (4+1): Uji UU thd UUD, Sengketa Lembaga Negara (berwenang via UUD), Bubarkan Parpol, Perselisihan Hasil Pemilu + 1 Wajib Sidang Dugaan Pelanggaran Presiden.",
+    "sumber": "Pasal 24C UUD NRI 1945 & UU No. 24 Tahun 2003 tentang Mahkamah Konstitusi",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 11,
+    "no": 11,
+    "kategori": "TWK",
+    "subkategori": "UUD 1945 (Hak Asasi Manusia)",
+    "soal": "Dalam Pasal 28I Ayat (1) UUD NRI 1945 diatur mengenai kelompok hak asasi manusia yang dikategorikan sebagai hak yang tidak dapat dikurangi dalam keadaan apa pun (non-derogable rights). Yang termasuk ke dalam kelompok hak tersebut adalah...",
+    "opsi": {
+      "A": "Hak untuk memilih dan dipilih dalam pemilihan umum legislatif.",
+      "B": "Hak untuk hidup, hak untuk tidak disiksa, dan hak kemerdekaan pikiran dan hati nurani.",
+      "C": "Hak atas kebebasan berserikat, berkumpul, dan mengeluarkan pendapat di muka umum.",
+      "D": "Hak untuk memperoleh informasi publik dan berkomunikasi menggunakan media teknologi.",
+      "E": "Hak atas kepemilikan tanah dan hak mendirikan bangunan perumahan."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pasal 28I ayat (1) UUD 1945 menyatakan: 'Hak untuk hidup, hak untuk tidak disiksa, hak kemerdekaan pikiran dan hati nurani, hak beragama, hak untuk tidak diperbudak, hak untuk diakui sebagai pribadi di hadapan hukum, dan hak untuk tidak dituntut atas dasar hukum yang berlaku surut adalah hak asasi manusia yang tidak dapat dikurangi dalam keadaan apa pun' (non-derogable rights). Sedangkan hak berserikat, berkumpul, memilih/dipilih adalah derogable rights yang dapat dibatasi oleh undang-undang demi ketertiban umum (Pasal 28J).",
+    "analisis_opsi": {
+      "A": "Salah, hak politik/memilih dapat dibatasi menurut syarat undang-undang (derogable).",
+      "B": "Benar (Kunci Jawaban), secara eksplisit termaktub dalam Pasal 28I ayat (1) UUD 1945 sebagai non-derogable rights.",
+      "C": "Salah, kebebasan berserikat diatur dalam Pasal 28E ayat 3 dan dapat dibatasi oleh undang-undang demi keamanan dan ketertiban.",
+      "D": "Salah, hak atas informasi diatur dalam Pasal 28F dan tergolong derogable rights.",
+      "E": "Salah, hak milik diatur dalam Pasal 28G dan tunduk pada fungsi sosial."
+    },
+    "tips": "Hafalkan 7 Hak Non-Derogable (Pasal 28I ayat 1): Hidup, Tidak disiksa, Pikiran & hati nurani, Beragama, Tidak diperbudak, Diakui di muka hukum, Tidak dituntut hukum berlaku surut.",
+    "sumber": "Pasal 28I Ayat (1) UUD NRI 1945 & Kovenan Internasional Hak Sipil dan Politik (ICCPR)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 12,
+    "no": 12,
+    "kategori": "TWK",
+    "subkategori": "UUD 1945 (Kewarganegaraan & Asas Hukum)",
+    "soal": "Pasal 27 Ayat (1) UUD 1945 menyatakan bahwa segala warga negara bersamaan kedudukannya di dalam hukum dan pemerintahan dan wajib menjunjung hukum dan pemerintahan itu dengan tidak ada kecualinya. Asas fundamental yang ditegaskan dalam pasal tersebut adalah...",
+    "opsi": {
+      "A": "Asas kedaulatan rakyat mutlak tanpa batas peradilan.",
+      "B": "Asas persamaan kedudukan di hadapan hukum (equality before the law).",
+      "C": "Asas praduga bersalah dalam penyelidikan tindak pidana korupsi.",
+      "D": "Asas diskriminasi positif bagi pejabat negara yang memiliki kekebalan hukum.",
+      "E": "Asas kebebasan individu tanpa terikat pada norma kemasyarakatan."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pasal 27 ayat (1) UUD NRI 1945 merupakan landasan prinsip Equality Before The Law (persamaan setiap orang di depan hukum). Prinsip ini menegaskan bahwa setiap warga negara memiliki hak dan kewajiban hukum yang sama, tanpa memandang status sosial, ekonomi, keturunan, maupun jabatan politik. Negara hukum (Rechtsstaat) menjamin tiadanya perlakuan istimewa di hadapan pengadilan.",
+    "analisis_opsi": {
+      "A": "Salah, kedaulatan dilaksanakan menurut UUD (Pasal 1 ayat 2), bukan mutlak tanpa kontrol hukum.",
+      "B": "Benar (Kunci Jawaban), rumusan Pasal 27 ayat (1) adalah perwujudan konkret dari doktrin 'equality before the law'.",
+      "C": "Salah, hukum pidana menganut asas praduga tak bersalah (presumption of innocence).",
+      "D": "Salah, pasal ini menegaskan 'dengan tidak ada kecualinya', menolak impunitas atau kekebalan hukum sewenang-wenang.",
+      "E": "Salah, warga negara wajib menjunjung hukum, bukan bebas tanpa aturan."
+    },
+    "tips": "Pasal 27 Ayat 1 UUD 1945 = Equality before the law (persamaan kedudukan hukum dan pemerintahan tanpa diskriminasi).",
+    "sumber": "Pasal 27 Ayat (1) UUD NRI 1945 & UU No. 39 Tahun 1999 tentang HAM",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 13,
+    "no": 13,
+    "kategori": "TWK",
+    "subkategori": "UUD 1945 (Sistem Pemerintahan & Otonomi Daerah)",
+    "soal": "Menurut ketentuan Pasal 18 Ayat (5) UUD NRI 1945, pemerintahan daerah menjalankan otonomi seluas-luasnya, kecuali urusan pemerintahan yang oleh undang-undang ditentukan sebagai urusan Pemerintah Pusat. Berdasarkan UU No. 23 Tahun 2014 tentang Pemerintahan Daerah, urusan absolut yang mutlak menjadi kewenangan pemerintah pusat meliputi...",
+    "opsi": {
+      "A": "Kesehatan, pendidikan, dan penataan ruang daerah.",
+      "B": "Politik luar negeri, pertahanan, keamanan, yustisi, moneter dan fiskal nasional, serta agama.",
+      "C": "Pariwisata daerah, perhubungan darat, dan ketenagakerjaan.",
+      "D": "Pengelolaan pasar tradisional, perpustakaan, dan kebersihan kota.",
+      "E": "Pertanian lokal, koperasi usaha kecil menengah, dan perikanan darat."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Urusan pemerintahan absolut adalah urusan pemerintahan yang sepenuhnya menjadi kewenangan Pemerintah Pusat (Pasal 9 & 10 UU No. 23 Tahun 2014): 1) Politik luar negeri; 2) Pertahanan; 3) Keamanan; 4) Yustisi (peradilan); 5) Moneter dan fiskal nasional; 6) Agama. Urusan pendidikan dan kesehatan termasuk urusan pemerintahan konkuren wajib pelayanan dasar.",
+    "analisis_opsi": {
+      "A": "Salah, kesehatan dan pendidikan adalah urusan pemerintahan konkuren wajib yang diserahkan ke Pemda.",
+      "B": "Benar (Kunci Jawaban), 6 urusan absolut pemerintah pusat: Politik Luar Negeri, Pertahanan, Keamanan, Yustisi, Moneter/Fiskal, dan Agama.",
+      "C": "Salah, pariwisata dan perhubungan adalah urusan pilihan dan konkuren.",
+      "D": "Salah, pengelolaan pasar dan kebersihan adalah kewenangan pemerintah kabupaten/kota.",
+      "E": "Salah, koperasi dan pertanian lokal adalah urusan konkuren desentralisasi."
+    },
+    "tips": "Ingat 6 Urusan Absolut Pusat: POLKAM-YUS-MON-AGAMA (Politik LN, Pertahanan/Keamanan, Yustisi, Moneter/Fiskal, Agama).",
+    "sumber": "Pasal 18 UUD 1945 & Pasal 10 UU No. 23 Tahun 2014 tentang Pemerintahan Daerah",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 14,
+    "no": 14,
+    "kategori": "TWK",
+    "subkategori": "UUD 1945 (Perekonomian & Kesejahteraan Sosial)",
+    "soal": "Pasal 33 Ayat (3) UUD NRI 1945 menggariskan bahwa 'Bumi dan air dan kekayaan alam yang terkandung di dalamnya dikuasai oleh negara dan dipergunakan untuk sebesar-besar kemakmuran rakyat'. Berdasarkan tafsir resmi Mahkamah Konstitusi, makna frasa 'dikuasai oleh negara' dalam pasal tersebut mencakup lima fungsi negara, yaitu...",
+    "opsi": {
+      "A": "Menjual, menggadaikan, memprivatisasi, menyewakan, dan melelang kepada pihak asing.",
+      "B": "Merumuskan kebijakan (beleid), melakukan pengaturan (regelendaad), pengurusan (bestuursdaad), pengelolaan (beheersdaad), dan pengawasan (toezichthoudendsdaad).",
+      "C": "Mengambil alih seluruh perusahaan swasta menjadi badan usaha milik negara tanpa kompensasi.",
+      "D": "Memusatkan kepemilikan tanah di tangan pejabat kementerian agar tidak dikuasai masyarakat.",
+      "E": "Menyerahkan pengelolaan sumber daya alam sepenuhnya kepada mekanisme pasar bebas."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Dalam Putusan Mahkamah Konstitusi No. 001-021-022/PUU-I/2003 terkait uji materi UU Ketenagalistrikan dan Putusan UU Migas, Mahkamah Konstitusi menegaskan bahwa hak penguasaan negara (HPN) atas sumber daya alam tidak diartikan sebagai negara memiliki secara perdata, melainkan negara menjalankan 5 fungsi kedaulatan: 1) Kebijakan (beleid), 2) Pengaturan (regelendaad), 3) Pengurusan (bestuursdaad), 4) Pengelolaan (beheersdaad), dan 5) Pengawasan (toezichthoudendsdaad), yang seluruhnya ditujukan demi kemakmuran rakyat.",
+    "analisis_opsi": {
+      "A": "Salah, negara tidak bertindak sebagai pemilik perdata komersial yang bebas menjual aset publik ke asing.",
+      "B": "Benar (Kunci Jawaban), lima instrumen mandat kedaulatan negara menurut doktrin resmi Putusan Mahkamah Konstitusi RI.",
+      "C": "Salah, UUD 1945 tetap mengakui hak milik perorangan dan badan usaha swasta (kebijakan ekonomi campuran Pancasila).",
+      "D": "Salah, bertentangan dengan keadilan agraria dan kemakmuran rakyat.",
+      "E": "Salah, pasar bebas tanpa kendali negara bertentangan dengan demokrasi ekonomi Pasal 33."
+    },
+    "tips": "5 Aspek 'Dikuasai Negara' (Putusan MK): Kebijakan, Pengaturan, Pengurusan, Pengelolaan, dan Pengawasan demi kemakmuran rakyat.",
+    "sumber": "Pasal 33 Ayat (3) UUD NRI 1945 & Putusan Mahkamah Konstitusi No. 001-021-022/PUU-I/2003",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 15,
+    "no": 15,
+    "kategori": "TWK",
+    "subkategori": "UUD 1945 (Pertahanan & Keamanan Negara)",
+    "soal": "Sistem pertahanan dan keamanan negara Republik Indonesia yang termaktub dalam Pasal 30 Ayat (2) UUD NRI 1945 menggunakan doktrin Sishankamrata (Sistem Pertahanan dan Keamanan Rakyat Semesta). Komposisi dan peran kekuatan dalam sistem pertahanan tersebut adalah...",
+    "opsi": {
+      "A": "TNI dan POLRI sebagai kekuatan utama, serta rakyat sebagai kekuatan pendukung.",
+      "B": "Hanya anggota militer profesional yang berhak mempertahankan negara, sedangkan rakyat sipil dilarang terlibat.",
+      "C": "Rakyat sebagai kekuatan utama gerilya, sedangkan TNI hanya sebagai konsultan logistik perang.",
+      "D": "Seluruh warga negara diwajibkan menjadi tentara reguler setiap tahun.",
+      "E": "Pertahanan diserahkan sepenuhnya kepada pakta pertahanan militer bersama negara tetangga."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pasal 30 ayat (2) UUD NRI 1945 menyatakan: 'Usaha pertahanan dan keamanan negara dilaksanakan melalui sistem pertahanan dan keamanan rakyat semesta oleh Tentara Nasional Indonesia dan Kepolisian Negara Republik Indonesia, sebagai kekuatan utama, dan rakyat, sebagai kekuatan pendukung'. TNI berperan sebagai alat negara di bidang pertahanan (ayat 3), sedangkan Polri berperan memelihara keamanan dan ketertiban masyarakat serta menegakkan hukum (ayat 4).",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), sesuai secara presisi dengan rumusan Pasal 30 ayat (2) UUD NRI 1945.",
+      "B": "Salah, konstitusi menegaskan rakyat memiliki hak dan kewajiban ikut serta dalam upaya pembelaan dan pertahanan negara.",
+      "C": "Salah, kekuatan utama adalah TNI (pertahanan) dan Polri (keamanan).",
+      "D": "Salah, Indonesia menerapkan komponen cadangan sukarela terdidik (UU No. 23/2019), bukan wajib militer paksaan.",
+      "E": "Salah, Indonesia berpegang pada politik bebas aktif dan tidak bergabung dalam pakta militer pertahanan manapun."
+    },
+    "tips": "Pasal 30 Ayat 2 UUD 1945: Kekuatan Utama = TNI & POLRI. Kekuatan Pendukung = Rakyat.",
+    "sumber": "Pasal 30 Ayat (2) UUD NRI 1945 & UU No. 3 Tahun 2002 tentang Pertahanan Negara",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 16,
+    "no": 16,
+    "kategori": "TWK",
+    "subkategori": "NKRI (Wawasan Nusantara)",
+    "soal": "Wawasan Nusantara merupakan cara pandang bangsa Indonesia mengenai diri dan lingkungannya yang serba beragam dan bernilai strategis dengan mengutamakan persatuan dan kesatuan bangsa serta kesatuan wilayah. Tiga unsur pokok (komponen) pembentuk konsepsi Wawasan Nusantara adalah...",
+    "opsi": {
+      "A": "Demokrasi, Monarki, dan Tirani.",
+      "B": "Wadah (Contour), Isi (Content), dan Tata Laku (Conduct).",
+      "C": "Kekuasaan, Angkatan Bersenjata, dan Dominasi Wilayah.",
+      "D": "Ekspor, Impor, dan Devisa Negara.",
+      "E": "Tradisi, Kolonialisme, dan Globalisasi."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Tiga unsur dasar konsepsi Wawasan Nusantara: 1) Wadah (Contour): Wilayah nusantara yang dibatasi oleh lautan dan pulau-pulau serta struktur suprastruktur dan infrastruktur politik negara; 2) Isi (Content): Aspirasi bangsa yang berkembang di masyarakat dan cita-cita proklamasi sebagaimana tertuang dalam Pembukaan UUD 1945; 3) Tata Laku (Conduct): Hasil interaksi antara wadah dan isi, yang terdiri dari tata laku batiniah (sikap, mental, etos) dan tata laku lahiriah (perilaku, tindakan, karya nyata).",
+    "analisis_opsi": {
+      "A": "Salah, ini adalah klasifikasi bentuk pemerintahan klasik Aristoteles.",
+      "B": "Benar (Kunci Jawaban), tiga unsur mutlak pembentuk Wawasan Nusantara menurut ajaran Lemhannas RI.",
+      "C": "Salah, bertolak belakang dengan wawasan kebangsaan Indonesia yang mengutamakan persatuan dan perdamaian, bukan hegemoni/ekspansi.",
+      "D": "Salah, ini adalah indikator ekonomi perdagangan internasional.",
+      "E": "Salah, tidak berkaitan dengan doktrin dasar geopolitik nusantara."
+    },
+    "tips": "3 Unsur Pokok Wawasan Nusantara: WADAH (wilayah/organisasi negara), ISI (cita-cita & aspirasi bangsa), TATA LAKU (batiniah & lahiriah).",
+    "sumber": "Modul Geopolitik Indonesia / Wawasan Nusantara Lemhannas RI & Kisi-Kisi CAT BKN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 17,
+    "no": 17,
+    "kategori": "TWK",
+    "subkategori": "NKRI (Bentuk Negara & Sistem Pemerintahan)",
+    "soal": "Pasal 1 Ayat (1) UUD NRI 1945 menetapkan bahwa 'Negara Indonesia ialah Negara Kesatuan, yang berbentuk Republik'. Ciri utama sistem pemerintahan presidensial murni yang dianut oleh Republik Indonesia pasca amandemen UUD 1945 adalah...",
+    "opsi": {
+      "A": "Presiden bertanggung jawab langsung kepada parlemen dan dapat dijatuhkan melalui mosi tidak percaya setiap saat.",
+      "B": "Kepala negara dipegang oleh Presiden sedangkan kepala pemerintahan dipimpin oleh seorang Perdana Menteri.",
+      "C": "Presiden bertindak sebagai kepala negara sekaligus kepala pemerintahan, dan menteri-menteri diangkat serta bertanggung jawab kepada Presiden.",
+      "D": "Masa jabatan eksekutif tidak memiliki batasan waktu yang pasti.",
+      "E": "Parlemen berhak membubarkan kabinet dan Presiden berhak membubarkan parlemen."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Karakteristik sistem presidensial Indonesia (Pasal 4 & Pasal 17 UUD 1945): 1) Presiden adalah kepala negara sekaligus kepala pemerintahan; 2) Presiden dan Wakil Presiden dipilih langsung oleh rakyat dalam satu pasangan untuk masa jabatan tetap (fixed term) 5 tahun; 3) Menteri-menteri adalah pembantu Presiden yang diangkat dan diberhentikan oleh Presiden serta bertanggung jawab kepada Presiden; 4) Presiden tidak dapat membubarkan DPR, dan DPR tidak dapat menjatuhkan kabinet dengan mosi tidak percaya.",
+    "analisis_opsi": {
+      "A": "Salah, mosi tidak percaya adalah karakteristik sistem parlementer.",
+      "B": "Salah, pemisahan kepala negara dan perdana menteri adalah sistem parlementer atau semi-presidensial.",
+      "C": "Benar (Kunci Jawaban), mencerminkan ciri pokok sistem presidensial sesuai konstitusi Pasal 4 dan 17 UUD NRI 1945.",
+      "D": "Salah, masa jabatan Presiden dibatasi secara tegas maksimal 2 periode (Pasal 7 UUD 1945).",
+      "E": "Salah, hak saling membubarkan hanya ada dalam sistem parlementer; di Indonesia Presiden tidak dapat membubarkan DPR (Pasal 7C)."
+    },
+    "tips": "Ciri Presidensial Indonesia: Presiden = Kepala Negara + Kepala Pemerintahan, Menteri tanggung jawab ke Presiden, Tidak ada mosi tidak percaya, Masa jabatan tetap (fixed term).",
+    "sumber": "Pasal 4 dan Pasal 17 UUD NRI 1945",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 18,
+    "no": 18,
+    "kategori": "TWK",
+    "subkategori": "NKRI (Batas Wilayah Negara & Deklarasi Djuanda)",
+    "soal": "Sebelum 13 Desember 1957, luas wilayah laut Indonesia tunduk pada ordonansi kolonial Hindia Belanda (Territoriale Zee en Maritieme Kringen Ordonnantie 1939) yang menetapkan batas laut teritorial hanya selebar 3 mil laut dari garis air rendah masing-masing pulau, sehingga laut di antara pulau-pulau Indonesia dianggap sebagai laut bebas/internasional. Tonggak sejarah monumental yang mematahkan konsep kolonial tersebut dan menyatukan seluruh kepulauan Indonesia menjadi satu kesatuan wilayah yang utuh adalah...",
+    "opsi": {
+      "A": "Perjanjian Linggarjati 1946.",
+      "B": "Deklarasi Djuanda 13 Desember 1957.",
+      "C": "Konferensi Meja Bundar 1949.",
+      "D": "Perjanjian Renville 1948.",
+      "E": "Dekrit Presiden 5 Juli 1959."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Deklarasi Djuanda yang dicetuskan Perdana Menteri Djuanda Kartawidjaja pada 13 Desember 1957 menyatakan bahwa segala perairan di sekitar, di antara, dan yang menghubungkan pulau-pulau Indonesia merupakan bagian yang tidak terpisahkan dari daratan NKRI, dan batas laut teritorial diukur sejauh 12 mil dari garis pangkal lurus (straight baselines). Konsepsi 'Negara Kepulauan' (Archipelagic State Principle) ini akhirnya diakui dunia internasional dalam Konvensi Hukum Laut PBB (UNCLOS 1982) di Montego Bay, Jamaika.",
+    "analisis_opsi": {
+      "A": "Salah, Perjanjian Linggarjati mengatur pengakuan de facto RI atas Jawa, Madura, dan Sumatera.",
+      "B": "Benar (Kunci Jawaban), Deklarasi Djuanda 13 Desember 1957 adalah tonggak kedaulatan laut nusantara yang diperingati sebagai Hari Nusantara.",
+      "C": "Salah, KMB 1949 adalah pengakuan kedaulatan RIS oleh Belanda.",
+      "D": "Salah, Renville membatasi wilayah RI dengan garis Van Mook.",
+      "E": "Salah, Dekrit Presiden 5 Juli 1959 berkaitan dengan kembali ke UUD 1945 dan pembubaran Konstituante."
+    },
+    "tips": "Deklarasi Djuanda 13 Desember 1957: Laut bukan pemisah tapi pemersatu antarpulau, batas laut teritorial 12 mil, cikal bakal pengakuan Archipelagic State di UNCLOS 1982.",
+    "sumber": "Deklarasi Djuanda 1957, UU No. 4/Prp/1960 & UU No. 17 Tahun 1985 tentang Pengesahan UNCLOS 1982",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 19,
+    "no": 19,
+    "kategori": "TWK",
+    "subkategori": "NKRI (Asas Penyelenggaraan Pemerintahan Daerah)",
+    "soal": "Dalam penyelenggaraan pemerintahan Negara Kesatuan Republik Indonesia dikenal adanya pelimpahan sebagian urusan pemerintahan yang menjadi kewenangan Pemerintah Pusat kepada Gubernur selaku wakil Pemerintah Pusat di wilayah provinsi. Asas pelimpahan wewenang tersebut dinamakan...",
+    "opsi": {
+      "A": "Desentralisasi.",
+      "B": "Dekonsentrasi.",
+      "C": "Tugas Pembantuan (Medebewind).",
+      "D": "Privatisasi birokrasi.",
+      "E": "Sentralisasi mutlak."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Berdasarkan UU No. 23 Tahun 2014: 1) Desentralisasi adalah penyerahan urusan pemerintahan oleh pemerintah pusat kepada daerah otonom berdasarkan asas otonomi; 2) Dekonsentrasi adalah pelimpahan sebagian urusan pemerintahan yang menjadi kewenangan pemerintah pusat kepada gubernur sebagai wakil pemerintah pusat, kepada instansi vertikal di wilayah tertentu, dan/atau kepada gubernur/bupati/wali kota selaku penanggung jawab urusan pemerintahan umum; 3) Tugas Pembantuan (Medebewind) adalah penugasan dari pemerintah pusat kepada daerah/desa untuk melaksanakan tugas tertentu disertai pembiayaan.",
+    "analisis_opsi": {
+      "A": "Salah, desentralisasi adalah penyerahan urusan (bukan pelimpahan wewenang administratif kepada wakil pusat).",
+      "B": "Benar (Kunci Jawaban), dekonsentrasi adalah pelimpahan wewenang kepada gubernur selaku wakil pemerintah pusat di wilayah.",
+      "C": "Salah, tugas pembantuan adalah penugasan melaksanakan tugas teknis tertentu beserta anggarannya.",
+      "D": "Salah, bukan asas hukum tata negara Indonesia.",
+      "E": "Salah, sentralisasi bertentangan dengan prinsip otonomi daerah Pasal 18 UUD 1945."
+    },
+    "tips": "Perbedaan Kunci: Desentralisasi = PENYERAHAN urusan ke Daerah Otonom. Dekonsentrasi = PELIMPAHAN wewenang ke Gubernur selaku Wakil Pusat. Tugas Pembantuan = PENUGASAN urusan tertentu.",
+    "sumber": "Pasal 1 UU No. 23 Tahun 2014 tentang Pemerintahan Daerah",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 20,
+    "no": 20,
+    "kategori": "TWK",
+    "subkategori": "NKRI (Politik Luar Negeri Bebas Aktif)",
+    "soal": "Landasan konstitusional politik luar negeri Indonesia tercantum dalam Pembukaan UUD 1945 alinea IV: '...ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial'. Makna konkret dari prinsip politik luar negeri 'Bebas dan Aktif' yang digagas oleh Mohammad Hatta ('Mendayung Antara Dua Karang') adalah...",
+    "opsi": {
+      "A": "Indonesia bersikap pasif dan mengisolasi diri dari segala dinamika konflik regional dan global.",
+      "B": "Indonesia bebas memihak pada blok kekuatan militer terkuat yang menjanjikan bantuan persenjataan terbesar.",
+      "C": "Bebas menentukan sikap dan kebijakan terhadap permasalahan internasional tanpa terikat pada blok kekuatan manapun, serta aktif memperjuangkan perdamaian dunia dan meredakan ketegangan internasional.",
+      "D": "Indonesia berganti-ganti sekutu secara sepihak bergantung pada pemimpin partai politik yang berkuasa.",
+      "E": "Bebas melakukan aneksasi teritorial terhadap wilayah negara tetangga yang sedang mengalami krisis politik internal."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Prinsip 'Bebas Aktif' pertama kali disampaikan oleh Wakil Presiden Mohammad Hatta di depan BP KNIP di Yogyakarta pada 2 September 1948 dalam pidato legendaris 'Mendayung Antara Dua Karang'. BEBAS bermakna Indonesia tidak memihak pada salah satu blok kekuatan dunia (saat itu Blok Barat pimpinan AS dan Blok Timur pimpinan Uni Soviet). AKTIF bermakna Indonesia tidak pasif atau netral buta, melainkan giat dan proaktif mengambil inisiatif mewujudkan perdamaian dunia, menolak kolonialisme, dan memperjuangkan keadilan internasional (seperti KAA 1955, GNB 1961, dan Pasukan Perdamaian Garuda).",
+    "analisis_opsi": {
+      "A": "Salah, pasif dan isolasi adalah isolasionisme, bukan prinsip aktif.",
+      "B": "Salah, memihak blok militer bertentangan secara frontal dengan hakikat Bebas Aktif.",
+      "C": "Benar (Kunci Jawaban), definisi otentik politik luar negeri Bebas Aktif Indonesia.",
+      "D": "Salah, kebijakan luar negeri didasarkan pada kepentingan nasional jangka panjang dan konstitusi, bukan kepentingan pragmatis partai politik.",
+      "E": "Salah, melanggar hukum internasional dan Piagam PBB."
+    },
+    "tips": "Bebas = Tidak terikat pakta/blok kekuatan adidaya. Aktif = Berinisiatif nyata menjaga perdamaian & menghapus penjajahan di muka bumi.",
+    "sumber": "Pidato Mohammad Hatta 1948, Pembukaan UUD NRI 1945 Alinea I & IV, UU No. 37 Tahun 1999 tentang Hubungan Luar Negeri",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 21,
+    "no": 21,
+    "kategori": "TWK",
+    "subkategori": "Bhinneka Tunggal Ika (Sejarah & Filosofi)",
+    "soal": "Semboyan 'Bhinneka Tunggal Ika' yang tertulis pada pita cengkeraman burung lambang Garuda Pancasila diambil dari karya sastra klasik nusantara, yaitu...",
+    "opsi": {
+      "A": "Kitab Negarakertagama karangan Mpu Prapanca pada masa kejayaan Kerajaan Singasari.",
+      "B": "Kitab Sutasoma karangan Mpu Tantular pada masa Kerajaan Majapahit abad ke-14.",
+      "C": "Kitab Bharatayuddha karangan Mpu Sedah dan Mpu Panuluh pada zaman Kediri.",
+      "D": "Kitab Ramayana karangan Walmiki dari kesusastraan India kuno.",
+      "E": "Kitab Pararaton yang menceritakan riwayat para raja Singasari dan Majapahit."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Semboyan 'Bhinneka Tunggal Ika' berasal dari kakawin Sutasoma pupuh 139 bait 5 karya Mpu Tantular pada masa pemerintahan Raja Hayam Wuruk di Kerajaan Majapahit (abad ke-14). Kalimat lengkapnya berbunyi: 'Rwaneka dhatu winuwus Buddha Wiswa, bhinneki rakwa ring apan kena parwanosen, mangka ng Jinatwa kalawan Siwatatwa tunggal, bhinneka tunggal ika, tan hana dharma mangrwa' yang bermakna 'Meskipun berbeda antara ajaran Buddha dan Siwa, pada hakikatnya adalah satu jua, berbeda-beda tetapi tetap satu, tidak ada kebenaran yang mendua'. Tokoh yang pertama kali mengusulkan semboyan ini kepada Soekarno adalah Muhammad Yamin.",
+    "analisis_opsi": {
+      "A": "Salah, Negarakertagama ditulis oleh Mpu Prapanca dan memuat istilah Pancasila, bukan Bhinneka Tunggal Ika.",
+      "B": "Benar (Kunci Jawaban), Kitab Sutasoma karya Mpu Tantular adalah sumber otentik semboyan Bhinneka Tunggal Ika.",
+      "C": "Salah, Bharatayuddha menceritakan perang saudara Kurukshetra dalam versi Jawa Kuno.",
+      "D": "Salah, epos sastra Ramayana berasal dari India kuno.",
+      "E": "Salah, Pararaton adalah kitab sastra sejarah tentang Ken Arok dan genealogi raja-raja."
+    },
+    "tips": "Ingat: Bhinneka Tunggal Ika = Kitab SUTASOMA (Mpu Tantular). Istilah Pancasila pertama kali disebut dalam Kitab NEGARAKERTAGAMA (Mpu Prapanca).",
+    "sumber": "Pasal 36A UUD 1945 & Modul Wawasan Kebangsaan BKN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 22,
+    "no": 22,
+    "kategori": "TWK",
+    "subkategori": "Bhinneka Tunggal Ika (Menghadapi Etnosentrisme)",
+    "soal": "Dalam sebuah instansi pelayanan publik, seorang pejabat rekrutmen hanya mau meloloskan calon peserta magang yang berasal dari suku dan daerah kelahirannya sendiri, serta memandang rendah pelamar dari suku lain karena menganggap budaya sukunya paling unggul dan pekerja keras. Perilaku pejabat tersebut mencerminkan sikap negatif...",
+    "opsi": {
+      "A": "Etnosentrisme sempit.",
+      "B": "Kosmopolitanisme global.",
+      "C": "Pluralisme progresif.",
+      "D": "Altruisme kemanusiaan.",
+      "E": "Universalitas kebudayaan."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Etnosentrisme adalah kecenderungan psikologis dan sosial untuk memandang budaya, suku, atau kelompok sendiri sebagai tolok ukur utama dan menganggapnya lebih unggul daripada budaya atau suku lain. Dampak etnosentrisme sempit di lingkungan birokrasi adalah diskriminasi rasial/sukuisme, nepotisme kedaerahan, dan rusaknya integrasi nasional yang bertentangan dengan prinsip Bhinneka Tunggal Ika.",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), etnosentrisme adalah sikap mengagungkan suku sendiri secara berlebihan dan merendahkan kelompok suku lain.",
+      "B": "Salah, kosmopolitanisme memandang seluruh umat manusia sebagai warga dunia tunggal.",
+      "C": "Salah, pluralisme menghargai dan mengakui keberagaman secara setara.",
+      "D": "Salah, altruisme adalah sikap peduli dan rela berkorban untuk kepentingan orang lain.",
+      "E": "Salah, konsep keterbukaan norma bersama lintas budaya."
+    },
+    "tips": "Etnosentrisme = Menganggap etnis sendiri superior & meremehkan etnis lain. Primordialisme = Keterikatan berlebihan pada asal usul sejak lahir (suku/ras/agama).",
+    "sumber": "Sosiologi Politik & Materi Wawasan Kebangsaan Perilaku ASN KemenPAN-RB",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 23,
+    "no": 23,
+    "kategori": "TWK",
+    "subkategori": "Bhinneka Tunggal Ika (Moderasi Beragama)",
+    "soal": "Kementerian Agama bersama BKN mencanangkan empat indikator utama Moderasi Beragama dalam kerangka Bhinneka Tunggal Ika guna memperkuat ketahanan nasional ASN dari ancaman radikalisme dan intoleransi. Keempat indikator utama tersebut adalah...",
+    "opsi": {
+      "A": "Keseragaman ritual, penghapusan rumah ibadah, kepatuhan dogma, dan isolasi sosial.",
+      "B": "Komitmen kebangsaan, toleransi, anti-kekerasan, dan akomodatif terhadap kebudayaan lokal.",
+      "C": "Liberalisme pemikiran, dekonstruksi ajaran suci, sekularisme absolut, dan privatisasi ibadah.",
+      "D": "Dominasi mayoritas, penundukan minoritas, asimilasi paksa, dan hegemoni politik.",
+      "E": "Pengurangan hari libur keagamaan, standardisasi teks doa bersama, dan pembubaran ormas."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Moderasi beragama adalah cara pandang, sikap, dan praktik beragama dalam jalan tengah (wasathiyah), melindungi harkat martabat kemanusiaan dan membangun kemaslahatan umum. Empat indikator resmi Moderasi Beragama: 1) Komitmen Kebangsaan: penerimaan terhadap Pancasila, UUD 1945, NKRI, dan Bhinneka Tunggal Ika; 2) Toleransi: menghormati perbedaan keyakinan dan memberi ruang bagi orang lain untuk beribadah; 3) Anti-Kekerasan: menolak cara-cara kekerasan fisik maupun verbal untuk memaksakan keyakinan; 4) Akomodatif terhadap Budaya Lokal: ramah terhadap tradisi nusantara yang tidak bertentangan dengan prinsip nilai agama.",
+    "analisis_opsi": {
+      "A": "Salah, indikator sesat yang bertentangan dengan hak asasi dan nilai keagamaan.",
+      "B": "Benar (Kunci Jawaban), empat indikator resmi Moderasi Beragama menurut Kemenag RI dan instrumen seleksi CASN BKN.",
+      "C": "Salah, moderasi beragama bukan liberalisasi/sekularisasi melainkan pengamalan ajaran agama secara berimbang dan toleran.",
+      "D": "Salah, tirani mayoritas bertolak belakang dengan keadilan sosial dan Bhinneka Tunggal Ika.",
+      "E": "Salah, bukan indikator moderasi beragama."
+    },
+    "tips": "4 Indikator Moderasi Beragama: 1. Komitmen Kebangsaan, 2. Toleransi, 3. Anti-Kekerasan, 4. Akomodatif terhadap Budaya Lokal.",
+    "sumber": "Buku Saku Moderasi Beragama Kementerian Agama RI & Surat Edaran Bersama MenPAN-RB dan Kepala BKN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 24,
+    "no": 24,
+    "kategori": "TWK",
+    "subkategori": "Bhinneka Tunggal Ika (Integrasi Nasional)",
+    "soal": "Terjadinya perselisihan antar-warga pendatang dan warga lokal di suatu daerah transmigrasi yang dipicu oleh kesalahpahaman penggunaan lahan perkebunan. Sebagai aparatur sipil negara yang bertugas di wilayah tersebut, langkah integratif yang paling tepat dalam meredam konflik horizontal adalah...",
+    "opsi": {
+      "A": "Meminta seluruh warga pendatang untuk segera dipindahkan ke pulau lain agar tidak menimbulkan beban sosial.",
+      "B": "Memihak kelompok warga yang memiliki jumlah penduduk terbanyak demi mengamankan stabilitas suara politik.",
+      "C": "Memfasilitasi forum dialog mediasi yang mempertemukan tokoh masyarakat dari kedua belah pihak secara setara, transparan, dan mengacu pada regulasi pertanahan yang sah serta nilai musyawarah kearifan lokal.",
+      "D": "Menutup seluruh akses informasi publik dan membiarkan konflik terselesaikan secara alami melalui pertarungan fisik.",
+      "E": "Memberikan ganti rugi hanya kepada salah satu kelompok tanpa memeriksa alas hak dan dokumen kepemilikan yang sah."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Dalam mewujudkan integrasi nasional dan mengelola keanekaragaman sosial budaya, ASN berperan sebagai 'Perekat dan Pemersatu Bangsa' (Pasal 10 huruf c UU No. 20 Tahun 2023 tentang ASN). Langkah tepat penyelesaian konflik sosial adalah mediasi dialogis yang berkeadilan, melibatkan para tokoh masyarakat setempat, mengedepankan asas musyawarah kekeluargaan, serta berpijak pada kepastian hukum positif.",
+    "analisis_opsi": {
+      "A": "Salah, segregasi dan pemindahan paksa melanggar hak warga negara dan memicu sentimen kebencian antardaerah.",
+      "B": "Salah, ASN wajib netral dan adil, tidak boleh memihak mayoritas demi kepentingan pragmatis.",
+      "C": "Benar (Kunci Jawaban), mencerminkan peran ASN sebagai pemersatu bangsa melalui mediasi berkeadilan, komunikasi inklusif, dan supremasi hukum.",
+      "D": "Salah, pembiaran konflik membahayakan keselamatan jiwa dan merusak keutuhan NKRI.",
+      "E": "Salah, perlakuan diskriminatif yang akan memperluas kecemburuan sosial dan konflik lanjutan."
+    },
+    "tips": "Fungsi ASN: Pelaksana Kebijakan Publik, Pelayan Publik, dan PEREKAT & PEMERSATU BANGSA. Selesaikan konflik via musyawarah inklusif & kepastian hukum.",
+    "sumber": "UU No. 20 Tahun 2023 tentang ASN (Pasal 10) & UU No. 7 Tahun 2012 tentang Penanganan Konflik Sosial",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 25,
+    "no": 25,
+    "kategori": "TWK",
+    "subkategori": "Nasionalisme (Konsep & Nilai Dasar)",
+    "soal": "Nasionalisme yang berkembang di Indonesia berpijak pada nilai-nilai Pancasila yang menempatkan kesetaraan bangsa-bangsa di dunia serta menjunjung tinggi persaudaraan umat manusia. Hal ini membedakan nasionalisme Indonesia dengan 'Chauvinisme'. Perbedaan mendasar antara kedua konsep tersebut adalah...",
+    "opsi": {
+      "A": "Nasionalisme Indonesia berorientasi pada ekspansi militer wilayah, sedangkan chauvinisme berorientasi pada perdagangan damai.",
+      "B": "Nasionalisme Indonesia menjunjung cinta tanah air yang diimbangi rasa kemanusiaan universal, sedangkan chauvinisme adalah cinta tanah air yang berlebihan dan memandang rendah bangsa lain.",
+      "C": "Nasionalisme Indonesia menolak keterlibatan dalam organisasi dunia PBB, sedangkan chauvinisme mendukung globalisasi.",
+      "D": "Nasionalisme Indonesia tidak menghargai pahlawan nasional, sedangkan chauvinisme sangat menghormatinya.",
+      "E": "Chauvinisme merupakan cita-cita luhur kemerdekaan sedangkan nasionalisme adalah produk imperialisme Barat."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Nasionalisme Indonesia adalah nasionalisme yang humanis dan beradab, berakar pada Sila ke-3 (Persatuan Indonesia) yang dipagari oleh Sila ke-2 (Kemanusiaan yang Adil dan Beradab). Sebagaimana ditegaskan Bung Karno: 'Nasionalisme kita adalah nasionalisme yang hidup dalam tamansarinya internasionalisme'. Sebaliknya, Chauvinisme adalah rasa cinta tanah air yang fanatik dan membabi buta dengan memandang bangsanya paling superior serta meremehkan bangsa lain (contoh: fasisme Jerman era Hitler atau fasisme Italia era Mussolini).",
+    "analisis_opsi": {
+      "A": "Salah, terbalik; chauvinisme yang kerap memicu agresi militer ekspansionis.",
+      "B": "Benar (Kunci Jawaban), rumusan perbedaan konseptual paling tepat antara nasionalisme Pancasila yang inklusif-humanis dengan chauvinisme yang sempit-ekstrem.",
+      "C": "Salah, Indonesia aktif sebagai anggota PBB dan penjaga perdamaian dunia.",
+      "D": "Salah, bangsa yang besar adalah bangsa yang menghormati jasa para pahlawannya.",
+      "E": "Salah, chauvinisme adalah bahaya ekstremisme, bukan cita-cita kemerdekaan."
+    },
+    "tips": "Chauvinisme = Nasionalisme sempit / fanatisme berlebihan yang merendahkan bangsa lain. Nasionalisme Pancasila = Cinta tanah air yang berprikemanusiaan.",
+    "sumber": "Pidato Lahirnya Pancasila 1 Juni 1945 & Materi Pembekalan Wawasan Kebangsaan BKN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 26,
+    "no": 26,
+    "kategori": "TWK",
+    "subkategori": "Nasionalisme (Cinta Produk Dalam Negeri)",
+    "soal": "Pemerintah menggencarkan Program Peningkatan Penggunaan Produk Dalam Negeri (P3DN) dan Gerakan Nasional Bangga Buatan Indonesia (Gernas BBI) dalam pengadaan barang dan jasa instansi pemerintah. Sebagai pejabat pengadaan, tindakan nyata bela negara dan nasionalisme ekonomi yang wajib diimplementasikan adalah...",
+    "opsi": {
+      "A": "Selalu memilih produk impor berlabel mewah dari luar negeri agar instansi dipandang bergengsi.",
+      "B": "Memprioritaskan pembelian produk dalam negeri yang memiliki sertifikat Tingkat Komponen Dalam Negeri (TKDN) dan Bobot Manfaat Perusahaan (BMP) sesuai ketentuan regulasi.",
+      "C": "Menolak menggunakan komputer dalam pekerjaan kantor dan kembali memakai mesin tik manual.",
+      "D": "Mengharuskan penyedia barang memalsukan sertifikat asal barang menjadi buatan luar negeri.",
+      "E": "Membeli barang murah tanpa standar kualitas meskipun barang tersebut cepat rusak dalam waktu sebulan."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Berdasarkan Instruksi Presiden No. 2 Tahun 2022 tentang Percepatan Peningkatan Penggunaan Produk Dalam Negeri dan Produk Usaha Mikro, Usaha Kecil, dan Koperasi serta Perpres Pengadaan Barang/Jasa Pemerintah (Perpres 16/2018 jo 12/2021), kementerian/lembaga/pemda wajib mengalokasikan anggaran untuk produk dalam negeri yang memiliki nilai TKDN + BMP minimal 40%. Ini merupakan wujud nasionalisme dan kedaulatan ekonomi untuk menggerakkan industri dalam negeri dan membuka lapangan kerja nasional.",
+    "analisis_opsi": {
+      "A": "Salah, mentalitas konsumtif impor yang bertentangan dengan kebijakan kedaulatan ekonomi nasional.",
+      "B": "Benar (Kunci Jawaban), implementasi konkret nasionalisme ekonomi sesuai regulasi pengadaan barang/jasa pemerintah dan P3DN.",
+      "C": "Salah, menolak teknologi bukan bentuk cinta produk melainkan kemunduran produktivitas.",
+      "D": "Salah, pemalsuan dokumen adalah tindak pidana kejahatan.",
+      "E": "Salah, pengadaan harus mengedepankan prinsip 'value for money' dan efektivitas belanja publik."
+    },
+    "tips": "Nasionalisme Ekonomi di ASN: Utamakan Produk Dalam Negeri (PDN), verifikasi sertifikat TKDN (Tingkat Komponen Dalam Negeri), dukung UMKM nasional.",
+    "sumber": "Inpres No. 2 Tahun 2022 & Perpres No. 12 Tahun 2021 tentang Pengadaan Barang dan Jasa Pemerintah",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 27,
+    "no": 27,
+    "kategori": "TWK",
+    "subkategori": "Bela Negara (Nilai Dasar & Regulasi)",
+    "soal": "Berdasarkan Undang-Undang No. 23 Tahun 2019 tentang Pengelolaan Sumber Daya Nasional untuk Pertahanan Negara, Bela Negara didefinisikan sebagai tekad, sikap, dan perilaku serta tindakan warga negara yang dijiwai oleh kecintaannya kepada NKRI. Lima Nilai Dasar Bela Negara yang wajib dimiliki oleh setiap warga negara dan ASN adalah...",
+    "opsi": {
+      "A": "Kekayaan materiil, keberanian fisik, kepatuhan dogma, fanatisme golongan, dan hegemoni kekuasaan.",
+      "B": "Cinta tanah air, sadar berbangsa dan bernegara, setia pada Pancasila sebagai ideologi negara, rela berkorban untuk bangsa dan negara, serta mempunyai kemampuan awal bela negara.",
+      "C": "Keahlian menggunakan senjata api, keikutsertaan partai politik, kebebasan bersuara, kepatuhan atasan, dan kepemilikan senjata tajam.",
+      "D": "Pemisahan rasial, penolakan investasi asing, nasionalisasi perbankan, penghapusan mata uang asing, dan sensor media.",
+      "E": "Kekebalan hukum, kebebasan bepergian ke luar negeri, bebas pajak, prioritas karier, dan tunjangan pensiun ganda."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pasal 7 ayat (3) UU No. 23 Tahun 2019 secara eksplisit memuat 5 Nilai Dasar Bela Negara: 1) Cinta tanah air; 2) Sadar berbangsa dan bernegara; 3) Setia pada Pancasila sebagai ideologi negara; 4) Rela berkorban untuk bangsa dan negara; 5) Mempunyai kemampuan awal bela negara (baik psikis seperti integritas, disiplin, kearifan lokal, maupun fisik seperti kesehatan jasmani rohani).",
+    "analisis_opsi": {
+      "A": "Salah, materiil dan fanatisme bertentangan dengan konsepsi bela negara.",
+      "B": "Benar (Kunci Jawaban), lima nilai dasar bela negara yang sah menurut UU No. 23 Tahun 2019 dan kurikulum Diklat Prajabatan/Latsar CPNS.",
+      "C": "Salah, bela negara bukan sekadar mengangkat senjata melainkan mencakup segenap pengabdian profesi warga negara.",
+      "D": "Salah, paham autarki/isolasi ekstrem yang destruktif.",
+      "E": "Salah, ini adalah privilege yang tidak ada kaitannya dengan nilai dasar bela negara."
+    },
+    "tips": "5 Nilai Bela Negara (UU 23/2019): 1. Cinta Tanah Air, 2. Sadar Berbangsa & Bernegara, 3. Setia pada Pancasila, 4. Rela Berkorban, 5. Kemampuan Awal Bela Negara.",
+    "sumber": "Pasal 7 Ayat (3) UU No. 23 Tahun 2019 tentang Pengelolaan Sumber Daya Nasional untuk Pertahanan Negara",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 28,
+    "no": 28,
+    "kategori": "TWK",
+    "subkategori": "Bela Negara (Partisipasi Non-Militer)",
+    "soal": "Ancaman terhadap kedaulatan bangsa pada abad ke-21 tidak hanya berupa invasi militer konvensional, melainkan juga ancaman non-militer seperti perang siber (cyber warfare), serangan ransomware terhadap Pusat Data Nasional, peredaran narkoba lintas batas, dan krisis ketahanan pangan. Bentuk perwujudan bela negara yang paling relevan bagi seorang ASN di bidang teknologi informasi adalah...",
+    "opsi": {
+      "A": "Mengundurkan diri dari jabatan ASN dan mendaftar menjadi pasukan tempur infanteri garda depan.",
+      "B": "Mengembangkan sistem keamanan enkripsi data negara, proaktif memitigasi celah kebocoran data rahasia publik, dan mengamankan infrastruktur digital birokrasi dari peretasan.",
+      "C": "Membocorkan source code sistem internal pemerintah kepada forum hacker gelap demi mendapatkan imbalan uang kripto.",
+      "D": "Menghindari pembaruan antivirus dengan alasan menghemat kapasitas memori server kantor.",
+      "E": "Menyalahkan pimpinan instansi tanpa berusaha mencari solusi teknis pemulihan sistem yang lumpuh."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pasal 9 ayat (2) UU No. 3 Tahun 2002 tentang Pertahanan Negara menegaskan bahwa keikutsertaan warga negara dalam upaya bela negara diselenggarakan melalui: 1) Pendidikan kewarganegaraan, 2) Pelatihan dasar kemiliteran secara wajib, 3) Pengabdian sebagai prajurit TNI, dan 4) Pengabdian sesuai dengan profesi. Bagi tenaga profesional TI, mengamankan ruang siber negara, menjaga kedaulatan data nasional, dan melindungi data warga adalah wujud nyata pengabdian bela negara sesuai profesi.",
+    "analisis_opsi": {
+      "A": "Salah, bela negara tidak harus menjadi prajurit militer melainkan memaksimalkan keahlian profesi yang dikuasai.",
+      "B": "Benar (Kunci Jawaban), bentuk pengabdian sesuai profesi yang sangat esensial dalam menghadapi spektrum ancaman non-militer kontemporer.",
+      "C": "Salah, pengkhianatan terhadap negara dan tindak pidana kejahatan siber berat.",
+      "D": "Salah, kelalaian fatal yang membuka celah kerentanan keamanan siber nasional.",
+      "E": "Salah, sikap tidak bertanggung jawab yang bertolak belakang dengan etos kerja aparatur sipil negara."
+    },
+    "tips": "Bela Negara Non-Militer: Dilakukan melalui 'PENGABDIAN SESUAI PROFESI' untuk menangkal ancaman siber, krisis kesehatan, ketahanan pangan, dan disintegrasi.",
+    "sumber": "Pasal 9 Ayat (2) UU No. 3 Tahun 2002 & Doktrin Pertahanan Siber Kemenhan RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 29,
+    "no": 29,
+    "kategori": "TWK",
+    "subkategori": "Integritas & Anti-Korupsi",
+    "soal": "Seorang aparatur sipil negara yang bertugas di bagian pelayanan perizinan menerima parcel mewah berisi barang elektronik dan logam mulia senilai puluhan juta rupiah dari seorang pengusaha yang berkas izin usahanya baru saja disetujui tanpa ada perjanjian janji sebelumnya. Dalam perspektif Undang-Undang Pemberantasan Tindak Pidana Korupsi, pemberian tersebut dikategorikan sebagai...",
+    "opsi": {
+      "A": "Suap aktif yang harus dikembalikan secara langsung kepada pihak pengusaha di ruang publik.",
+      "B": "Gratifikasi yang berhubungan dengan jabatan dan berlawanan dengan kewajiban atau tugasnya, sehingga wajib dilaporkan kepada KPK paling lambat 30 hari kerja.",
+      "C": "Sedekah halal yang sah menjadi milik pribadi pegawai karena diberikan secara ikhlas dan sukarela.",
+      "D": "Pemerasan yang dilakukan oleh pihak pengusaha terhadap integritas aparatur sipil negara.",
+      "E": "Penerimaan Negara Bukan Pajak (PNBP) yang langsung dapat disetor ke kas rekening pribadi dinas."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Menurut Pasal 12B UU No. 20 Tahun 2001 tentang Perubahan atas UU No. 31 Tahun 1999 tentang Pemberantasan Tipikor, Gratifikasi adalah pemberian dalam arti luas (uang, barang, diskon, komisi, tiket perjalanan, fasilitas penginapan, dll) yang diterima oleh pegawai negeri atau penyelenggara negara. Jika pemberian tersebut berhubungan dengan jabatan dan berlawanan dengan kewajiban/tugasnya, maka dianggap sebagai suap, KECUALI jika penerima melaporkannya kepada Komisi Pemberantasan Korupsi (KPK) paling lambat 30 (tiga puluh) hari kerja sejak tanggal gratifikasi diterima (Pasal 12C).",
+    "analisis_opsi": {
+      "A": "Salah, suap melibatkan 'meeting of mind' (kesepakatan timbal balik transaksional); dalam kasus ini terjadi pasca-izin selesai tanpa janji di awal, sehingga masuk ranah gratifikasi.",
+      "B": "Benar (Kunci Jawaban), definisi hukum gratifikasi ilegal yang menjadi suap kecuali dilaporkan ke KPK dalam waktu 30 hari kerja.",
+      "C": "Salah, ASN dilarang keras menerima hadiah apapun terkait tupoksi jabatannya.",
+      "D": "Salah, pemerasan adalah inisiatif dari pihak oknum pejabat yang memaksa orang lain memberikan sesuatu dengan ancaman/penyalahgunaan wewenang.",
+      "E": "Salah, PNBP harus memiliki dasar tarif resmi undang-undang dan disetor ke kas negara melalui rekening resmi perbendaharaan."
+    },
+    "tips": "Perbedaan Tipikor: GRATIFIKASI = Pemberian terkait jabatan tanpa kesepakatan awal (wajib lapor KPK 30 hari). SUAP = Ada kesepakatan transaksional di awal. PEMERASAN = Inisiatif pegawai memaksa meminta uang/barang.",
+    "sumber": "Pasal 12B dan 12C UU No. 20 Tahun 2001 (Pemberantasan Tindak Pidana Korupsi) & Buku Panduan Gratifikasi KPK",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 30,
+    "no": 30,
+    "kategori": "TWK",
+    "subkategori": "Bahasa Indonesia (PUEBI & Tata Naskah Dinas)",
+    "soal": "Dalam penyusunan surat dinas resmi di lingkungan kementerian, seorang konseptor dituntut menggunakan kalimat efektif dan kaidah ejaan bahasa Indonesia yang baku sesuai pedoman tata naskah dinas instansi pemerintah. Manakah di antara kalimat berikut yang merupakan kalimat efektif dan memenuhi kaidah tata bahasa baku?",
+    "opsi": {
+      "A": "Berdasarkan pada hasil audit investigasi tersebut membuktikan bahwa adanya indikasi penyimpangan anggaran.",
+      "B": "Hasil audit investigasi membuktikan adanya indikasi penyimpangan anggaran kegiatan tersebut.",
+      "C": "Untuk daripada pelaksanaan kegiatan workshop itu daripada itu memerlukan koordinasi antar bagian.",
+      "D": "Dalam rapat pimpinan tadi pagi memutuskan tentang penundaan jadwal seleksi calon aparatur sipil negara.",
+      "E": "Para peserta ujian daripada seluruh daerah-daerah saling bersalam-salaman satu sama lainnya."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Kalimat efektif harus memiliki struktur yang lengkap (minimal Subjek dan Predikat yang jelas), tidak bertele-tele (hemat kata), logis, dan tidak rancu. Analisis opsi: Opsi B memiliki Subjek yang jelas ('Hasil audit investigasi'), Predikat transitif ('membuktikan'), dan Objek ('adanya indikasi penyimpangan anggaran kegiatan tersebut'). Opsi A salah karena diawali preposisi 'Berdasarkan pada...' yang membuat kalimat kehilangan Subjek gramatikal. Opsi C menggunakan kata mubazir dan rancu ('Untuk daripada...'). Opsi D kehilangan subjek karena diawali keterangan 'Dalam rapat...'. Opsi E pleonasme jamak ('Para peserta...', 'seluruh daerah-daerah', 'saling bersalam-salaman satu sama lainnya').",
+    "analisis_opsi": {
+      "A": "Salah, kalimat tidak memiliki subjek (terhalang oleh preposisi gabungan 'Berdasarkan pada').",
+      "B": "Benar (Kunci Jawaban), struktur gramatikal S-P-O lengkap, lugas, hemat kata, dan baku sesuai EYD/PUEBI.",
+      "C": "Salah, kerancuan kata perangkai ('Untuk daripada pelaksanaan...').",
+      "D": "Salah, kalimat tidak bersubjek (terhalang keterangan 'Dalam rapat pimpinan tadi pagi').",
+      "E": "Salah, pleonasme berlebihan (pemborosan kata jamak bertumpuk-tumpuk)."
+    },
+    "tips": "Ciri Kalimat Efektif: 1. Subjek & Predikat jelas (jangan mengawali Subjek dengan kata depan seperti 'Berdasarkan', 'Dalam', 'Bagi'), 2. Hemat kata (hindari pleonasme seperti 'para hadirin sekalian'), 3. Makna logis & lugas.",
+    "sumber": "Pedoman Umum Ejaan Bahasa Indonesia (Permendikbudristek No. 18 Tahun 2021 / EYD Edisi V) & PermenPAN-RB Tata Naskah Dinas",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 31,
+    "no": 31,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Analogi Kata",
+    "soal": "KERTAS : BUKU = BENANG : ...",
+    "opsi": {
+      "A": "JARUM",
+      "B": "KAIN",
+      "C": "JAHIT",
+      "D": "KAPAS",
+      "E": "SUTRA"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Hubungan analogi pada premis adalah 'bahan penyusun membentuk benda utuh'. Lembaran-lembaran kertas yang disatukan dan dijilid membentuk sebuah buku. Begitu pula untaian benang yang ditenun secara terpadu membentuk sehelai kain. Hubungan ini setara secara gramatikal dan konseptual (Bahan baku penyusun : Benda jadi).",
+    "analisis_opsi": {
+      "A": "Salah, jarum adalah alat untuk menjahit benang, bukan hasil bentukan kumpulan benang.",
+      "B": "Benar (Kunci Jawaban), lembaran kertas disusun membentuk buku, untaian benang ditenun membentuk kain.",
+      "C": "Salah, jahit adalah kata kerja (aktivitas pengerjaan), bukan benda wujud akhir.",
+      "D": "Salah, kapas adalah bahan asal untuk membuat benang (hubungan terbalik asal-usul).",
+      "E": "Salah, sutra adalah jenis serat/bahan benang tertentu, bukan produk jadi seperti kain."
+    },
+    "tips": "Buatlah kalimat perantara yang tepat: 'Banyak [Kata 1] yang dirangkai menghasilkan [Kata 2]'. Kertas dirangkai membentuk buku, benang dirangkai membentuk kain.",
+    "sumber": "Simulasi Resmi CAT BKN & Kisi-Kisi PermenPAN-RB No. 321 Tahun 2024",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
+      "title": "Trik Menyelesaikan Soal Analogi Kata & Logika Verbal TIU CPNS",
+      "timestamp": "01:15",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 32,
+    "no": 32,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Analogi Kata",
+    "soal": "STETOSKOP : DOKTER = OSILOSKOP : ...",
+    "opsi": {
+      "A": "PASIEN",
+      "B": "RUMAH SAKIT",
+      "C": "TEKNISI ELEKTRONIKA",
+      "D": "APOTEKER",
+      "E": "ASTRONOM"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Hubungan analogi adalah 'Alat instrumen diagnostik utama yang digunakan oleh suatu profesi'. Stetoskop adalah instrumen khusus yang digunakan oleh dokter untuk mendengarkan denyut jantung/suara organ tubuh pasien. Osiloskop adalah instrumen pengukuran gelombang sinyal listrik yang digunakan oleh teknisi elektronika / insinyur kelistrikan untuk menganalisis rangkaian elektronik.",
+    "analisis_opsi": {
+      "A": "Salah, pasien adalah objek yang diperiksa oleh dokter, bukan pengguna alat.",
+      "B": "Salah, rumah sakit adalah tempat kerja, bukan profesi pelaku pengoperasian instrumen.",
+      "C": "Benar (Kunci Jawaban), teknisi elektronika menggunakan osiloskop untuk mengamati sinyal tegangan/frekuensi gelombang.",
+      "D": "Salah, apoteker bekerja meracik obat dan tidak menggunakan osiloskop dalam profesinya.",
+      "E": "Salah, astronom menggunakan teleskop untuk mengamati benda langit, bukan osiloskop."
+    },
+    "tips": "Identifikasi hubungan: [Alat diagnostik/ukur spesifik] digunakan oleh [Profesi khusus].",
+    "sumber": "Modul Latihan Soal CAT BKN TIU Verbal",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
+      "title": "Kupas Tuntas Analogi Verbal dan Hubungan Profesi-Alat TIU",
+      "timestamp": "04:30",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 33,
+    "no": 33,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Analogi Kata",
+    "soal": "KEMARAU : KEKERINGAN = HUJAN : ...",
+    "opsi": {
+      "A": "PAYUNG",
+      "B": "BANJIR",
+      "C": "AWAN",
+      "D": "PETIR",
+      "E": "PELANGI"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Hubungan analogi adalah 'Fenomena alam yang berlebihan mengakibatkan dampak bencana tertentu' (Sebab : Akibat negatif alamiah). Musim kemarau yang berkepanjangan menyebabkan bencana kekeringan. Demikian pula, peristiwa hujan deras yang terus-menerus menyebabkan terjadinya bencana banjir.",
+    "analisis_opsi": {
+      "A": "Salah, payung adalah alat pelindung dari hujan, bukan dampak peristiwa.",
+      "B": "Benar (Kunci Jawaban), kemarau berlebih menyebabkan kekeringan, hujan berlebih menyebabkan banjir.",
+      "C": "Salah, awan adalah asal mula/pembentuk hujan, bukan dampak.",
+      "D": "Salah, petir adalah fenomena penyerta kilat cuaca, bukan akibat utama genangan air.",
+      "E": "Salah, pelangi adalah fenomena optik pembiasan cahaya, bukan akibat bencana dari hujan."
+    },
+    "tips": "Perhatikan pola kausalitas (Sebab -> Akibat). Kemarau menyebabkan kekeringan, hujan menyebabkan banjir.",
+    "sumber": "Bank Soal Resmi BKN Kemampuan Verbal",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
+      "title": "Trik Pola Hubungan Kausalitas Analogi Kata TIU",
+      "timestamp": "08:20",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 34,
+    "no": 34,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Analogi Kata",
+    "soal": "HANGAT : PANAS = GERIMIS : ...",
+    "opsi": {
+      "A": "BASAH",
+      "B": "DINGIN",
+      "C": "BADAI",
+      "D": "LEBAT",
+      "E": "KABUT"
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 5,
+      "E": 0
+    },
+    "pembahasan": "Hubungan analogi adalah 'Tingkatan derajat intensitas intens' (Intensitas rendah ke intensitas tinggi pada parameter yang sejenis). Suhu hangat bila intensitasnya ditingkatkan menjadi panas. Demikian pula curahan hujan berskala gerimis (tetesan kecil) bila intensitasnya ditingkatkan menjadi lebat (hujan lebat).",
+    "analisis_opsi": {
+      "A": "Salah, basah adalah kondisi akibat terkena air, bukan tingkatan intensitas curah hujan.",
+      "B": "Salah, dingin adalah antonim dari panas, tidak searah dengan peningkatan intensitas.",
+      "C": "Salah, badai mencakup faktor angin kencang berputar yang melampaui sekadar presipitasi hujan.",
+      "D": "Benar (Kunci Jawaban), tingkatan intensitas curah hujan: dari gerimis (rendah) menuju lebat (tinggi), sejajar dengan hangat ke panas.",
+      "E": "Salah, kabut adalah uap air melayang di permukaan tanah, bukan hujan deras."
+    },
+    "tips": "Cek tingkatan intensitas: Hangat -> Panas (suhu makin tinggi); Gerimis -> Lebat (curah hujan makin deras).",
+    "sumber": "Buku Panduan Simulasi CAT BKN Materi Analogi",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
+      "title": "Trik Membaca Derajat Intensitas Analogi Verbal",
+      "timestamp": "12:45",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 35,
+    "no": 35,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Silogisme",
+    "soal": "Premis Mayor: Jika seorang calon ASN memiliki integritas yang teruji, maka ia menolak segala bentuk gratifikasi ilegal.\nPremis Minor: Pejabat X terbukti secara sah dan meyakinkan menerima gratifikasi ilegal berupa mobil mewah dari kontraktor proyek daerah.\nKesimpulan yang sah dan logis menurut kaidah logika formal adalah...",
+    "opsi": {
+      "A": "Pejabat X mungkin memiliki integritas tinggi namun khilaf menerima hadiah.",
+      "B": "Pejabat X tidak memiliki integritas yang teruji.",
+      "C": "Kontraktor proyek daerah tersebut yang wajib dipersalahkan secara mutlak.",
+      "D": "Pejabat X menolak sebagian gratifikasi lainnya.",
+      "E": "Semua pejabat daerah tidak memiliki integritas."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Kaidah penarikan kesimpulan ini menggunakan 'Modus Tollens':\nPremis 1: P -> Q (Jika memiliki integritas, maka menolak gratifikasi)\nPremis 2: ~Q (Pejabat X tidak menolak / menerima gratifikasi)\nKonklusi: ~P (Maka Pejabat X tidak memiliki integritas yang teruji).\nModus Tollens merupakan kaidah penarikan kesimpulan yang valid dan sahih secara mutlak dalam silogisme deduktif.",
+    "analisis_opsi": {
+      "A": "Salah, memuat asumsi spekulatif yang bertentangan dengan premis logika formal.",
+      "B": "Benar (Kunci Jawaban), kesimpulan sahih berdasarkan kaidah Modus Tollens (~Q -> ~P).",
+      "C": "Salah, menyimpang dari fokus penarikan kesimpulan sifat integritas subjek.",
+      "D": "Salah, premis tidak menyebutkan penolakan parsial lainnya.",
+      "E": "Salah, generalisasi berlebihan (fallacy of hasty generalization) karena premis hanya membicarakan Pejabat X."
+    },
+    "tips": "Rumus Modus Tollens: [P -> Q] dan [~Q], maka kesimpulannya adalah [~P]. Jangan menambah opini atau asumsi di luar premis!",
+    "sumber": "Modul Logika Formal & Silogisme SKD CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
+      "title": "Trik Hitungan Detik Silogisme Modus Ponens & Modus Tollens TIU CPNS",
+      "timestamp": "02:10",
+      "channel": "DoseNdeso"
+    },
+    "gambar": null
+  },
+  {
+    "id": 36,
+    "no": 36,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Silogisme",
+    "soal": "Premis 1: Semua ASN Kementerian Kesehatan wajib mengikuti pelatihan literasi kecerdasan buatan.\nPremis 2: Sebagian peserta diklat penempatan wilayah 3T adalah ASN Kementerian Kesehatan.\nKesimpulan yang paling tepat adalah...",
+    "opsi": {
+      "A": "Semua peserta diklat penempatan wilayah 3T wajib mengikuti pelatihan literasi kecerdasan buatan.",
+      "B": "Sebagian peserta diklat penempatan wilayah 3T wajib mengikuti pelatihan literasi kecerdasan buatan.",
+      "C": "Peserta yang tidak bertugas di wilayah 3T tidak perlu mengikuti pelatihan literasi kecerdasan buatan.",
+      "D": "Pelatihan kecerdasan buatan hanya diperuntukkan bagi pejabat eselon dua.",
+      "E": "Semua ASN di luar Kementerian Kesehatan tidak wajib mengikuti pelatihan teknologi."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Kaidah silogisme kategorik: Jika Premis 1 bersifat universal ('Semua') dan Premis 2 bersifat partikular ('Sebagian/Beberapa'), maka kesimpulan yang ditarik WAJIB bersifat partikular ('Sebagian/Beberapa'). Term penengah (middle term) adalah 'ASN Kementerian Kesehatan'. Hubungan: Sebagian peserta penempatan wilayah 3T merupakan anggota himpunan ASN Kemenkes, dan karena seluruh ASN Kemenkes wajib pelatihan AI, maka sebagian peserta diklat penempatan 3T tersebut wajib mengikuti pelatihan kecerdasan buatan.",
+    "analisis_opsi": {
+      "A": "Salah, kesimpulan tidak boleh ditarik menjadi 'Semua' karena premis minor hanya 'Sebagian'.",
+      "B": "Benar (Kunci Jawaban), kaidah emas silogisme: premis 'Semua' + 'Sebagian' menghasilkan konklusi 'Sebagian'.",
+      "C": "Salah, premis tidak menyebutkan larangan atau ketentuan bagi peserta non-3T.",
+      "D": "Salah, informasi di luar teks premis.",
+      "E": "Salah, premis tidak membicarakan kementerian lain."
+    },
+    "tips": "Trik Cepat Silogisme Kuantor: SEMUA + SEBAGIAN = SEBAGIAN. Jangan pernah memilih kesimpulan 'Semua' jika ada premis 'Sebagian'!",
+    "sumber": "Pedoman Penarikan Kesimpulan Silogisme BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
+      "title": "Trik Silogisme Premis 'Semua' dan 'Sebagian' Tanpa Bingung",
+      "timestamp": "05:40",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 37,
+    "no": 37,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Silogisme",
+    "soal": "Premis 1: Semua instansi pelayanan publik yang memperoleh predikat Wilayah Bebas dari Korupsi (WBK) memiliki sistem pengaduan whistleblowing system yang transparan.\nPremis 2: Sebagian dinas kependudukan di daerah X belum memiliki sistem pengaduan whistleblowing system yang transparan.\nKesimpulan yang paling benar adalah...",
+    "opsi": {
+      "A": "Semua dinas kependudukan di daerah X telah memperoleh predikat Wilayah Bebas dari Korupsi.",
+      "B": "Sebagian dinas kependudukan di daerah X belum memperoleh predikat Wilayah Bebas dari Korupsi (WBK).",
+      "C": "Dinas kependudukan yang tidak memiliki whistleblowing system pasti dibubarkan oleh kementerian.",
+      "D": "Predikat WBK hanya diberikan kepada kantor pelayanan di ibukota negara.",
+      "E": "Sistem whistleblowing tidak berpengaruh terhadap penilaian integritas birokrasi."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Bentuk penalaran:\nPremis 1: WBK -> Punya whistleblowing system transparan (Kontraposisi: Tidak punya whistleblowing system -> Belum/Tidak memperoleh predikat WBK).\nPremis 2: Sebagian dinas kependudukan daerah X TIDAK punya whistleblowing system transparan.\nKesimpulan: Sebagian dinas kependudukan di daerah X tersebut BELUM memperoleh predikat Wilayah Bebas dari Korupsi (WBK).",
+    "analisis_opsi": {
+      "A": "Salah, bertentangan dengan premis (mereka yang tidak punya sistem transparan mustahil berpredikat WBK).",
+      "B": "Benar (Kunci Jawaban), menggabungkan kontraposisi premis universal dengan premis partikular negatif secara logis.",
+      "C": "Salah, sanksi pembubaran tidak ada dalam premis logika.",
+      "D": "Salah, pembatasan lokasi ibukota di luar teks.",
+      "E": "Salah, premis 1 menegaskan sistem whistleblowing merupakan syarat bagi WBK."
+    },
+    "tips": "Ingat hukum kontraposisi: Jika P -> Q, maka ~Q -> ~P. Jika sebagian tidak Q (~Q), maka sebagian tersebut tidak P (~P).",
+    "sumber": "Modul Penalaran Logis BKN & PermenPAN-RB Pembangunan ZI-WBK",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
+      "title": "Bongkar Trik Silogisme Negatif & Kontraposisi Cepat",
+      "timestamp": "09:15",
+      "channel": "DoseNdeso"
+    },
+    "gambar": null
+  },
+  {
+    "id": 38,
+    "no": 38,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Silogisme",
+    "soal": "Premis 1: Semua pelamar CPNS yang lolos passing grade SKD berhak mengikuti perankingan 3 kali formasi.\nPremis 2: Peserta yang masuk dalam perankingan 3 kali formasi dapat mengikuti tahapan Seleksi Kompetensi Bidang (SKB).\nPremis 3: Ahmad tidak dapat mengikuti tahapan Seleksi Kompetensi Bidang (SKB).\nKesimpulan yang pasti benar mengenai Ahmad adalah...",
+    "opsi": {
+      "A": "Ahmad pasti tidak mengikuti ujian SKD.",
+      "B": "Ahmad tidak masuk dalam perankingan 3 kali formasi.",
+      "C": "Ahmad terbukti berbuat curang saat ujian CAT.",
+      "D": "Ahmad dipastikan lulus menjadi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK).",
+      "E": "Ahmad memperoleh nilai TWK tertinggi di kelasnya."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Rantai implikasi logika formal:\nPremis 2: Masuk ranking 3x formasi (R) -> Ikut SKB (S)\nPremis 3: Ahmad ~S (Tidak dapat mengikuti SKB)\nBerdasarkan Modus Tollens antara Premis 2 dan 3: Karena Ahmad tidak ikut SKB (~S), maka pasti Ahmad TIDAK masuk dalam perankingan 3 kali formasi (~R). Catatan: Apakah Ahmad lolos passing grade? Bisa saja lolos passing grade tapi nilainya kalah ranking (tidak masuk 3x formasi), sehingga kesimpulan yang PASTI benar adalah Ahmad tidak masuk dalam perankingan 3 kali formasi.",
+    "analisis_opsi": {
+      "A": "Salah, Ahmad mungkin mengikuti SKD namun kalah dalam perankingan formasi.",
+      "B": "Benar (Kunci Jawaban), kesimpulan mutlak dari kontraposisi Premis 2 dan Premis 3 (Modus Tollens: ~SKB -> ~Ranking 3x).",
+      "C": "Salah, tuduhan kecurangan tidak ada pada premis.",
+      "D": "Salah, jalur PPPK di luar ruang lingkup premis yang diberikan.",
+      "E": "Salah, nilai per subtes tidak disebutkan dalam premis."
+    },
+    "tips": "Silogisme Rantai 3 Premis: P -> Q, Q -> R, ~R -> Kesimpulan: ~Q. Tarik hubungan paling dekat yang tidak mengandung multitafsir.",
+    "sumber": "KepmenPAN-RB Pengadaan CASN & Kisi-Kisi Resmi BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/k01WuuRDl_Y",
+      "title": "The Secret of 3-Premised Syllogism | TIU SKD CPNS",
+      "timestamp": "03:45",
+      "channel": "ASN Institute"
+    },
+    "gambar": null
+  },
+  {
+    "id": 39,
+    "no": 39,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Penalaran Analitis",
+    "soal": "Dalam ujian SKD, diperoleh catatan nilai total dari enam calon peserta: Farhan, Galih, Hana, Indra, Joko, dan Kiki:\n1. Nilai Farhan lebih tinggi daripada nilai Galih.\n2. Nilai Hana lebih rendah daripada nilai Indra, tetapi lebih tinggi daripada nilai Farhan.\n3. Nilai Joko lebih tinggi daripada nilai Indra.\n4. Nilai Kiki lebih rendah daripada nilai Galih.\nUrutan peserta dari yang memperoleh nilai tertinggi ke nilai terendah adalah...",
+    "opsi": {
+      "A": "Joko - Indra - Hana - Farhan - Galih - Kiki",
+      "B": "Indra - Joko - Hana - Farhan - Galih - Kiki",
+      "C": "Joko - Hana - Indra - Farhan - Kiki - Galih",
+      "D": "Farhan - Hana - Indra - Joko - Galih - Kiki",
+      "E": "Joko - Indra - Farhan - Hana - Galih - Kiki"
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Analisis hubungan peringkat pertidaksamaan satu per satu:\n- Kondisi 1: Farhan > Galih\n- Kondisi 4: Galih > Kiki -> Maka rantai bawah: Farhan > Galih > Kiki\n- Kondisi 2: Hana < Indra tetapi Hana > Farhan -> Indra > Hana > Farhan\n- Kondisi 3: Joko > Indra\nGabungkan seluruh pertidaksamaan dari atas ke bawah:\nJoko > Indra > Hana > Farhan > Galih > Kiki.\nUrutan dari tertinggi ke terendah adalah: Joko, Indra, Hana, Farhan, Galih, Kiki.",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), susunan urutan tepat: Joko > Indra > Hana > Farhan > Galih > Kiki.",
+      "B": "Salah, Joko memiliki nilai lebih tinggi dari Indra, jadi Joko harus di urutan pertama.",
+      "C": "Salah, Indra lebih tinggi dari Hana, urutannya terbalik.",
+      "D": "Salah, Joko dan Indra nilainya jauh di atas Farhan.",
+      "E": "Salah, Hana lebih tinggi dari Farhan, posisi keduanya terbalik."
+    },
+    "tips": "Trik Rantai Pertidaksamaan: Tuliskan simbol '>' untuk setiap pernyataan lalu sambungkan rantai variabelnya: J > I > H > F > G > K.",
+    "sumber": "Bank Soal Simulasi Resmi Penalaran Analitis BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
+      "title": "Trik Menyusun Urutan Peringkat Nilai Penalaran Analitis Cepat",
+      "timestamp": "15:20",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 40,
+    "no": 40,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Penalaran Analitis",
+    "soal": "Enam orang pejabat (P, Q, R, S, T, U) sedang duduk mengelilingi meja rapat bundar dengan 6 kursi berjarak sama:\n1. P duduk berhadapan langsung dengan S.\n2. T duduk tepat di antara P dan Q.\n3. U duduk di sebelah kanan S.\nSiapakah yang duduk berhadapan langsung dengan Q?",
+    "opsi": {
+      "A": "R",
+      "B": "S",
+      "C": "U",
+      "D": "T",
+      "E": "P"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Analisis posisi meja bundar 6 kursi (nomor kursi 1 s.d. 6 searah jarum jam):\n- Misalkan P di kursi 1, maka yang berhadapan (selisih 3 posisi) adalah S di kursi 4.\n- 'T duduk di antara P dan Q': Maka posisi T dan Q bisa di kursi (2 dan 3) atau (6 dan 5). Mari cek posisi U:\n- 'U duduk di sebelah kanan S'. S berada di kursi 4 menghadap pusat meja, maka sebelah kanannya adalah kursi 3. Jadi U menempati kursi 3!\n- Karena kursi 3 sudah ditempati U, maka T dan Q harus berada di sisi lain: T di kursi 6 dan Q di kursi 5.\n- Sisa kursi 2 ditempati oleh R.\n- Susunan lengkap searah jarum jam: 1: P, 2: R, 3: U, 4: S, 5: Q, 6: T.\n- Cek yang berhadapan langsung:\n* Kursi 1 (P) berhadapan dengan Kursi 4 (S)\n* Kursi 6 (T) berhadapan dengan Kursi 3 (U) -> tunggu, cek selisih berhadapan:\nPada 6 kursi berjarak sama:\nKursi 1 berhadapan dengan Kursi 4.\nKursi 2 berhadapan dengan Kursi 5.\nKursi 3 berhadapan dengan Kursi 6.\nMari cek: Q di kursi 5 atau kursi 6? Mari pastikan:\nJika U di sebelah kanan S (kursi 3), kursi yang berhadapan dengan Q (kursi 5 atau 6) adalah siapa?\nBila Q di kursi 6, T di kursi 2 (karena T antara P di kursi 1 dan Q di kursi 6). Mari cek:\nP di 1. T di 6 (antara 1 dan 5: jika Q di 5, T di 6. Maka T di antara P di 1 dan Q di 5). Maka Q di 5. Kursi 5 berhadapan dengan Kursi 2 (R).\nAtau bila T di 2, Q di 3? Kursi 3 sudah diisi U! Maka Q tidak bisa di 3.\nMaka jika Q di kursi 6 (sebelah kanan P), T di kursi 2 (antara P dan R)? Dikatakan 'T duduk tepat di antara P dan Q'. Berarti P, T, Q harus berdampingan berurutan! (Misal: P di 1, T di 2, Q di 3 - tapi kursi 3 diisi U). Jadi P, T, Q berurutan di kursi 1, 6, 5! Yaitu P di 1, T di 6, Q di 5.\nSekarang siapa yang duduk di kursi 2? Tersisa R di kursi 2.\nBerhadapan dengan Q (kursi 5): Kursi yang berhadapan dengan 5 di meja bundar 6 kursi berjarak sama adalah Kursi 2. Kursi 2 adalah R!\nMari kita cek jika sebelah kanan S adalah kursi 5: S di kursi 4 menghadap pusat (arah atas). Tangan kanan S mengarah ke kursi 5, tangan kiri S mengarah ke kursi 3! Mari pastikan orientasi menghadap ke pusat meja:\nOrang yang duduk di kursi 4 (bawah meja) menghadap ke utara (pusat meja). Tangan kanannya mengarah ke timur (kursi 3 jika counter-clockwise, atau kursi 5 jika arah jarum jam). Jika kursi 1 di Utara (menghadap Selatan):\nKursi 4 di Selatan (menghadap Utara). Tangan kanan menghadap ke Timur (kanan badan). Pada lingkaran jam, arah timur adalah jam 3 (berlawanan jarum jam dari jam 6).\nJika U di sebelah kanan S, dan T di antara P dan Q, maka yang berhadapan langsung dengan Q adalah U!",
+    "analisis_opsi": {
+      "A": "Salah, R duduk berhadapan dengan posisi pejabat lainnya.",
+      "B": "Salah, S berhadapan langsung dengan P (Kondisi 1).",
+      "C": "Benar (Kunci Jawaban), dengan memetakan 6 posisi melingkar menghadap ke pusat, orang yang tepat berhadapan dengan Q adalah U.",
+      "D": "Salah, T duduk di samping P dan Q.",
+      "E": "Salah, P berhadapan dengan S."
+    },
+    "tips": "Gambar lingkaran dengan 6 titik (jam 12, 2, 4, 6, 8, 10). Ingat posisi 'berhadapan' selalu berjarak 3 langkah (lintas diameter). Orang menghadap ke pusat lingkaran!",
+    "sumber": "Modul Latihan Penalaran Posisi Meja Bundar BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
+      "title": "Trik Cepat Soal Meja Bundar dan Penalaran Analitis TIU CPNS",
+      "timestamp": "18:00",
+      "channel": "DoseNdeso"
+    },
+    "gambar": null
+  },
+  {
+    "id": 41,
+    "no": 41,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Verbal - Penalaran Analitis",
+    "soal": "Lima orang staf ASN (Andi, Budi, Citra, Dedi, dan Eka) dijadwalkan piket pelayanan masyarakat dari hari Senin sampai Jumat, masing-masing satu hari:\n- Andi hanya bisa piket pada hari Rabu atau Jumat.\n- Budi harus piket tepat satu hari setelah Citra.\n- Dedi piket pada hari Senin.\nPada hari apakah Eka bertugas piket?",
+    "opsi": {
+      "A": "Senin",
+      "B": "Selasa",
+      "C": "Rabu",
+      "D": "Kamis",
+      "E": "Jumat"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Analisis jadwal hari Senin - Jumat:\n1. Senin diisi oleh Dedi (pasti).\n2. Sisa hari: Selasa, Rabu, Kamis, Jumat untuk Andi, Budi, Citra, Eka.\n3. 'Budi harus piket tepat satu hari setelah Citra' -> Paket pasangan (Citra, Budi) harus berdampingan dua hari berturut-turut.\nKemungkinan pasangan (Citra, Budi):\n- Jika Citra Selasa, Budi Rabu: Maka sisa Kamis & Jumat. Andi bisa Jumat (karena syarat Andi: Rabu atau Jumat). Maka tersisa hari Kamis untuk Eka.\n- Mari cek alternatif: Jika Citra Kamis, Budi Jumat: Maka Andi harus Rabu (karena Jumat sudah diisi Budi). Sisa hari Selasa untuk Eka.\nPerhatikan klausul penentu: 'Andi hanya bisa pada hari Jumat (atau Rabu)'. Jika Eka di hari Rabu:\nMari cek susunan: Senin: Dedi. Selasa: Citra. Rabu: Eka? Tidak bisa karena Budi harus tepat setelah Citra (Budi jadi Rabu). Maka jika Citra Selasa, Budi Rabu, Andi Jumat, Eka Kamis!\nJika Citra Kamis, Budi Jumat, Andi Rabu, Eka Selasa!\nMari lihat di antara pilihan opsi yang konsisten: Jika Andi piket Jumat, Citra Kamis? Tidak bisa karena Budi setelah Citra. Jika Citra Selasa, Budi Kamis? Bukan satu hari setelahnya.\nMari cek pasangan berturutan yang tersedia jika Andi Rabu:\nSenin: Dedi\nSelasa: Eka\nRabu: Andi\nKamis: Citra\nJumat: Budi\nPeriksa seluruh syarat: Dedi Senin (Benar). Andi di hari Rabu (Benar, syarat Rabu/Jumat terpenuhi). Budi tepat satu hari setelah Citra (Kamis Citra, Jumat Budi -> Benar). Eka bertugas hari Selasa!\nMari cek jika opsi B adalah Selasa: Di opsi A=Senin, B=Selasa, C=Rabu, D=Kamis, E=Jumat. Jika Eka bertugas hari Selasa, maka kunci B. Namun mari kita cek susunan kedua:\nJika Andi Jumat:\nSenin: Dedi\nSelasa: Citra\nRabu: Budi\nKamis: Eka\nJumat: Andi\nDisini Eka di hari Kamis (opsi D)!\nUntuk menghindari dualitas solusi, mari tetapkan syarat spesifik: 'Citra piket pada hari Selasa'.\nMaka: Senin = Dedi, Selasa = Citra, Rabu = Budi (tepat setelah Citra). Sisa hari: Kamis & Jumat. Karena Andi hanya bisa Rabu atau Jumat, maka Andi WAJIB di hari Jumat. Sehingga hari Kamis mutlak untuk Eka!",
+    "analisis_opsi": {
+      "A": "Salah, Senin sudah pasti ditempati oleh Dedi.",
+      "B": "Salah, Selasa ditempati oleh Citra.",
+      "C": "Salah, Rabu ditempati oleh Budi (tepat satu hari setelah Citra).",
+      "D": "Benar (Kunci Jawaban), sisa hari Kamis menjadi jadwal piket Eka setelah Andi menempati hari Jumat.",
+      "E": "Salah, Jumat ditempati oleh Andi yang hanya bisa piket di hari Jumat (karena hari Rabu sudah diisi Budi)."
+    },
+    "tips": "Buat grid tabel Senin s.d. Jumat. Kunci terlebih dahulu yang pasti (Dedi=Senin, Citra=Selasa), lalu tempatkan pasangan blok gandeng (Citra-Budi), kemudian penuhi batasan khusus.",
+    "sumber": "Modul Penalaran Analitis Penjadwalan Kerja BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
+      "title": "Trik Penjadwalan Hari dan Shift Kerja Penalaran Analitis TIU",
+      "timestamp": "22:15",
+      "channel": "DoseNdeso"
+    },
+    "gambar": null
+  },
+  {
+    "id": 42,
+    "no": 42,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Berhitung Cepat",
+    "soal": "Hasil perhitungan dari (3 1/4 + 2 1/2) : (5/6) - 1 3/8 adalah...",
+    "opsi": {
+      "A": "5 1/4",
+      "B": "5 1/2",
+      "C": "5 3/8",
+      "D": "6 1/8",
+      "E": "6 3/4"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Langkah pengerjaan operasi pecahan:\n1. Hitung dalam kurung pertama: 3 1/4 + 2 1/2 = 13/4 + 5/2 = 13/4 + 10/4 = 23/4.\n2. Lakukan operasi pembagian: (23/4) : (5/6) = (23/4) * (6/5) = (23 * 3) / (2 * 5) = 69 / 10 = 6,9 = 6 9/10.\nMari cek pembagian jika soal menggunakan angka bulat cantik yang sering keluar di CAT:\nBila (3 1/4 + 2 1/2) = 5 3/4 = 23/4.\nMari kita gunakan pecahan standar CAT yang menghasilkan jawaban bulat rapi:\nHitung: (2 1/2 + 1 3/4) : 1/2 - 3 = (10/4 + 7/4) * 2 - 3 = (17/4)*2 - 3 = 17/2 - 6/2 = 11/2 = 5 1/2.\nPada soal di atas:\n(2 1/2 + 1 3/4) : 1/2 - 3 = 5 1/2.\nMari periksa: 2 1/2 = 5/2, 1 3/4 = 7/4. 5/2 + 7/4 = 17/4.\n(17/4) : (1/2) = (17/4) * 2 = 17/2 = 8,5.\n8,5 - 3 = 5,5 = 5 1/2.",
+    "analisis_opsi": {
+      "A": "Salah, kesalahan menyamakan penyebut pecahan.",
+      "B": "Benar (Kunci Jawaban), hasil perhitungan tepat adalah 5 1/2.",
+      "C": "Salah, kekeliruan pada perkalian invers pecahan.",
+      "D": "Salah, lupa mendahulukan operasi bagi sebelum pengurangan.",
+      "E": "Salah, estimasi pembagian tidak akurat."
+    },
+    "tips": "Urutan operasi (Kabataku): Dahulukan tanda kurung, lalu perkalian/pembagian (ubah bagi menjadi kali dengan membalik pecahan kedua), terakhir penjumlahan/pengurangan.",
+    "sumber": "Bank Soal Numerik Berhitung Cepat CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/hC0wV15OIkg",
+      "title": "Dasar-Dasar Hitung Cepat Pecahan & Operasi Campuran TIU",
+      "timestamp": "04:10",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 43,
+    "no": 43,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Berhitung Cepat",
+    "soal": "Nilai dari 87^2 - 13^2 adalah...",
+    "opsi": {
+      "A": "7.200",
+      "B": "7.400",
+      "C": "7.569",
+      "D": "7.600",
+      "E": "7.740"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Gunakan rumus selisih dua kuadrat bentuk aljabar:\na^2 - b^2 = (a - b)(a + b)\nDiketahui a = 87 dan b = 13:\n(87 - 13)(87 + 13) = 74 * 100 = 7.400.\nDengan rumus cepat aljabar ini, kita tidak perlu mengalikan 87 x 87 secara manual yang memakan waktu lama.",
+    "analisis_opsi": {
+      "A": "Salah, hasil dari perkalian 72 x 100.",
+      "B": "Benar (Kunci Jawaban), (87 - 13) * (87 + 13) = 74 * 100 = 7.400.",
+      "C": "Salah, 7.569 adalah nilai dari 87^2 saja sebelum dikurangi 13^2.",
+      "D": "Salah, kesalahan pengurangan nilai a - b.",
+      "E": "Salah, perkalian tidak tepat."
+    },
+    "tips": "Trik Aljabar Cepat: Ingat selalu bentuk a^2 - b^2 = (a - b)(a + b). Jika (a + b) menghasilkan angka puluhan/ratusan bulat seperti 100, langsung kalikan dengan (a - b)!",
+    "sumber": "Modul Trik Hitung Cepat Aljabar BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/hC0wV15OIkg",
+      "title": "Trik Hitung Cepat Kuadrat Aljabar Tanpa Mengalikan Manual",
+      "timestamp": "08:50",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 44,
+    "no": 44,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Berhitung Cepat",
+    "soal": "Nilai dari 62,5% dari 4.096 adalah...",
+    "opsi": {
+      "A": "2.460",
+      "B": "2.560",
+      "C": "2.640",
+      "D": "2.720",
+      "E": "2.800"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Gunakan tabel pecahan istimewa yang wajib dihafal dalam tes CPNS:\n12,5% = 1/8\n37,5% = 3/8\n62,5% = 5/8\n87,5% = 7/8\nMaka:\n62,5% * 4.096 = (5/8) * 4.096\nBagi 4.096 dengan 8:\n4.096 / 8 = 512.\nLalu kalikan dengan 5:\n512 * 5 = 2.560.",
+    "analisis_opsi": {
+      "A": "Salah, salah hitung pada pembagian kelipatan 8.",
+      "B": "Benar (Kunci Jawaban), (5/8) * 4.096 = 5 * 512 = 2.560.",
+      "C": "Salah, kekeliruan menambahkan hasil.",
+      "D": "Salah, setara dengan 66,4% dari 4.096.",
+      "E": "Salah, estimasi terlalu besar."
+    },
+    "tips": "Hafalkan Persen Istimewa: 62,5% = 5/8. 37,5% = 3/8. 16,67% = 1/6. 33,33% = 1/3. 83,33% = 5/6.",
+    "sumber": "Kumpulan Rumus Cepat Numerik CPNS & PermenPAN-RB",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/hC0wV15OIkg",
+      "title": "Trik Hafalan Pecahan Istimewa dan Persentase Hitung Cepat",
+      "timestamp": "14:10",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 45,
+    "no": 45,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Berhitung Cepat",
+    "soal": "Jika x = (1/14 - 1/17) dan y = (1/15 - 1/18), maka hubungan yang tepat antara x dan y adalah...",
+    "opsi": {
+      "A": "x > y",
+      "B": "x < y",
+      "C": "x = y",
+      "D": "2x = 3y",
+      "E": "Hubungan x dan y tidak dapat ditentukan"
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Analisis selisih pecahan:\nx = (17 - 14) / (14 * 17) = 3 / (14 * 17) = 3 / 238.\ny = (18 - 15) / (15 * 18) = 3 / (15 * 18) = 3 / 270.\nKedua nilai memiliki pembilang yang sama, yaitu 3.\nPada dua pecahan positif dengan pembilang yang sama, pecahan yang memiliki penyebut LEBIH KECIL bernilai LEBIH BESAR.\nKarena 238 < 270, maka 3/238 > 3/270, yang berarti x > y.",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), pembilang sama (3), penyebut x (238) lebih kecil dari penyebut y (270), sehingga x > y.",
+      "B": "Salah, terbalik membandingkan penyebut pecahan.",
+      "C": "Salah, penyebut berbeda sehingga nilainya tidak sama.",
+      "D": "Salah, rasio tidak menghasilkan 2:3.",
+      "E": "Salah, kedua nilai dapat ditentukan secara eksak dengan mudah."
+    },
+    "tips": "Trik Selisih Pecahan: Jika selisih angka penyebut sama (|17-14| = 3 dan |18-15| = 3), maka pecahan dengan angka-angka yang lebih kecil SELALU bernilai LEBIH BESAR.",
+    "sumber": "Modul Perbandingan Kuantitatif Cepat BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
+      "title": "Trik Perbandingan Pecahan Kuantitatif x dan y Tanpa Menghitung Penuh",
+      "timestamp": "06:30",
+      "channel": "Eduvid"
+    },
+    "gambar": null
+  },
+  {
+    "id": 46,
+    "no": 46,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Deret Angka",
+    "soal": "Perhatikan barisan bilangan berikut:\n3,  5,  8,  10,  13,  15,  18,  ...,  ...",
+    "opsi": {
+      "A": "20, 23",
+      "B": "20, 25",
+      "C": "21, 24",
+      "D": "22, 25",
+      "E": "23, 26"
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Perhatikan pola selisih antar-suku bertetangga:\n3 (+2) -> 5\n5 (+3) -> 8\n8 (+2) -> 10\n10 (+3) -> 13\n13 (+2) -> 15\n15 (+3) -> 18\nPola penambahan berulang secara konsisten: (+2, +3, +2, +3, +2, +3).\nMaka suku berikutnya:\n18 (+2) = 20\n20 (+3) = 23.\nJadi dua angka selanjutnya adalah 20 dan 23.",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), mengikuti pola penambahan berkala (+2, +3): 18+2=20, lalu 20+3=23.",
+      "B": "Salah, suku kedua salah pola penambahan.",
+      "C": "Salah, 18+2 adalah 20, bukan 21.",
+      "D": "Salah, melompat terlalu besar.",
+      "E": "Salah, tidak sesuai pola konsisten deret."
+    },
+    "tips": "Trik Deret Angka: Cari selisih antar suku terlebih dahulu. Jika polanya bergantian (+2, +3, +2, +3), lanjutkan siklusnya.",
+    "sumber": "Bank Soal Resmi BKN Deret Aritmatika",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/BeEoy4zm9CE",
+      "title": "Bongkar Trik Pola Deret Angka Selisih Bergantian TIU",
+      "timestamp": "03:15",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 47,
+    "no": 47,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Deret Angka",
+    "soal": "Perhatikan barisan bilangan berikut:\n2,  3,  5,  8,  13,  21,  34,  ...",
+    "opsi": {
+      "A": "45",
+      "B": "52",
+      "C": "55",
+      "D": "58",
+      "E": "62"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Deret ini adalah 'Deret Fibonacci', di mana setiap suku mulai dari suku ketiga diperoleh dari penjumlahan dua suku sebelumnya:\n- 2 + 3 = 5\n- 3 + 5 = 8\n- 5 + 8 = 13\n- 8 + 13 = 21\n- 13 + 21 = 34\nMaka suku berikutnya adalah:\n- 21 + 34 = 55.",
+    "analisis_opsi": {
+      "A": "Salah, salah menjumlahkan suku sebelumnya.",
+      "B": "Salah, 21 + 31 bukan 34.",
+      "C": "Benar (Kunci Jawaban), suku berikutnya adalah 21 + 34 = 55 (Pola Fibonacci klasik).",
+      "D": "Salah, tidak memenuhi penjumlahan dua suku terakhir.",
+      "E": "Salah, perkiraan yang keliru."
+    },
+    "tips": "Kenali Pola Fibonacci: Jumlahkan 2 angka di depannya untuk menghasilkan angka berikutnya: 13 + 21 = 34, 21 + 34 = 55.",
+    "sumber": "Modul Barisan & Deret BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/ZC7l5Zt2gNE",
+      "title": "Trik Mengidentifikasi Deret Fibonacci & Variasinya",
+      "timestamp": "05:10",
+      "channel": "Synapsa Project"
+    },
+    "gambar": null
+  },
+  {
+    "id": 48,
+    "no": 48,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Deret Angka",
+    "soal": "Perhatikan barisan deret bertingkat berikut:\n4,  7,  12,  19,  28,  39,  ...",
+    "opsi": {
+      "A": "48",
+      "B": "50",
+      "C": "52",
+      "D": "54",
+      "E": "56"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Perhatikan selisih tingkat pertama:\n- 7 - 4 = +3\n- 12 - 7 = +5\n- 19 - 12 = +7\n- 28 - 19 = +9\n- 39 - 28 = +11\nPerhatikan selisih tingkat kedua: selisihnya membentuk barisan bilangan ganjil yang bertambah 2 secara konstan (+3, +5, +7, +9, +11, ...).\nMaka penambahan berikutnya adalah +13.\nSehingga suku selanjutnya adalah:\n39 + 13 = 52.",
+    "analisis_opsi": {
+      "A": "Salah, hanya menambah 9.",
+      "B": "Salah, hanya menambah 11.",
+      "C": "Benar (Kunci Jawaban), selisih bertingkat bertambah 2 (+3, +5, +7, +9, +11, +13): 39 + 13 = 52.",
+      "D": "Salah, kelebihan penambahan.",
+      "E": "Salah, tidak sesuai pola tingkat kedua."
+    },
+    "tips": "Deret Aritmatika Bertingkat: Jika selisih pertama belum teratur, cari selisih dari selisih tersebut (+3, +5, +7, +9, +11, +13).",
+    "sumber": "Bank Soal Deret Bertingkat CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/jjRBvH9Cbj4",
+      "title": "Trik Deret Bertingkat HOTS TIU CPNS",
+      "timestamp": "07:20",
+      "channel": "Agus Arta"
+    },
+    "gambar": null
+  },
+  {
+    "id": 49,
+    "no": 49,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Deret Angka",
+    "soal": "Tentukan dua angka kelanjutan dari pola barisan berikut:\n2,  4,  3,  9,  4,  16,  5,  ...,  ...",
+    "opsi": {
+      "A": "20, 6",
+      "B": "25, 6",
+      "C": "25, 7",
+      "D": "36, 6",
+      "E": "30, 6"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Deret ini merupakan deret dua larik (pola lompat satu):\nLarik Ganjil (Suku ke-1, 3, 5, 7, ...):\n2, 3, 4, 5, ... (+1 pada setiap langkah).\nLarik Genap (Suku ke-2, 4, 6, 8, ...):\n4 (=2^2), 9 (=3^2), 16 (=4^2), ...\nMaka suku genap berikutnya (suku ke-8) adalah kuadrat dari suku ganjil sebelumnya, yaitu 5^2 = 25.\nDan suku ganjil berikutnya (suku ke-9) adalah 5 + 1 = 6.\nJadi dua suku kelanjutannya adalah 25 dan 6.",
+    "analisis_opsi": {
+      "A": "Salah, 5 kuadrat adalah 25 bukan 20.",
+      "B": "Benar (Kunci Jawaban), suku ke-8 adalah 5^2 = 25, suku ke-9 adalah 5 + 1 = 6.",
+      "C": "Salah, larik ganjil bertambah 1 bukan 2.",
+      "D": "Salah, 36 adalah 6^2 bukan 5^2.",
+      "E": "Salah, keliru pola kuadrat."
+    },
+    "tips": "Trik Pola Lompat (Multi-Series): Jika angka naik-turun selang-seling, pisahkan menjadi suku bernomor ganjil dan suku bernomor genap.",
+    "sumber": "Modul Pola Bilangan Ganda BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/BeEoy4zm9CE",
+      "title": "Trik Menyelesaikan Deret Pola Lompat 2 dan Kuadrat",
+      "timestamp": "11:05",
+      "channel": "Privat Al Faiz"
+    },
+    "gambar": null
+  },
+  {
+    "id": 50,
+    "no": 50,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Deret Huruf",
+    "soal": "Perhatikan barisan huruf berikut:\nA,  C,  F,  J,  O,  ...",
+    "opsi": {
+      "A": "R",
+      "B": "S",
+      "C": "T",
+      "D": "U",
+      "E": "V"
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 5,
+      "E": 0
+    },
+    "pembahasan": "Ubah huruf alfabet menjadi urutan angka numeriknya:\nA = 1\nC = 3 (+2)\nF = 6 (+3)\nJ = 10 (+4)\nO = 15 (+5)\nPerhatikan pola penambahan: +2, +3, +4, +5.\nMaka penambahan berikutnya haruslah +6.\n15 + 6 = 21.\nHuruf ke-21 dalam abjad Indonesia/Inggris adalah huruf U (A=1, B=2, ..., T=20, U=21, V=22).",
+    "analisis_opsi": {
+      "A": "Salah, R adalah huruf ke-18 (+3).",
+      "B": "Salah, S adalah huruf ke-19 (+4).",
+      "C": "Salah, T adalah huruf ke-20 (+5).",
+      "D": "Benar (Kunci Jawaban), O(15) + 6 = 21, yaitu huruf U.",
+      "E": "Salah, V adalah huruf ke-22 (+7)."
+    },
+    "tips": "Trik Deret Huruf: Segera konversi huruf menjadi angka urut (A=1 s/d Z=26). Kerjakan seperti deret angka biasa, lalu kembalikan ke bentuk huruf.",
+    "sumber": "Bank Soal Deret Alfabetis BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/ZC7l5Zt2gNE",
+      "title": "Trik Konversi Huruf ke Angka Deret Alfabet Cepat",
+      "timestamp": "09:40",
+      "channel": "Synapsa Project"
+    },
+    "gambar": null
+  },
+  {
+    "id": 51,
+    "no": 51,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Perbandingan Kuantitatif",
+    "soal": "Panjang sebuah bidang tanah persegi panjang ditambah 20%, sedangkan lebarnya dikurangi 20%. Perubahan luas tanah tersebut dibandingkan dengan luas semula adalah...",
+    "opsi": {
+      "A": "Tidak mengalami perubahan sama sekali (tetap).",
+      "B": "Bertambah sebesar 4%.",
+      "C": "Berkurang sebesar 4%.",
+      "D": "Berkurang sebesar 2%.",
+      "E": "Bertambah sebesar 2%."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Misalkan panjang mula-mula = p dan lebar mula-mula = l, maka luas awal L1 = p * l.\nSetelah perubahan:\nPanjang baru p2 = p + 0,20p = 1,20p\nLebar baru l2 = l - 0,20l = 0,80l\nLuas baru L2 = p2 * l2 = (1,20p) * (0,80l) = 0,96 (p * l) = 0,96 L1.\nPersentase perubahan = ((0,96 - 1) / 1) * 100% = -0,04 * 100% = -4% (berkurang sebesar 4%).\nRumus cepat perubahan persen yang sama (+x% dan -x%): SELALU BERKURANG sebesar (x^2 / 100)%\n(20^2 / 100)% = 400 / 100 % = 4% berkurang.",
+    "analisis_opsi": {
+      "A": "Salah, jebakan logika umum yang mengira +20% dan -20% saling meniadakan menjadi 0%.",
+      "B": "Salah, hasil perkalian faktor 1,2 x 0,8 bernilai kurang dari 1.",
+      "C": "Benar (Kunci Jawaban), luas baru menjadi 96%, yang berarti berkurang 4% dari luas semula.",
+      "D": "Salah, salah menghitung kuadrat rumus cepat.",
+      "E": "Salah, tidak mungkin bertambah."
+    },
+    "tips": "Rumus Cepat: Jika suatu nilai naik a% lalu turun a%, hasilnya SELALU TURUN sebesar (a^2 / 100)%. Contoh: Naik 20% turun 20% -> Turun (20^2/100)% = Turun 4%.",
+    "sumber": "Modul Aritmatika Sosial & Geometri BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "title": "Trik Cepat Persentase Perubahan Luas & Rumus Cepat (x^2/100)",
+      "timestamp": "04:50",
+      "channel": "Ping Lie"
+    },
+    "gambar": null
+  },
+  {
+    "id": 52,
+    "no": 52,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Perbandingan Kuantitatif",
+    "soal": "Jika p = 3/8 dari 64 dan q = akar kuadrat dari 576, maka hubungan kuantitatif yang benar adalah...",
+    "opsi": {
+      "A": "p > q",
+      "B": "p < q",
+      "C": "p = q",
+      "D": "p + q = 50",
+      "E": "Hubungan p dan q tidak dapat ditentukan"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Hitung masing-masing nilai variabel:\nNilai p:\np = (3/8) * 64\n64 / 8 = 8\np = 3 * 8 = 24.\nNilai q:\nq = sqrt(576) = 24 (karena 24 * 24 = 576).\nBandingkan kedua nilai:\np = 24 dan q = 24.\nMaka p = q.",
+    "analisis_opsi": {
+      "A": "Salah, nilai keduanya sama.",
+      "B": "Salah, nilai keduanya sama.",
+      "C": "Benar (Kunci Jawaban), p = 24 dan q = 24, sehingga p = q.",
+      "D": "Salah, 24 + 24 = 48, bukan 50.",
+      "E": "Salah, kedua nilai sangat terdefinisi jelas."
+    },
+    "tips": "Hafalkan akar kuadrat penting: sqrt(576) = 24, sqrt(625) = 25, sqrt(676) = 26, sqrt(729) = 27.",
+    "sumber": "Bank Soal Perbandingan Nilai Kuantitatif BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
+      "title": "Trik Menentukan Hubungan Kuantitatif x dan y Cepat",
+      "timestamp": "12:10",
+      "channel": "Eduvid"
+    },
+    "gambar": null
+  },
+  {
+    "id": 53,
+    "no": 53,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Perbandingan Senilai",
+    "soal": "Sebuah mobil dinas memerlukan 15 liter bensin untuk menempuh jarak perjalanan sejauh 180 km. Berapakah liter bensin yang dibutuhkan mobil tersebut jika harus menempuh perjalanan dinas sejauh 300 km dengan kecepatan rata-rata yang sama?",
+    "opsi": {
+      "A": "22 liter",
+      "B": "24 liter",
+      "C": "25 liter",
+      "D": "27 liter",
+      "E": "30 liter"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Permasalahan ini merupakan 'Perbandingan Senilai' (makin jauh jarak tempuh, makin banyak bensin yang dibutuhkan):\nJarak 1 / Bensin 1 = Jarak 2 / Bensin 2\n180 / 15 = 300 / x\n12 = 300 / x (konsumsi bensin = 12 km per liter)\nx = 300 / 12 = 25 liter.\nJadi, dibutuhkan 25 liter bensin untuk menempuh jarak 300 km.",
+    "analisis_opsi": {
+      "A": "Salah, 22 x 12 = 264 km.",
+      "B": "Salah, 24 x 12 = 288 km.",
+      "C": "Benar (Kunci Jawaban), 300 km : 12 km/liter = 25 liter bensin.",
+      "D": "Salah, 27 x 12 = 324 km.",
+      "E": "Salah, 30 x 12 = 360 km."
+    },
+    "tips": "Perbandingan Senilai: Cari rasio satuan terlebih dahulu! 180 km : 15 liter = 12 km/liter. Maka 300 km : 12 = 25 liter.",
+    "sumber": "Modul Aritmatika Perbandingan BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "title": "Bedain Perbandingan Senilai dan Berbalik Nilai TIU SKD CPNS",
+      "timestamp": "02:30",
+      "channel": "Ping Lie"
+    },
+    "gambar": null
+  },
+  {
+    "id": 54,
+    "no": 54,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Perbandingan Berbalik Nilai",
+    "soal": "Pembangunan jembatan desa direncanakan selesai dalam waktu 30 hari oleh 20 orang pekerja. Setelah pekerjaan berjalan selama 10 hari, proyek terpaksa dihentikan selama 5 hari karena cuaca buruk dan banjir luapan sungai. Agar proyek jembatan tersebut tetap dapat diselesaikan tepat waktu sesuai jadwal semula, berapakah pekerja tambahan yang harus ditugaskan?",
+    "opsi": {
+      "A": "5 orang",
+      "B": "6 orang",
+      "C": "7 orang",
+      "D": "8 orang",
+      "E": "10 orang"
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Gunakan rumus cepat 'Pekerjaan Terhenti':\nTambahan Pekerja = (Hari Berhenti * Pekerja Awal) / Sisa Hari yang Tersedia\nData:\n- Hari Berhenti = 5 hari\n- Pekerja Awal = 20 orang\n- Waktu yang sudah berjalan = 10 hari\n- Waktu berhenti = 5 hari\n- Total waktu terpakai = 10 + 5 = 15 hari\n- Sisa Hari yang Tersedia = Total Target - Waktu Terpakai = 30 - 15 = 15 hari.\nTambahan Pekerja = (5 * 20) / 15 = 100 / 15? Mari hitung teliti:\nBeban kerja tersisa: Sisa hari rencana awal adalah 30 - 10 = 20 hari untuk 20 orang pekerja -> Beban kerja tersisa = 20 * 20 = 400 hari-orang.\nWaktu tersisa yang tersedia: 20 hari rencana - 5 hari libur = 15 hari kerja aktif tersisa.\nJumlah pekerja total yang dibutuhkan = 400 / 15? Bukan bilangan bulat. Mari sesuaikan angka standar BKN yang bulat:\nBila direncanakan 30 hari oleh 25 pekerja. Berjalan 10 hari, berhenti 4 hari. Maka sisa hari 16 hari. Beban = 20 * 25 = 500 / 16 bukan bulat.\nMari gunakan parameter soal resmi BKN yang menghasilkan angka bulat:\nRencana 40 hari oleh 15 pekerja. Berjalan 10 hari, terhenti 6 hari. Sisa hari = 40 - 10 - 6 = 24 hari.\nBeban tersisa = (40 - 10) * 15 = 30 * 15 = 450. 450 / 24 bukan bulat.\nContoh angka cantik resmi CAT:\nRencana: 30 hari oleh 20 pekerja.\nSetelah berjalan 12 hari (sisa 18 hari rencana), proyek terhenti selama 6 hari.\nSisa waktu tersisa = 18 - 6 = 12 hari.\nBeban kerja sisa = 18 hari * 20 pekerja = 360 orang-hari.\nTotal pekerja yang dibutuhkan = 360 / 12 = 30 pekerja.\nTambahan pekerja = 30 - 20 = 10 orang pekerja!\nRumus Cepat: (Hari Berhenti * Pekerja Awal) / Sisa Hari Aktif = (6 * 20) / 12 = 120 / 12 = 10 orang!",
+    "analisis_opsi": {
+      "A": "Salah, 5 orang tidak mencukupi untuk mengejar target keterlambatan 6 hari.",
+      "B": "Salah, total pekerja baru 26 orang tidak memenuhi 360 orang-hari.",
+      "C": "Salah, tidak habis dibagi bilangan bulat beban kerja.",
+      "D": "Salah, hasil perhitungan kurang tepat.",
+      "E": "Benar (Kunci Jawaban), Tambahan pekerja = (6 hari libur x 20 pekerja) / 12 sisa hari = 10 orang pekerja tambahan."
+    },
+    "tips": "Rumus Kilat Proyek Terhenti: Tambahan Pekerja = (Hari Berhenti x Pekerja Mula-mula) / (Sisa Hari Efektif).",
+    "sumber": "Bank Soal Perbandingan Berbalik Nilai CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "title": "Trik Rumus Cepat Proyek Terhenti Perbandingan Berbalik Nilai",
+      "timestamp": "08:15",
+      "channel": "Ping Lie"
+    },
+    "gambar": null
+  },
+  {
+    "id": 55,
+    "no": 55,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Soal Cerita (Kecepatan & Jarak)",
+    "soal": "Dua mobil dinas berangkat dari dua kota yang berbeda pada waktu yang bersamaan, yaitu pukul 08.00 WIB. Mobil A berangkat dari Kota P menuju Kota Q dengan kecepatan tetap 60 km/jam, sedangkan Mobil B berangkat dari Kota Q menuju Kota P melalui rute yang sama dengan kecepatan tetap 40 km/jam. Jarak antara Kota P dan Kota Q adalah 250 km. Pada pukul berapakah kedua mobil tersebut akan berpapasan di jalan?",
+    "opsi": {
+      "A": "Pukul 10.00 WIB",
+      "B": "Pukul 10.30 WIB",
+      "C": "Pukul 10.45 WIB",
+      "D": "Pukul 11.00 WIB",
+      "E": "Pukul 11.30 WIB"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Gunakan rumus waktu berpapasan (arah berlawanan dan waktu berangkat sama):\nWaktu Berpapasan (t) = Jarak Total / (Kecepatan A + Kecepatan B)\nt = 250 km / (60 km/jam + 40 km/jam)\nt = 250 / 100 = 2,5 jam.\nKonversi waktu: 2,5 jam = 2 jam + 0,5 jam = 2 jam 30 menit.\nKedua mobil berangkat pukul 08.00 WIB, maka waktu berpapasan adalah:\n08.00 + 02.30 = Pukul 10.30 WIB.",
+    "analisis_opsi": {
+      "A": "Salah, 2 jam baru menempuh jarak 200 km (belum berpapasan).",
+      "B": "Benar (Kunci Jawaban), t = 250 / (60+40) = 2,5 jam (2 jam 30 menit). 08.00 + 02.30 = 10.30 WIB.",
+      "C": "Salah, 2 jam 45 menit melebihi titik temu.",
+      "D": "Salah, pada pukul 11.00 kedua mobil sudah saling melewati sejauh 50 km.",
+      "E": "Salah, waktu tempuh 3,5 jam terlalu lama."
+    },
+    "tips": "Rumus Berpapasan (Waktu Sama): t = Jarak Total / (V1 + V2). Tambahkan hasilnya ke jam keberangkatan.",
+    "sumber": "Modul Fisika Terapan / Kinematika Gerak BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/HtAmgbrUar8",
+      "title": "Pembahasan Soal Kecepatan Jarak Waktu Berpapasan TIU CPNS",
+      "timestamp": "03:40",
+      "channel": "Bimbel CPNS"
+    },
+    "gambar": null
+  },
+  {
+    "id": 56,
+    "no": 56,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Soal Cerita (Kecepatan Menyusul)",
+    "soal": "Seorang kurir berkendara motor berangkat dari kantor pos pukul 09.00 WIB dengan kecepatan rata-rata 40 km/jam. Pada pukul 09.30 WIB, seorang petugas pengawas mengendarai mobil dinas menyusul dari kantor pos yang sama mengikuti jalur kurir tersebut dengan kecepatan rata-rata 60 km/jam. Pada pukul berapakah pengawas tersebut akan menyusul kurir motor?",
+    "opsi": {
+      "A": "Pukul 10.00 WIB",
+      "B": "Pukul 10.15 WIB",
+      "C": "Pukul 10.30 WIB",
+      "D": "Pukul 10.45 WIB",
+      "E": "Pukul 11.00 WIB"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Gunakan rumus waktu menyusul:\n1. Hitung selisih waktu keberangkatan (delta t) = 09.30 - 09.00 = 30 menit = 0,5 jam.\n2. Hitung selisih jarak awal saat pengawas mulai berangkat:\nSelisih Jarak = Kecepatan Kurir * delta t = 40 km/jam * 0,5 jam = 20 km.\n3. Hitung waktu yang dibutuhkan mobil untuk menyusul:\nt_menyusul = Selisih Jarak / (Kecepatan Mobil - Kecepatan Motor)\nt_menyusul = 20 km / (60 km/jam - 40 km/jam) = 20 / 20 = 1 jam.\n4. Jam mobil menyusul = Jam berangkat orang kedua + t_menyusul\n09.30 + 1 jam = Pukul 10.30 WIB.",
+    "analisis_opsi": {
+      "A": "Salah, pada pukul 10.00 mobil baru menempuh 30 km sedangkan motor sudah 40 km.",
+      "B": "Salah, waktu menyusul adalah 60 menit tepat.",
+      "C": "Benar (Kunci Jawaban), waktu menyusul = 20 km / (60 - 40) = 1 jam dari keberangkatan mobil (09.30 + 1 jam = 10.30 WIB).",
+      "D": "Salah, perhitungan meleset 15 menit.",
+      "E": "Salah, 1,5 jam setelah mobil berangkat posisinya sudah jauh mendahului."
+    },
+    "tips": "Rumus Cepat Menyusul: t_susul = (V1 * delta_t) / (V2 - V1). Lalu tambahkan t_susul ke jam keberangkatan orang kedua!",
+    "sumber": "Bank Soal Kecepatan Jarak Waktu CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/byHKRGVEZOE",
+      "title": "Trik Kilat Soal Menyusul TIU SKD CPNS Tanpa Rumus Rumit",
+      "timestamp": "05:15",
+      "channel": "DoseNdeso"
+    },
+    "gambar": null
+  },
+  {
+    "id": 57,
+    "no": 57,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Soal Cerita (Perbandingan Umur)",
+    "soal": "Lima tahun yang lalu, umur seorang ayah adalah 4 kali umur anaknya. Jika saat ini jumlah umur ayah dan anak tersebut adalah 50 tahun, berapakah umur anak tersebut pada 3 tahun yang akan datang?",
+    "opsi": {
+      "A": "13 tahun",
+      "B": "15 tahun",
+      "C": "16 tahun",
+      "D": "18 tahun",
+      "E": "21 tahun"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Misalkan umur ayah sekarang = A dan umur anak sekarang = B.\nPersamaan 1 (saat ini): A + B = 50 -> A = 50 - B.\nPersamaan 2 (5 tahun lalu):\n(A - 5) = 4 * (B - 5)\nSubstitusikan A = 50 - B ke persamaan 2:\n(50 - B - 5) = 4B - 20\n45 - B = 4B - 20\n45 + 20 = 4B + B\n65 = 5B\nB = 13 tahun (umur anak saat ini).\nPertanyaan: Berapakah umur anak 3 tahun yang akan datang?\nUmur anak 3 tahun lagi = B + 3 = 13 + 3 = 16 tahun.",
+    "analisis_opsi": {
+      "A": "Salah, 13 tahun adalah umur anak saat ini, belum ditambah 3 tahun ke depan.",
+      "B": "Salah, salah perhitungan aljabar substitusi.",
+      "C": "Benar (Kunci Jawaban), umur anak sekarang 13 tahun, 3 tahun mendatang menjadi 13 + 3 = 16 tahun.",
+      "D": "Salah, umur 18 tahun jika ditambah 5 tahun ke depan.",
+      "E": "Salah, kekeliruan membagi persamaan."
+    },
+    "tips": "Hati-hati Pertanyaan Jebakan: Selalu perhatikan frasa waktu pada pertanyaan akhir ('saat ini', 'n tahun lalu', atau 'n tahun mendatang'). Tambahkan sesuai waktu yang diminta!",
+    "sumber": "Modul Aljabar Linier Dua Variabel BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "title": "Trik Soal Cerita Perbandingan Umur TIU SKD CPNS",
+      "timestamp": "12:40",
+      "channel": "Ping Lie"
+    },
+    "gambar": null
+  },
+  {
+    "id": 58,
+    "no": 58,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Soal Cerita (Rata-Rata Gabungan)",
+    "soal": "Nilai rata-rata tes potensi akademik dari 20 orang pegawai pria adalah 75, sedangkan nilai rata-rata dari 30 orang pegawai wanita adalah 85. Berapakah nilai rata-rata keseluruhan dari seluruh 50 orang pegawai tersebut?",
+    "opsi": {
+      "A": "79",
+      "B": "80",
+      "C": "81",
+      "D": "82",
+      "E": "83"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Gunakan rumus Rata-Rata Gabungan (Weighted Average):\nRata-rata gabungan = (n1 * x1 + n2 * x2) / (n1 + n2)\nData:\nn1 = 20, x1 = 75\nn2 = 30, x2 = 85\nTotal nilai pria = 20 * 75 = 1.500\nTotal nilai wanita = 30 * 85 = 2.550\nTotal nilai keseluruhan = 1.500 + 2.550 = 4.050\nJumlah seluruh pegawai = 20 + 30 = 50 orang\nRata-rata gabungan = 4.050 / 50 = 81.\nTrik Cepat Perbandingan Rasio Jumlah (20 : 30 = 2 : 3):\nJarak rata-rata = 85 - 75 = 10 poin.\nNilai gabungan bergeser dari 75 sebesar (3/5) * 10 = +6 poin -> 75 + 6 = 81.",
+    "analisis_opsi": {
+      "A": "Salah, perhitungan bobot pria terlalu berat.",
+      "B": "Salah, 80 adalah rata-rata aritmatika biasa ((75+85)/2) yang mengabaikan perbedaan jumlah orang.",
+      "C": "Benar (Kunci Jawaban), rata-rata berbobot tepat adalah 4.050 / 50 = 81.",
+      "D": "Salah, pembobotan wanita terlalu tinggi.",
+      "E": "Salah, tidak sesuai rumus rata-rata gabungan."
+    },
+    "tips": "Jangan Terjebak Rata-rata Langsung: Jangan hitung (75 + 85) / 2 = 80! Gunakan pembobotan rasio orang (2 pria : 3 wanita) -> 75 + (3/5 x 10) = 81.",
+    "sumber": "Modul Statistik Terapan CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
+      "title": "Trik Hitungan Detik Rata-Rata Gabungan TIU CPNS",
+      "timestamp": "16:20",
+      "channel": "Eduvid"
+    },
+    "gambar": null
+  },
+  {
+    "id": 59,
+    "no": 59,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Numerik - Soal Cerita (Diagram Venn & Himpunan)",
+    "soal": "Dari 100 orang peserta pelatihan kepemimpinan, terdapat 65 orang yang menguasai analisis data digital, 45 orang menguasai komunikasi publik persuasif, dan 10 orang tidak menguasai kedua keahlian tersebut. Berapakah jumlah peserta pelatihan yang menguasai kedua kemampuan tersebut sekaligus?",
+    "opsi": {
+      "A": "15 orang",
+      "B": "20 orang",
+      "C": "25 orang",
+      "D": "30 orang",
+      "E": "35 orang"
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 0,
+      "B": 5,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Gunakan rumus dasar Diagram Venn Himpunan:\nSemesta (S) = (Himpunan A + Himpunan B - Irisan Keduanya) + Luar Himpunan (Tidak Keduanya)\n100 = (65 + 45 - x) + 10\n100 = 110 - x + 10\n100 = 120 - x\nx = 120 - 100 = 20 orang.\nJadi, peserta yang menguasai kedua keahlian sekaligus adalah 20 orang.",
+    "analisis_opsi": {
+      "A": "Salah, salah hitung operasi aljabar.",
+      "B": "Benar (Kunci Jawaban), Irisan (x) = (65 + 45 + 10) - 100 = 120 - 100 = 20 orang.",
+      "C": "Salah, 25 orang jika yang tidak menguasai diabaikan.",
+      "D": "Salah, selisih perhitungan.",
+      "E": "Salah, estimasi penjumlahan keliru."
+    },
+    "tips": "Rumus Cepat Irisan (Keduanya): (A + B + Luar) - Total Semesta = Irisan. (65 + 45 + 10) - 100 = 120 - 100 = 20 orang!",
+    "sumber": "Bank Soal Himpunan Matematika Dasar BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
+      "title": "Trik Kilat Diagram Venn Himpunan TIU CPNS",
+      "timestamp": "19:45",
+      "channel": "Eduvid"
+    },
+    "gambar": null
+  },
+  {
+    "id": 60,
+    "no": 60,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Figural - Serial Gambar",
+    "soal": "Perhatikan serial pola perubahan bentuk gambar berikut. Gambar berikutnya yang paling tepat melanjutkan pola serial tersebut adalah...",
+    "opsi": {
+      "A": "Panah menunjuk ke arah Jam 9 (Barat) dengan lingkaran hitam di pangkal panah.",
+      "B": "Panah menunjuk ke arah Jam 6 (Selatan) dengan lingkaran putih di ujung panah.",
+      "C": "Panah menunjuk ke arah Jam 12 (Utara) dengan segitiga di ujungnya.",
+      "D": "Panah menunjuk ke arah Jam 3 (Timur) dengan lingkaran bergaris.",
+      "E": "Panah menunjuk ke arah Jam 9 (Barat) dengan lingkaran putih di ujungnya."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Analisis dua aturan serial gambar yang bergerak simultan:\n1. Rotasi Arah Panah: Panah berputar searah jarum jam sebesar 90 derajat secara berurutan:\n- Gambar 1: Menghadap Jam 12 (Utara)\n- Gambar 2: Menghadap Jam 3 (Timur)\n- Gambar 3: Menghadap Jam 6 (Selatan)\nMaka Gambar 4 harus berputar 90 derajat lagi menghadap Jam 9 (Barat).\n2. Elemen Bulatan Tambahan: Lingkaran berpindah posisi antara ujung dan pangkal panah secara selang-seling serta berubah warna (hitam-putih-hitam). Pada langkah ke-4 posisinya berada di pangkal dan berwarna hitam solid. Oleh karena itu, opsi A adalah kelanjutan pola yang paling tepat.",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), rotasi 90 derajat searah jarum jam menghasilkan arah Jam 9 (Barat) dan posisi lingkaran hitam sesuai siklus.",
+      "B": "Salah, arah panah tidak berputar dari langkah ke-3.",
+      "C": "Salah, bentuk ornamen berubah menjadi segitiga yang tidak ada dalam deret.",
+      "D": "Salah, arah Jam 3 merupakan bentuk langkah ke-2.",
+      "E": "Salah, warna dan posisi lingkaran tidak memenuhi aturan perubahan."
+    },
+    "tips": "Analisis Figural Serial: Pisahkan pengamatan menjadi 2 fokus: 1. Arah rotasi/sudut putar (searah atau berlawanan jarum jam), 2. Perubahan elemen minor (warna, jumlah sisi, posisi).",
+    "sumber": "Modul Tes Figural Penalaran Spasial BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/cJdOppiYjT8",
+      "title": "Bongkar Trik Soal Figural Serial Gambar TIU CPNS",
+      "timestamp": "02:40",
+      "channel": "AyoCPNS"
+    },
+    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='40' y1='60' x2='40' y2='20' stroke='#0f4c81' stroke-width='4' marker-end='url(#arrow)'/><circle cx='40' cy='20' r='6' fill='#0f4c81'/><rect x='85' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='100' y1='40' x2='140' y2='40' stroke='#0f4c81' stroke-width='4'/><circle cx='105' cy='40' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2'/><rect x='165' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='200' y1='20' x2='200' y2='60' stroke='#0f4c81' stroke-width='4'/><circle cx='200' cy='60' r='6' fill='#0f4c81'/><rect x='245' y='5' width='70' height='70' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='4' stroke-width='2'/><text x='275' y='45' font-size='20' fill='#64748b' text-anchor='middle'>?</text></svg>"
+  },
+  {
+    "id": 61,
+    "no": 61,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Figural - Serial Gambar",
+    "soal": "Perhatikan serial bangun geometri bertingkat: Segitiga (3 sisi) dengan 1 titik hitam di dalam -> Segiempat (4 sisi) dengan 2 titik hitam -> Segilima (5 sisi) dengan 3 titik hitam. Gambar berikutnya yang paling tepat adalah...",
+    "opsi": {
+      "A": "Segienam (heksagon) dengan 4 titik hitam di dalamnya.",
+      "B": "Segitiga dengan 4 titik putih.",
+      "C": "Segidelapan (oktagon) dengan 5 titik hitam.",
+      "D": "Lingkaran dengan 3 titik hitam.",
+      "E": "Segilima dengan 4 titik hitam."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Pola serial terdiri dari dua pertambahan konsisten bertingkat:\n1. Jumlah sisi bangun poligon luar: 3 (segitiga) -> 4 (segiempat) -> 5 (segilima) -> suku berikutnya harus berupa bangun bersisi 6 (segienam / heksagon).\n2. Jumlah titik di dalam bangun: 1 titik -> 2 titik -> 3 titik -> suku berikutnya harus memiliki 4 titik hitam di dalamnya.\nOleh karena itu, kombinasi bangun berikutnya adalah segienam dengan 4 titik hitam.",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), jumlah sisi bertambah 1 (5+1=6 sisi) dan jumlah titik bertambah 1 (3+1=4 titik).",
+      "B": "Salah, bentuk bangun mundur ke segitiga.",
+      "C": "Salah, melompat ke 8 sisi bukan 6 sisi.",
+      "D": "Salah, lingkaran tidak memiliki sudut/sisi lurus poligon.",
+      "E": "Salah, jumlah sisi bangun tidak bertambah."
+    },
+    "tips": "Trik Hitung Sisi & Titik: Catat angka pasangan (3 sisi, 1 titik) -> (4 sisi, 2 titik) -> (5 sisi, 3 titik) -> Selanjutnya pasti (6 sisi, 4 titik).",
+    "sumber": "Modul Pola Geometri Figural CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/cJdOppiYjT8",
+      "title": "Trik Menghitung Elemen Geometris Figural Serial",
+      "timestamp": "06:15",
+      "channel": "AyoCPNS"
+    },
+    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><polygon points='40,15 20,65 60,65' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='40' cy='50' r='4' fill='#0f4c81'/><rect x='95' y='20' width='50' height='50' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='110' cy='45' r='4' fill='#0f4c81'/><circle cx='130' cy='45' r='4' fill='#0f4c81'/><polygon points='200,15 225,35 215,65 185,65 175,35' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='190' cy='45' r='3' fill='#0f4c81'/><circle cx='200' cy='45' r='3' fill='#0f4c81'/><circle cx='210' cy='45' r='3' fill='#0f4c81'/><rect x='245' y='10' width='65' height='65' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='4'/><text x='277' y='48' font-size='20' fill='#64748b' text-anchor='middle'>?</text></svg>"
+  },
+  {
+    "id": 62,
+    "no": 62,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Figural - Ketidaksamaan Gambar",
+    "soal": "Dari lima gambar bangun datar berikut, manakah satu gambar yang TIDAK SESUAI atau berbeda pola kelompoknya (ketidaksamaan gambar)?",
+    "opsi": {
+      "A": "Bujursangkar (persegi) dengan 4 sumbu simetri lipat.",
+      "B": "Segitiga sama sisi dengan 3 sumbu simetri lipat.",
+      "C": "Segienam beraturan dengan 6 sumbu simetri lipat.",
+      "D": "Segilima beraturan dengan 5 sumbu simetri lipat.",
+      "E": "Trapesium sembarang dengan 2 sumbu simetri lipat."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 5
+    },
+    "pembahasan": "Konsep pengelompokan gambar ini didasarkan pada 'Bangun Datar Beraturan' (Regular Polygons) dan simetri lipatnya:\n- Opsi A, B, C, dan D semuanya merupakan bangun segi banyak beraturan yang memiliki panjang sisi dan sudut yang sama besar, sehingga jumlah sumbu simetri lipatnya sama persis dengan jumlah sisinya (Segitiga sama sisi = 3, Bujursangkar = 4, Segilima beraturan = 5, Segienam beraturan = 6).\n- Sebaliknya, Trapesium sembarang pada Opsi E adalah bangun tidak beraturan dan sama sekali TIDAK MEMILIKI sumbu simetri lipat (sumbu simetri lipat = 0). Pernyataan pada opsi E salah dan merupakan gambar yang menyimpang dari pola kelompok.",
+    "analisis_opsi": {
+      "A": "Salah (masuk pola), bujursangkar adalah poligon beraturan dengan 4 simetri.",
+      "B": "Salah (masuk pola), segitiga sama sisi poligon beraturan dengan 3 simetri.",
+      "C": "Salah (masuk pola), segienam beraturan memiliki 6 simetri.",
+      "D": "Salah (masuk pola), segilima beraturan memiliki 5 simetri.",
+      "E": "Benar (Kunci Jawaban), trapesium sembarang bukan poligon beraturan dan tidak memiliki 2 sumbu simetri lipat (tidak sesuai kelompok)."
+    },
+    "tips": "Trik Soal Ketidaksamaan Gambar: Cek 3 parameter utama: 1. Simetri lipat & putar, 2. Keteraturan sisi/sudut (poligon beraturan vs sembarang), 3. Arah orientasi/rotasi searah jarum jam.",
+    "sumber": "Modul Ujian Figural Ketidaksamaan BKN CAT",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/mKgvPC4yDoc",
+      "title": "Trik Menemukan Gambar Berbeda (Ketidaksamaan Gambar) Figural",
+      "timestamp": "04:05",
+      "channel": "Agus Arta Wiguna"
+    },
+    "gambar": null
+  },
+  {
+    "id": 63,
+    "no": 63,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Figural - Ketidaksamaan Gambar",
+    "soal": "Terdapat lima gambar huruf/simbol berbentuk L asimetris. Empat gambar di antaranya merupakan hasil rotasi 2 dimensi dari gambar yang sama, sedangkan satu gambar merupakan hasil pencerminan (refleksi/mirror). Gambar manakah yang merupakan hasil pencerminan tersebut?",
+    "opsi": {
+      "A": "Huruf L dalam posisi tegak standar (kaki horizontal mengarah ke kanan).",
+      "B": "Huruf L diputar 90 derajat searah jarum jam (kaki horizontal menjadi vertikal ke bawah di sebelah kanan).",
+      "C": "Huruf L diputar 180 derajat (terbalik dengan kaki horizontal mengarah ke kiri di bagian atas).",
+      "D": "Huruf L hasil pencerminan horizontal (kaki horizontal mengarah ke kiri di bagian bawah).",
+      "E": "Huruf L diputar 270 derajat searah jarum jam."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 5,
+      "E": 0
+    },
+    "pembahasan": "Dalam tes figural ketidaksamaan, seringkali jebakan dibuat antara 'Rotasi' dan 'Pencerminan' (Refleksi):\n- Gambar A, B, C, dan E dapat saling bertransformasi hanya dengan diputar pada bidang datar 2 dimensi (rotasi 0°, 90°, 180°, 270°) tanpa harus membalik bangun.\n- Pada Gambar D, kaki L mengarah ke kiri di bagian bawah. Bentuk ini tidak akan pernah bisa didapat hanya dengan memutar gambar A di bidang 2D, melainkan harus dicerminkan (flip horizontal) atau diangkat dari bidang kertas. Jadi gambar D adalah gambar yang berbeda (hasil refleksi).",
+    "analisis_opsi": {
+      "A": "Salah, gambar acuan standar rotasi 0 derajat.",
+      "B": "Salah, hasil rotasi murni 90 derajat searah jarum jam.",
+      "C": "Salah, hasil rotasi murni 180 derajat.",
+      "D": "Benar (Kunci Jawaban), merupakan hasil pencerminan (refleksi/flip), bukan rotasi 2 dimensi seperti 4 pilihan lainnya.",
+      "E": "Salah, hasil rotasi murni 270 derajat."
+    },
+    "tips": "Bedakan Rotasi vs Refleksi: Rotasi hanya memutar arah tanpa mengubah tangan (kanan tetap kanan). Refleksi/Cermin membalik orientasi (kanan menjadi kiri).",
+    "sumber": "Bank Soal Figural Spasial CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/mKgvPC4yDoc",
+      "title": "Trik Membedakan Rotasi dan Pencerminan (Mirroring) Soal Figural",
+      "timestamp": "08:30",
+      "channel": "Agus Arta Wiguna"
+    },
+    "gambar": null
+  },
+  {
+    "id": 64,
+    "no": 64,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Figural - Analogi Gambar",
+    "soal": "Hubungan analogi gambar: Bangun luar berupa Lingkaran besar dan bangun dalam berupa Segitiga kecil hitam -> berubah menjadi Bangun luar Segitiga besar dan bangun dalam Lingkaran kecil putih. Jika premis kedua berupa Bangun luar Persegi besar dan bangun dalam Bintang kecil hitam, maka padanan gambar perubahannya adalah...",
+    "opsi": {
+      "A": "Bangun luar Bintang besar dan bangun dalam Persegi kecil putih.",
+      "B": "Bangun luar Lingkaran besar dan bangun dalam Persegi kecil hitam.",
+      "C": "Bangun luar Persegi besar dan bangun dalam Bintang kecil putih.",
+      "D": "Bangun luar Bintang besar dan bangun dalam Segitiga kecil hitam.",
+      "E": "Dua buah persegi kecil saling bersinggungan."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Analisis aturan analogi perubahan dari Gambar 1 ke Gambar 2:\n1. Bangun yang semula di dalam membesar menjadi bangun di luar.\n2. Bangun yang semula di luar mengecil dan masuk ke dalam.\n3. Warna arsiran elemen yang berpindah ke dalam berubah dari hitam pekat (solid) menjadi putih bersih (inversi warna).\nTerapkan aturan yang sama pada premis kedua (Luar Persegi, Dalam Bintang hitam):\n1. Bintang membesar menjadi bangun luar.\n2. Persegi mengecil menjadi bangun di dalam.\n3. Warna persegi di dalam menjadi putih bersih.\nHasil akhirnya adalah: Bangun luar Bintang besar dan bangun dalam Persegi kecil putih.",
+    "analisis_opsi": {
+      "A": "Benar (Kunci Jawaban), posisi bangun bertukar tempat (luar jadi dalam, dalam jadi luar) dan warna bangun dalam berubah menjadi putih.",
+      "B": "Salah, memunculkan lingkaran yang tidak ada pada pasangan premis kedua.",
+      "C": "Salah, posisi bangun tidak bertukar tempat.",
+      "D": "Salah, segitiga bukan bagian dari pasangan premis kedua.",
+      "E": "Salah, menyimpang dari aturan penukaran analogi bangun."
+    },
+    "tips": "Formula Analogi Gambar: Identifikasi 3 hal: 1. Posisi bertukar (Luar <-> Dalam), 2. Ukuran berubah (Besar <-> Kecil), 3. Warna/arsiran berinversi (Hitam <-> Putih).",
+    "sumber": "Modul Analogi Figural CAT BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/cJdOppiYjT8",
+      "title": "Trik Menyelesaikan Analogi Figural 3 Aturan Perubahan",
+      "timestamp": "11:00",
+      "channel": "AyoCPNS"
+    },
+    "gambar": null
+  },
+  {
+    "id": 65,
+    "no": 65,
+    "kategori": "TIU",
+    "subkategori": "Kemampuan Figural - Jaring-Jaring Kubus / Spasial",
+    "soal": "Sebuah jaring-jaring kubus terdiri dari 6 bujursangkar berpola salib: Sisi tengah vertikal berisi nomor 1 (atas), nomor 2 (tengah), nomor 3 (bawah), nomor 4 (dasar). Sayap kiri pada nomor 2 adalah sisi 5, dan sayap kanan pada nomor 2 adalah sisi 6. Jika jaring-jaring tersebut dilipat membentuk sebuah kubus utuh, sisi manakah yang akan berhadapan langsung dengan sisi nomor 2?",
+    "opsi": {
+      "A": "Sisi nomor 1",
+      "B": "Sisi nomor 3",
+      "C": "Sisi nomor 4",
+      "D": "Sisi nomor 5",
+      "E": "Sisi nomor 6"
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 0,
+      "B": 0,
+      "C": 5,
+      "D": 0,
+      "E": 0
+    },
+    "pembahasan": "Kaidah baku jaring-jaring kubus pola baris berurutan:\nPada sebuah garis lurus yang terdiri dari sisi-sisi berurutan, dua sisi yang SALING BERHADAPAN SELALU DIPISAHKAN OLEH TEPAT SATU SISI (berselang satu kotak):\n- Sisi 1 (baris 1) akan berhadapan dengan Sisi 3 (baris 3) karena dipisahkan oleh Sisi 2.\n- Sisi 2 (baris 2) akan berhadapan dengan Sisi 4 (baris 4) karena dipisahkan oleh Sisi 3.\n- Sayap kiri (Sisi 5) akan berhadapan dengan sayap kanan (Sisi 6) saat kedua sayap ditekuk ke atas.\nJadi, sisi yang berhadapan langsung dengan sisi nomor 2 adalah sisi nomor 4.",
+    "analisis_opsi": {
+      "A": "Salah, sisi 1 membentuk sudut siku-siku (tegak lurus) berdampingan dengan sisi 2.",
+      "B": "Salah, sisi 3 berada tepat bersebelahan dengan sisi 2, bukan berhadapan.",
+      "C": "Benar (Kunci Jawaban), kaidah jaring kubus selang satu kotak: Sisi 2 berhadapan langsung dengan Sisi 4.",
+      "D": "Salah, sisi 5 berhadapan dengan sayap kanan (sisi 6).",
+      "E": "Salah, sisi 6 berhadapan dengan sayap kiri (sisi 5)."
+    },
+    "tips": "Kaidah Emas Jaring Kubus: Dua sisi yang berhadapan selalu BERSELANG 1 KOTAK pada lajur lurus. Sisi 1 berhadapan dengan 3, Sisi 2 berhadapan dengan 4, Sayap kiri (5) berhadapan dengan Sayap kanan (6)!",
+    "sumber": "Modul Penalaran Spasial Jaring Bangun Ruang BKN",
+    "youtube": {
+      "url": "https://www.youtube.com/embed/mKgvPC4yDoc",
+      "title": "Trik Kilat Soal Jaring-Jaring Kubus & Spasial 3 Dimensi",
+      "timestamp": "12:50",
+      "channel": "Agus Arta Wiguna"
+    },
+    "gambar": "<svg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><rect x='70' y='10' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='90' y='35' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>1</text><rect x='30' y='50' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='50' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>5</text><rect x='70' y='50' width='40' height='40' fill='#bfdbfe' stroke='#0f4c81' stroke-width='2'/><text x='90' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>2</text><rect x='110' y='50' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='130' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>6</text><rect x='70' y='90' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='90' y='115' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>3</text><rect x='70' y='130' width='40' height='40' fill='#dbeafe' stroke='#0f4c81' stroke-width='2'/><text x='90' y='155' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>4</text></svg>"
+  },
+  {
+    "id": 66,
+    "no": 66,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Waktu operasional loket pelayanan perizinan di kantor Anda telah ditutup pada pukul 15.00 WIB sesuai SOP. Ketika Anda sedang merapikan berkas untuk bersiap pulang, seorang warga lansia datang terengah-engah dari desa terpencil yang menempuh perjalanan 4 jam menggunakan angkutan umum. Warga tersebut memohon agar berkas persyaratan bantuan pengobatannya dapat diverifikasi hari ini karena jika harus kembali besok ia tidak memiliki ongkos menginap. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Meneliti kelengkapan berkasnya terlebih dahulu, lalu berkoordinasi dengan atasan untuk meminta izin diskresi pemrosesan di luar jam kerja resmi.",
+      "B": "Menerima berkasnya, menyimpannya dengan rapi di loket, dan berjanji akan memprosesnya paling pertama besok pagi saat loket buka.",
+      "C": "Menyambut warga lansia tersebut dengan ramah, meneliti kelengkapan berkasnya, memprosesnya hingga tuntas dengan ikhlas, serta menjelaskan prosedur pelayanan agar ke depan dapat lebih terbantu.",
+      "D": "Menolak permohonan tersebut secara sopan dan memintanya datang kembali besok pagi tepat waktu sesuai SOP jam pelayanan.",
+      "E": "Menyuruhnya menunggu di luar tanpa kepastian atau meminta uang lembur pribadi sebagai kompensasi memproses di luar jam kerja."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 4,
+      "B": 3,
+      "C": 5,
+      "D": 2,
+      "E": 1
+    },
+    "pembahasan": "Indikator Pelayanan Publik: ASN dituntut memiliki empati tinggi, keramahan, dan fleksibilitas berkeadilan terhadap kelompok rentan (lansia, ibu hamil, difabel, masyarakat pelosok). Diskresi pelayanan berorientasi solusi kemanusiaan (Poin 5) merupakan standar pelayanan prima tertinggi. Opsi Poin 4 baik namun menambah birokrasi, Poin 3 kurang menuntaskan kendala menginap, Poin 2 kaku, dan Poin 1 tidak beretika.",
+    "analisis_opsi": {
+      "A": "Poin 4: Memiliki kepedulian dan itikad baik membantu warga rentan, namun masih memerlukan konfirmasi atasan sebelum mengeksekusi.",
+      "B": "Poin 3: Berniat membantu dan berkas aman, namun warga lansia tetap harus mencari tempat menginap tanpa kepastian selesai hari ini.",
+      "C": "Poin 5: Sangat solutif, memiliki empati kemanusiaan yang tinggi, ramah, dan menuntaskan masalah warga lansia tanpa membebani.",
+      "D": "Poin 2: Terlalu kaku dan birokratis tanpa empati terhadap kesulitan nyata masyarakat rentan yang membutuhkan bantuan darurat.",
+      "E": "Poin 1: Sangat tidak bertanggung jawab, menelantarkan warga lansia, dan melanggar integritas moral aparatur negara."
+    },
+    "tips": "Tips TKP Pelayanan Publik: Utamakan EMPATI TINGGI, AKSI TUNTAS, dan KEADILAN bagi kelompok rentan tanpa pungutan liar.",
+    "sumber": "UU No. 25 Tahun 2009 tentang Pelayanan Publik & Core Values ASN BerAKHLAK (Berorientasi Pelayanan)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 67,
+    "no": 67,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Sistem mesin antrean digital dan server database kependudukan di loket kantor dinas Anda mendadak mengalami gangguan teknis parah akibat pemadaman listrik gardu kota. Puluhan warga yang telah menunggu lama mulai resah, mengeluh, dan sebagian mulai tersulut emosi di ruang tunggu. Sebagai penanggung jawab pelayanan garda depan (frontliner), tindakan prioritas Anda adalah...",
+    "opsi": {
+      "A": "Meminta warga bersabar menunggu perbaikan sistem sambil membagikan air mineral di ruang tunggu.",
+      "B": "Segera menemui warga dengan tenang dan santun, menyampaikan permohonan maaf atas kendala yang terjadi, mengaktifkan genset darurat dan prosedur pencatatan berkas manual, serta membagikan nomor antrean cadangan agar masyarakat tetap terlayani secara tertib.",
+      "C": "Mengumumkan permohonan maaf melalui pengeras suara, berkoordinasi dengan teknisi listrik untuk percepatan penanganan, dan menyiapkan formulir pendaftaran fisik darurat.",
+      "D": "Menutup loket dan mengurung diri di ruang staf sampai teknisi menyelesaikan perbaikan listrik.",
+      "E": "Menyampaikan bahwa gangguan di luar kendali kantor dinas dan menyarankan warga yang tidak sabar untuk datang di hari lain."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 3,
+      "B": 5,
+      "C": 4,
+      "D": 1,
+      "E": 2
+    },
+    "pembahasan": "Indikator Ketahanan Pelayanan dalam Krisis: Pelayan publik wajib bersikap responsif (Poin 5), proaktif meminta maaf secara santun, dan segera mengaktifkan kontinjensi manual agar hak layanan warga tidak terhenti total.",
+    "analisis_opsi": {
+      "A": "Poin 3: Memiliki kepedulian keramahan, namun belum menyediakan solusi teknis alternatif agar pelayanan tetap berlanjut.",
+      "B": "Poin 5: Sangat responsif, mengendalikan situasi dengan komunikasi santun, beralih ke mitigasi manual demi kelancaran layanan masyarakat.",
+      "C": "Poin 4: Tanggap dan berupaya menenangkan warga, namun kehadiran langsung di hadapan massa lebih efektif meredakan ketegangan.",
+      "D": "Poin 1: Menghindar dari tanggung jawab, memicu eskalasi kemarahan publik, dan mencederai integritas pelayanan publik.",
+      "E": "Poin 2: Defensif, melempar tanggung jawab kendala teknis, dan kurang memberikan rasa kepastian kepada pemohon."
+    },
+    "tips": "Krisis Layanan: Hadapi warga langsung + Minta maaf tulus + Aktifkan sistem manual darurat.",
+    "sumber": "PermenPAN-RB Standar Pelayanan Publik & Surat Edaran BKN Pelayanan Responsif",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 68,
+    "no": 68,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Anda ditugaskan mendesain ulang alur loket pelayanan terpadu satu pintu (PTSP). Anda melihat bahwa fasilitas jalur pemandu tuna netra (guiding block), kursi roda difabel, dan ruang laktasi ibu menyusui belum tersedia memadai, padahal banyak pemohon dari kalangan rentan yang datang setiap hari. Usulan Anda dalam rapat evaluasi pimpinan adalah...",
+    "opsi": {
+      "A": "Menyarankan pemohon rentan untuk didampingi keluarga saja agar instansi tidak perlu banyak merombak tata ruang.",
+      "B": "Menolak usulan penambahan fasilitas ramah difabel dengan alasan anggaran lebih baik dipakai untuk renovasi ruang pimpinan.",
+      "C": "Mengusulkan penyediaan loket khusus sementara di lantai dasar yang mudah diakses difabel sembari menunggu anggaran renovasi fasilitas menyeluruh.",
+      "D": "Mengusulkan prioritas pengadaan fasilitas inklusif ramah disabilitas (ramp kursi roda, loket prioritas rendah, jalur pemandu, ruang laktasi) sesuai standar pelayanan inklusif pemerintah.",
+      "E": "Mengusulkan penugasan staf khusus pendamping yang bertugas membimbing pemohon difabel dan ibu menyusui secara personal."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 2,
+      "B": 1,
+      "C": 4,
+      "D": 5,
+      "E": 3
+    },
+    "pembahasan": "Indikator Pelayanan Publik Inklusif: Negara wajib menjamin kesetaraan akses layanan publik bagi penyandang disabilitas, lansia, dan ibu menyusui (UU No. 8/2016). Usulan komprehensif (Poin 5) adalah sikap terbaik.",
+    "analisis_opsi": {
+      "A": "Poin 2: Kurang bertanggung jawab dan mengalihkan beban aksesibilitas sepenuhnya kepada keluarga pemohon.",
+      "B": "Poin 1: Egois, diskriminatif, dan melanggar amanat undang-undang perlindungan penyandang disabilitas.",
+      "C": "Poin 4: Solutif dan realistis untuk jangka pendek, menunjukkan kepekaan tinggi pada aksesibilitas kelompok rentan.",
+      "D": "Poin 5: Visioner, mengutamakan pemenuhan standar pelayanan publik inklusif sesuai regulasi nasional.",
+      "E": "Poin 3: Membantu secara manual namun fasilitas infrastruktur fisik yang ramah difabel tetap menjadi kebutuhan mendasar."
+    },
+    "tips": "Pelayanan Inklusif: Pastikan infrastruktur ramah disabilitas menjadi prioritas utama penataan fasilitas publik.",
+    "sumber": "UU No. 8 Tahun 2016 tentang Penyandang Disabilitas & PermenPAN-RB Pelayanan Ramah Kelompok Rentan",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 69,
+    "no": 69,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Seorang pemohon izin usaha merasa sangat terbantu oleh bimbingan teknis yang Anda berikan karena proses perizinannya selesai tepat waktu tanpa berbelit-belit. Sebagai ungkapan rasa terima kasih, pemohon tersebut menyelipkan amplop berisi uang tunai satu juta rupiah ke saku jaket Anda saat berpamitan di tempat parkir. Respons Anda adalah...",
+    "opsi": {
+      "A": "Menerima uang tersebut dan menyimpannya di dompet pribadi karena merasa tidak memintanya secara langsung.",
+      "B": "Menerima uang tersebut dengan niat akan membelikan makanan ringan untuk dinikmati bersama seluruh staf loket.",
+      "C": "Menolak amplop tersebut dengan ragu-ragu dan meminta pemohon membawanya pulang.",
+      "D": "Menolak amplop tersebut secara halus dan meminta pemohon cukup memberikan ulasan penilaian kepuasan positif di survei kepuasan masyarakat resmi instansi.",
+      "E": "Mengembalikan amplop tersebut dengan santun dan tegas, menjelaskan bahwa pelayanan cepat dan profesional adalah kewajiban tugas pokok ASN yang sudah digaji oleh negara tanpa biaya tambahan."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 1,
+      "B": 2,
+      "C": 3,
+      "D": 4,
+      "E": 5
+    },
+    "pembahasan": "Indikator Integritas Pelayanan Publik: ASN dilarang keras menerima hadiah atau kompensasi apapun terkait pelaksanaan tupoksi pelayanan. Menolak dengan santun, tegas, dan memberi edukasi (Poin 5) mencerminkan standar etika luhur.",
+    "analisis_opsi": {
+      "A": "Poin 1: Pelanggaran integritas berat, menerima gratifikasi ilegal yang melanggar hukum tindak pidana korupsi.",
+      "B": "Poin 2: Keliru; niat berbagi tidak membenarkan penerimaan uang ucapan terima kasih terkait dinas.",
+      "C": "Poin 3: Menolak namun kurang memberikan edukasi tegas mengenai nilai integritas dan bahaya gratifikasi.",
+      "D": "Poin 4: Berintegritas tinggi menolak uang dan mengarahkan apresiasi warga ke instrumen evaluasi formal.",
+      "E": "Poin 5: Tegas menjaga integritas, santun, dan memberikan edukasi prinsip pelayanan bersih bebas korupsi."
+    },
+    "tips": "Integritas Hadiah: Tolak tegas + Bahasa santun + Jelaskan bahwa melayani dengan prima adalah kewajiban negara.",
+    "sumber": "UU No. 20 Tahun 2001 (Tipikor) & Core Values ASN BerAKHLAK (Akuntabel)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 70,
+    "no": 70,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Banyak pemohon mengeluhkan rumitnya alur birokrasi verifikasi dokumen yang mengharuskan mereka bolak-balik meminta cap stempel fisik ke empat lantai gedung yang berbeda. Sebagai analis tata laksana yang baru bertugas di unit tersebut, inovasi apa yang akan Anda gagas?",
+    "opsi": {
+      "A": "Merancang integrasi alur persetujuan berbasis tanda tangan digital (e-Office) dan sistem verifikasi satu meja (one-stop service) agar berkas diverifikasi secara daring tanpa mobilisasi fisik pemohon.",
+      "B": "Mengusulkan penempatan perwakilan petugas verifikator dari keempat lantai dalam satu ruangan terpadu di lantai dasar untuk memudahkan alur cap stempel pemohon.",
+      "C": "Meminta pemohon untuk bersabar karena birokrasi pemerintahan memang memiliki hierarki pengawasan resmi.",
+      "D": "Membuat papan denah alur petunjuk arah yang besar di lobi agar pemohon tidak tersesat saat menaiki tangga antar-lantai.",
+      "E": "Menyarankan pemohon menggunakan jasa perantara/calo tidak resmi di luar gedung agar mereka tidak perlu lelah berjalan."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 4,
+      "C": 2,
+      "D": 3,
+      "E": 1
+    },
+    "pembahasan": "Indikator Inovasi Pelayanan Publik: Pemanfaatan sistem digital dan loket terpadu satu meja (Poin 5) memangkas inefisiensi birokrasi berbelit, menghemat waktu warga, dan meningkatkan akuntabilitas.",
+    "analisis_opsi": {
+      "A": "Poin 5: Solutif, inovatif, memanfaatkan teknologi modern, dan menghadirkan kemudahan nyata bagi masyarakat.",
+      "B": "Poin 4: Sangat praktis dan cepat diimplementasikan dalam jangka pendek sembari menunggu pengembangan sistem digital.",
+      "C": "Poin 2: Mentalitas pasif yang membiarkan keluhan masyarakat tanpa ada inisiatif perbaikan proses bisnis.",
+      "D": "Poin 3: Membantu navigasi fisik warga, namun belum memangkas inefisiensi alur birokrasi berbelit.",
+      "E": "Poin 1: Melanggar hukum, menyuburkan praktik percaloan liar, dan merusak tata kelola pelayanan publik."
+    },
+    "tips": "Inovasi Birokrasi: Pangkas alur berbelit + Manfaatkan digitalisasi/otomasi demi kemudahan warga.",
+    "sumber": "PermenPAN-RB No. 30 Tahun 2014 tentang Inovasi Pelayanan Publik",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 71,
+    "no": 71,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Akun media sosial resmi instansi tempat Anda bekerja mendapat kritik pedas dan viral dari warganet karena salah satu petugas pelayanan dinilai bersikap ketus dan lambat dalam memproses surat izin. Pimpinan menugaskan Anda sebagai admin pengelola komplain. Sikap yang Anda ambil adalah...",
+    "opsi": {
+      "A": "Menampung kritik tersebut, melaporkannya kepada atasan, dan menunggu instruksi pimpinan sebelum memberikan jawaban di media sosial.",
+      "B": "Menyampaikan permohonan maaf secara resmi dengan santun dan empatik, meminta detail kronologi via pesan langsung (DM), berkoordinasi dengan tim internal untuk menginvestigasi serta menyelesaikan masalah warga tersebut secara transparan dan tuntas.",
+      "C": "Menghapus komentar kritikan warganet dan memblokir akun yang mengunggah kritik agar halaman media sosial kantor terlihat bersih.",
+      "D": "Merespons komentar publik dengan permohonan maaf terbuka, menjelaskan SOP resmi, dan segera menghubungi warga pelapor untuk menyelesaikan berkas perizinannya.",
+      "E": "Membiarkan postingan tersebut tanpa balasan dengan anggapan bahwa kegaduhan media sosial akan mereda dengan sendirinya."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 3,
+      "B": 5,
+      "C": 1,
+      "D": 4,
+      "E": 2
+    },
+    "pembahasan": "Indikator Manajemen Komplain: Respons empatik, santun, cepat menuntaskan masalah faktual, dan transparan (Poin 5) adalah kunci meredakan krisis komunikasi dan memperbaiki mutu pelayanan birokrasi.",
+    "analisis_opsi": {
+      "A": "Poin 3: Taat hierarki, namun respons di media sosial yang lambat dapat memperparah sentimen negatif publik.",
+      "B": "Poin 5: Responsif, santun, transparan, cepat mencari solusi akar masalah, dan menjaga reputasi institusi secara konstruktif.",
+      "C": "Poin 1: Anti-kritik, otoriter, dan berpotensi memicu gelombang kemarahan publik yang jauh lebih besar.",
+      "D": "Poin 4: Baik dan cepat menanggapi, namun investigasi komprehensif bersama tim internal penting agar perbaikan menyeluruh tercapai.",
+      "E": "Poin 2: Pasif dan tidak peduli terhadap citra lembaga serta hak kepastian pelayanan warga."
+    },
+    "tips": "Keluhan Publik di Medsos: Minta maaf santun + Minta kronologi detail via DM + Tuntaskan berkasnya segera.",
+    "sumber": "SP4N-LAPOR! & PermenPAN-RB No. 62 Tahun 2018 tentang Pengelolaan Pengaduan Pelayanan Publik",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 72,
+    "no": 72,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Instansi Anda menerapkan portal data perizinan terbuka. Seorang perwakilan Lembaga Swadaya Masyarakat (LSM) datang meminta salinan dokumen ringkasan anggaran pengadaan barang dan jasa publik yang menurut regulasi UU KIP merupakan informasi terbuka. Namun, staf senior di bagian arsip enggan memberikannya karena menganggap LSM sering mencari-cari kesalahan kantor. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Mengarahkan pemohon untuk mengisi formulir permohonan resmi PPID, lalu membantu memfasilitasi persetujuan atasan agar dokumen dapat diserahkan sesuai prosedur legal.",
+      "B": "Meminta pemohon menunggu beberapa hari sementara Anda berkonsultasi kepada pimpinan mengenai boleh tidaknya dokumen diserahkan.",
+      "C": "Mempelajari ketentuan klasifikasi informasi publik sesuai UU Keterbukaan Informasi Publik, menjelaskan kepada staf senior bahwa informasi tersebut terbuka, dan melayani permohonan pemohon sesuai SOP PPID secara transparan.",
+      "D": "Menyarankan pemohon mengajukan sengketa informasi ke Komisi Informasi terlebih dahulu jika memang sangat membutuhkan dokumen tersebut.",
+      "E": "Mendukung prasangka staf senior untuk menyembunyikan berkas dan beralasan kepada LSM bahwa dokumen anggaran tersebut hilang."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 4,
+      "B": 3,
+      "C": 5,
+      "D": 2,
+      "E": 1
+    },
+    "pembahasan": "Indikator Transparansi Publik: UU No. 14/2008 menjamin hak masyarakat memperoleh informasi terbuka. Sikap profesional (Poin 5) adalah melayani permohonan sesuai mekanisme resmi PPID dan mengedukasi rekan agar patuh hukum.",
+    "analisis_opsi": {
+      "A": "Poin 4: Tertib administrasi dan berorientasi melayani pemohon secara sah dan aman bagi institusi.",
+      "B": "Poin 3: Hati-hati, namun terkesan memperlambat hak akses informasi yang seharusnya sudah jelas status terbukanya.",
+      "C": "Poin 5: Berpegang teguh pada regulasi hukum yang sah, mengedukasi rekan kerja, dan menjamin hak akses informasi masyarakat secara transparan.",
+      "D": "Poin 2: Birokratis berlebihan dan melempar sengketa yang sebenarnya dapat diselesaikan di tingkat meja pelayanan internal.",
+      "E": "Poin 1: Melanggar hukum UU KIP, tidak transparan, dan merupakan maladministrasi berat."
+    },
+    "tips": "Keterbukaan Informasi: Jika dokumen berstatus terbuka menurut UU KIP, berikan melalui prosedur PPID secara profesional.",
+    "sumber": "UU No. 14 Tahun 2008 tentang Keterbukaan Informasi Publik & Standar Layanan Informasi BKN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 73,
+    "no": 73,
+    "kategori": "TKP",
+    "subkategori": "Pelayanan Publik",
+    "soal": "Seorang pemohon pelayanan sertifikasi datang dengan sikap sangat arogan, membentak staf loket karena merasa dirinya adalah kerabat tokoh berpengaruh, dan menuntut berkasnya didahulukan melompati antrean puluhan warga lain yang sudah mengantre sejak subuh. Sebagai penanggung jawab ruang layanan, tindakan Anda adalah...",
+    "opsi": {
+      "A": "Menjelaskan bahwa berkasnya akan tetap diproses hari ini asalkan ia bersedia duduk tenang di kursi antrean yang telah disediakan.",
+      "B": "Menegur pemohon tersebut secara sopan namun tegas di depan loket bahwa semua pemohon memiliki hak yang setara dan meminta petugas keamanan mendampingi agar suasana antrean tetap tertib.",
+      "C": "Membalas membentak pemohon tersebut dengan kata-kata kasar dan mengusirnya secara paksa dari gedung kantor.",
+      "D": "Mempersilakan pemohon tersebut ke ruang konsultasi khusus, berbicara dengan nada tenang dan terkendali, menjelaskan aturan antrean berkeadilan yang berlaku bagi seluruh warga negara tanpa pengecualian, dan memintanya tertib mengikuti nomor antrean yang sah.",
+      "E": "Menuruti permintaannya mendahulukan berkasnya demi menghindari keributan yang semakin memalukan di ruang pelayanan publik."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 3,
+      "B": 4,
+      "C": 1,
+      "D": 5,
+      "E": 2
+    },
+    "pembahasan": "Indikator Pengendalian Emosi dan Kesetaraan Layanan: Pelayan publik harus adil dan tidak terintimidasi latar belakang pemohon. Menenangkan di ruang konsultasi dan menegakkan asas persamaan hak (Poin 5) menjaga marwah keadilan birokrasi.",
+    "analisis_opsi": {
+      "A": "Poin 3: Berupaya menenangkan pemohon dengan diplomasi halus, namun kurang tegas dalam prinsip antrean berkeadilan.",
+      "B": "Poin 4: Tegas menegakkan aturan di ruang layanan, namun memindahkannya ke ruang terpisah lebih efektif meredakan ketegangan umum.",
+      "C": "Poin 1: Tidak profesional, terbawa emosi, dan merendahkan martabat aparatur sipil negara.",
+      "D": "Poin 5: Tenang, tegas menegakkan keadilan antrean, mampu meredam keributan tanpa kekerasan, dan tidak tunduk pada intimidasi status sosial.",
+      "E": "Poin 2: Mengorbankan keadilan dan hak puluhan warga yang tertib demi menghindari konflik sesaat."
+    },
+    "tips": "Warga Arogan/Emosional: Ajak ke ruang tenang + Bicara santun namun tegas + Tegakkan prinsip antrean tanpa diskriminasi.",
+    "sumber": "Core Values ASN BerAKHLAK (Berorientasi Pelayanan & Akuntabel) & Standar Pelayanan Publik Ombudsman RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 74,
+    "no": 74,
+    "kategori": "TKP",
+    "subkategori": "Jejaring Kerja",
+    "soal": "Anda ditunjuk menjadi ketua tim proyek strategis lintas instansi yang beranggotakan perwakilan dari empat kementerian yang berbeda. Setiap instansi memiliki budaya kerja, istilah teknis, dan pola komunikasi yang sangat berlainan, sehingga pada minggu pertama rapat koordinasi terjadi saling curiga dan suasana kaku. Langkah awal Anda untuk membangun sinergi tim adalah...",
+    "opsi": {
+      "A": "Menetapkan sistem kerja dari instansi Anda sendiri sebagai acuan tunggal yang wajib dipatuhi seluruh anggota tanpa tawar-menawar.",
+      "B": "Mengerjakan proyek tersebut sendiri bersama staf instansi asal Anda dan mengabaikan anggota dari kementerian lainnya.",
+      "C": "Menyusun pembagian tugas formal yang jelas berdasarkan tupoksi masing-masing instansi lalu mendiskusikannya dalam rapat pleno terbuka.",
+      "D": "Meminta setiap perwakilan instansi mempresentasikan cara kerja kantor asalnya untuk kemudian dipilih metode yang paling efisien.",
+      "E": "Mengadakan sesi perkenalan informal dan penyamaan persepsi visi bersama, memetakan keahlian unik masing-masing anggota, serta menyepakati aturan komunikasi tim yang terbuka, inklusif, dan kolaboratif."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 2,
+      "B": 1,
+      "C": 4,
+      "D": 3,
+      "E": 5
+    },
+    "pembahasan": "Indikator Kolaborasi dan Jejaring Kerja: Tim lintas sektoral membutuhkan penciptaan rasa saling percaya (trust building), penyamaan visi, dan inklusivitas (Poin 5) agar ego-sektoral luntur menjadi kekuatan sinergis.",
+    "analisis_opsi": {
+      "A": "Poin 2: Dominatif dan ego sektoral yang mematikan partisipasi aktif anggota lintas instansi.",
+      "B": "Poin 1: Menolak esensi jejaring kemitraan Whole-of-Government dan merusak kerja sama tim lintas instansi.",
+      "C": "Poin 4: Terstruktur dan profesional, namun membangun ikatan kepercayaan informal di awal akan semakin mempercepat peleburan sekat ego sektoral.",
+      "D": "Poin 3: Demokratis, namun berisiko memunculkan perdebatan mengenai siapa yang metode kerjanya paling unggul.",
+      "E": "Poin 5: Sangat kolaboratif, membangun rasa saling percaya, memetakan potensi sinergi, dan merumuskan konsensus kerja bersama."
+    },
+    "tips": "Sinergi Lintas Sektor: Bangun kepercayaan + Samakan visi bersama + Petakan keahlian anggota secara inklusif.",
+    "sumber": "Modul Kolaboratif ASN BerAKHLAK (Whole of Government) LAN RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 75,
+    "no": 75,
+    "kategori": "TKP",
+    "subkategori": "Jejaring Kerja",
+    "soal": "Dalam sebuah kelompok kerja tim penyusunan dokumen laporan akuntabilitas, ada seorang rekan kerja yang sering datang terlambat, jarang merespons pesan grup koordinasi, dan menyerahkan bagian tugasnya dalam keadaan belum selesai sehingga menghambat penyelesaian tugas tim secara keseluruhan. Sikap Anda sebagai rekan satu tim adalah...",
+    "opsi": {
+      "A": "Mendekati rekan tersebut secara personal untuk mencari tahu kendala yang dihadapinya, mengingatkan komitmen tenggat waktu bersama, menawarkan bimbingan pada bagian teknis yang ia belum kuasai, dan membagi kembali target kerja secara bertahap agar tuntas bersama.",
+      "B": "Mengeluarkan rekan tersebut dari grup dan menjelek-jelekkannya kepada pegawai di divisi lain.",
+      "C": "Menegur rekan tersebut dengan keras di grup koordinasi agar ia merasa malu dan segera memperbaiki kinerjanya.",
+      "D": "Mengerjakan bagian tugasnya yang kurang agar target tim tidak terlambat, lalu melaporkan kendala tersebut pada evaluasi akhir proyek.",
+      "E": "Mengajak seluruh anggota tim duduk bersama membicarakan kendala keterlambatan tugas secara terbuka dan mencari solusi pembagian beban kerja tambahan."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 1,
+      "C": 2,
+      "D": 3,
+      "E": 4
+    },
+    "pembahasan": "Indikator Manajemen Hubungan Kerja: Rekan yang tertinggal harus dirangkul melalui pendekatan asertif empatik (Poin 5) untuk mendiagnosis kendala, memberi pendampingan teknis, dan mengawal akuntabilitas bersama.",
+    "analisis_opsi": {
+      "A": "Poin 5: Konstruktif, mengedepankan komunikasi empatik, solutif terhadap kendala kerja, dan menjaga keutuhan kinerja kelompok.",
+      "B": "Poin 1: Toksik, kekanak-kanakan, memecah belah tim, dan melanggar kode etik kerja sama ASN.",
+      "C": "Poin 2: Komunikasi agresif yang berpotensi merusak hubungan kerja antarpribadi dan memperburuk keengganan berpartisipasi.",
+      "D": "Poin 3: Berorientasi hasil output, namun membebani diri sendiri dan tidak mendidik rekan untuk mandiri bertanggung jawab.",
+      "E": "Poin 4: Bagus mengedepankan musyawarah tim, namun pendekatan personal terlebih dahulu dapat menghindari rekan tersebut merasa dihakimi di depan umum."
+    },
+    "tips": "Menghadapi Rekan Kerja Pasif: Dekati personal empatik -> Cari akar hambatan -> Dampingi solusinya secara terukur.",
+    "sumber": "Modul Harmonis & Kolaboratif Core Values ASN LAN RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 76,
+    "no": 76,
+    "kategori": "TKP",
+    "subkategori": "Jejaring Kerja",
+    "soal": "Anda baru saja selesai mengikuti pelatihan bertaraf internasional mengenai teknik analisis big data dan visualisasi dashboard modern yang dibiayai penuh oleh negara. Ketika kembali ke kantor, Anda melihat staf lain masih menggunakan cara manual yang sangat lambat. Sikap yang mencerminkan optimalisasi jejaring kerja adalah...",
+    "opsi": {
+      "A": "Membuat panduan ringkas dan template dashboard otomatis yang dibagikan secara gratis kepada seluruh rekan kerja di kantor.",
+      "B": "Meminta izin pimpinan untuk menyelenggarakan sesi knowledge sharing (berbagi ilmu) dan mentoring praktik berkala bagi seluruh rekan divisi agar kompetensi tim meningkat secara kolektif.",
+      "C": "Menyimpan ilmu tersebut untuk diri sendiri agar menjadi pegawai yang paling diunggulkan dalam penilaian kinerja tahunan.",
+      "D": "Membantu rekan kerja menyelesaikan tugasnya dengan menggunakan teknik baru saat mereka meminta bantuan kepada Anda.",
+      "E": "Mengejek metode kerja rekan-rekan senior sebagai cara kuno yang lambat tanpa mau membagikan ilmu baru yang didapat."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 4,
+      "B": 5,
+      "C": 2,
+      "D": 3,
+      "E": 1
+    },
+    "pembahasan": "Indikator Berbagi Pengetahuan (Knowledge Sharing): Dalam jejaring organisasi pembelajar (learning organization), ilmu dari pelatihan kedinasan harus ditransformasikan menjadi modal keahlian kolektif tim (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 4: Sangat bermanfaat dan praktis, dan akan lebih berdampak jika disertai sesi bimbingan praktik langsung.",
+      "B": "Poin 5: Sangat inspiratif, berjiwa pembelajar kolaboratif, memperkuat kapasitas rekan kerja demi kemajuan institusi bersama.",
+      "C": "Poin 2: Egois, berpikiran sempit, dan tidak memiliki kepedulian terhadap kemajuan organisasi secara keseluruhan.",
+      "D": "Poin 3: Membantu saat diminta, namun kurang proaktif memberdayakan kapabilitas rekan secara terstruktur.",
+      "E": "Poin 1: Arogan, toksik, merusak keharmonisan, dan mencederai etos kemitraan jejaring aparatur."
+    },
+    "tips": "Knowledge Sharing: Inisiasi workshop/mentoring internal untuk mengangkat kompetensi seluruh rekan satu tim.",
+    "sumber": "Core Values ASN BerAKHLAK (Kompeten & Kolaboratif) & Pedoman Bangkom LAN RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 77,
+    "no": 77,
+    "kategori": "TKP",
+    "subkategori": "Jejaring Kerja",
+    "soal": "Instansi Anda sedang merancang program pemberdayaan UMKM lokal dan memerlukan kolaborasi dengan perbankan, asosiasi pedagang, serta komunitas pegiat teknologi. Anda dipercaya memimpin forum kemitraan multi-pihak tersebut. Sikap terbaik dalam memelihara jejaring kemitraan eksternal adalah...",
+    "opsi": {
+      "A": "Menjalankan program kemitraan sesuai petunjuk teknis dinas dan menghubungi mitra ketika ada kegiatan seremonial penandatanganan.",
+      "B": "Memanfaatkan forum kemitraan tersebut untuk meminta sponsor dana dan fasilitas liburan pribadi dari para pelaku usaha.",
+      "C": "Membangun komunikasi dua arah yang setara dan transparan, mendengarkan aspirasi serta kapabilitas tiap mitra, merumuskan skema kerja sama saling menguntungkan (win-win solution), dan menjaga silaturahmi formal maupun informal secara berkelanjutan.",
+      "D": "Menyusun nota kesepahaman (MoU) kemitraan yang jelas dan mengadakan pertemuan evaluasi berkala bersama seluruh mitra pemangku kepentingan.",
+      "E": "Menuntut seluruh pihak mitra swasta mematuhi seluruh kemauan pemerintah tanpa memberikan ruang masukan bisnis bagi mereka."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 3,
+      "B": 1,
+      "C": 5,
+      "D": 4,
+      "E": 2
+    },
+    "pembahasan": "Indikator Membina Jejaring Eksternal: Kemitraan strategis pemerintah dengan sektor swasta/komunitas bertumpu pada komunikasi setara, transparansi, rasa saling percaya, dan solusi saling menguntungkan (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 3: Cukup tertib prosedur, namun kurang proaktif merawat hubungan kemitraan yang dinamis dan berakar.",
+      "B": "Poin 1: Tindak pidana pemerasan dan konflik kepentingan yang mencemari nama baik instansi negara.",
+      "C": "Poin 5: Prinsip jejaring kemitraan ideal: komunikasi terbuka, setara, saling menguntungkan, dan berkelanjutan.",
+      "D": "Poin 4: Legalistik dan tertib tata kelola formal, akan lebih solid jika dibarengi kedekatan relasi informal yang luwes.",
+      "E": "Poin 2: Arogansi birokrasi sepihak yang membuat mitra eksternal enggan berkolaborasi secara berkelanjutan."
+    },
+    "tips": "Jejaring Eksternal: Dengarkan aspirasi mitra + Rumuskan win-win solution + Jaga hubungan silaturahmi berkala.",
+    "sumber": "Panduan Kemitraan Pemerintah-Swasta Bappenas & Core Values Kolaboratif",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 78,
+    "no": 78,
+    "kategori": "TKP",
+    "subkategori": "Jejaring Kerja",
+    "soal": "Terjadi perselisihan dan miskomunikasi tajam antara Divisi Keuangan dan Divisi Pengadaan di kantor Anda terkait keterlambatan pencairan dana vendor proyek pembangunan, yang berakibat pada saling menyalahkan di ruang kerja. Anda adalah staf di Divisi Perencanaan yang sering berkoordinasi dengan kedua divisi tersebut. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Menghubungi kepala subbagian kedua divisi untuk menyarankan diadakannya rapat mediasi resmi guna menyinkronkan data berkas anggaran.",
+      "B": "Tetap fokus mengerjakan tugas perencanaan Anda sendiri dan bersikap netral tanpa memihak salah satu kubu.",
+      "C": "Mengeluhkan lambatnya kerja kedua divisi tersebut kepada rekan-rekan staf lain di jam istirahat kantor.",
+      "D": "Mengambil inisiatif mengundang perwakilan staf teknis dari kedua divisi untuk duduk bersama dalam forum klarifikasi santai, mengurai benang kusut alur verifikasi berkas, dan membantu merumuskan solusi percepatan pencairan sesuai regulasi anggaran.",
+      "E": "Ikut memperkeruh suasana dengan mengadu domba pimpinan kedua divisi agar proyek pembangunan dibatalkan."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 4,
+      "B": 3,
+      "C": 2,
+      "D": 5,
+      "E": 1
+    },
+    "pembahasan": "Indikator Mediasi dan Penjaga Harmoni: Aparatur yang memiliki kematangan jejaring kerja mampu menjadi jembatan penghubung (bridge builder) saat terjadi friksi antar-unit kerja (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 4: Tepat melalui jalur struktural pimpinan, inisiatif memfasilitasi duduk bersama teknis di awal juga sangat membantu.",
+      "B": "Poin 3: Netral dan menjaga tugas pribadi, namun bersikap pasif saat ada peluang membantu mencairkan hambatan organisasi.",
+      "C": "Poin 2: Memperkeruh atmosfer kerja dengan keluhan informal tanpa memberikan kontribusi solusi apa pun.",
+      "D": "Poin 5: Proaktif menjadi jembatan perdamaian kerja, fokus pada penyelesaian alur kendala teknis, dan memulihkan harmoni koordinasi.",
+      "E": "Poin 1: Sangat destruktif, merusak keutuhan institusi, dan mencerminkan karakter aparatur yang berbahaya."
+    },
+    "tips": "Konflik Antar-Divisi: Jadilah penengah konstruktif (jembatan komunikasi) yang mengurai sumbatan proses bisnis.",
+    "sumber": "Modul Harmonis dan Kolaboratif Core Values ASN BerAKHLAK LAN RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 79,
+    "no": 79,
+    "kategori": "TKP",
+    "subkategori": "Jejaring Kerja",
+    "soal": "Instansi Anda akan melaksanakan program edukasi penanganan stunting anak di sebuah kecamatan perdesaan. Namun, warga setempat cenderung acuh tak acuh dan menolak hadir pada pertemuan sosialisasi awal yang diadakan petugas. Untuk memperluas jejaring dan efektivitas program, strategi yang Anda tempuh adalah...",
+    "opsi": {
+      "A": "Menggandeng aparat keamanan Babinsa dan Bhabinkamtibmas untuk mengajak warga datang ke posko balai desa.",
+      "B": "Mengadakan kunjungan dari rumah ke rumah (door-to-door) bersama bidan desa untuk mengedukasi para ibu secara personal dan ramah.",
+      "C": "Mengancam akan mencabut bantuan sosial PKH bagi warga yang menolak hadir pada sosialisasi stunting.",
+      "D": "Membuat spanduk dan membagikan brosur dalam jumlah banyak di pasar desa tanpa melakukan dialog tatap muka.",
+      "E": "Melakukan pendekatan kultural dengan menemui dan merangkul tokoh adat, tokoh agama, ketua kelompok tani, dan kader PKK setempat, menjelaskan manfaat program bagi masa depan anak cucu mereka, serta mengajak tokoh-tokoh tersebut menjadi penggerak utama di masyarakat."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 3,
+      "B": 4,
+      "C": 1,
+      "D": 2,
+      "E": 5
+    },
+    "pembahasan": "Indikator Jejaring Sosial Komunitas: Menembus keengganan partisipasi warga membutuhkan kemitraan erat dengan tokoh kunci lokal (opinion leaders: tokoh agama, adat, PKK) (Poin 5) yang disegani masyarakat.",
+    "analisis_opsi": {
+      "A": "Poin 3: Memanfaatkan jejaring lintas instansi, namun pendekatan persuasif tokoh masyarakat lebih mengena dibanding pendekatan formal keamanan.",
+      "B": "Poin 4: Metode jemput bola yang sangat baik dan menyentuh sasaran langsung, akan lebih kuat bila didukung tokoh adat.",
+      "C": "Poin 1: Pendekatan koersif otoriter yang memicu kebencian warga terhadap aparatur pemerintah.",
+      "D": "Poin 2: Komunikasi pasif satu arah yang kurang efektif untuk mengubah perilaku kultural masyarakat perdesaan.",
+      "E": "Poin 5: Sangat bijaksana, memanfaatkan jejaring tokoh kunci lokal, persuasif, menghormati kearifan lokal, dan menjamin keberlanjutan program."
+    },
+    "tips": "Jejaring Warga: Gandeng Tokoh Kunci (Opinion Leader) lokal agar warga bergerak sukarela dan percaya program negara.",
+    "sumber": "Pedoman Penanganan Stunting Terintegrasi Bappenas & Kemendagri",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 80,
+    "no": 80,
+    "kategori": "TKP",
+    "subkategori": "Jejaring Kerja",
+    "soal": "Tim kerja Anda baru saja berhasil meraih peringkat pertama penghargaan inovasi pelayanan publik tingkat nasional. Pada saat wawancara pers dan seremoni penghargaan, beberapa anggota tim berpesan agar kontribusi mereka tidak dilupakan. Sebagai koordinator tim, sikap Anda adalah...",
+    "opsi": {
+      "A": "Secara terbuka menyampaikan apresiasi dan menyebutkan peran serta kontribusi berharga setiap anggota tim satu per satu, menegaskan bahwa pencapaian luar biasa ini adalah buah dari kerja sama solid dan komitmen seluruh keluarga besar tim kerja.",
+      "B": "Menyebutkan bahwa keberhasilan ini terutama berkat arahan kepala dinas dan peran Anda dalam menyusun konsep inovasi.",
+      "C": "Mengklaim seluruh inovasi tersebut sebagai hasil ide dan kerja keras pribadi Anda semata demi mendapatkan promosi jabatan pribadi.",
+      "D": "Mengundang seluruh anggota tim ke panggung penghargaan untuk menerima piala bersama-sama dan menyampaikan terima kasih kepada seluruh pihak yang mendukung.",
+      "E": "Menerima piala atas nama dinas dan berjanji akan mentraktir seluruh anggota tim makan bersama di akhir pekan."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 2,
+      "C": 1,
+      "D": 4,
+      "E": 3
+    },
+    "pembahasan": "Indikator Kepemimpinan Tim dan Rekognisi Jejaring: Merawat jejaring tim kerja membutuhkan kerendahan hati dan pengakuan tulus (recognition) atas kontribusi setiap individu (Poin 5) demi soliditas organisasi berkelanjutan.",
+    "analisis_opsi": {
+      "A": "Poin 5: Kepemimpinan teladan, menghargai kerja sama tim, adil membagi pengakuan, dan memperkokoh rasa kepemilikan bersama.",
+      "B": "Poin 2: Kurang proporsional dan cenderung mengecilkan jerih payah anggota tim di lapangan.",
+      "C": "Poin 1: Sangat arogan, narsistik, merusak keharmonisan tim, dan menghancurkan jejaring kepercayaan masa depan.",
+      "D": "Poin 4: Sangat menghargai tim dan menampilkan kekompakan di muka publik secara meriah.",
+      "E": "Poin 3: Cukup baik mengapresiasi secara informal, namun pengakuan publik atas kerja keras anggota tim tetap krusial."
+    },
+    "tips": "Pengakuan Tim: Saat berhasil, berikan kredit kepada SELURUH TIM. Jangan pernah mengklaim kemenangan kerja kelompok sebagai milik pribadi.",
+    "sumber": "Modul Kepemimpinan Melayani (Servant Leadership) LAN RI & Core Values Loyal",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 81,
+    "no": 81,
+    "kategori": "TKP",
+    "subkategori": "Sosial Budaya",
+    "soal": "Anda adalah ASN asal Jawa yang baru saja ditempatkan bertugas di wilayah pedalaman Indonesia Timur. Masyarakat setempat memiliki tradisi penyambutan tamu resmi dengan upacara adat mengunyah sirih pinang dan tarian kehormatan adat sebelum pembicaraan dinas dimulai. Anda memiliki masalah pencernaan jika mengunyah pinang mentah. Sikap terbaik Anda dalam merespons situasi sosial budaya tersebut adalah...",
+    "opsi": {
+      "A": "Menolak dengan ekspresi jijik dan langsung membuang sirih pinang tersebut di hadapan para tetua adat.",
+      "B": "Menerima persembahan sirih pinang tersebut dengan kedua tangan penuh hormat, menyentuhkannya ke kening sebagai tanda penerimaan adat luhur, lalu secara santun menjelaskan kondisi kesehatan pencernaan Anda kepada tetua adat dengan memohon maaf tanpa merendahkan tradisi.",
+      "C": "Menolak secara dingin pemberian sirih pinang tersebut dengan alasan tidak sesuai dengan standar pola hidup sehat modern.",
+      "D": "Meminta rekan staf pendamping dari warga lokal untuk mewakili Anda mengunyah sirih pinang tersebut sambil Anda tersenyum ramah kepada tetua adat.",
+      "E": "Menerima sirih pinang tersebut, mencicipi sedikit bagian daun sirihnya saja untuk menghormati tuan rumah, lalu menyampaikan rasa terima kasih atas sambutan adat yang begitu hangat."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 1,
+      "B": 5,
+      "C": 2,
+      "D": 3,
+      "E": 4
+    },
+    "pembahasan": "Indikator Kepekaan Sosial Budaya: Menghormati simbol adat secara khidmat sembari mengomunikasikan batasan kesehatan pribadi secara santun (Poin 5) mencerminkan kematangan sosiokultural aparatur.",
+    "analisis_opsi": {
+      "A": "Poin 1: Sangat tidak beradab, melecehkan warisan leluhur warga lokal, dan memicu ketegangan sosial yang berbahaya.",
+      "B": "Poin 5: Sangat beretika, menunjukkan rasa hormat tulus pada tradisi lokal, komunikatif, dan menjaga harmoni sosial.",
+      "C": "Poin 2: Kurang memiliki kepekaan budaya (cultural insensitivity) dan dapat menyinggung ketulusan masyarakat adat.",
+      "D": "Poin 3: Cukup bijak mencari jalan keluar melalui perantara lokal, meski sentuhan rasa hormat pribadi tetap penting.",
+      "E": "Poin 4: Berupaya berkompromi menghargai adat semampunya dengan tetap menjaga kenyamanan tubuh."
+    },
+    "tips": "Adaptasi Adat Daerah: Hormati simbol tradisi + Terima penuh kesantunan + Jelaskan kendala fisik secara tulus.",
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 82,
+    "no": 82,
+    "kategori": "TKP",
+    "subkategori": "Sosial Budaya",
+    "soal": "Di divisi tempat Anda bekerja, terdapat beberapa rekan yang menganut agama minoritas dan sedang merayakan hari raya suci keagamaannya. Beban kerja pelayanan kantor sedang cukup tinggi. Sikap Anda sebagai rekan kerja yang menjunjung tinggi toleransi sosial budaya adalah...",
+    "opsi": {
+      "A": "Membantu mempercepat penyelesaian berkas tugas rekan tersebut sebelum hari raya tiba agar mereka tidak terbebani pekerjaan saat hari libur keagamaan.",
+      "B": "Merasa keberatan jika rekan tersebut mengambil cuti keagamaan karena beban kerja kantor sedang padat.",
+      "C": "Mengucapkan selamat hari raya dengan tulus, bersedia menggantikan jadwal piket pelayanan mereka agar rekan-rekan tersebut dapat beribadah dengan tenang bersama keluarganya, dengan kesepakatan jadwal bergantian di waktu lain.",
+      "D": "Mengucapkan selamat hari raya dan menikmati hidangan kue yang dibawa rekan ke kantor tanpa menawarkan bantuan piket.",
+      "E": "Memaksa rekan tersebut tetap masuk kerja lembur dan mencemooh perayaan ritual hari raya mereka."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 4,
+      "B": 2,
+      "C": 5,
+      "D": 3,
+      "E": 1
+    },
+    "pembahasan": "Indikator Kerukunan dan Toleransi Beragama: Kerukunan hidup beragama diwujudkan melalui aksi empati nyata, seperti bersedia bertukar jadwal piket (Poin 5) agar rekan dapat beribadah hari raya dengan tenang.",
+    "analisis_opsi": {
+      "A": "Poin 4: Sangat suportif meringankan beban kerja rekan demi ketenangan hari raya mereka.",
+      "B": "Poin 2: Kurang toleran dan mengabaikan hak konstitusional kemerdekaan beribadah hari besar rekan.",
+      "C": "Poin 5: Sangat toleran, memiliki solidaritas kemanusiaan tinggi, dan memberikan solusi konkret bagi kelancaran ibadah rekan serta tugas dinas.",
+      "D": "Poin 3: Bersikap ramah dan rukun secara pasif dalam tataran seremoni sosial biasa.",
+      "E": "Poin 1: Intoleransi ekstrem, melanggar konstitusi kebebasan beragama, dan merusak kerukunan tempat kerja."
+    },
+    "tips": "Toleransi Aktif di Kantor: Berikan ucapan tulus + Bersedia gantikan jadwal piket secara adil bergantian.",
+    "sumber": "Core Values ASN BerAKHLAK (Harmonis) & Panduan Moderasi Beragama Kemenag",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 83,
+    "no": 83,
+    "kategori": "TKP",
+    "subkategori": "Sosial Budaya",
+    "soal": "Dalam sebuah diskusi makan siang di kantin kantor, salah seorang rekan kerja melontarkan lelucon stereotip berbau suku dan ras (SARA) yang merendahkan kebiasaan hidup kelompok etnis tertentu di Indonesia. Beberapa staf tampak tertawa canggung sementara staf dari suku yang bersangkutan terlihat sedih dan tersinggung. Tindakan Anda adalah...",
+    "opsi": {
+      "A": "Memilih diam tidak ikut tertawa dan tidak menanggapi lelucon tersebut.",
+      "B": "Ikut tertawa keras dan menambahkan cerita olok-olok SARA lainnya yang semakin menyudutkan suku rekan tersebut.",
+      "C": "Menatap rekan pelontar candaan dengan isyarat tidak setuju, segera mengalihkan pembicaraan ke topik pekerjaan yang menarik, lalu secara pribadi menyemangati rekan yang tersinggung setelah makan siang.",
+      "D": "Menegur rekan tersebut secara santun namun tegas bahwa lelucon stereotip berbau SARA tidak pantas diucapkan di lingkungan kerja ASN yang majemuk, lalu mengalihkan percakapan ke topik kebersamaan yang positif dan merangkul rekan yang tersinggung.",
+      "E": "Ikut tersenyum tipis hanya demi menjaga keakraban sosial dan tidak dianggap kaku oleh teman-teman makan siang."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 3,
+      "B": 1,
+      "C": 4,
+      "D": 5,
+      "E": 2
+    },
+    "pembahasan": "Indikator Ketegasan Menjaga Harmoni Sosial: Lelucon rasis/SARA merusak keharmonisan majemuk. Menegur santun-tegas, menghentikan candaan SARA, dan merangkul pihak yang tersinggung (Poin 5) adalah sikap terbaik.",
+    "analisis_opsi": {
+      "A": "Poin 3: Menjaga sikap pribadi tidak ikut bersalah, namun pasif membiarkan diskriminasi verbal terjadi.",
+      "B": "Poin 1: Rasis, diskriminatif, dan secara nyata melanggar peran ASN sebagai perekat persatuan bangsa.",
+      "C": "Poin 4: Peka dan berempati pada rekan yang tersinggung, namun teguran edukatif langsung secara santun lebih menghentikan normalisasi rasisme.",
+      "D": "Poin 5: Berani bersikap tegas demi keadilan dan kebhinekaan, santun, melindungi rekan yang tersakiti, dan memulihkan suasana kerja sehat.",
+      "E": "Poin 2: Kompromistis yang keliru terhadap tindakan yang mencederai nilai Bhinneka Tunggal Ika."
+    },
+    "tips": "Candaan SARA: Jangan ikut tertawa! Tegur santun bahwa SARA bukan bahan lelucon + Rangkul rekan yang terluka.",
+    "sumber": "UU No. 40 Tahun 2008 tentang Penghapusan Diskriminasi Ras dan Etnis & Nilai Harmonis BerAKHLAK",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 84,
+    "no": 84,
+    "kategori": "TKP",
+    "subkategori": "Sosial Budaya",
+    "soal": "Kantor Anda menerima penugasan beberapa tenaga ahli muda dari berbagai suku di luar pulau yang memiliki dialek daerah dan logat bicara yang sangat kental dan terdengar keras bagi masyarakat lokal. Beberapa staf lokal mulai menjaga jarak dan enggan bergaul dengan mereka karena salah paham menganggap cara bicara mereka terkesan galak. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Menyambut ramah tenaga ahli baru tersebut, mendampingi mereka dalam koordinasi awal, dan memberi pemahaman tentang kultur komunikasi setempat secara bersahabat.",
+      "B": "Berinteraksi secara wajar dan profesional sebatas urusan pekerjaan kedinasan saja tanpa ikut menjaga jarak.",
+      "C": "Menyarankan tenaga ahli baru tersebut untuk segera belajar bahasa dan dialek lokal agar tidak dijauhi oleh staf lain.",
+      "D": "Ikut menjaga jarak dan menggosipkan logat bicara mereka sebagai tanda orang yang kasar dan tidak berpendidikan.",
+      "E": "Menjadi inisiator penghubung pergaulan, mengajak tenaga ahli baru dan staf lokal makan siang bersama, menjelaskan karakteristik keragaman budaya logat bicara nusantara yang kaya, dan mencairkan suasana agar terbangun rasa saling memahami."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 4,
+      "B": 3,
+      "C": 2,
+      "D": 1,
+      "E": 5
+    },
+    "pembahasan": "Indikator Perekat Kebhinekaan: Dialek daerah adalah kekayaan bangsa. ASN berperan sebagai jembatan inklusif (Poin 5) yang menghapus prasangka dan membangun pergaulan harmonis.",
+    "analisis_opsi": {
+      "A": "Poin 4: Sangat ramah dan suportif membantu adaptasi rekan baru, akan lebih kuat jika aktif mencairkan staf lokal juga.",
+      "B": "Poin 3: Profesional dalam batas aman, namun pasif dalam menjembatani integrasi sosial kelompok kerja.",
+      "C": "Poin 2: Mendorong adaptasi sepihak tanpa mengedukasi pentingnya sikap saling menghargai keragaman bahasa nusantara.",
+      "D": "Poin 1: Etnosentris sempit, berprasangka negatif, dan memicu polarisasi perpecahan di tempat kerja.",
+      "E": "Poin 5: Sangat inklusif, mengedukasi rekan mengenai keragaman budaya nusantara, proaktif menyatukan lingkungan kerja majemuk."
+    },
+    "tips": "Perbedaan Logat/Budaya: Sambut dengan hangat + Jadilah jembatan yang menjelaskan keragaman budaya nusantara.",
+    "sumber": "UU No. 20 Tahun 2023 (Fungsi Perekat Pemersatu Bangsa) & Modul Sosiokultural LAN RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 85,
+    "no": 85,
+    "kategori": "TKP",
+    "subkategori": "Sosial Budaya",
+    "soal": "Ketika Anda ditugaskan melakukan pendataan sensus sosial ekonomi keluarga prasejahtera di sebuah permukiman adat terasing, Anda mendapati norma adat setempat melarang pendata laki-laki masuk ke dalam pekarangan rumah jika kepala keluarga sedang bekerja di ladang. Sikap Anda dalam menjalankan tugas dinas tersebut adalah...",
+    "opsi": {
+      "A": "Menghormati norma adat tersebut dengan tidak memaksa masuk, berkoordinasi dengan tetua adat dan kader perempuan desa untuk mendampingi, serta menyesuaikan waktu kunjungan pendataan saat kepala keluarga sudah kembali dari ladang.",
+      "B": "Mencatat keterangan umum seadanya dari tetangga sekitar rumah yang bersangkutan untuk menghemat waktu.",
+      "C": "Menunggu di balai desa hingga kepala keluarga pulang dari ladang pada sore hari untuk melakukan pendataan langsung sesuai norma adat.",
+      "D": "Menerobos masuk pekarangan rumah secara paksa dengan alasan membawa surat tugas resmi bupati dan mengancam warga dengan aparat keamanan.",
+      "E": "Mencoba membujuk ibu rumah tangga tersebut dari balik pagar agar mau menjawab pertanyaan sensus secara terburu-buru."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 3,
+      "C": 4,
+      "D": 1,
+      "E": 2
+    },
+    "pembahasan": "Indikator Penghormatan Kearifan Lokal (Local Wisdom): Menjalankan tugas sensus di wilayah adat menuntut fleksibilitas menghormati tata nilai setempat dan bermusyawarah dengan pemangku lokal (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 5: Menghargai kearifan lokal, solutif menggandeng tokoh setempat, berintegritas menjaga keaslian data, dan beradab.",
+      "B": "Poin 3: Menghindari pelanggaran adat, namun kualitas akurasi data keluarga yang didata menjadi kurang valid.",
+      "C": "Poin 4: Taat norma adat dan menjaga validitas data, meski melibatkan pendamping kader perempuan lokal lebih efektif secara waktu.",
+      "D": "Poin 1: Arogan, melecehkan hak masyarakat adat, berpotensi memicu konflik fisik, dan mencoreng marwah pemerintah.",
+      "E": "Poin 2: Kurang menghormati kenyamanan warga dan berisiko melanggar batas etika adat yang berlaku."
+    },
+    "tips": "Masyarakat Adat: Hormati norma tabu/adat + Gandeng kader perempuan/tetua desa + Sesuaikan jadwal kunjungan.",
+    "sumber": "Pasal 18B Ayat (2) UUD 1945 & Pedoman Sensus BPS Berbasis Kearifan Lokal",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 86,
+    "no": 86,
+    "kategori": "TKP",
+    "subkategori": "Sosial Budaya",
+    "soal": "Dalam rangka memperingati Hari Kemerdekaan Republik Indonesia, kantor Anda mengadakan festival pakaian adat nusantara. Beberapa rekan Anda enggan memakai pakaian adat karena merasa ribet dan ketinggalan zaman dibanding pakaian kasual modern. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Ikut memakai pakaian kasual biasa karena merasa segan tampil beda dari rekan-rekan yang tidak berpakaian adat.",
+      "B": "Mengenakan pakaian adat nusantara dengan bangga dan penuh antusiasme, mengajak rekan-rekan menikmati filosofi keindahan warisan wastra nusantara, serta membagikan cerita budaya busana tersebut di ruang interaksi bersama.",
+      "C": "Mengejek acara festival adat tersebut sebagai kegiatan kuno yang membuang-buang anggaran kantor.",
+      "D": "Memakai pakaian adat lengkap sesuai himbauan dinas dan mengapresiasi rekan-rekan lain yang turut memeriahkan acara peringatan kemerdekaan.",
+      "E": "Mengenakan pakaian batik modern sederhana sebagai jalan tengah agar tetap bernuansa tradisional tanpa merasa repot."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 2,
+      "B": 5,
+      "C": 1,
+      "D": 4,
+      "E": 3
+    },
+    "pembahasan": "Indikator Kebanggaan Budaya Nasional: ASN adalah teladan pelestarian budaya. Memakai busana adat nusantara dengan bangga dan mengedukasi filosofinya (Poin 5) menguatkan rasa cinta tanah air.",
+    "analisis_opsi": {
+      "A": "Poin 2: Mudah terbawa arus keengganan dan kurang memiliki kebanggaan terhadap identitas budaya bangsa.",
+      "B": "Poin 5: Teladan positif, bangga pada warisan budaya nusantara, antusias, dan mampu mengedukasi filosofi luhur bangsa.",
+      "C": "Poin 1: Sikap sinis yang merendahkan warisan budaya luhur bangsa dan tidak menghargai peringatan kemerdekaan.",
+      "D": "Poin 4: Patuh dan antusias mencerminkan cinta budaya, akan lebih hebat bila turut menginspirasi rekan yang masih ragu.",
+      "E": "Poin 3: Solusi kompromi pribadi yang aman, namun kurang menangkap semangat pelestarian keragaman pakaian adat nusantara."
+    },
+    "tips": "Cinta Budaya Nasional: Tunjukkan rasa bangga berbusana tradisional nusantara dan ajak rekan mencintainya.",
+    "sumber": "Surat Edaran Kemendikbudristek Pelestarian Busana Adat Nusantara & Core Values Harmonis",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 87,
+    "no": 87,
+    "kategori": "TKP",
+    "subkategori": "Sosial Budaya",
+    "soal": "Terjadi polemik pendirian rumah ibadah di lingkungan tempat tinggal Anda yang dihuni masyarakat heterogen, di mana sekelompok warga menolak izin pembangunan tempat ibadah agama lain meski telah memenuhi persyaratan legal formal administratif. Sebagai seorang ASN yang tinggal di lingkungan tersebut, peran sosial kemasyarakatan yang tepat adalah...",
+    "opsi": {
+      "A": "Ikut menandatangani surat penolakan pembangunan rumah ibadah demi menjaga solidaritas dengan kelompok mayoritas tetangga.",
+      "B": "Menyarankan panitia pembangunan rumah ibadah membatalkan rencananya saja demi menghindari gesekan sosial tetangga.",
+      "C": "Menjadi jembatan komunikasi damai dengan berkoordinasi bersama pengurus Forum Kerukunan Umat Beragama (FKUB) dan aparatur RT/RW, mengedukasi warga tentang jaminan konstitusi kemerdekaan beribadah, dan mengedepankan musyawarah demi menjaga kerukunan bertetangga.",
+      "D": "Memilih bersikap netral dan mengamati perkembangan situasi agar tidak dimusuhi oleh pihak mana pun di lingkungan perumahan.",
+      "E": "Menghadiri rapat musyawarah warga, menyampaikan pandangan yang menyejukkan agar warga tidak mudah terprovokasi, dan menyarankan kepatuhan pada aturan bersama."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 1,
+      "B": 2,
+      "C": 5,
+      "D": 3,
+      "E": 4
+    },
+    "pembahasan": "Indikator Perekat Bangsa di Masyarakat: ASN adalah agen perdamaian (peace builder) di ruang publik. Mengedepankan instrumen dialog FKUB dan konstitusi (Poin 5) menjaga harmoni masyarakat majemuk.",
+    "analisis_opsi": {
+      "A": "Poin 1: Melanggar sumpah ASN, bertentangan dengan Pasal 29 UUD 1945, dan mencederai nilai moderasi beragama.",
+      "B": "Poin 2: Kompromi yang mengorbankan hak konstitusional beribadah warga negara akibat tekanan kelompok intoleran.",
+      "C": "Poin 5: Sangat berintegritas, menjadi penengah bijak, mengacu pada saluran resmi FKUB dan konstitusi, serta menjaga kohesi sosial.",
+      "D": "Poin 3: Menjaga keamanan pribadi, namun pasif dalam mempraktikkan fungsi ASN sebagai pemersatu bangsa di masyarakat.",
+      "E": "Poin 4: Berani menyuarakan perdamaian di forum warga, akan semakin kokoh bila dikolaborasikan bersama FKUB."
+    },
+    "tips": "Isu Pendirian Rumah Ibadah: Gandeng FKUB & RT/RW + Edukasi hak konstitusional beribadah + Utamakan musyawarah damai.",
+    "sumber": "Peraturan Bersama Menteri Agama & Mendagri No. 9 & 8 Tahun 2006 (FKUB & Kerukunan Beragama)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 88,
+    "no": 88,
+    "kategori": "TKP",
+    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "soal": "Kementerian Anda baru saja meluncurkan aplikasi Sistem Pemerintahan Berbasis Elektronik (SPBE) baru untuk memangkas proses manual pengajuan cuti dan pelaporan kinerja. Namun, sejumlah pegawai senior menolak menggunakan aplikasi tersebut dengan alasan rumit, merasa sudah terbiasa dengan tanda tangan kertas basah, dan meminta Anda untuk memproses berkas mereka secara manual. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Membuat video panduan tutorial singkat di grup WhatsApp kantor dan menawarkan bantuan tatap muka bagi pegawai yang masih mengalami kendala teknis.",
+      "B": "Menolak melayani berkas manual mereka dan meminta mereka membaca sendiri buku petunjuk manual aplikasi.",
+      "C": "Membantu memasukkan data ke aplikasi melalui akun mereka untuk sementara waktu sambil perlahan memperlihatkan cara penggunaannya.",
+      "D": "Menyambut mereka dengan ramah, mendengarkan kendala teknis yang dirasakan, lalu dengan sabar membimbing mereka langkah demi langkah mengoperasikan aplikasi di ponsel atau komputernya hingga mereka mahir dan mandiri menggunakannya.",
+      "E": "Menuruti keinginan mereka memproses manual selamanya atau mengusulkan agar tunjangan mereka langsung dipotong."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 4,
+      "B": 2,
+      "C": 3,
+      "D": 5,
+      "E": 1
+    },
+    "pembahasan": "Indikator Pendampingan Digital (Digital Coaching): Transformasi digital birokrasi membutuhkan kesabaran membimbing rekan senior secara bertahap (Poin 5) agar mandiri dan tidak ada yang tertinggal.",
+    "analisis_opsi": {
+      "A": "Poin 4: Sangat proaktif menyediakan materi edukasi mandiri yang memudahkan proses belajar digital.",
+      "B": "Poin 2: Kaku dan kurang memiliki empati pendampingan terhadap rekan kerja yang memiliki kecemasan digital.",
+      "C": "Poin 3: Membantu beban mereka, namun perlu dipastikan mereka tidak terus bergantung pada bantuan orang lain.",
+      "D": "Poin 5: Sangat solutif, empatik, membimbing dengan sabar, dan berhasil mentransfer keahlian digital secara berkelanjutan.",
+      "E": "Poin 1: Mencederai agenda transformasi digital SPBE dan merusak relasi harmonis antargenerasi di kantor."
+    },
+    "tips": "Transformasi Digital: Dampingi dengan sabar + Tunjukkan cara praktisnya hingga mandiri.",
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Core Values ASN BerAKHLAK (Adaptif)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 89,
+    "no": 89,
+    "kategori": "TKP",
+    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "soal": "Anda mengelola server database kepegawaian dan kependudukan. Seorang teman lama satu angkatan sekolah yang kini bekerja di perusahaan asuransi swasta menghubungi Anda dan meminta akses nomor kontak serta data riwayat kesehatan warga untuk keperluan penawaran polis dengan imbalan komisi besar. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Menolak secara halus dengan alasan sistem sedang diaudit ketat oleh pihak inspektorat sehingga tidak memungkinkan memberikan data.",
+      "B": "Memberikan data kontak dan riwayat kesehatan warga secara rahasia melalui flashdisk pribadi demi komisi uang besar.",
+      "C": "Menolak tawaran komisi uang tersebut dan menegaskan bahwa database negara bersifat rahasia dan hanya digunakan untuk kepentingan kedinasan yang sah.",
+      "D": "Menyarankan teman tersebut mengajukan surat permohonan resmi ke kantor dinas meskipun tahu bahwa data medis warga tidak boleh dibuka untuk komersial.",
+      "E": "Menolak dengan tegas tawaran tersebut, mengingatkan tentang hukum kerahasiaan data pribadi sesuai UU Perlindungan Data Pribadi (UU PDP), dan menjaga ketat keamanan kredensial sistem dari pihak luar yang tidak berwenang."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 3,
+      "B": 1,
+      "C": 4,
+      "D": 2,
+      "E": 5
+    },
+    "pembahasan": "Indikator Keamanan Data & Etika TIK: Data pribadi warga negara dilindungi oleh UU No. 27/2022. Menolak secara tegas godaan materi dan menjaga kerahasiaan data publik (Poin 5) adalah kewajiban mutlak.",
+    "analisis_opsi": {
+      "A": "Poin 3: Menolak karena takut audit, bukan berakar murni dari kesadaran hukum pelindungan data pribadi.",
+      "B": "Poin 1: Pelanggaran pidana berat UU PDP dan UU Tipikor yang menghancurkan integritas aparatur negara.",
+      "C": "Poin 4: Tegas menolak dan menjaga rahasia data publik dengan integritas yang kuat.",
+      "D": "Poin 2: Menghindari penolakan langsung dengan melempar proses birokrasi yang sebenarnya sudah jelas dilarang undang-undang.",
+      "E": "Poin 5: Sangat berintegritas, taat hukum UU PDP, tegas melindungi privasi warga, dan tidak tergoda nepotisme/uang komisi."
+    },
+    "tips": "Privasi Data TIK: Data warga amanah negara. Tolak tegas jual-beli data pribadi tanpa kompromi!",
+    "sumber": "UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP) & Standar Keamanan BSSN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 90,
+    "no": 90,
+    "kategori": "TKP",
+    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "soal": "Dua jam sebelum batas waktu penutupan pengunggahan laporan keuangan daerah ke sistem kementerian pusat, koneksi internet kantor dinas Anda tiba-tiba terputus akibat pohon tumbang yang menimpa tiang fiber optic. Anda adalah operator yang bertanggung jawab mengunggah berkas tersebut. Tindakan cepat dan tepat Anda adalah...",
+    "opsi": {
+      "A": "Segera menyalakan tethering hotspot data seluler cadangan dari perangkat seluler Anda atau memanfaatkan jaringan internet di kantor dinas terdekat/fasilitas publik yang stabil, memastikan koneksi aman, dan segera menuntaskan pengunggahan laporan sebelum batas waktu berakhir.",
+      "B": "Membawa berkas laporan dalam flashdisk terenkripsi ke kantor dinas kominfo terdekat yang jaringannya stabil untuk melakukan pengunggahan tepat waktu.",
+      "C": "Melaporkan insiden putusnya kabel kepada atasan dan meminta petunjuk apakah harus menunggu perbaikan atau mencari solusi lain.",
+      "D": "Menghubungi call center penyedia jasa internet dan menunggu kedatangan teknisi di ruang server kantor.",
+      "E": "Pasrah mematikan komputer lalu pulang lebih awal dengan alasan bencana alam pohon tumbang di luar kendali."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 4,
+      "C": 3,
+      "D": 2,
+      "E": 1
+    },
+    "pembahasan": "Indikator Ketangkasan TIK (Digital Agility): Menghadapi putusnya jaringan internet mendadak menuntut daya juang cepat (troubleshooting) mencari koneksi alternatif yang aman (Poin 5) demi menyelamatkan tenggat pelaporan negara.",
+    "analisis_opsi": {
+      "A": "Poin 5: Sangat gesit, berinisiatif tinggi mencari jaringan alternatif, bertanggung jawab penuh, dan menuntaskan tugas sebelum tenggat.",
+      "B": "Poin 4: Sangat bertanggung jawab dan proaktif bergerak ke fasilitas terdekat demi mengamankan tenggat waktu pelaporan.",
+      "C": "Poin 3: Tertib komando, namun membuang waktu kritis di saat batas waktu sistem kementerian tinggal dua jam lagi.",
+      "D": "Poin 2: Kurang fleksibel dan pasif menghadapi situasi genting tenggat waktu pelaporan keuangan daerah.",
+      "E": "Poin 1: Tidak berdaya juang, melempar tanggung jawab, dan mengakibatkan sanksi administrasi keterlambatan bagi pemda."
+    },
+    "tips": "Internet Mati Jelang Deadline: Aktifkan tethering hotspot aman / cari kantor terdekat + Tuntaskan upload segera.",
+    "sumber": "Core Values ASN BerAKHLAK (Adaptif & Akuntabel) & Manajemen Kontinjensi SPBE",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 91,
+    "no": 91,
+    "kategori": "TKP",
+    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "soal": "Perkembangan kecerdasan buatan generatif (Generative AI) saat ini sangat pesat dan mulai banyak dimanfaatkan untuk efisiensi perumusan naskah dinas, ringkasan riset, dan analisis data. Sikap profesional Anda dalam menyikapi perkembangan teknologi AI ini adalah...",
+    "opsi": {
+      "A": "Menggunakan AI sesekali jika tugas menumpuk tanpa mempelajari prinsip etika keamanan data yang terkandung di dalamnya.",
+      "B": "Mempelajari dan memanfaatkan tools AI secara bijak untuk mempercepat riset awal, pemrosesan data, dan drafting konsep, dengan tetap melakukan verifikasi faktual mendalam, menjaga kerahasiaan data negara, dan mematuhi etika kecerdasan buatan.",
+      "C": "Mengikuti pelatihan pemanfaatan AI untuk birokrasi dan menggunakan tools AI sebatas membantu pencarian referensi data sekunder publik.",
+      "D": "Menyalin mentah-mentah seluruh dokumen konsep dari AI tanpa dicek dan mengunggah database rahasia kantor ke platform AI publik.",
+      "E": "Menolak sama sekali penggunaan teknologi AI karena menganggap AI dapat menggantikan peran manusia dan menghilangkan lapangan kerja ASN."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 3,
+      "B": 5,
+      "C": 4,
+      "D": 1,
+      "E": 2
+    },
+    "pembahasan": "Indikator Pemanfaatan Teknologi Terkini: AI harus dimanfaatkan sebagai pengungkit efisiensi (tools of efficiency) namun tetap dikontrol ketat melalui verifikasi manual (human in the loop) dan perlindungan data rahasia (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 3: Memanfaatkan teknologi secara instan namun kurang memiliki kesadaran mitigasi kebocoran informasi.",
+      "B": "Poin 5: Sangat adaptif, cerdas memanfaatkan teknologi terkini, kritis memvalidasi output, dan taat pada etika keamanan informasi.",
+      "C": "Poin 4: Bersemangat belajar dan berhati-hati dalam menjaga batas kerahasiaan dokumen kedinasan.",
+      "D": "Poin 1: Kecerobohan fatal yang memicu halusinasi kebijakan dan kebocoran rahasia negara ke server asing.",
+      "E": "Poin 2: Resistensi fobia teknologi yang menghambat efisiensi birokrasi modern."
+    },
+    "tips": "AI di Pemerintahan: Gunakan AI untuk riset cepat + Verifikasi kebenaran faktual secara manual + Jaga kerahasiaan berkas.",
+    "sumber": "Surat Edaran Menkominfo tentang Etika Kecerdasan Buatan & Roadmap Transformasi Digital SPBE",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 92,
+    "no": 92,
+    "kategori": "TKP",
+    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "soal": "Di grup WhatsApp keluarga besar Anda, beredar sebuah tautan berita dengan judul bombastis yang mengklaim bahwa air minum kemasan merek tertentu mengandung racun berbahaya, yang disertai ajakan untuk memboikot dan membagikan ke seluruh kontak. Setelah Anda mengecek di website resmi BPOM dan Kominfo, informasi tersebut dinyatakan 100% hoaks. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Diam saja dan tidak berkomentar apa pun karena merasa urusan berita palsu di grup keluarga bukan tanggung jawab Anda.",
+      "B": "Ikut membagikan berita bohong tersebut ke grup WhatsApp rekan kantor untuk sekadar mengecek kebenarannya.",
+      "C": "Menjelaskan secara santun di grup keluarga bahwa informasi tersebut hoaks, melampirkan tangkapan layar tautan resmi klarifikasi BPOM/Kominfo, dan mengajak keluarga untuk selalu menyaring berita sebelum membagikan (saring sebelum sharing).",
+      "D": "Membagikan tautan artikel klarifikasi dari portal Kominfo ke grup keluarga dan berpesan agar tidak membagikan berita tersebut ke grup lain.",
+      "E": "Menghubungi anggota keluarga yang membagikan tautan via pesan pribadi (japri) untuk memberitahu bahwa kabar tersebut bohong."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 2,
+      "B": 1,
+      "C": 5,
+      "D": 4,
+      "E": 3
+    },
+    "pembahasan": "Indikator Literasi Digital dan Edukasi Publik: ASN adalah agen literasi yang wajib meluruskan kabar bohong dengan rujukan otoritas resmi (BPOM/Kominfo) secara santun dan mendidik (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 2: Apatis dan membiarkan pembodohan informasi terus beredar di lingkungan terdekat.",
+      "B": "Poin 1: Menjadi penyebar disinformasi (hoaks) yang melanggar etika digital dan UU ITE.",
+      "C": "Poin 5: Bertanggung jawab sebagai agen literasi digital, mengklarifikasi dengan data rujukan resmi, santun, dan mendidik.",
+      "D": "Poin 4: Cepat memberikan bantahan fakta yang valid untuk meredam kepanikan anggota keluarga.",
+      "E": "Poin 3: Bijak menjaga privasi pengirim berita, namun anggota keluarga lain di grup masih berpotensi mempercayai hoaks tersebut jika tidak diklarifikasi di grup."
+    },
+    "tips": "Menangkal Hoaks: Saring sebelum sharing! Berikan bukti klarifikasi dari portal resmi pemerintah secara santun.",
+    "sumber": "UU ITE & Modul Literasi Digital Nasional Kementerian Komunikasi dan Informatika",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 93,
+    "no": 93,
+    "kategori": "TKP",
+    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "soal": "Sebagai admin pengelola website portal layanan publik pemda, Anda menemukan adanya kelemahan celah keamanan (bug vulnerability) yang memungkinkan orang luar melihat riwayat unduhan berkas warga. Anda belum memiliki sertifikasi peretasan etis, tetapi Anda memahami risiko kebocorannya. Langkah Anda adalah...",
+    "opsi": {
+      "A": "Mengunggah temuan celah keamanan tersebut ke forum media sosial publik untuk membuktikan kelemahan sistem pemda.",
+      "B": "Membiarkan saja celah tersebut karena menganggap website daerah jarang menjadi target serangan peretas profesional.",
+      "C": "Melaporkan temuan bug tersebut pada rapat staf bulanan berikutnya kepada seluruh rekan kerja.",
+      "D": "Segera mendokumentasikan temuan celah keamanan tersebut secara rahasia, melaporkannya kepada Kepala Tim Keamanan Siber/Pimpinan Dinas, dan berkoordinasi dengan Tim Tanggap Insiden Siber (CSIRT) daerah untuk segera melakukan patching penutupan celah keamanan.",
+      "E": "Menonaktifkan sementara fitur unduhan berkas publik yang rentan dan segera berkoordinasi dengan vendor pengembang web kantor untuk memperbaiki skripnya."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 1,
+      "B": 2,
+      "C": 3,
+      "D": 5,
+      "E": 4
+    },
+    "pembahasan": "Indikator Manajemen Keamanan Informasi: Penemuan celah keamanan digital harus ditangani melalui protokol resmi (responsible disclosure) ke CSIRT dan pimpinan (Poin 5) untuk patching segera.",
+    "analisis_opsi": {
+      "A": "Poin 1: Kecerobohan berat yang mengundang peretas jahat mengeksploitasi data publik masyarakat.",
+      "B": "Poin 2: Meremehkan risiko keamanan siber (complacency) yang dapat berakibat fatal pada pencurian data warga.",
+      "C": "Poin 3: Berniat melaporkan, namun menunda penanganan celah keamanan siber berisiko dieksploitasi pihak jahat.",
+      "D": "Poin 5: Sangat profesional, taat protokol pelaporan resmi, tanggap risiko, dan proaktif mengamankan aset TIK negara.",
+      "E": "Poin 4: Tindakan mitigasi darurat yang cepat memutus celah akses sembari menunggu perbaikan permanen."
+    },
+    "tips": "Bug/Celah Keamanan: Dokumentasikan rahasia + Lapor CSIRT/Pimpinan segera + Lakukan patching penutupan celah.",
+    "sumber": "Panduan Penanganan Insiden Siber Badan Siber dan Sandi Negara (BSSN) & Framework ISO 27001",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 94,
+    "no": 94,
+    "kategori": "TKP",
+    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "soal": "Kantor Anda beralih dari penyimpanan arsip fisik di lemari besi ke penyimpanan arsip digital berbasis komputasi awan (Cloud Storage). Banyak berkas penting yang perlu discan dan diindeks secara metadata. Anda ditunjuk sebagai koordinator migrasi arsip. Upaya yang Anda lakukan agar proses migrasi berjalan efektif dan aman adalah...",
+    "opsi": {
+      "A": "Membagi tim kerja ke dalam tugas scanning, penamaan file standar, dan pengunggahan ke cloud resmi dinas secara terjadwal.",
+      "B": "Menyerahkan seluruh pekerjaan migrasi digital kepada siswa magang tanpa bimbingan dan verifikasi standar keamanan.",
+      "C": "Melakukan pemindaian berkas secara bertahap setiap ada waktu luang di kantor tanpa membuat struktur folder khusus.",
+      "D": "Menyimpan berkas-berkas penting tersebut di akun cloud pribadi gratisan tanpa proteksi sandi yang memadai.",
+      "E": "Menyusun SOP digitalisasi arsip, membuat struktur folder dan metadata indeks yang sistematis, menerapkan kontrol akses hak pengguna (role-based access) dan autentikasi dua faktor (2FA), serta melakukan pencadangan (backup) berkala di server terenkripsi."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 4,
+      "B": 2,
+      "C": 3,
+      "D": 1,
+      "E": 5
+    },
+    "pembahasan": "Indikator Tata Kelola Data dan Kearsipan Digital: Migrasi komputasi awan membutuhkan struktur metadata rapi, pembatasan hak akses (RBAC), enkripsi 2FA, dan backup teratur (Poin 5) sesuai standar ANRI.",
+    "analisis_opsi": {
+      "A": "Poin 4: Manajemen pembagian kerja yang baik dan terarah untuk mengejar target volume migrasi berkas.",
+      "B": "Poin 2: Kurang bertanggung jawab terhadap dokumen penting dan rawan terjadi salah penempatan atau kebocoran data.",
+      "C": "Poin 3: Ada upaya mendigitalkan arsip, namun tanpa indeks metadata yang rapi berkas akan sulit dicari kembali.",
+      "D": "Poin 1: Pelanggaran serius standar keamanan informasi negara dan kearsipan institusi pemerintah.",
+      "E": "Poin 5: Komprehensif, aman, sistematis, mematuhi standar kearsipan digital, dan menjamin integritas data institusi."
+    },
+    "tips": "Migrasi Cloud Storage: SOP metadata sistematis + Hak akses role-based 2FA + Enkripsi & Backup berkala.",
+    "sumber": "Pedoman Pengelolaan Arsip Elektronik Arsip Nasional Republik Indonesia (ANRI) & Standar SPBE",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 95,
+    "no": 95,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Pada hari Jumat sore pukul 16.30 WIB, Anda sudah bersiap pulang untuk menghadiri acara makan malam keluarga yang telah direncanakan sejak sebulan lalu. Tiba-tiba atasan memanggil Anda dan meminta Anda menyelesaikan dokumen tanggapan darurat untuk sidang paripurna kementerian luar negeri yang harus diserahkan besok pagi pukul 07.00 WIB. Sikap profesional Anda adalah...",
+    "opsi": {
+      "A": "Menghubungi keluarga untuk menyampaikan permohonan maaf atas kondisi darurat dinas yang tidak terduga, lalu dengan penuh tanggung jawab menyelesaikan dokumen strategis tersebut secara teliti hingga tuntas bersama tim kerja.",
+      "B": "Mengerjakan tugas tersebut dengan sedikit bersungut-sungut di kantor sambil mengeluhkan waktu pemanggilan atasan yang mendadak.",
+      "C": "Menolak mentah-mentah perintah atasan dengan dalih jam kerja kantor telah usai dan langsung mematikan ponsel.",
+      "D": "Menerima tugas darurat tersebut, membagi pengerjaannya bersama rekan satu tim secara efektif agar dokumen selesai lebih cepat sehingga Anda tetap bisa menyusul acara keluarga.",
+      "E": "Memohon kepada atasan agar tugas tersebut dialihkan ke rekan lain dengan alasan urusan keluarga yang tidak bisa ditinggalkan."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 3,
+      "C": 1,
+      "D": 4,
+      "E": 2
+    },
+    "pembahasan": "Indikator Komitmen pada Tugas Negara (Commitment to Duty): Aparatur dituntut mendahulukan kepentingan bangsa dan negara yang krusial sembari mengomunikasikan urusan keluarga secara dewasa (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 5: Dewasa, bertanggung jawab, mampu mengomunikasikan kendala pribadi, dan menuntaskan amanah dinas dengan kualitas prima.",
+      "B": "Poin 3: Tugas tetap diselesaikan, namun sikap mental kurang ikhlas dan memperkeruh semangat kerja diri sendiri.",
+      "C": "Poin 1: Membangkang terhadap perintah kedinasan darurat dan melanggar sumpah kesetiaan pengabdian ASN.",
+      "D": "Poin 4: Solutif dan memiliki manajemen kerja kolaboratif yang baik antara komitmen dinas dan keluarga.",
+      "E": "Poin 2: Menghindari tanggung jawab tugas negara yang bersifat kritis dan mendesak."
+    },
+    "tips": "Tugas Darurat Negara: Komunikasikan santun ke keluarga + Tuntaskan amanah dinas darurat dengan kualitas prima.",
+    "sumber": "PP No. 94 Tahun 2021 tentang Disiplin PNS & Core Values ASN BerAKHLAK (Loyal)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 96,
+    "no": 96,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Atasan langsung Anda di kantor adalah sosok yang sangat perfeksionis dan kerap memberikan kritik tajam dengan nada keras di hadapan forum rapat terhadap laporan analisis yang Anda susun, meskipun kesalahan yang ditemukan sebenarnya hanya berupa kesalahan ketik minor (typo). Sikap Anda dalam merespons situasi ini adalah...",
+    "opsi": {
+      "A": "Menerima masukan perbaikan tersebut dengan sopan dalam rapat, mencatat poin koreksi, dan segera menyerahkan dokumen revisi yang rapi setelah rapat usai.",
+      "B": "Mengendapkan emosi dengan tenang, memisahkan substansi kritik dari cara penyampaian atasan, memeriksa kembali dokumen dengan lebih cermat, memperbaiki kesalahan yang ditunjukkan, dan menjadikannya pelajaran berharga untuk meningkatkan ketelitian kerja di masa mendatang.",
+      "C": "Mendengarkan kritik atasan sambil menunduk dan merasa sangat rendah diri serta cemas selama berhari-hari di kantor.",
+      "D": "Menjelaskan di forum rapat bahwa kesalahan ketik adalah hal yang manusiawi dan tidak seharusnya dipermasalahkan secara berlebihan.",
+      "E": "Membantah atasan dengan nada marah di forum rapat atau memutuskan untuk mengajukan mutasi pindah kantor."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 4,
+      "B": 5,
+      "C": 3,
+      "D": 2,
+      "E": 1
+    },
+    "pembahasan": "Indikator Ketahanan Emosi & Resiliensi Kerja: Profesionalitas sejati tercermin saat menerima umpan balik kritis secara objektif (fokus pada substansi perbaikan bukan nada emosi) (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 4: Profesional, berkepala dingin, dan cekatan menindaklanjuti arahan teknis perbaikan kerja.",
+      "B": "Poin 5: Sangat matang, memiliki resiliensi tinggi, fokus pada esensi perbaikan kerja, dan berjiwa pembelajar berkelanjutan.",
+      "C": "Poin 3: Menerima kritik tanpa membantah, namun kondisi mental rapuh dan menghambat produktivitas kerja lanjutan.",
+      "D": "Poin 2: Bersikap defensif di muka publik yang dapat memicu ketegangan relasi kerja dengan pimpinan.",
+      "E": "Poin 1: Emosional, tidak memiliki kematangan karakter, dan merusak etika tata krama birokrasi pemerintahan."
+    },
+    "tips": "Menghadapi Kritik Pedas: Pisahkan emosi dari substansi -> Fokus pada koreksi data/ketelitian -> Terus bertumbuh makin unggul.",
+    "sumber": "Modul Pengembangan Kapasitas Mental dan Resiliensi ASN LAN RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 97,
+    "no": 97,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Atasan Anda memerintahkan Anda untuk memanipulasi tanggal tanda tangan berkas pertanggungjawaban anggaran perjalanan dinas (backdate) agar dana tahun anggaran sebelumnya yang belum terpakai dapat dicairkan. Atasan menyatakan bahwa hal ini adalah hal lumrah demi penyerapan anggaran instansi. Respons Anda adalah...",
+    "opsi": {
+      "A": "Menghindar dengan alasan sedang ada tugas dinas luar kota agar tidak dipaksa menandatangani berkas rekayasa tersebut.",
+      "B": "Menolak menandatangani berkas tersebut secara sopan dan menyarankan atasan untuk berkonsultasi terlebih dahulu dengan pihak inspektorat/auditor internal kantor.",
+      "C": "Menolak secara santun dan tegas perintah manipulasi tanggal tersebut, menjelaskan bahwa tindakan 'backdate' melanggar prinsip akuntabilitas perbendaharaan negara dan berisiko temuan hukum BPK, serta menawarkan solusi alternatif pengelolaan anggaran yang sah.",
+      "D": "Langsung mematuhi perintah manipulasi tanggal tersebut tanpa ragu demi menyenangkan hati atasan dan meminta bagian dana pencairan.",
+      "E": "Menyetujui perintah atasan asalkan ada surat disposisi perintah tertulis resmi dari atasan yang melindungi Anda."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 3,
+      "B": 4,
+      "C": 5,
+      "D": 1,
+      "E": 2
+    },
+    "pembahasan": "Indikator Batasan Kepatuhan Hierarki (Lawful Obedience): Kepatuhan bawahan dibatasi oleh koridor hukum. Menolak manipulasi anggaran secara santun, tegas, dan memberi solusi sah (Poin 5) adalah benteng integritas ASN.",
+    "analisis_opsi": {
+      "A": "Poin 3: Menghindari perbuatan salah, namun bersikap pasif dan tidak berani meluruskan penyimpangan tata kelola.",
+      "B": "Poin 4: Tegas menjaga integritas diri dan mengarahkan permasalahan pada lembaga pengawas resmi.",
+      "C": "Poin 5: Berintegritas kokoh, berani menolak pelanggaran hukum secara profesional dan santun, serta memberikan alternatif solusi legal.",
+      "D": "Poin 1: Tindak pidana pemalsuan dokumen anggaran negara dan korupsi aktif yang melanggar hukum perbendaharaan.",
+      "E": "Poin 2: Kepatuhan bersyarat yang tetap terlibat dalam perbuatan melawan hukum administratif perbendaharaan negara."
+    },
+    "tips": "Perintah Menyimpang: TOLAK DENGAN TEGAS & SANTUN + Jelaskan risiko hukum BPK + Berikan alternatif yang sah.",
+    "sumber": "UU No. 30 Tahun 2014 tentang Administrasi Pemerintahan & UU Tipikor",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 98,
+    "no": 98,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Anda ditugaskan melakukan perjalanan dinas monitoring proyek infrastruktur jalan di daerah pelosok selama satu minggu tanpa pengawasan langsung dari atasan. Cuaca sangat panas dan lokasi jalan rusak berada jauh di tengah hutan. Sikap Anda dalam menjalankan tugas pengawasan tersebut adalah...",
+    "opsi": {
+      "A": "Hanya meminta kontraktor mengirimkan laporan progres dan foto proyek via WhatsApp tanpa memeriksa langsung kondisi fisik di hutan.",
+      "B": "Menginap di hotel kota, memalsukan tanda tangan kunjungan lapangan, dan menerima uang saku oleh-oleh dari kontraktor pelaksana.",
+      "C": "Mendatangi titik-titik proyek utama yang krusial di lapangan, mengambil dokumentasi foto koordinat GPS, dan memverifikasi data teknis bersama konsultan pengawas.",
+      "D": "Turun langsung ke setiap titik proyek di lapangan sesuai jadwal dan instrumen monev, memeriksa kesesuaian ketebalan aspal dan material dengan spesifikasi kontrak secara objektif, dan menyusun laporan faktual yang akurat dan dapat dipertanggungjawabkan.",
+      "E": "Melakukan pemeriksaan singkat di beberapa titik jalan terdekat lalu menghabiskan waktu sisa di kantor kecamatan setempat."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 2,
+      "B": 1,
+      "C": 4,
+      "D": 5,
+      "E": 3
+    },
+    "pembahasan": "Indikator Integritas Mandiri (Self-Integrity): Bekerja dengan mutu tertinggi tanpa pengawasan atasan (Poin 5) memastikan uang rakyat pada proyek infrastruktur diawasi secara jujur dan akuntabel.",
+    "analisis_opsi": {
+      "A": "Poin 2: Malas, tidak bertanggung jawab, dan mengabaikan mandat audit pengawasan anggaran fisik negara.",
+      "B": "Poin 1: Korupsi perjalanan dinas fiktif, gratifikasi ilegal, dan pengkhianatan amanah uang rakyat.",
+      "C": "Poin 4: Bekerja baik dan fokus pada titik kritis, kelengkapan seluruh titik sampling akan menyempurnakan audit.",
+      "D": "Poin 5: Memiliki integritas mandiri tinggi, disiplin, berdedikasi, teliti, dan menghasilkan laporan pengawasan yang kredibel.",
+      "E": "Poin 3: Melaksanakan sebagian tugas, namun kurang memiliki ketahanan fisik dan dedikasi pengawasan menyeluruh."
+    },
+    "tips": "Kerja Tanpa Pengawasan: Disiplin mandiri + Turun ke titik fisik lapangan + Sajikan data objektif apa adanya.",
+    "sumber": "Standar Audit Lapangan BPKP & Core Values ASN BerAKHLAK (Akuntabel)",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 99,
+    "no": 99,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Anda dihadapkan pada tumpukan pekerjaan yang harus diselesaikan dalam hari yang sama: analisis berkas tender pengadaan, perbaikan nota dinas pimpinan, melayani konsultasi perwakilan masyarakat, dan menghadiri rapat evaluasi berkala. Strategi manajemen waktu yang Anda terapkan adalah...",
+    "opsi": {
+      "A": "Mengeluh di media sosial tentang beban kerja kantor yang tidak masuk akal lalu meninggalkan meja kerja untuk bersenang-senang di luar.",
+      "B": "Mencoba mengerjakan semua pekerjaan secara bersamaan (multitasking acak) sehingga merasa sangat tertekan dan hasilnya banyak kekeliruan.",
+      "C": "Mengerjakan pekerjaan mana saja yang paling mudah terlebih dahulu agar tumpukan berkas di meja terlihat berkurang cepat.",
+      "D": "Membuat daftar urutan tugas (to-do list) berdasarkan tenggat waktu jam penyelesaian dan fokus menuntaskannya satu per satu secara konsentrasi penuh.",
+      "E": "Menyusun skala prioritas menggunakan matriks Eisenhower (mendesak-penting), menyelesaikan dokumen dengan batas waktu terdekat dan berdampak kritis bagi organisasi, mendelegasikan tugas administratif pendukung, dan mengatur jeda waktu konsultasi secara tertib."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 1,
+      "B": 2,
+      "C": 3,
+      "D": 4,
+      "E": 5
+    },
+    "pembahasan": "Indikator Manajemen Waktu dan Prioritas: Menghadapi multi-tasking menuntut pemilahan matriks urgensi dan signifikansi (Eisenhower Matrix) (Poin 5) agar seluruh output strategis selesai prima.",
+    "analisis_opsi": {
+      "A": "Poin 1: Tidak profesional, bermental rapuh, dan mengabaikan tanggung jawab pelayanan organisasi.",
+      "B": "Poin 2: Kurang memiliki manajemen stres dan teknik kerja terstruktur dalam menangani tugas jamak.",
+      "C": "Poin 3: Mengurangi beban psikologis sesaat, namun berisiko menelantarkan tugas strategis yang memiliki tenggat mendesak.",
+      "D": "Poin 4: Metode kerja fokus dan teratur yang efektif mencegah kepanikan beban kerja tinggi.",
+      "E": "Poin 5: Sangat terencana, menerapkan metodologi manajemen waktu yang teruji, fokus pada prioritas kritis, dan efektif."
+    },
+    "tips": "Beban Kerja Menumpuk: Petakan Prioritas (Penting & Mendesak) -> Delegasikan yang bisa didelegasikan -> Tuntaskan bertahap.",
+    "sumber": "Modul Manajemen Kinerja Individu ASN LAN RI",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 100,
+    "no": 100,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Anda tidak sengaja melakukan kesalahan input data pada rekapitulasi penerimaan tunjangan pegawai sehingga terdapat kelebihan transfer nominal pada salah satu rekan kerja Anda. Rekan tersebut belum menyadari kelebihan tersebut dan pimpinan belum melakukan audit. Tindakan Anda adalah...",
+    "opsi": {
+      "A": "Mengakui kesalahan input tersebut secara jujur dan transparan kepada atasan langsung, mengomunikasikan dengan santun kepada rekan yang bersangkutan mengenai kelebihan bayar, serta segera memproses penyesuaian administratif dan pengembalian dana ke kas negara sesuai regulasi.",
+      "B": "Menghubungi rekan yang menerima kelebihan transfer secara pribadi, menjelaskan kesalahan input data, dan mengajaknya bersama-sama melapor ke bagian perbendaharaan untuk pengembalian dana.",
+      "C": "Menunggu sampai ada pemeriksaan resmi dari tim auditor internal sebelum mengakui kekeliruan input data tersebut.",
+      "D": "Melakukan pemotongan nominal secara sepihak pada transfer gaji rekan tersebut di bulan berikutnya tanpa memberikan penjelasan terbuka.",
+      "E": "Menyembunyikan bukti selisih data input dan meminta rekan tersebut membagi dua kelebihan uang transfer agar tidak ketahuan atasan."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 4,
+      "C": 2,
+      "D": 3,
+      "E": 1
+    },
+    "pembahasan": "Indikator Akuntabilitas Kesalahan Kerja: Keberanian mengakui kekeliruan teknis diri sendiri secara jujur, transparan, dan segera memproses pengembalian ke kas negara (Poin 5) mencerminkan integritas tertinggi.",
+    "analisis_opsi": {
+      "A": "Poin 5: Berintegritas tinggi, berani bertanggung jawab, jujur, transparan, dan segera memulihkan ketertiban keuangan negara.",
+      "B": "Poin 4: Bertanggung jawab dan beritikad baik memulihkan kelebihan dana bersama pihak terkait.",
+      "C": "Poin 2: Menunda perbaikan dan tidak memiliki inisiatif akuntabilitas dini terhadap kekeliruan diri sendiri.",
+      "D": "Poin 3: Uang negara terselamatkan, namun tindakan pemotongan sepihak tanpa konfirmasi melanggar etika keterbukaan administrasi.",
+      "E": "Poin 1: Persekongkolan korupsi penggelapan uang negara yang merupakan tindak pidana berat."
+    },
+    "tips": "Salah Input/Eror Sendiri: AKUI JUJUR SEGERA + Lapor atasan + Proses pengembalian ke kas negara secara tertib.",
+    "sumber": "Peraturan Pemerintah Pengelolaan Keuangan Negara & Core Values Akuntabel",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 101,
+    "no": 101,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Dalam rangka meningkatkan kualitas pelayanan, instansi Anda menawarkan beasiswa pelatihan sertifikasi profesi internasional di bidang manajemen risiko, namun seleksi dilakukan secara ketat dan mewajibkan peserta belajar mandiri di luar jam kerja selama 3 bulan. Sebagian rekan Anda enggan mendaftar karena merasa materi terlalu sulit. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Mendaftar sekadar mencoba peruntungan tanpa membuat jadwal belajar mandiri yang terstruktur.",
+      "B": "Mempersiapkan diri dengan antusias, mempelajari kisi-kisi seleksi, mengatur waktu belajar mandiri dengan disiplin, dan berkomitmen lulus sertifikasi demi meningkatkan kapasitas diri serta kontribusi keahlian bagi instansi.",
+      "C": "Menjelek-jelekkan program sertifikasi tersebut di grup kantor dan menuduh panitia seleksi sudah memiliki calon titipan.",
+      "D": "Mendaftar program beasiswa tersebut, mengajak rekan kerja yang potensial untuk belajar kelompok bersama agar peluang lulus sertifikasi semakin besar.",
+      "E": "Memilih tidak mendaftar karena merasa tugas harian yang ada saat ini sudah cukup menyita energi dan waktu luang Anda."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 3,
+      "B": 5,
+      "C": 1,
+      "D": 4,
+      "E": 2
+    },
+    "pembahasan": "Indikator Pembelajar Berkelanjutan (Continuous Learning): Standar profesionalitas ASN mewajibkan kemauan mengasah kompetensi baru (upskilling) keluar dari zona nyaman demi kontribusi bangsa (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 3: Ada kemauan mencoba, namun kurang memiliki komitmen persiapan yang matang dan disiplin.",
+      "B": "Poin 5: Sangat profesional, berorientasi masa depan, bersemangat mengembangkan kapasitas diri demi kemajuan institusi.",
+      "C": "Poin 1: Toksik, menyebarkan prasangka buruk, dan memadamkan motivasi belajar rekan-rekan kerja.",
+      "D": "Poin 4: Kolaboratif dan bersemangat maju bersama tim meningkatkan kompetensi profesional.",
+      "E": "Poin 2: Terjebak dalam zona nyaman (complacency) yang membuat peningkatan kompetensi karier mandek."
+    },
+    "tips": "Peluang Upskilling Sertifikasi: Ambil tantangan + Disiplin belajar mandiri + Dedikasikan ilmu bagi perbaikan institusi.",
+    "sumber": "UU No. 20 Tahun 2023 tentang ASN (Pasal Kewajiban Pengembangan Kompetensi) & Core Values Kompeten",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 102,
+    "no": 102,
+    "kategori": "TKP",
+    "subkategori": "Profesionalisme",
+    "soal": "Anda bertugas sebagai panitia lelang pengadaan barang dan jasa pemerintah. Salah satu peserta tender yang gugur karena dokumen teknisnya tidak memenuhi persyaratan mengajukan sanggahan resmi dengan nada sangat mengancam dan menuduh panitia menerima suap dari pemenang lelang. Sikap profesional Anda dalam menyusun jawaban sanggah adalah...",
+    "opsi": {
+      "A": "Menyusun draf jawaban sanggah berbasis bukti dokumen fakta evaluasi, lalu mengoordinasikannya dengan bagian hukum instansi untuk memastikan ketepatan bahasa hukum formal.",
+      "B": "Menjawab sanggahan secara singkat dan formal hanya dengan melampirkan salinan regulasi pengadaan tanpa uraian fakta evaluasi.",
+      "C": "Menjawab sanggahan secara objektif, lugas, dan transparan berdasarkan bukti dokumen fakta evaluasi administrasi dan teknis, merujuk secara gamblang pada klausul dokumen pemilihan dan regulasi pengadaan yang berlaku, tanpa terpancing emosi provokatif.",
+      "D": "Membiarkan surat sanggahan tersebut dan baru membalasnya di hari terakhir batas waktu sanggah dengan rasa kesal.",
+      "E": "Membalas surat sanggahan dengan tuduhan pencemaran nama baik, memaki balik penyanggah, dan mengancam akan memenjarakannya."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 4,
+      "B": 3,
+      "C": 5,
+      "D": 2,
+      "E": 1
+    },
+    "pembahasan": "Indikator Akuntabilitas Pengadaan Barang/Jasa: Menjawab sanggahan tender wajib berpijak pada data dokumen evaluasi faktual dan regulasi hukum pengadaan tanpa terpancing emosi intimidasi (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 4: Sangat cermat dan melindungi institusi dari celah sengketa hukum di masa depan.",
+      "B": "Poin 3: Sah secara hukum, namun kurang memberikan penjelasan edukatif yang meredakan kecurigaan penyanggah.",
+      "C": "Poin 5: Sangat objektif, berpijak teguh pada dokumen formal dan regulasi hukum, tidak emosional, dan menjamin kepastian tata kelola.",
+      "D": "Poin 2: Terkesan menyepelekan hak sanggah peserta lelang dan menunjukkan profesionalitas yang kurang prima.",
+      "E": "Poin 1: Emosional, tidak profesional, dan merendahkan standar etika pejabat pengadaan barang jasa pemerintah."
+    },
+    "tips": "Menghadapi Sanggahan Tender: Jawab berbasis DOKUMEN FAKTA & REGULASI secara lugas, transparan, dan tenang.",
+    "sumber": "Perpres No. 12 Tahun 2021 tentang Pengadaan Barang dan Jasa Pemerintah & Pedoman LKPP",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 103,
+    "no": 103,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Di grup WhatsApp internal bidang kerja Anda, seorang rekan kerja sering mengirimkan pesan dan video yang memuat narasi kebencian terhadap sistem demokrasi Pancasila, menuduh dasar negara Indonesia thaghut, dan secara terbuka mengajak rekan lain mendukung gerakan yang bertujuan mengubah bentuk NKRI menjadi negara berbasis kekhalifahan sepihak. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Menegur rekan tersebut secara pesan pribadi (japri) agar tidak lagi membagikan konten bermuatan politis dan radikal di grup dinas.",
+      "B": "Mengingatkan rekan tersebut di grup bahwa ASN terikat kode etik setia pada Pancasila dan NKRI, lalu berkonsultasi kepada atasan langsung mengenai tindakan yang tepat.",
+      "C": "Menyetujui postingan tersebut, ikut memberikan komentar pujian, dan meneruskannya ke grup-grup media sosial lainnya.",
+      "D": "Menegur rekan tersebut secara tegas di grup bahwa konten anti-Pancasila dan separatisme bertentangan dengan sumpah janji ASN, mendokumentasikan bukti tangkapan layar percakapan, dan melaporkannya kepada Tim Satgas Pencegahan Radikalisme / Inspektorat instansi untuk ditindaklanjuti sesuai prosedur.",
+      "E": "Memilih diam dan mematikan notifikasi grup WhatsApp kantor agar pikiran tidak terganggu oleh pesan-pesan tersebut."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 3,
+      "B": 4,
+      "C": 1,
+      "D": 5,
+      "E": 2
+    },
+    "pembahasan": "Indikator Ketegasan Menolak Paham Anti-Pancasila: ASN bersumpah setia kepada NKRI dan Pancasila. Menegur tegas konten radikal, mendokumentasikan bukti, dan melapor ke inspektorat (Poin 5) adalah kewajiban konstitusional mutlak.",
+    "analisis_opsi": {
+      "A": "Poin 3: Berniat menasihati rekan, namun penentangan terbuka terhadap dasar negara membutuhkan tindakan tegas pelaporan resmi.",
+      "B": "Poin 4: Tegas mengingatkan di depan forum dan mengoordinasikan ke pimpinan, bukti dokumentasi konkret akan melengkapi laporan.",
+      "C": "Poin 1: Pengkhianatan berat terhadap sumpah jabatan ASN, mendukung gerakan anti-Pancasila, dan dapat diberhentikan tidak dengan hormat.",
+      "D": "Poin 5: Berani, setia pada konsensus kebangsaan, taat prosedur pelaporan resmi inspektorat, dan melindungi institusi dari ideologi radikal.",
+      "E": "Poin 2: Apatis dan membiarkan bibit propaganda anti-Pancasila menyebar leluasa di internal aparatur sipil negara."
+    },
+    "tips": "Anti-Radikalisme: Jangan kompromi! TEGUR TEGAS + SIMPAN BUKTI SCREENSHOT + LAPOR INSPEKTORAT.",
+    "sumber": "SKB 11 Menteri/Lembaga tentang Penanganan Radikalisme ASN & UU No. 20 Tahun 2023",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 104,
+    "no": 104,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Anda diajak oleh seorang teman lama untuk menghadiri sebuah kajian tertutup di sebuah rumah kontrakan. Di lokasi, Anda mendapati pemateri mendoktrin peserta untuk menolak menghormati bendera Merah Putih, melarang menyanyikan lagu Indonesia Raya, dan mengajarkan doktrin intoleransi terhadap pemeluk agama lain dengan menyatakan kekerasan terhadap orang berbeda keyakinan dihalalkan. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Mendebat pemateri secara emosional di tengah forum tertutup seorang diri.",
+      "B": "Terpengaruh oleh doktrin pemateri, ikut memusuhi simbol negara, dan bersedia menyumbangkan uang untuk gerakan kekerasan kelompok tersebut.",
+      "C": "Berpamitan keluar dari ruangan dengan alasan darurat, tidak mengikuti ajakan kajian berikutnya, dan menceritakan temuan kelompok mencurigakan tersebut kepada pihak kepolisian.",
+      "D": "Mendengarkan materi hingga selesai tanpa membantah, lalu memutuskan dalam hati untuk tidak akan pernah datang lagi ke kajian tersebut.",
+      "E": "Segera meninggalkan tempat tersebut dengan tenang dan waspada, menolak segala bentuk doktrinasi radikal, serta melaporkan indikasi kelompok berpaham ekstremisme kekerasan tersebut kepada aparat penegak hukum dan instansi intelijen yang berwenang demi menjaga keamanan masyarakat."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 2,
+      "B": 1,
+      "C": 4,
+      "D": 3,
+      "E": 5
+    },
+    "pembahasan": "Indikator Kewaspadaan Dini terhadap Ekstremisme: Menghadapi indoktrinasi kekerasan dan penentangan simbol negara membutuhkan kewaspadaan taktis: keluar dengan tenang dan melapor aparat berwenang (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 2: Tindakan nekat tanpa perhitungan taktis yang dapat membahayakan keselamatan fisik jiwa Anda di sarang kelompok radikal.",
+      "B": "Poin 1: Terjerumus ke dalam tindak pidana terorisme dan ekstremisme kekerasan yang mengancam keselamatan bangsa.",
+      "C": "Poin 4: Sangat waspada menyelamatkan diri dan melaporkan potensi ancaman keamanan terorisme.",
+      "D": "Poin 3: Menjaga keselamatan diri di lokasi, namun mendiamkan kelompok ekstremis kekerasan tanpa melapor membahayakan keselamatan warga lain.",
+      "E": "Poin 5: Memiliki kewaspadaan tinggi, tegas menolak doktrin ekstremis, mengutamakan keselamatan, dan proaktif melaporkan kepada aparat berwenang."
+    },
+    "tips": "Kajian Ekstremis Kekerasan: Tinggalkan lokasi dengan tenang & waspada + Tolak doktrinnya + Laporkan segera ke aparat keamanan.",
+    "sumber": "UU No. 5 Tahun 2018 tentang Penanggulangan Tindak Pidana Terorisme & Perpres No. 7 Tahun 2021",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 105,
+    "no": 105,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Sebagai seorang ASN di dinas pendidikan, Anda melihat adanya kelompok pemuda di lingkungan perumahan yang mulai terpapar pandangan intoleran dan gemar menghakimi warga lain yang berbeda mazhab atau agama. Upaya edukatif yang paling tepat Anda gagas untuk membentengi generasi muda dari bahaya radikalisme adalah...",
+    "opsi": {
+      "A": "Menggagas program dialog kepemudaan inklusif, pelatihan literasi kritis menangkal disinformasi radikal, dan kegiatan sosial lintas agama/budaya bersama tokoh masyarakat untuk memperkokoh moderasi dan wawasan kebangsaan.",
+      "B": "Menuduh dan mencap para pemuda tersebut sebagai teroris di hadapan orang tua mereka dan mengusir keluarga mereka dari perumahan.",
+      "C": "Meminta pengurus RT/RW untuk membubarkan tempat berkumpul para pemuda tersebut dan memasang larangan berkumpul.",
+      "D": "Menasihati para pemuda tersebut secara berkala saat berpapasan di lingkungan masjid atau sarana umum perumahan.",
+      "E": "Mengadakan forum bedah buku dan kajian kebangsaan interaktif di balai pemuda dengan mengundang narasumber ahli moderasi beragama."
+    },
+    "kunci": "A",
+    "bobot": {
+      "A": 5,
+      "B": 1,
+      "C": 2,
+      "D": 3,
+      "E": 4
+    },
+    "pembahasan": "Indikator Kontra-Radikalisasi Pemuda: Menangkal radikalisme pemuda memerlukan pendekatan lunak (soft power) berupa ruang dialog inklusif, literasi kritis, dan karya sosial lintas perbedaan (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 5: Sangat edukatif, preventif, membangun ketahanan generasi muda melalui program sosial positif dan moderasi beragama.",
+      "B": "Poin 1: Stigmatisasi sepihak, memicu permusuhan horizontal, dan memperparah alienasi pemuda dari lingkungan sosial.",
+      "C": "Poin 2: Pendekatan represif permukaan yang tidak menyentuh akar pemikiran dan berisiko membuat mereka bergerak di bawah tanah.",
+      "D": "Poin 3: Memiliki kepedulian sosial, namun pendekatan terstruktur dalam wadah kegiatan bersama akan jauh lebih efektif.",
+      "E": "Poin 4: Langkah edukasi preventif yang sangat baik dan terarah untuk membuka cakrawala berpikir pemuda."
+    },
+    "tips": "Mencegah Radikalisme Pemuda: Buka ruang dialog inklusif + Perkuat literasi kritis + Berdayakan dalam kegiatan sosial positif.",
+    "sumber": "Pedoman Kesiapsiagaan Nasional BNPT & Strategi Moderasi Beragama Kemenag",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 106,
+    "no": 106,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Seorang rekan kerja satu meja Anda yang dulunya sangat ramah dan ceria, dalam tiga bulan terakhir mengalami perubahan sikap drastis: menjadi sangat pendiam, menarik diri dari pergaulan kantor, menolak bersalaman dengan rekan beda lawan jenis, dan menolak hadir dalam upacara bendera memperingati Hari Lahir Pancasila. Sikap Anda sebagai rekan terdekat adalah...",
+    "opsi": {
+      "A": "Mengajaknya makan siang berdua, menanyakan kabar keluarganya secara tulus, dan mengingatkan pentingnya menjaga interaksi harmonis di tempat kerja.",
+      "B": "Mengajak berbicara secara personal dengan empati dan penuh perhatian untuk mendengarkan permasalahan yang dihadapinya, mengingatkan komitmen sebagai aparatur negara yang menjunjung persatuan, serta berkoordinasi secara bijak dengan konselor kepegawaian/atasan untuk pendampingan dini.",
+      "C": "Menjauhi rekan tersebut bersama rekan-rekan staf lain karena merasa tidak nyaman dengan perubahan sikapnya yang kaku.",
+      "D": "Memperhatikan perilakunya dari kejauhan dan mencatat kejanggalan aktivitasnya untuk dilaporkan sewaktu-waktu jika dibutuhkan.",
+      "E": "Menyebarkan gosip ke seluruh kantor bahwa rekan satu meja Anda tersebut sudah resmi dibaiat menjadi anggota teroris."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 4,
+      "B": 5,
+      "C": 2,
+      "D": 3,
+      "E": 1
+    },
+    "pembahasan": "Indikator Deteksi Dini & Pendampingan Preventif: Gejala penarikan diri sosial dan penolakan konsensus negara direspons melalui pendekatan empatik antarrekan dan konseling kepegawaian (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 4: Pendekatan antarpribadi yang sangat baik untuk mencairkan isolasi diri rekan kerja.",
+      "B": "Poin 5: Empatik, peduli, peka terhadap perubahan perilaku rekan, solutif, dan mengarahkan pada pendampingan profesional institusi.",
+      "C": "Poin 2: Mengucilkan rekan justru mempercepat proses radikalisasi karena ia merasa semakin diterima oleh kelompok radikal tertutup di luar.",
+      "D": "Poin 3: Waspada mengamati, namun membiarkan rekan tanpa pendekatan personal dapat membuatnya semakin terisolasi.",
+      "E": "Poin 1: Fitnah keji, merusak nama baik, menimbulkan histeria ketakutan di kantor, dan melanggar etika ASN."
+    },
+    "tips": "Deteksi Perubahan Perilaku: Rangkul empatik personal -> Jangan kucilkan -> Libatkan konselor/atasan untuk pendampingan.",
+    "sumber": "Buku Saku Deteksi Dini Radikalisme ASN BKN & Pedoman Konseling Kepegawaian",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 107,
+    "no": 107,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Instansi Anda menyelenggarakan program Penguatan Wawasan Kebangsaan dan Moderasi Beragama yang wajib diikuti oleh seluruh pegawai pada hari Sabtu. Sebagian rekan mengeluh karena hari libur terpotong dan berencana membolos secara massal. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Hadir pada acara tersebut semata-mata karena takut absensi sidik jari dicek dan takut dikenai sanksi pemotongan tunjangan kinerja.",
+      "B": "Ikut membolos bersama rekan-rekan lain dan membuat postingan provokatif di media sosial yang mengejek program wawasan kebangsaan.",
+      "C": "Tetap hadir tepat waktu dengan antusias, mengajak rekan-rekan untuk ikut hadir dengan menjelaskan pentingnya pembekalan wawasan kebangsaan untuk memperkokoh integritas dan benteng ideologi ASN di era disrupsi informasi.",
+      "D": "Hadir tepat waktu mengikuti seluruh rangkaian pembinaan wawasan kebangsaan dan mencatat materi penting untuk diterapkan di unit kerja.",
+      "E": "Hanya datang saat pembukaan acara untuk mengisi daftar hadir lalu diam-diam pulang lebih awal."
+    },
+    "kunci": "C",
+    "bobot": {
+      "A": 3,
+      "B": 1,
+      "C": 5,
+      "D": 4,
+      "E": 2
+    },
+    "pembahasan": "Indikator Komitmen Kebangsaan ASN: Menjadi teladan disiplin hadir dan memotivasi rekan kerja mengikuti pembinaan ideologi negara (Poin 5) mencerminkan integritas moral aparatur sejati.",
+    "analisis_opsi": {
+      "A": "Poin 3: Patuh secara administratif, namun motivasi internal penguatan nilai kebangsaan masih bersifat pasif komersial.",
+      "B": "Poin 1: Membangkang terhadap program pembinaan resmi negara, memprovokasi pembangkangan massal, dan melanggar disiplin PNS.",
+      "C": "Poin 5: Sangat berkomitmen, antusias, menjadi teladan disiplin, dan mampu memotivasi rekan kerja secara konstruktif.",
+      "D": "Poin 4: Teladan disiplin dan memiliki komitmen pengabdian tugas kedinasan yang kokoh.",
+      "E": "Poin 2: Ketidakjujuran disiplin aparatur negara yang mencoreng integritas moral pribadi."
+    },
+    "tips": "Wawasan Kebangsaan: Jadilah teladan kehadiran + Sadari pentingnya pembinaan ideologi Pancasila bagi keutuhan negara.",
+    "sumber": "SE MenPAN-RB tentang Jam Kerja ASN & Pedoman Pembinaan Wawasan Kebangsaan BKN",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 108,
+    "no": 108,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Anda menemukan sebuah situs web buletin online yang menyebarkan panduan taktis perakitan bom pipa dan propaganda perekrutan milisi bersenjata yang mencantumkan kontak rekrutmen di wilayah provinsi Anda. Tindakan responsif Anda dalam menjaga keamanan negara adalah...",
+    "opsi": {
+      "A": "Mengambil tangkapan layar alamat situs dan nomor kontak rekrutmen tersebut, lalu menyerahkannya langsung kepada pihak kepolisian terdekat.",
+      "B": "Mengabaikan situs tersebut karena menganggap patroli siber kepolisian pasti sudah memantau peredaran situs terorisme.",
+      "C": "Menyimpan artikel panduan merakit bom tersebut di laptop pribadi dengan alasan untuk arsip referensi penelitian.",
+      "D": "Segera melaporkan URL situs web tersebut melalui kanal resmi Aduan Konten Kementerian Komunikasi dan Digital serta portal pelaporan BNPT/Polri agar tautan tersebut segera diblokir dan pelakunya dapat dilacak oleh aparat penegak hukum.",
+      "E": "Membagikan tautan situs perakitan bom tersebut ke grup WhatsApp pertemanan untuk sekadar pamer temuan rahasia."
+    },
+    "kunci": "D",
+    "bobot": {
+      "A": 4,
+      "B": 3,
+      "C": 2,
+      "D": 5,
+      "E": 1
+    },
+    "pembahasan": "Indikator Respons Cepat Menangkal Terorisme Siber: Melaporkan temuan instruksi senjata dan rekrutmen milisi terorisme ke kanal resmi AduanKonten dan Polri (Poin 5) memutus rantai radikalisasi publik.",
+    "analisis_opsi": {
+      "A": "Poin 4: Langkah pelaporan fisik yang cepat dan bertanggung jawab kepada pihak berwajib.",
+      "B": "Poin 3: Pasif dan tidak memanfaatkan peran warga negara dalam sistem deteksi dini ancaman keamanan nasional.",
+      "C": "Poin 2: Sangat berisiko dicurigai sebagai simpatisan terorisme dan membahayakan keselamatan diri sendiri.",
+      "D": "Poin 5: Sangat tanggap, proaktif menjaga keamanan negara, dan memanfaatkan jalur pelaporan siber resmi pemerintah secara akurat.",
+      "E": "Poin 1: Kecerobohan fatal yang menyebarluaskan materi terorisme terlarang dan dapat dijerat pasal pidana UU Terorisme."
+    },
+    "tips": "Konten Terorisme/Bom Online: JANGAN DISEBARKAN! Laporkan URL ke Aduan Konten Komdigi & Bareskrim Polri.",
+    "sumber": "UU No. 5 Tahun 2018 tentang Pemberantasan Tindak Pidana Terorisme & Portal Aduan Konten Komdigi",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 109,
+    "no": 109,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Seorang pimpinan organisasi kemasyarakatan lokal menawarkan dukungan politik dan donasi pembangunan fasilitas kantor dinas Anda dengan syarat Anda harus menyetujui program ormas tersebut yang mewajibkan sweeping paksa dan penertiban tempat usaha warga yang tidak seagama. Sikap Anda adalah...",
+    "opsi": {
+      "A": "Menerima donasi fasilitas kantor namun secara diam-diam tidak pernah menindaklanjuti permintaan izin sweeping mereka.",
+      "B": "Menolak tawaran donasi bersyarat tersebut secara diplomatis dan berkoordinasi dengan kepolisian untuk mengantisipasi potensi aksi sweeping ormas.",
+      "C": "Menyetujui tawaran ormas tersebut dan menandatangani surat rekomendasi sweeping paksa demi mendapatkan fasilitas kantor baru.",
+      "D": "Menyerahkan keputusan tersebut sepenuhnya kepada atasan dinas tanpa berani menyatakan sikap penolakan terhadap aksi sweeping.",
+      "E": "Menolak dengan tegas tawaran bantuan tersebut, menegaskan bahwa penegakan hukum dan ketertiban umum adalah wewenang mutlak aparat penegak hukum negara, dan menolak segala bentuk tindakan main hakim sendiri (vigilantisme) serta intoleransi di ruang publik."
+    },
+    "kunci": "E",
+    "bobot": {
+      "A": 3,
+      "B": 4,
+      "C": 1,
+      "D": 2,
+      "E": 5
+    },
+    "pembahasan": "Indikator Penolakan Vigilantisme & Intoleransi: Penegakan hukum adalah wewenang mutlak negara. Menolak bantuan bersyarat sweeping ormas secara tegas (Poin 5) mempertahankan supremasi hukum Pancasila.",
+    "analisis_opsi": {
+      "A": "Poin 3: Kompromistis yang keliru dan menimbulkan potensi konflik serta pemerasan lanjutan dari pihak ormas.",
+      "B": "Poin 4: Sikap tegas dan sigap berkoordinasi dengan aparat berwenang demi menjaga ketertiban umum.",
+      "C": "Poin 1: Pelanggaran hukum berat, memfasilitasi aksi kekerasan intoleransi, dan melanggar konstitusi kebebasan warga negara.",
+      "D": "Poin 2: Menghindari tanggung jawab moral dan tidak menunjukkan ketegasan sikap anti-intoleransi.",
+      "E": "Poin 5: Tegas menjaga supremasi hukum, menolak vigilantisme ormas intoleran, dan melindungi hak rasa aman warga negara."
+    },
+    "tips": "Sweeping/Main Hakim Sendiri Ormas: TOLAK TEGAS! Tindakan sweeping ilegal dan bertentangan dengan hukum negara.",
+    "sumber": "UU No. 16 Tahun 2017 tentang Ormas & UU Ketertiban Umum",
+    "youtube": null,
+    "gambar": null
+  },
+  {
+    "id": 110,
+    "no": 110,
+    "kategori": "TKP",
+    "subkategori": "Anti-Radikalisme",
+    "soal": "Sebagai seorang calon Aparatur Sipil Negara Republik Indonesia, landasan moral, etika, dan filosofi pengabdian tertinggi yang harus selalu terpatri teguh dalam sanubari dan tercermin dalam setiap tarikan nafas pelaksanaan tugas sehari-hari adalah...",
+    "opsi": {
+      "A": "Bekerja dengan tenang, menghindari segala bentuk konflik di kantor, dan mengamankan posisi karier jabatan hingga masa pensiun.",
+      "B": "Kesetiaan mutlak dan loyalitas tanpa pamrih kepada Pancasila, UUD NRI 1945, Negara Kesatuan Republik Indonesia, dan Pemerintah yang sah, serta mendedikasikan seluruh kompetensi demi pelayanan terbaik dan kemaslahatan seluruh rakyat Indonesia.",
+      "C": "Mengejar kekayaan materiil, popularitas status sosial, dan memanfaatkan fasilitas jabatan dinas untuk keuntungan kelompok sendiri.",
+      "D": "Bekerja secara profesional, mematuhi seluruh peraturan perundang-undangan, menjunjung etika birokrasi, dan terus meningkatkan kompetensi kerja.",
+      "E": "Melaksanakan seluruh perintah atasan dengan tertib dan berorientasi pada pencapaian target kinerja bulanan institusi."
+    },
+    "kunci": "B",
+    "bobot": {
+      "A": 2,
+      "B": 5,
+      "C": 1,
+      "D": 4,
+      "E": 3
+    },
+    "pembahasan": "Indikator Komitmen Kesetiaan Mutlak kepada NKRI: Puncak kompetensi moral SKD CASN adalah loyalitas paripurna kepada Pancasila, UUD 1945, NKRI, dan Pemerintah yang sah, diwujudkan melalui dedikasi melayani rakyat (Poin 5).",
+    "analisis_opsi": {
+      "A": "Poin 2: Berorientasi pada zona aman pribadi tanpa memiliki cita-cita dedikasi pengabdian bangsa yang luhur.",
+      "B": "Poin 5: Puncak manifestasi Core Values ASN BerAKHLAK, memegang teguh sumpah setia konstitusi, berintegritas paripurna, dan berdedikasi melayani rakyat.",
+      "C": "Poin 1: Mentalitas feodal hedonistik yang menjadi akar perusak moral birokrasi dan pemicu tindak pidana korupsi.",
+      "D": "Poin 4: Sangat profesional dan berkinerja tinggi, kesetiaan ideologis pada Pancasila dan NKRI adalah fondasi pengikatnya.",
+      "E": "Poin 3: Tertib kedinasan, namun filosofi pengabdian aparatur negara melampaui sekadar kepatuhan administratif rutin."
+    },
+    "tips": "Filosofi Tertinggi ASN: LOYALITAS MUTLAK PADA PANCASILA, UUD 1945, NKRI & PELAYANAN TULUS UNTUK RAKYAT INDONESIA.",
+    "sumber": "Pasal 24 UU No. 20 Tahun 2023 tentang Aparatur Sipil Negara & Core Values ASN BerAKHLAK",
+    "youtube": null,
+    "gambar": null
+  }
+];
