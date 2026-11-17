@@ -3,40 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulasi CAT BKN - CASN | Badan Kepegawaian Negara</title>
-  <meta name="description" content="Simulator Resmi CAT BKN CASN - Seleksi Kompetensi Dasar (SKD) CPNS & PPPK dengan Mode Simulasi Ujian dan Mode Belajar Mandiri.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>CAT Assessment System - SKD CASN</title>
+  <meta name="description" content="Sistem Simulasi CAT Terpadu - Seleksi Kompetensi Dasar (SKD) CASN CPNS & PPPK dengan Mode Simulasi Ujian Terkunci, Mode Belajar Mandiri, dan Riwayat Evaluasi Sesi.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230f4c81'%3E%3Cpath d='M12 2L2 7v7c0 5.25 4.25 9.75 10 11 5.75-1.25 10-5.75 10-11V7L12 2z'/%3E%3C/svg%3E">
 </head>
 <body class="font-md">
 
   <!-- ======================================================================
-       1. HEADER RESMI CAT BKN
+       1. GLOBAL TOP HEADER (CLEAN CAT ASSESSMENT SYSTEM)
        ====================================================================== -->
-  <header class="bkn-header">
-    <div class="header-brand">
-      <!-- Lambang Garuda Pancasila / BKN SVG -->
-      <svg class="brand-emblem" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Garuda BKN">
-        <circle cx="32" cy="32" r="30" fill="#0f4c81" stroke="#f59e0b" stroke-width="2.5"/>
-        <path d="M32 8L36 18H46L38 24L41 34L32 28L23 34L26 24L18 18H28L32 8Z" fill="#f59e0b" stroke="#ffffff" stroke-width="0.5"/>
-        <path d="M16 35C20 42 26 48 32 52C38 48 44 42 48 35C42 38 36 39 32 39C28 39 22 38 16 35Z" fill="#d97706"/>
-        <circle cx="32" cy="38" r="6" fill="#ef4444"/>
-        <path d="M32 33V43M27 38H37" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-        <rect x="22" y="47" width="20" height="4" rx="2" fill="#fef3c7"/>
-        <text x="32" y="50" font-size="3" font-weight="900" text-anchor="middle" fill="#78350f" font-family="sans-serif">BHINNEKA TUNGGAL IKA</text>
+  <header class="cat-header">
+    <div class="header-brand" id="brand-home-link" title="Kembali ke Halaman Utama">
+      <!-- Clean Assessment Shield Vector Icon -->
+      <svg class="brand-shield-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo CAT Assessment">
+        <rect x="6" y="6" width="52" height="52" rx="14" fill="#0f4c81" stroke="#d97706" stroke-width="2.5"/>
+        <path d="M32 14L46 20V34C46 43 39 49 32 52C25 49 18 43 18 34V20L32 14Z" fill="url(#shield-grad)" stroke="#ffffff" stroke-width="1.5"/>
+        <path d="M26 33L30 37L39 27" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="shield-grad" x1="18" y1="14" x2="46" y2="52" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#2563eb"/>
+            <stop offset="1" stop-color="#1e3a8a"/>
+          </linearGradient>
+        </defs>
       </svg>
       <div class="brand-title-wrap">
         <div class="brand-title-main">
-          SIMULASI CAT BKN <span class="badge-cat">CASN</span>
+          CAT ASSESSMENT <span class="badge-cat">CASN</span>
         </div>
         <div class="brand-title-sub">
-          BADAN KEPEGAWAIAN NEGARA • REPUBLIK INDONESIA
+          SELEKSI KOMPETENSI DASAR • CPNS & PPPK
         </div>
       </div>
     </div>
 
     <!-- Identitas Peserta Ujian -->
-    <div class="header-candidate">
+    <div class="header-candidate" id="header-candidate-box">
       <div class="candidate-photo-box">
         <div class="candidate-photo-placeholder" id="candidate-photo-avatar">ASN</div>
         <div class="candidate-status-dot" title="Kamera Pengawas Terhubung"></div>
@@ -45,14 +48,33 @@
         <div class="candidate-name" id="candidate-name">CALON ASN INDONESIA</div>
         <div class="candidate-meta">
           <span class="candidate-badge-no" id="candidate-id">24-00123-CAT</span>
-          <span class="candidate-pin">PIN: <strong id="candidate-pin">BKN-SKD-2024</strong></span>
+          <span class="candidate-pin">PIN: <strong id="candidate-pin">SKD-2024</strong></span>
         </div>
       </div>
     </div>
 
-    <!-- Timer & Tombol Selesai Ujian -->
+    <!-- Header Actions: History Link, Countdown Timer, Finish Exam Button -->
     <div class="header-actions">
-      <div class="timer-box" id="timer-box">
+      <!-- Tombol Bank Soal di Header -->
+      <button type="button" class="btn-header-nav" id="btn-header-bank-soal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>Bank Soal</span>
+      </button>
+
+      <!-- Tombol Riwayat Ujian di Header -->
+      <button type="button" class="btn-header-nav" id="btn-header-history">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>Riwayat Sesi</span>
+      </button>
+
+      <!-- Timer Box (Hanya Tampil Saat Mode Simulasi Berlangsung) -->
+      <div class="timer-box" id="timer-box" style="display: none;">
         <svg class="timer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
@@ -63,7 +85,8 @@
         </div>
       </div>
 
-      <button type="button" class="btn-finish-exam" id="btn-finish-exam">
+      <!-- Tombol Selesai Ujian (Hanya Tampil Saat Mode Simulasi) -->
+      <button type="button" class="btn-finish-exam" id="btn-finish-exam" style="display: none;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
           <line x1="12" y1="2" x2="12" y2="12"></line>
@@ -74,444 +97,886 @@
   </header>
 
   <!-- ======================================================================
-       2. MODE SELECTOR & FILTER SUBNAV
+       SCREEN 1: LANDING SCREEN / PEMILIHAN MODE AWAL
        ====================================================================== -->
-  <nav class="bkn-subnav" aria-label="Navigasi Mode dan Kategori">
-    <!-- Mode Tabs -->
-    <div class="mode-selector-wrap" role="tablist">
-      <button type="button" class="mode-tab-btn active" id="tab-mode-simulasi" data-mode="simulasi" role="tab" aria-selected="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-          <line x1="8" y1="21" x2="16" y2="21"></line>
-          <line x1="12" y1="17" x2="12" y2="21"></line>
-        </svg>
-        <span>Mode Simulasi CAT BKN</span>
-        <span class="mode-badge">100 Menit</span>
-      </button>
+  <main class="app-screen active" id="landing-screen">
+    <div class="landing-container">
+      
+      <!-- Hero Section -->
+      <section class="landing-hero">
+        <div class="hero-pill-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Standar Resmi PermenPAN-RB No. 321 Tahun 2024</span>
+        </div>
+        <h1 class="landing-hero-title">Portal Simulasi & Latihan Mandiri CAT SKD</h1>
+        <p class="landing-hero-desc">
+          Platform terpadu persiapan Seleksi Kompetensi Dasar CASN (CPNS & PPPK) dengan 110 soal resmi (TWK, TIU, TKP), pembahasan komprehensif seluruh opsi, trik cepat, video materi, dan pencatatan riwayat sesi SQLite.
+        </p>
+      </section>
 
-      <button type="button" class="mode-tab-btn" id="tab-mode-belajar" data-mode="belajar" role="tab" aria-selected="false">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-        </svg>
-        <span>Mode Belajar Mandiri</span>
-        <span class="mode-badge">Bahas Langsung</span>
-      </button>
+      <!-- 3 Mode Selection Cards -->
+      <div class="landing-cards-grid">
+        
+        <!-- Card 1: Mode Belajar Mandiri -->
+        <article class="portal-card">
+          <span class="portal-card-badge badge-study">Pembahasan Instan</span>
+          <div class="portal-icon-wrap icon-wrap-study">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h2 class="portal-card-title">Mode Belajar Mandiri</h2>
+          <p class="portal-card-desc">
+            Eksplorasi soal satu per satu dengan pembahasan langsung. Begitu Anda memilih opsi, kunci jawaban, analisis mendalam setiap opsi (A-E), tips cepat, dan video YouTube akan terbuka seketika.
+          </p>
+          <ul class="portal-card-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Feedback instan per nomor soal</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Analisis komprehensif opsi A s.d. E</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Playable video YouTube untuk numerik/logika</span>
+            </li>
+          </ul>
+          <button type="button" class="btn-portal-action btn-portal-study" id="btn-start-study">
+            <span>Masuk Mode Belajar &rarr;</span>
+          </button>
+        </article>
 
-      <button type="button" class="mode-tab-btn" id="tab-mode-review" data-mode="review" role="tab" aria-selected="false" style="display: none;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-          <polyline points="10 9 9 9 8 9"></polyline>
-        </svg>
-        <span>Review Hasil Ujian</span>
-        <span class="mode-badge">Analisis</span>
-      </button>
+        <!-- Card 2: Mode Simulasi Ujian CAT (Resmi) -->
+        <article class="portal-card featured">
+          <span class="portal-card-badge badge-sim">Simulasi Ujian Murni</span>
+          <div class="portal-icon-wrap icon-wrap-sim">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h2 class="portal-card-title">Simulasi Ujian CAT</h2>
+          <p class="portal-card-desc">
+            Replikasi persis ujian riil: waktu 100 menit, 110 butir soal, navigasi grid, penanda ragu-ragu, dan auto-submit saat waktu habis. Mode belajar dinonaktifkan sepenuhnya agar fokus ujian 100%.
+          </p>
+          <ul class="portal-card-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Timer 100 Menit + Auto-Submit wajib</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Mode belajar terkunci & disembunyikan</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Penilaian resmi PG (TWK 65, TIU 80, TKP 166)</span>
+            </li>
+          </ul>
+          <button type="button" class="btn-portal-action btn-portal-sim" id="btn-start-simulation">
+            <span>Mulai Simulasi Ujian (100 Menit) &rarr;</span>
+          </button>
+        </article>
+
+        <!-- Card 3: Riwayat Ujian & Evaluasi Sesi -->
+        <article class="portal-card">
+          <span class="portal-card-badge badge-history">Database SQLite</span>
+          <div class="portal-icon-wrap icon-wrap-history">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h2 class="portal-card-title">Riwayat & Evaluasi</h2>
+          <p class="portal-card-desc">
+            Akses rekam jejak hasil simulasi yang tersimpan di database SQLite. Buka kembali evaluasi lengkap per sesi, telusuri pilihan jawaban saat itu versus kunci, hapus sesi, atau reset riwayat.
+          </p>
+          <ul class="portal-card-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tersimpan permanen di database SQLite</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dapat dibuka kembali untuk evaluasi menyeluruh</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Hapus per sesi atau reset seluruh riwayat</span>
+            </li>
+          </ul>
+          <button type="button" class="btn-portal-action btn-portal-history" id="btn-view-history">
+            <span>Buka Riwayat Ujian &rarr;</span>
+          </button>
+        </article>
+
+        <!-- Card 4: Manajemen Bank Soal (CRUD & Toggle) -->
+        <article class="portal-card">
+          <span class="portal-card-badge" style="background: #e0e7ff; color: #3730a3;">Database SQLite</span>
+          <div class="portal-icon-wrap" style="background: #eef2ff; color: #4f46e5;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <line x1="12" y1="6" x2="16" y2="6"></line>
+              <line x1="12" y1="10" x2="16" y2="10"></line>
+            </svg>
+          </div>
+          <h2 class="portal-card-title">Kelola Bank Soal</h2>
+          <p class="portal-card-desc">
+            Manajemen 110+ butir soal di SQLite: tambah soal baru, edit teks & opsi, atur kunci & bobot nilai, toggle aktif/nonaktif soal, atau verifikasi sumber resmi dan video YouTube.
+          </p>
+          <ul class="portal-card-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>CRUD lengkap (Tambah, Edit, Hapus)</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Toggle switch aktif/nonaktif instan</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Metadata sumber URL, hal, & video</span>
+            </li>
+          </ul>
+          <button type="button" class="btn-portal-action btn-portal-history" id="btn-view-bank-soal" style="border-color: #c7d2fe; color: #4338ca;">
+            <span>Kelola Bank Soal &rarr;</span>
+          </button>
+        </article>
+
+      </div>
+
+      <!-- Passing Grade Quick Info Bar -->
+      <aside class="landing-pg-info-bar">
+        <div class="pg-info-left">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cat-primary)" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-main);">Nilai Ambang Batas Resmi SKD (PermenPAN-RB 321/2024):</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <div class="pg-badge-item">
+            <span>TWK (30 Soal):</span>
+            <strong>Passing Grade 65</strong>
+          </div>
+          <div class="pg-badge-item">
+            <span>TIU (35 Soal):</span>
+            <strong>Passing Grade 80</strong>
+          </div>
+          <div class="pg-badge-item">
+            <span>TKP (45 Soal):</span>
+            <strong>Passing Grade 166</strong>
+          </div>
+          <div class="pg-badge-item" style="background: #eff6ff; border-color: #bfdbfe;">
+            <span>Total Maks:</span>
+            <strong>550 Poin</strong>
+          </div>
+        </div>
+      </aside>
+
     </div>
-
-    <!-- Category Filter Badges -->
-    <div class="category-filter-wrap">
-      <button type="button" class="filter-badge-btn active" data-category-filter="all">
-        <span>Semua</span>
-        <span class="badge-count" id="count-filter-all">110</span>
-      </button>
-      <button type="button" class="filter-badge-btn" data-category-filter="TWK">
-        <span>TWK</span>
-        <span class="badge-count" id="count-filter-twk">30</span>
-      </button>
-      <button type="button" class="filter-badge-btn" data-category-filter="TIU">
-        <span>TIU</span>
-        <span class="badge-count" id="count-filter-tiu">35</span>
-      </button>
-      <button type="button" class="filter-badge-btn" data-category-filter="TKP">
-        <span>TKP</span>
-        <span class="badge-count" id="count-filter-tkp">45</span>
-      </button>
-    </div>
-
-    <!-- Accessibility: Text Scaling -->
-    <div class="accessibility-controls" aria-label="Pengatur Ukuran Teks">
-      <span class="accessibility-label">Ukuran Teks:</span>
-      <button type="button" class="font-btn" id="btn-font-dec" title="Perkecil Teks">A-</button>
-      <button type="button" class="font-btn active" id="btn-font-reset" title="Ukuran Normal">A</button>
-      <button type="button" class="font-btn" id="btn-font-inc" title="Perbesar Teks">A+</button>
-    </div>
-  </nav>
+  </main>
 
   <!-- ======================================================================
-       3. WORKSPACE CONTAINER (MAIN CONTENT + SIDEBAR)
+       SCREEN 2: EXAM & STUDY WORKSPACE (CAT SIMULATOR / BELAJAR MANDIRI)
        ====================================================================== -->
-  <main class="bkn-main-container">
-
-    <!-- Kolom Kiri / Utama: Question Viewport -->
-    <section class="question-viewport" id="question-viewport">
-
-      <!-- Mode Belajar Notification Banner -->
-      <div class="mode-notification-banner belajar" id="banner-mode-belajar">
-        <div class="banner-left">
-          <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="16" x2="12" y2="12"></line>
-            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+  <div class="app-screen" id="exam-screen">
+    
+    <!-- Subnavigasi Kontrol & Filter -->
+    <nav class="cat-subnav" aria-label="Navigasi Mode dan Kategori">
+      <div class="subnav-left-group">
+        <!-- Tombol Kembali ke Menu Utama -->
+        <button type="button" class="btn-back-home" id="btn-exam-back-home" title="Kembali ke Portal Depan">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
-          <span><strong>Mode Belajar Mandiri Aktif:</strong> Pilih jawaban untuk langsung melihat pembahasan komprehensif, analisis tiap opsi, trik cepat, dan video materi!</span>
+          <span>Portal Utama</span>
+        </button>
+
+        <!-- Badge jika Simulasi Sedang Terkunci -->
+        <div class="sim-locked-badge" id="badge-sim-locked" style="display: none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Simulasi Terkunci (100 Menit)</span>
+        </div>
+
+        <!-- Mode Tabs (Hanya Tampil di Mode Belajar atau Review, Terkunci di Simulasi) -->
+        <div class="mode-selector-wrap" id="mode-tabs-wrap" role="tablist">
+          <button type="button" class="mode-tab-btn active study-mode-only" id="tab-mode-belajar" data-mode="belajar" role="tab" aria-selected="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <span>Mode Belajar Mandiri</span>
+            <span class="mode-badge">Bahas Langsung</span>
+          </button>
+
+          <button type="button" class="mode-tab-btn" id="tab-mode-review" data-mode="review" role="tab" aria-selected="false" style="display: none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>Review Sesi</span>
+            <span class="mode-badge">Evaluasi</span>
+          </button>
         </div>
       </div>
 
-      <!-- Kartu Soal Utama -->
-      <article class="question-card" id="question-card">
-        <!-- Header Kartu Soal -->
-        <header class="question-card-header">
-          <div class="question-meta-group">
-            <span class="badge-question-number" id="badge-question-number">Soal No. 1</span>
-            <span class="badge-question-category" id="badge-question-category">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-              <span id="badge-category-text">TWK - Nasionalisme</span>
-            </span>
-            <span class="badge-question-weight" id="badge-question-weight">Bobot: Benar 5, Salah 0</span>
-          </div>
-          <div class="question-status-group">
-            <span class="question-status-pill unanswered" id="question-status-pill">Belum Dijawab</span>
-          </div>
-        </header>
+      <!-- Category Filter Badges -->
+      <div class="category-filter-wrap">
+        <button type="button" class="filter-badge-btn active" data-category-filter="all">
+          <span>Semua</span>
+          <span class="badge-count" id="count-filter-all">110</span>
+        </button>
+        <button type="button" class="filter-badge-btn" data-category-filter="TWK">
+          <span>TWK</span>
+          <span class="badge-count" id="count-filter-twk">30</span>
+        </button>
+        <button type="button" class="filter-badge-btn" data-category-filter="TIU">
+          <span>TIU</span>
+          <span class="badge-count" id="count-filter-tiu">35</span>
+        </button>
+        <button type="button" class="filter-badge-btn" data-category-filter="TKP">
+          <span>TKP</span>
+          <span class="badge-count" id="count-filter-tkp">45</span>
+        </button>
+      </div>
 
-        <!-- Body Teks Soal -->
-        <div class="question-card-body">
-          <div class="question-text-content" id="question-text">
-            Memuat naskah soal simulasi CAT BKN...
-          </div>
+      <!-- Text Scaling Accessibility -->
+      <div class="accessibility-controls" aria-label="Pengatur Ukuran Teks">
+        <span class="accessibility-label">Ukuran Teks:</span>
+        <button type="button" class="font-btn" id="btn-font-dec" title="Perkecil Teks">A-</button>
+        <button type="button" class="font-btn active" id="btn-font-reset" title="Ukuran Normal">A</button>
+        <button type="button" class="font-btn" id="btn-font-inc" title="Perbesar Teks">A+</button>
+      </div>
+    </nav>
 
-          <!-- Container Media / Gambar Figural / Formula (Jika ada) -->
-          <div class="question-media-wrapper" id="question-media" style="display: none;">
-            <!-- Dynamic SVG Figural / Table / Diagram will be injected here -->
-          </div>
+    <!-- Workspace Utama -->
+    <main class="cat-main-container">
+      
+      <!-- Kolom Kiri: Soal, Pilihan, Pembahasan, Review -->
+      <section class="question-viewport" id="question-viewport">
 
-          <!-- Daftar Pilihan Jawaban (A, B, C, D, E) -->
-          <div class="options-list" id="options-container" role="radiogroup" aria-label="Pilihan Jawaban">
-            <!-- Dynamic option items will be rendered here by engine -->
-            <label class="option-card" data-option="A">
-              <input type="radio" name="skd_answer" value="A">
-              <span class="option-indicator">A</span>
-              <div class="option-text">Memuat pilihan jawaban A...</div>
-              <span class="option-score-pill">+5</span>
-            </label>
-            <label class="option-card" data-option="B">
-              <input type="radio" name="skd_answer" value="B">
-              <span class="option-indicator">B</span>
-              <div class="option-text">Memuat pilihan jawaban B...</div>
-              <span class="option-score-pill">+5</span>
-            </label>
-            <label class="option-card" data-option="C">
-              <input type="radio" name="skd_answer" value="C">
-              <span class="option-indicator">C</span>
-              <div class="option-text">Memuat pilihan jawaban C...</div>
-              <span class="option-score-pill">+5</span>
-            </label>
-            <label class="option-card" data-option="D">
-              <input type="radio" name="skd_answer" value="D">
-              <span class="option-indicator">D</span>
-              <div class="option-text">Memuat pilihan jawaban D...</div>
-              <span class="option-score-pill">+5</span>
-            </label>
-            <label class="option-card" data-option="E">
-              <input type="radio" name="skd_answer" value="E">
-              <span class="option-indicator">E</span>
-              <div class="option-text">Memuat pilihan jawaban E...</div>
-              <span class="option-score-pill">+5</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- Tombol Aksi Navigasi Bawah -->
-        <footer class="question-card-footer">
-          <div class="action-btn-group-left">
-            <button type="button" class="btn-nav" id="btn-prev">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-              <span>Sebelumnya</span>
-            </button>
-          </div>
-
-          <div class="action-btn-group-center">
-            <button type="button" class="btn-ragu-toggle" id="btn-ragu">
-              <input type="checkbox" class="ragu-checkbox" id="checkbox-ragu">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
-                <line x1="4" y1="22" x2="4" y2="15"></line>
-              </svg>
-              <span>Ragu-Ragu</span>
-            </button>
-
-            <!-- Mode Belajar Actions -->
-            <button type="button" class="btn-nav btn-study-action" id="btn-toggle-study-pembahasan" style="display: none;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-              </svg>
-              <span>Buka Pembahasan</span>
-            </button>
-
-            <button type="button" class="btn-nav" id="btn-retry-question" style="display: none;" title="Coba Kerjakan Ulang Soal Ini">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="1 4 1 10 7 10"></polyline>
-                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
-              </svg>
-              <span>Ulangi</span>
-            </button>
-          </div>
-
-          <div class="action-btn-group-right">
-            <button type="button" class="btn-nav" id="btn-skip">
-              <span>Lewatkan</span>
-            </button>
-            <button type="button" class="btn-nav btn-primary-next" id="btn-next">
-              <span>Simpan & Lanjutkan</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
-          </div>
-        </footer>
-      </article>
-
-      <!-- Kotak Pembahasan Komprehensif (Muncul di Mode Belajar & Review Sesi) -->
-      <section class="pembahasan-wrapper" id="pembahasan-box" aria-label="Pembahasan Lengkap">
-        <header class="pembahasan-header">
-          <div class="pembahasan-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <!-- Mode Belajar Notification Banner -->
+        <div class="mode-notification-banner belajar" id="banner-mode-belajar">
+          <div class="banner-left">
+            <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="16" x2="12" y2="12"></line>
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
-            <span>Pembahasan & Analisis Jawaban Resmi</span>
-          </div>
-          <div class="badge-kunci-resmi" id="kunci-jawaban-badge">
-            Kunci: <span id="kunci-jawaban-text">A</span>
-          </div>
-        </header>
-
-        <div class="pembahasan-body">
-          <!-- 1. Konsep Pokok / Jawaban Benar -->
-          <div class="rationale-main-card">
-            <div class="rationale-main-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Mengapa Kunci Ini Tepat:</span>
-            </div>
-            <div class="rationale-main-text" id="rationale-main-content">
-              Pembahasan materi akan dimuat di sini...
-            </div>
-          </div>
-
-          <!-- 2. Analisis Opsi Demi Opsi (Exhaustive Rationale A - E) -->
-          <div class="option-breakdown-section">
-            <div class="option-breakdown-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              <span>Analisis Mendalam Setiap Opsi (A - E):</span>
-            </div>
-            <div class="option-breakdown-list" id="option-breakdown-container">
-              <!-- Item Opsi A -->
-              <div class="option-breakdown-item" id="breakdown-opt-A">
-                <span class="option-breakdown-letter">A</span>
-                <div class="option-breakdown-desc"><strong>Opsi A:</strong> Penjelasan opsi A...</div>
-              </div>
-              <!-- Item Opsi B -->
-              <div class="option-breakdown-item" id="breakdown-opt-B">
-                <span class="option-breakdown-letter">B</span>
-                <div class="option-breakdown-desc"><strong>Opsi B:</strong> Penjelasan opsi B...</div>
-              </div>
-              <!-- Item Opsi C -->
-              <div class="option-breakdown-item" id="breakdown-opt-C">
-                <span class="option-breakdown-letter">C</span>
-                <div class="option-breakdown-desc"><strong>Opsi C:</strong> Penjelasan opsi C...</div>
-              </div>
-              <!-- Item Opsi D -->
-              <div class="option-breakdown-item" id="breakdown-opt-D">
-                <span class="option-breakdown-letter">D</span>
-                <div class="option-breakdown-desc"><strong>Opsi D:</strong> Penjelasan opsi D...</div>
-              </div>
-              <!-- Item Opsi E -->
-              <div class="option-breakdown-item" id="breakdown-opt-E">
-                <span class="option-breakdown-letter">E</span>
-                <div class="option-breakdown-desc"><strong>Opsi E:</strong> Penjelasan opsi E...</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. Tips & Trik Cepat / Rumus Praktis -->
-          <div class="tips-card" id="tips-box">
-            <svg class="tips-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            <div class="tips-content">
-              <div class="tips-title">Tips / Trik Cepat & Pola Ujian:</div>
-              <div class="tips-text" id="tips-text">
-                Gunakan eliminasi opsi yang tidak logis dan perhatikan kata kunci pada pokok soal.
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. Video Pembahasan Embed (Playable 16:9 YouTube iframe untuk Numerik/Logika/Figural) -->
-          <div class="video-explainer-card" id="video-section" style="display: none;">
-            <div class="video-header">
-              <div class="video-title-wrap">
-                <span class="video-badge">YOUTUBE</span>
-                <span class="video-title" id="video-title-text">Video Pembahasan Soal Ini</span>
-              </div>
-            </div>
-            <div class="video-embed-container" id="video-container">
-              <iframe id="video-iframe" src="" title="Video Pembahasan Soal CPNS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="video-fallback-link" id="video-direct-link">Tonton langsung di YouTube &rarr;</a>
-          </div>
-
-          <!-- 5. Referensi Sumber Resmi / Kisi-Kisi PermenPAN-RB -->
-          <div class="source-footer" id="source-box">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-            <span>Sumber Resmi: <strong id="source-text">KepmenPAN-RB / FR Resmi CAT BKN</strong></span>
+            <span><strong>Mode Belajar Mandiri:</strong> Pilih opsi jawaban untuk membuka pembahasan lengkap, analisis opsi A-E, trik cepat, dan video materi!</span>
           </div>
         </div>
+
+        <!-- Kartu Soal Utama -->
+        <article class="question-card" id="question-card">
+          <header class="question-card-header">
+            <div class="question-meta-group">
+              <span class="badge-question-number" id="badge-question-number">Soal No. 1</span>
+              <span class="badge-question-category" id="badge-question-category">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span id="badge-category-text">TWK - Nasionalisme</span>
+              </span>
+              <span class="badge-question-weight" id="badge-question-weight">Bobot: Benar 5, Salah 0</span>
+            </div>
+            <div class="question-status-group">
+              <span class="question-status-pill unanswered" id="question-status-pill">Belum Dijawab</span>
+            </div>
+          </header>
+
+          <div class="question-card-body">
+            <div class="question-text-content" id="question-text">
+              Memuat naskah soal simulasi CAT SKD...
+            </div>
+
+            <!-- Media / Diagram / Gambar Figural -->
+            <div class="question-media-wrapper" id="question-media" style="display: none;"></div>
+
+            <!-- Pilihan Jawaban A - E -->
+            <div class="options-list" id="options-container" role="radiogroup" aria-label="Pilihan Jawaban">
+              <label class="option-card" data-option="A">
+                <input type="radio" name="skd_answer" value="A">
+                <span class="option-indicator">A</span>
+                <div class="option-text">Memuat opsi A...</div>
+                <span class="option-score-pill">+5</span>
+              </label>
+              <label class="option-card" data-option="B">
+                <input type="radio" name="skd_answer" value="B">
+                <span class="option-indicator">B</span>
+                <div class="option-text">Memuat opsi B...</div>
+                <span class="option-score-pill">+5</span>
+              </label>
+              <label class="option-card" data-option="C">
+                <input type="radio" name="skd_answer" value="C">
+                <span class="option-indicator">C</span>
+                <div class="option-text">Memuat opsi C...</div>
+                <span class="option-score-pill">+5</span>
+              </label>
+              <label class="option-card" data-option="D">
+                <input type="radio" name="skd_answer" value="D">
+                <span class="option-indicator">D</span>
+                <div class="option-text">Memuat opsi D...</div>
+                <span class="option-score-pill">+5</span>
+              </label>
+              <label class="option-card" data-option="E">
+                <input type="radio" name="skd_answer" value="E">
+                <span class="option-indicator">E</span>
+                <div class="option-text">Memuat opsi E...</div>
+                <span class="option-score-pill">+5</span>
+              </label>
+            </div>
+          </div>
+
+          <footer class="question-card-footer">
+            <div class="action-btn-group-left">
+              <button type="button" class="btn-nav" id="btn-prev">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>Sebelumnya</span>
+              </button>
+            </div>
+
+            <div class="action-btn-group-center">
+              <button type="button" class="btn-ragu-toggle" id="btn-ragu">
+                <input type="checkbox" class="ragu-checkbox" id="checkbox-ragu">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                  <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
+                <span>Ragu-Ragu</span>
+              </button>
+
+              <!-- Aksi khusus Mode Belajar -->
+              <button type="button" class="btn-nav btn-study-action study-mode-only" id="btn-toggle-study-pembahasan" style="display: none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Buka Pembahasan</span>
+              </button>
+
+              <button type="button" class="btn-nav study-mode-only" id="btn-retry-question" style="display: none;" title="Kerjakan Ulang Soal Ini">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 4 1 10 7 10"></polyline>
+                  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+                <span>Ulangi</span>
+              </button>
+            </div>
+
+            <div class="action-btn-group-right">
+              <button type="button" class="btn-nav" id="btn-skip">
+                <span>Lewatkan</span>
+              </button>
+              <button type="button" class="btn-nav btn-primary-next" id="btn-next">
+                <span>Simpan & Lanjutkan</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Kotak Pembahasan Komprehensif -->
+        <section class="pembahasan-wrapper" id="pembahasan-box" aria-label="Pembahasan Lengkap">
+          <header class="pembahasan-header">
+            <div class="pembahasan-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Pembahasan & Analisis Jawaban Resmi</span>
+            </div>
+            <div class="badge-kunci-resmi" id="kunci-jawaban-badge">
+              Kunci: <span id="kunci-jawaban-text">A</span>
+            </div>
+          </header>
+
+          <div class="pembahasan-body">
+            <!-- 1. Konsep Utama & Alasan Kunci Benar -->
+            <div class="rationale-main-card">
+              <div class="rationale-main-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Mengapa Kunci Ini Tepat:</span>
+              </div>
+              <div class="rationale-main-text" id="rationale-main-content">
+                Pembahasan materi pokok...
+              </div>
+            </div>
+
+            <!-- 2. Analisis Setiap Opsi A - E -->
+            <div class="option-breakdown-section">
+              <div class="option-breakdown-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Analisis Mendalam Setiap Opsi (A - E):</span>
+              </div>
+              <div class="option-breakdown-list" id="option-breakdown-container">
+                <div class="option-breakdown-item" id="breakdown-opt-A">
+                  <span class="option-breakdown-letter">A</span>
+                  <div class="option-breakdown-desc"><strong>Opsi A:</strong> Penjelasan opsi A...</div>
+                </div>
+                <div class="option-breakdown-item" id="breakdown-opt-B">
+                  <span class="option-breakdown-letter">B</span>
+                  <div class="option-breakdown-desc"><strong>Opsi B:</strong> Penjelasan opsi B...</div>
+                </div>
+                <div class="option-breakdown-item" id="breakdown-opt-C">
+                  <span class="option-breakdown-letter">C</span>
+                  <div class="option-breakdown-desc"><strong>Opsi C:</strong> Penjelasan opsi C...</div>
+                </div>
+                <div class="option-breakdown-item" id="breakdown-opt-D">
+                  <span class="option-breakdown-letter">D</span>
+                  <div class="option-breakdown-desc"><strong>Opsi D:</strong> Penjelasan opsi D...</div>
+                </div>
+                <div class="option-breakdown-item" id="breakdown-opt-E">
+                  <span class="option-breakdown-letter">E</span>
+                  <div class="option-breakdown-desc"><strong>Opsi E:</strong> Penjelasan opsi E...</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Tips & Trik Cepat -->
+            <div class="tips-card" id="tips-box">
+              <svg class="tips-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <div class="tips-content">
+                <div class="tips-title">Tips / Trik Cepat & Pola Ujian:</div>
+                <div class="tips-text" id="tips-text">
+                  Gunakan eliminasi opsi yang tidak logis dan perhatikan kata kunci pokok soal.
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Video Playable YouTube Embed (Tangguh Terhadap Error 153) -->
+            <div class="video-explainer-card" id="video-section" style="display: none;">
+              <div class="video-header">
+                <div class="video-title-wrap">
+                  <span class="video-badge">YOUTUBE</span>
+                  <span class="video-title" id="video-title-text">Video Pembahasan Soal Ini</span>
+                  <span class="video-timestamp-badge" id="video-timestamp-badge" style="display: none;">⏱️ Menit 00:00</span>
+                </div>
+                <span class="video-channel-tag" id="video-channel-text" style="font-size:0.75rem; color:#cbd5e1; font-weight:600;">Channel: Edukasi CASN</span>
+              </div>
+              <div class="video-embed-container" id="video-container">
+                <iframe id="video-iframe" src="" title="Video Pembahasan Soal SKD" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+              
+              <!-- Direct Watch Action & Tip Error 153 -->
+              <div class="video-actions-bar">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-watch-youtube" id="video-direct-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>Buka & Tonton Langsung di YouTube &rarr;</span>
+                </a>
+              </div>
+
+              <div class="video-tip-notice">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span><strong>Tips Bebas Error 153:</strong> Jika pemutar YouTube menampilkan "Error 153" saat aplikasi dibuka via file://, klik tombol merah di atas untuk memutar langsung, atau cukup klik dua kali berkas <code>jalankan_server.bat</code> di folder aplikasi ini untuk menjalankan server localhost otomatis.</span>
+              </div>
+            </div>
+
+            <!-- 5. Referensi Sumber Resmi -->
+            <div class="source-footer" id="source-box">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Sumber Resmi: <strong id="source-text">KepmenPAN-RB / FR Resmi CAT SKD</strong></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Review Sesi View: Daftar Seluruh Soal Pasca Ujian / Buka Sesi Riwayat -->
+        <section class="review-session-view" id="review-session-view">
+          
+          <!-- Banner Info Sesi yang Sedang Dibuka -->
+          <div class="review-session-info-banner" id="review-session-info-banner" style="display: none;">
+            <div class="review-session-info-left">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span id="review-session-info-text">Menampilkan Evaluasi Sesi Tersimpan: 16 Nov 2024, 14:00 • Total Skor: 385 (LULUS PG)</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <button type="button" class="btn-nav" id="btn-back-to-history-from-review" style="background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3);">
+                &larr; Riwayat Sesi
+              </button>
+              <button type="button" class="btn-nav" id="btn-back-to-home-from-review" style="background: #ffffff; color: var(--cat-primary);">
+                Menu Utama
+              </button>
+            </div>
+          </div>
+
+          <div class="review-filter-bar">
+            <div class="review-filter-chips">
+              <button type="button" class="chip-btn active" data-review-filter="all">Semua Soal (110)</button>
+              <button type="button" class="chip-btn" data-review-filter="wrong">Salah Saja</button>
+              <button type="button" class="chip-btn" data-review-filter="correct">Benar Saja</button>
+              <button type="button" class="chip-btn" data-review-filter="ragu">Ragu-Ragu</button>
+              <button type="button" class="chip-btn" data-review-filter="TWK">TWK</button>
+              <button type="button" class="chip-btn" data-review-filter="TIU">TIU</button>
+              <button type="button" class="chip-btn" data-review-filter="TKP">TKP</button>
+            </div>
+            <button type="button" class="btn-nav" id="btn-back-to-exam-from-review">
+              &larr; Tampilan Navigasi Soal
+            </button>
+          </div>
+
+          <div class="review-questions-list" id="review-questions-list"></div>
+        </section>
+
       </section>
 
-      <!-- Review Sesi View: Daftar Soal Lengkap Pasca Ujian (Jika Dipilih) -->
-      <section class="review-session-view" id="review-session-view">
-        <div class="review-filter-bar">
-          <div class="review-filter-chips">
-            <button type="button" class="chip-btn active" data-review-filter="all">Semua Soal (110)</button>
-            <button type="button" class="chip-btn" data-review-filter="wrong">Salah Saja</button>
-            <button type="button" class="chip-btn" data-review-filter="correct">Benar Saja</button>
-            <button type="button" class="chip-btn" data-review-filter="ragu">Ragu-Ragu</button>
-            <button type="button" class="chip-btn" data-review-filter="TWK">TWK</button>
-            <button type="button" class="chip-btn" data-review-filter="TIU">TIU</button>
-            <button type="button" class="chip-btn" data-review-filter="TKP">TKP</button>
+      <!-- Kolom Kanan: Pengawas & Grid Nomor Soal -->
+      <aside class="sidebar-viewport" id="sidebar-viewport">
+        
+        <!-- Webcam Proctoring Card -->
+        <div class="sidebar-card webcam-card">
+          <div class="webcam-feed-simulation">
+            <div class="webcam-placeholder-avatar">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="webcam-live-badge">
+              <span class="webcam-live-dot"></span>
+              <span>LIVE</span>
+            </div>
           </div>
-          <button type="button" class="btn-nav" id="btn-back-to-exam-from-review">
-            &larr; Kembali ke Tampilan Soal
+          <div class="webcam-info">
+            <div class="webcam-info-title">Pengawasan Ujian</div>
+            <div class="webcam-info-status">
+              <span class="dot"></span>
+              <span>Kamera Terhubung</span>
+            </div>
+            <div class="webcam-pin-text">ID: 24-00123-CAT</div>
+          </div>
+        </div>
+
+        <!-- Daftar Nomor Soal Grid -->
+        <div class="sidebar-card">
+          <header class="sidebar-header">
+            <div class="sidebar-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Daftar Nomor Soal</span>
+            </div>
+          </header>
+
+          <div class="sidebar-progress-box">
+            <div class="progress-stats-row">
+              <span>Dijawab: <strong id="stat-answered">0</strong> / <span id="stat-total">110</span></span>
+              <span>Ragu: <strong id="stat-ragu">0</strong> | Kosong: <strong id="stat-unanswered">110</strong></span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="grid-subfilter-tabs">
+            <button type="button" class="subfilter-tab active" data-grid-range="all">Semua</button>
+            <button type="button" class="subfilter-tab" data-grid-range="TWK">TWK 1-30</button>
+            <button type="button" class="subfilter-tab" data-grid-range="TIU">TIU 31-65</button>
+            <button type="button" class="subfilter-tab" data-grid-range="TKP">TKP 66-110</button>
+          </div>
+
+          <div class="question-grid-container">
+            <div class="question-grid" id="question-grid" role="navigation" aria-label="Grid Nomor Soal"></div>
+          </div>
+
+          <div class="sidebar-legend">
+            <span class="legend-title">Petunjuk Warna Soal:</span>
+            <div class="legend-items-grid">
+              <div class="legend-item">
+                <span class="legend-color-box answered"></span>
+                <span>Sudah Dijawab</span>
+                <span class="legend-count" id="legend-count-answered">(0)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color-box ragu"></span>
+                <span>Ragu-Ragu</span>
+                <span class="legend-count" id="legend-count-ragu">(0)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color-box unanswered"></span>
+                <span>Belum Dijawab</span>
+                <span class="legend-count" id="legend-count-unanswered">(110)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color-box current"></span>
+                <span>Sedang Dibuka</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </main>
+  </div>
+
+  <!-- ======================================================================
+       SCREEN 3: RIWAYAT UJIAN & EVALUASI SESI (SQLITE REKAPITULASI)
+       ====================================================================== -->
+  <main class="app-screen" id="history-screen">
+    <div class="history-container">
+      
+      <!-- History Top Bar -->
+      <header class="history-header-bar">
+        <div class="history-header-left">
+          <h1 class="history-title">Riwayat Sesi Ujian & Rekapitulasi Evaluasi</h1>
+          <p class="history-subtitle">Daftar rekaman simulasi ujian CAT yang tersimpan di database SQLite.</p>
+        </div>
+        <div class="history-header-actions">
+          <button type="button" class="btn-nav" id="btn-history-export-db" title="Unduh cadangan database SQLite">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Unduh database.sqlite</span>
+          </button>
+          <button type="button" class="btn-nav" id="btn-history-import-db-trigger" title="Impor file database.sqlite">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <span>Impor SQLite</span>
+          </button>
+          <input type="file" id="input-history-import-db" accept=".sqlite,.db" style="display: none;">
+          <button type="button" class="btn-nav" id="btn-history-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Kembali ke Menu Utama</span>
+          </button>
+          <button type="button" class="btn-danger-outline" id="btn-reset-all-history">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+            <span>Reset Semua Riwayat</span>
           </button>
         </div>
-        <div class="review-questions-list" id="review-questions-list">
-          <!-- Dynamic review question items will be rendered here by engine -->
+      </header>
+
+      <!-- History Stats Cards -->
+      <section class="history-stats-grid">
+        <div class="history-stat-card">
+          <span class="stat-card-title">Total Sesi Ujian</span>
+          <span class="stat-card-number" id="stat-history-total">0</span>
+          <span class="stat-card-note">Sesi simulasi tersimpan</span>
+        </div>
+        <div class="history-stat-card">
+          <span class="stat-card-title">Tingkat Kelulusan</span>
+          <span class="stat-card-number" id="stat-history-passed" style="color: #059669;">0%</span>
+          <span class="stat-card-note">Memenuhi Passing Grade</span>
+        </div>
+        <div class="history-stat-card">
+          <span class="stat-card-title">Skor Tertinggi</span>
+          <span class="stat-card-number" id="stat-history-highest" style="color: #2563eb;">0</span>
+          <span class="stat-card-note">Dari nilai maksimal 550</span>
+        </div>
+        <div class="history-stat-card">
+          <span class="stat-card-title">Rata-Rata Skor</span>
+          <span class="stat-card-number" id="stat-history-avg">0</span>
+          <span class="stat-card-note">Skor rata-rata seluruh sesi</span>
         </div>
       </section>
 
-    </section>
-
-    <!-- Kolom Kanan: Navigasi Nomor Soal & Pengawas CAT BKN -->
-    <aside class="sidebar-viewport" id="sidebar-viewport">
-
-      <!-- Candidate Camera / Proctoring Card -->
-      <div class="sidebar-card webcam-card">
-        <div class="webcam-feed-simulation">
-          <div class="webcam-placeholder-avatar">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
-          <div class="webcam-live-badge">
-            <span class="webcam-live-dot"></span>
-            <span>LIVE</span>
-          </div>
-        </div>
-        <div class="webcam-info">
-          <div class="webcam-info-title">Pengawasan Ujian</div>
-          <div class="webcam-info-status">
-            <span class="dot"></span>
-            <span>Kamera Online</span>
-          </div>
-          <div class="webcam-pin-text">ID: 24-00123-CAT</div>
-        </div>
+      <!-- Tabel Riwayat Sesi -->
+      <div class="history-table-wrapper" id="history-table-container">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>ID Sesi</th>
+              <th>Tanggal & Waktu</th>
+              <th>TWK (PG: 65)</th>
+              <th>TIU (PG: 80)</th>
+              <th>TKP (PG: 166)</th>
+              <th>Total Skor (Max 550)</th>
+              <th>Status Kelulusan</th>
+              <th>Aksi Evaluasi</th>
+            </tr>
+          </thead>
+          <tbody id="history-table-body">
+            <!-- Dynamic history rows generated by engine -->
+          </tbody>
+        </table>
       </div>
 
-      <!-- Navigasi Grid Nomor Soal -->
-      <div class="sidebar-card">
-        <header class="sidebar-header">
-          <div class="sidebar-title">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="7" height="7"></rect>
-              <rect x="14" y="3" width="7" height="7"></rect>
-              <rect x="14" y="14" width="7" height="7"></rect>
-              <rect x="3" y="14" width="7" height="7"></rect>
-            </svg>
-            <span>Daftar Nomor Soal</span>
-          </div>
-        </header>
-
-        <!-- Progress Summary -->
-        <div class="sidebar-progress-box">
-          <div class="progress-stats-row">
-            <span>Dijawab: <strong id="stat-answered">0</strong> / <span id="stat-total">110</span></span>
-            <span>Ragu: <strong id="stat-ragu">0</strong> | Kosong: <strong id="stat-unanswered">110</strong></span>
-          </div>
-          <div class="progress-bar-track">
-            <div class="progress-bar-fill" id="progress-bar-fill" style="width: 0%;"></div>
-          </div>
-        </div>
-
-        <!-- Filter Kategori Grid Cepat -->
-        <div class="grid-subfilter-tabs">
-          <button type="button" class="subfilter-tab active" data-grid-range="all">Semua</button>
-          <button type="button" class="subfilter-tab" data-grid-range="TWK">TWK 1-30</button>
-          <button type="button" class="subfilter-tab" data-grid-range="TIU">TIU 31-65</button>
-          <button type="button" class="subfilter-tab" data-grid-range="TKP">TKP 66-110</button>
-        </div>
-
-        <!-- Grid 110 Tombol Soal -->
-        <div class="question-grid-container">
-          <div class="question-grid" id="question-grid" role="navigation" aria-label="Grid Nomor Soal">
-            <!-- Dynamic 1 to 110 buttons will be generated by engine -->
-          </div>
-        </div>
-
-        <!-- Legend / Petunjuk Warna Resmi CAT BKN -->
-        <div class="sidebar-legend">
-          <span class="legend-title">Petunjuk Warna Soal:</span>
-          <div class="legend-items-grid">
-            <div class="legend-item">
-              <span class="legend-color-box answered"></span>
-              <span>Sudah Dijawab</span>
-              <span class="legend-count" id="legend-count-answered">(0)</span>
-            </div>
-            <div class="legend-item">
-              <span class="legend-color-box ragu"></span>
-              <span>Ragu-Ragu</span>
-              <span class="legend-count" id="legend-count-ragu">(0)</span>
-            </div>
-            <div class="legend-item">
-              <span class="legend-color-box unanswered"></span>
-              <span>Belum Dijawab</span>
-              <span class="legend-count" id="legend-count-unanswered">(110)</span>
-            </div>
-            <div class="legend-item">
-              <span class="legend-color-box current"></span>
-              <span>Sedang Dibuka</span>
-            </div>
-          </div>
-        </div>
+      <!-- Empty State Riwayat -->
+      <div class="history-table-wrapper history-empty-card" id="history-empty-state" style="display: none;">
+        <svg class="history-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <div class="history-empty-title">Belum Ada Riwayat Ujian</div>
+        <p class="history-empty-desc">
+          Anda belum menyelesaikan simulasi ujian CAT. Selesaikan sesi ujian pada Mode Simulasi CAT untuk melihat riwayat skor dan evaluasi di sini.
+        </p>
+        <button type="button" class="btn-portal-action btn-portal-sim" id="btn-empty-start-sim">
+          <span>Mulai Simulasi Ujian Sekarang &rarr;</span>
+        </button>
       </div>
 
-    </aside>
+    </div>
   </main>
 
   <!-- ======================================================================
-       4. MODAL: KONFIRMASI SELESAI UJIAN
+       SCREEN 4: MANAJEMEN BANK SOAL (SQLITE CRUD & TOGGLE AKTIF)
+       ====================================================================== -->
+  <main class="app-screen" id="bank-soal-screen">
+    <div class="bank-soal-container">
+      
+      <!-- Top Bar -->
+      <header class="bank-soal-header-bar">
+        <div class="bank-soal-header-left">
+          <h1 class="bank-soal-title">Manajemen Bank Soal SKD (SQLite)</h1>
+          <p class="bank-soal-subtitle">Kelola naskah soal, opsi, kunci, bobot nilai, metadata sumber resmi, embed video, dan toggle status aktif.</p>
+        </div>
+        <div class="bank-soal-header-actions">
+          <span class="sqlite-badge" id="sqlite-status-badge">
+            <span class="sqlite-badge-dot"></span>
+            <span>SQLite JS (WASM)</span>
+          </span>
+          <button type="button" class="btn-nav" id="btn-export-db" title="Unduh file SQLite dari memori browser">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Unduh database.sqlite</span>
+          </button>
+          <button type="button" class="btn-nav" id="btn-import-db-trigger" title="Impor file database.sqlite">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <span>Impor SQLite</span>
+          </button>
+          <input type="file" id="input-import-db" accept=".sqlite,.db" style="display: none;">
+          <button type="button" class="btn-nav" id="btn-bank-soal-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Menu Utama</span>
+          </button>
+          <button type="button" class="btn-primary-action" id="btn-add-question">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>Tambah Soal Baru</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Search & Filter Toolbar -->
+      <div class="bank-soal-toolbar">
+        <div class="bank-soal-search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="search-input" id="bank-soal-search" placeholder="Cari soal, topik, atau kata kunci...">
+        </div>
+
+        <div class="bank-soal-filter-group">
+          <select class="select-filter" id="bank-soal-filter-cat">
+            <option value="all">Semua Kategori (TWK/TIU/TKP)</option>
+            <option value="TWK">Hanya TWK</option>
+            <option value="TIU">Hanya TIU</option>
+            <option value="TKP">Hanya TKP</option>
+          </select>
+
+          <select class="select-filter" id="bank-soal-filter-status">
+            <option value="all">Semua Status (Aktif & Nonaktif)</option>
+            <option value="active">Hanya Aktif</option>
+            <option value="inactive">Hanya Nonaktif</option>
+          </select>
+
+          <span class="bank-soal-count-badge" id="bank-soal-count-badge">Memuat soal...</span>
+        </div>
+      </div>
+
+      <!-- Data Table -->
+      <div class="bank-soal-table-wrap" id="bank-soal-table-container">
+        <table class="bank-soal-table" id="bank-soal-table">
+          <thead>
+            <tr>
+              <th style="width: 50px; text-align: center;">No</th>
+              <th style="width: 140px;">Kategori</th>
+              <th>Naskah Soal</th>
+              <th style="width: 130px; text-align: center;">Kunci / Media</th>
+              <th style="width: 220px;">Sumber Resmi</th>
+              <th style="width: 110px; text-align: center;">Status</th>
+              <th style="width: 120px; text-align: center;">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="bank-soal-table-body">
+            <!-- Dynamic rows generated by engine -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty State -->
+      <div class="bank-soal-table-wrap history-empty-card" id="bank-soal-empty-state" style="display: none;">
+        <svg class="history-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <div class="history-empty-title">Tidak Ada Soal yang Cocok</div>
+        <p class="history-empty-desc">
+          Tidak ditemukan butir soal yang sesuai dengan kata kunci pencarian atau filter yang dipilih.
+        </p>
+        <button type="button" class="btn-nav" id="btn-reset-bank-filters">Reset Filter & Pencarian</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       MODAL 1: KONFIRMASI SELESAI UJIAN
        ====================================================================== -->
   <div class="modal-backdrop" id="modal-confirm-finish" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
     <div class="modal-dialog">
@@ -526,10 +991,9 @@
 
       <div class="modal-confirm-body">
         <p style="font-size: 0.95rem; color: var(--text-main); margin: 0;">
-          Apakah Anda yakin ingin mengakhiri sesi ujian simulasi CAT BKN ini? Setelah diselesaikan, jawaban Anda akan langsung dinilai sesuai dengan ketentuan ambang batas PermenPAN-RB.
+          Apakah Anda yakin ingin mengakhiri sesi ujian simulasi CAT ini? Jawaban Anda akan langsung dinilai sesuai dengan ambang batas PermenPAN-RB dan otomatis disimpan ke riwayat sesi.
         </p>
 
-        <!-- Summary Status Kartu -->
         <div class="confirm-summary-cards">
           <div class="confirm-stat-card answered">
             <div class="stat-val" id="confirm-stat-answered">0</div>
@@ -552,7 +1016,7 @@
             <line x1="12" y1="17" x2="12.01" y2="17"></line>
           </svg>
           <div>
-            <strong>Perhatian:</strong> Masih ada soal yang belum Anda jawab atau ditandai ragu-ragu. Soal yang tidak dijawab tidak akan mendapatkan poin.
+            <strong>Perhatian:</strong> Masih ada butir soal yang belum dijawab atau berstatus ragu-ragu. Soal yang kosong bernilai 0.
           </div>
         </div>
       </div>
@@ -570,27 +1034,23 @@
   </div>
 
   <!-- ======================================================================
-       5. MODAL: SERTIFIKAT HASIL UJIAN (SCORING RESULT VIEW)
+       MODAL 2: SERTIFIKAT HASIL UJIAN (SCORING RESULT VIEW)
        ====================================================================== -->
   <div class="modal-backdrop" id="modal-result" role="dialog" aria-modal="true" aria-labelledby="result-modal-title">
     <div class="modal-dialog modal-result-dialog">
       <div class="certificate-card">
 
-        <!-- Header Sertifikat Resmi -->
         <header class="certificate-header">
-          <svg class="cert-garuda" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="32" cy="32" r="30" fill="#0f4c81" stroke="#f59e0b" stroke-width="2.5"/>
-            <path d="M32 8L36 18H46L38 24L41 34L32 28L23 34L26 24L18 18H28L32 8Z" fill="#f59e0b" stroke="#ffffff" stroke-width="0.5"/>
-            <path d="M16 35C20 42 26 48 32 52C38 48 44 42 48 35C42 38 36 39 32 39C28 39 22 38 16 35Z" fill="#d97706"/>
-            <circle cx="32" cy="38" r="6" fill="#ef4444"/>
-            <path d="M32 33V43M27 38H37" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          <svg class="cert-emblem" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="52" height="52" rx="14" fill="#0f4c81" stroke="#d97706" stroke-width="2.5"/>
+            <path d="M32 14L46 20V34C46 43 39 49 32 52C25 49 18 43 18 34V20L32 14Z" fill="#1e3a8a" stroke="#ffffff" stroke-width="1.5"/>
+            <path d="M26 33L30 37L39 27" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <div class="cert-instansi">BADAN KEPEGAWAIAN NEGARA REPUBLIK INDONESIA</div>
+          <div class="cert-instansi">COMPUTER ASSISTED TEST ASSESSMENT SYSTEM</div>
           <h2 class="cert-title" id="result-modal-title">SERTIFIKAT HASIL SIMULASI CAT SKD</h2>
           <div class="cert-subtitle">Seleksi Kompetensi Dasar Pengadaan Calon Aparatur Sipil Negara (CASN)</div>
         </header>
 
-        <!-- Data Peserta -->
         <div class="cert-candidate-info">
           <div class="cert-info-item">
             <span class="cert-info-label">Nama Peserta:</span>
@@ -605,12 +1065,11 @@
             <span class="cert-info-val" id="cert-exam-date">16 November 2024</span>
           </div>
           <div class="cert-info-item">
-            <span class="cert-info-label">Waktu Pengerjaan:</span>
+            <span class="cert-info-label">Durasi Ujian:</span>
             <span class="cert-info-val" id="cert-exam-duration">100 Menit</span>
           </div>
         </div>
 
-        <!-- Tabel Perolehan Nilai Sesuai PermenPAN-RB -->
         <div class="score-table-wrap">
           <table class="score-table">
             <thead>
@@ -656,14 +1115,13 @@
                 </td>
                 <td><strong>110 Soal</strong></td>
                 <td><strong>311 (Kumulatif)</strong></td>
-                <td><span id="score-val-total" style="font-size: 1.3rem; font-weight: 900; color: var(--bkn-primary);">0</span> / 550</td>
+                <td><span id="score-val-total" style="font-size: 1.3rem; font-weight: 900; color: var(--cat-primary);">0</span> / 550</td>
                 <td><span class="score-badge-status fail" id="badge-status-total">TIDAK MEMENUHI</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Banner Hasil Akhir -->
         <div class="final-status-card fail" id="final-status-banner">
           <div class="final-status-title" id="final-status-title">TIDAK MEMENUHI AMBANG BATAS</div>
           <div class="final-status-desc" id="final-status-desc">
@@ -671,7 +1129,6 @@
           </div>
         </div>
 
-        <!-- Tombol Aksi Hasil Ujian -->
         <div class="cert-actions">
           <button type="button" class="btn-nav btn-primary-next" id="btn-open-review">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -680,7 +1137,14 @@
               <line x1="16" y1="13" x2="8" y2="13"></line>
               <line x1="16" y1="17" x2="8" y2="17"></line>
             </svg>
-            <span>Review Pembahasan Lengkap (110 Soal)</span>
+            <span>Review Pembahasan Lengkap</span>
+          </button>
+          <button type="button" class="btn-nav" id="btn-open-history-from-cert">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Lihat Riwayat Sesi</span>
           </button>
           <button type="button" class="btn-nav" id="btn-print-result">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -688,14 +1152,14 @@
               <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
               <rect x="6" y="14" width="12" height="8"></rect>
             </svg>
-            <span>Cetak / Unduh Hasil (PDF)</span>
+            <span>Cetak Hasil (PDF)</span>
           </button>
           <button type="button" class="btn-nav" id="btn-restart-exam">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="1 4 1 10 7 10"></polyline>
               <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
             </svg>
-            <span>Ulangi Ujian Simulasi</span>
+            <span>Kembali ke Menu Utama</span>
           </button>
         </div>
 
@@ -703,7 +1167,413 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- ======================================================================
+       MODAL 3: FORM TAMBAH / EDIT SOAL (SQLITE CRUD)
+       ====================================================================== -->
+  <div class="modal-backdrop" id="modal-question-form" role="dialog" aria-modal="true" aria-labelledby="form-modal-title">
+    <div class="modal-dialog modal-form-dialog">
+      <header class="form-modal-header">
+        <h3 class="form-modal-title" id="form-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+          <span id="form-title-text">Tambah Soal Baru ke SQLite</span>
+        </h3>
+        <button type="button" class="btn-modal-close" id="btn-close-form-x" aria-label="Tutup Form">&times;</button>
+      </header>
+
+      <form id="form-question" class="form-modal-body">
+        <input type="hidden" id="form-question-id" value="">
+
+        <!-- Bagian 1: Kategori & Status -->
+        <fieldset class="form-section-card">
+          <legend class="form-section-header">1. Informasi Kategori & Status Aktif</legend>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label class="form-label" for="form-kategori">Kategori Ujian *</label>
+              <select class="form-select" id="form-kategori" required>
+                <option value="TWK">TWK (Tes Wawasan Kebangsaan)</option>
+                <option value="TIU">TIU (Tes Inteligensi Umum)</option>
+                <option value="TKP">TKP (Tes Karakteristik Pribadi)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-subkategori">Subkategori / Topik *</label>
+              <input type="text" class="form-input" id="form-subkategori" placeholder="misal: Nasionalisme / Silogisme" required>
+            </div>
+            <div class="form-group" style="justify-content: flex-end;">
+              <label class="toggle-switch-wrap" style="padding-bottom: 8px;">
+                <input type="checkbox" class="toggle-switch-input" id="form-is-active" checked>
+                <span class="toggle-slider"></span>
+                <span class="toggle-label-text">Soal Aktif Diujikan</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Bagian 2: Naskah Soal & Media -->
+        <fieldset class="form-section-card">
+          <legend class="form-section-header">2. Naskah Butir Soal & Media Gambar</legend>
+          <div class="form-group">
+            <label class="form-label" for="form-soal">Teks Soal *</label>
+            <textarea class="form-textarea" id="form-soal" rows="4" placeholder="Tuliskan teks naskah soal lengkap di sini..." required></textarea>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Media Gambar / SVG</label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; font-weight: 600; cursor: pointer;">
+                <input type="checkbox" id="form-has-image">
+                <span>Soal ini memiliki ilustrasi gambar / diagram SVG</span>
+              </label>
+            </div>
+            <div class="form-group" id="form-image-data-group">
+              <label class="form-label" for="form-image-data">Data Gambar / Markup SVG</label>
+              <textarea class="form-textarea" id="form-image-data" rows="2" placeholder="Contoh: <svg viewBox='0 0 200 200'>...</svg>"></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Bagian 3: Pilihan Jawaban A s.d. E & Bobot Nilai -->
+        <fieldset class="form-section-card">
+          <legend class="form-section-header">3. Pilihan Jawaban & Bobot Nilai (PermenPAN-RB)</legend>
+          
+          <div class="form-group" style="max-width: 250px; margin-bottom: 0.5rem;">
+            <label class="form-label" for="form-kunci">Kunci Jawaban Resmi *</label>
+            <select class="form-select" id="form-kunci" required>
+              <option value="A">Opsi A</option>
+              <option value="B">Opsi B</option>
+              <option value="C">Opsi C</option>
+              <option value="D">Opsi D</option>
+              <option value="E">Opsi E</option>
+            </select>
+          </div>
+
+          <!-- Opsi A -->
+          <div class="form-option-row">
+            <span class="form-option-badge">A</span>
+            <input type="text" class="form-input" id="form-opsi-A" placeholder="Teks pilihan A..." required style="flex:1;">
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">Bobot:</span>
+              <input type="number" class="form-input form-weight-input" id="form-bobot-A" min="0" max="5" value="0" required>
+            </div>
+          </div>
+
+          <!-- Opsi B -->
+          <div class="form-option-row">
+            <span class="form-option-badge">B</span>
+            <input type="text" class="form-input" id="form-opsi-B" placeholder="Teks pilihan B..." required style="flex:1;">
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">Bobot:</span>
+              <input type="number" class="form-input form-weight-input" id="form-bobot-B" min="0" max="5" value="0" required>
+            </div>
+          </div>
+
+          <!-- Opsi C -->
+          <div class="form-option-row">
+            <span class="form-option-badge">C</span>
+            <input type="text" class="form-input" id="form-opsi-C" placeholder="Teks pilihan C..." required style="flex:1;">
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">Bobot:</span>
+              <input type="number" class="form-input form-weight-input" id="form-bobot-C" min="0" max="5" value="0" required>
+            </div>
+          </div>
+
+          <!-- Opsi D -->
+          <div class="form-option-row">
+            <span class="form-option-badge">D</span>
+            <input type="text" class="form-input" id="form-opsi-D" placeholder="Teks pilihan D..." required style="flex:1;">
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">Bobot:</span>
+              <input type="number" class="form-input form-weight-input" id="form-bobot-D" min="0" max="5" value="0" required>
+            </div>
+          </div>
+
+          <!-- Opsi E -->
+          <div class="form-option-row">
+            <span class="form-option-badge">E</span>
+            <input type="text" class="form-input" id="form-opsi-E" placeholder="Teks pilihan E..." required style="flex:1;">
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">Bobot:</span>
+              <input type="number" class="form-input form-weight-input" id="form-bobot-E" min="0" max="5" value="0" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Bagian 4: Pembahasan & Analisis Opsi A s.d. E -->
+        <fieldset class="form-section-card">
+          <legend class="form-section-header">4. Pembahasan Lengkap & Analisis Tiap Opsi</legend>
+          
+          <div class="form-group">
+            <label class="form-label" for="form-pembahasan">Pembahasan Utama / Mengapa Kunci Benar *</label>
+            <textarea class="form-textarea" id="form-pembahasan" rows="3" placeholder="Penjelasan materi pokok dan alasan kunci jawaban..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-analisis-A">Analisis Opsi A *</label>
+            <input type="text" class="form-input" id="form-analisis-A" placeholder="Penjelasan mendalam mengapa opsi A benar / salah..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-analisis-B">Analisis Opsi B *</label>
+            <input type="text" class="form-input" id="form-analisis-B" placeholder="Penjelasan mendalam mengapa opsi B benar / salah..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-analisis-C">Analisis Opsi C *</label>
+            <input type="text" class="form-input" id="form-analisis-C" placeholder="Penjelasan mendalam mengapa opsi C benar / salah..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-analisis-D">Analisis Opsi D *</label>
+            <input type="text" class="form-input" id="form-analisis-D" placeholder="Penjelasan mendalam mengapa opsi D benar / salah..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-analisis-E">Analisis Opsi E *</label>
+            <input type="text" class="form-input" id="form-analisis-E" placeholder="Penjelasan mendalam mengapa opsi E benar / salah..." required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-tips">Tips & Trik Cepat</label>
+            <input type="text" class="form-input" id="form-tips" placeholder="Tips trik cepat atau rumus praktis...">
+          </div>
+        </fieldset>
+
+        <!-- Bagian 5: Video YouTube & Metadata Sumber Dokumen -->
+        <fieldset class="form-section-card">
+          <legend class="form-section-header">5. Video Embed YouTube & Metadata Sumber Resmi</legend>
+          
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label class="form-label" for="form-video-url">URL Embed YouTube</label>
+              <input type="url" class="form-input" id="form-video-url" placeholder="https://www.youtube.com/embed/VIDEO_ID">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-video-title">Judul Video</label>
+              <input type="text" class="form-input" id="form-video-title" placeholder="misal: Pembahasan Trik Deret Angka">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-video-channel">Kanal / Channel YouTube</label>
+              <input type="text" class="form-input" id="form-video-channel" placeholder="misal: DoseNdeso / Privat Al Faiz">
+            </div>
+          </div>
+
+          <div class="form-grid-2" style="margin-top: 0.5rem;">
+            <div class="form-group">
+              <label class="form-label" for="form-video-timestamp">Timestamp Bagian Soal (MM:SS)</label>
+              <input type="text" class="form-input" id="form-video-timestamp" placeholder="misal: 04:30">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-video-start-seconds">Start Detik (Angka detik)</label>
+              <input type="number" class="form-input" id="form-video-start-seconds" placeholder="misal: 270">
+            </div>
+          </div>
+
+          <div class="form-grid-2" style="margin-top: 0.5rem;">
+            <div class="form-group">
+              <label class="form-label" for="form-sumber-nama">Nama Dokumen Resmi *</label>
+              <input type="text" class="form-input" id="form-sumber-nama" placeholder="misal: UUD 1945 Pasal 27 / Kisi-Kisi PermenPAN-RB" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-sumber-url">URL Sumber Resmi Lengkap</label>
+              <input type="url" class="form-input" id="form-sumber-url" placeholder="https://jdih.menpan.go.id/...">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="form-sumber-halaman">Nomor Halaman pada Dokumen</label>
+              <input type="text" class="form-input" id="form-sumber-halaman" placeholder="misal: Hal. 14">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-sumber-no">Nomor Soal pada Sumber</label>
+              <input type="text" class="form-input" id="form-sumber-no" placeholder="misal: Soal No. 8">
+            </div>
+          </div>
+        </fieldset>
+
+        <footer class="form-modal-footer">
+          <button type="button" class="btn-nav" id="btn-cancel-form">Batal</button>
+          <button type="submit" class="btn-primary-action" id="btn-save-question">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Simpan Soal ke SQLite</span>
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL 4: DETAIL PREVIEW SOAL LENGKAP
+       ====================================================================== -->
+  <div class="modal-backdrop" id="modal-question-detail" role="dialog" aria-modal="true" aria-labelledby="detail-modal-title">
+    <div class="modal-dialog modal-detail-dialog">
+      <header class="form-modal-header">
+        <h3 class="form-modal-title" id="detail-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span id="detail-header-text">Detail & Verifikasi Soal</span>
+        </h3>
+        <button type="button" class="btn-modal-close" id="btn-close-detail-x" aria-label="Tutup Detail">&times;</button>
+      </header>
+
+      <div class="detail-modal-body">
+        
+        <!-- Metadata Header Bar -->
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="badge-question-number" id="detail-badge-id">ID: #1</span>
+            <span class="badge-question-category" id="detail-badge-cat">TWK</span>
+            <span class="badge-question-weight" id="detail-badge-subcat">Nasionalisme</span>
+          </div>
+          <span class="question-status-pill answered" id="detail-badge-status">Status: Aktif</span>
+        </div>
+
+        <!-- Question Text -->
+        <div style="background: #ffffff; border: 1.5px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+          <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">Naskah Butir Soal:</div>
+          <div style="font-size: 1.05rem; font-weight: 500; line-height: 1.7; color: var(--text-main);" id="detail-soal-text">Memuat teks soal...</div>
+        </div>
+
+        <!-- Media / Gambar Preview -->
+        <div id="detail-media-container" style="display: none; background: #f8fafc; border: 1px dashed var(--border-strong); border-radius: var(--radius-md); padding: 1rem; text-align: center;"></div>
+
+        <!-- Options List -->
+        <div>
+          <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--cat-primary-dark); margin-bottom: 0.65rem;">Pilihan Jawaban & Bobot Nilai:</div>
+          <div class="options-list" id="detail-options-container"></div>
+        </div>
+
+        <!-- Pembahasan & Analisis Opsi -->
+        <div class="rationale-main-card">
+          <div class="rationale-main-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Alasan Mengapa Kunci Tepat:</span>
+          </div>
+          <div class="rationale-main-text" id="detail-pembahasan-text">Memuat pembahasan...</div>
+        </div>
+
+        <div class="option-breakdown-section">
+          <div class="option-breakdown-title">Analisis Mendalam Seluruh Opsi (A - E):</div>
+          <div class="option-breakdown-list" id="detail-analysis-container"></div>
+        </div>
+
+        <!-- Tips & Trik -->
+        <div class="tips-card" id="detail-tips-box">
+          <svg class="tips-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <div class="tips-content">
+            <div class="tips-title">Tips / Trik Cepat:</div>
+            <div class="tips-text" id="detail-tips-text">-</div>
+          </div>
+        </div>
+
+        <!-- Video Embed Preview (Tangguh Terhadap Error 153) -->
+        <div class="video-explainer-card" id="detail-video-container" style="display: none;">
+          <div class="video-header">
+            <div class="video-title-wrap">
+              <span class="video-badge">YOUTUBE</span>
+              <span class="video-title" id="detail-video-title">Video Pembahasan</span>
+              <span class="video-timestamp-badge" id="detail-video-timestamp" style="display: none;">⏱️ Menit 00:00</span>
+            </div>
+            <span class="video-channel-tag" id="detail-video-channel" style="font-size:0.75rem; color:#cbd5e1; font-weight:600;">Channel: -</span>
+          </div>
+          <div class="video-embed-container">
+            <iframe id="detail-video-iframe" src="" title="Video Pembahasan" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-actions-bar">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-watch-youtube" id="detail-video-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              <span>Buka & Tonton Langsung di YouTube &rarr;</span>
+            </a>
+          </div>
+          <div class="video-tip-notice">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span><strong>Tips:</strong> Jika YouTube player menampilkan "Error 153" di browser, gunakan tombol di atas untuk menonton di tab baru.</span>
+          </div>
+        </div>
+
+        <!-- Sumber Resmi Lengkap -->
+        <div class="detail-source-card" id="detail-source-card">
+          <div class="detail-source-item">
+            <span class="detail-source-label">Nama Dokumen Resmi:</span>
+            <span class="detail-source-val" id="detail-sumber-nama">-</span>
+          </div>
+          <div class="detail-source-item">
+            <span class="detail-source-label">URL Dokumen Lengkap:</span>
+            <span class="detail-source-val" id="detail-sumber-url">-</span>
+          </div>
+          <div class="detail-source-item">
+            <span class="detail-source-label">Halaman pada Dokumen:</span>
+            <span class="detail-source-val" id="detail-sumber-halaman">-</span>
+          </div>
+          <div class="detail-source-item">
+            <span class="detail-source-label">Nomor Soal pada Sumber:</span>
+            <span class="detail-source-val" id="detail-sumber-no">-</span>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="form-modal-footer">
+        <button type="button" class="btn-nav" id="btn-close-detail">Tutup Preview</button>
+        <button type="button" class="btn-primary-action" id="btn-detail-to-edit" style="background: linear-gradient(180deg, #d97706 0%, #b45309 100%); border-color: #b45309;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+          <span>Edit Soal Ini</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL 5: KONFIRMASI HAPUS SOAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="modal-confirm-delete-q" role="dialog" aria-modal="true" aria-labelledby="delete-q-title">
+    <div class="modal-dialog">
+      <header class="modal-confirm-header" style="background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); border-bottom-color: #ef4444;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fca5a5" stroke-width="2.5">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <h3 id="delete-q-title" style="margin: 0; font-size: 1.15rem; font-weight: 800;">Konfirmasi Hapus Soal</h3>
+      </header>
+      <div class="modal-confirm-body">
+        <p style="font-size: 0.95rem; color: var(--text-main); margin: 0;">
+          Apakah Anda yakin ingin menghapus butir soal ini dari database SQLite? Tindakan ini bersifat permanen dan tidak dapat dibatalkan.
+        </p>
+        <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius-md); padding: 0.85rem; font-size: 0.85rem; color: #991b1b;" id="delete-q-snippet">
+          Soal ID #1
+        </div>
+      </div>
+      <footer class="modal-confirm-footer">
+        <button type="button" class="btn-nav" id="btn-cancel-delete-q">Batal</button>
+        <button type="button" class="btn-finish-exam" id="btn-confirm-delete-q">
+          <span>Ya, Hapus Permanen</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- SQLite WebAssembly Driver (Local with CDN fallback) -->
+  <script src="js/sql-wasm.js"></script>
+  <script>
+    if (typeof initSqlJs === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/sql-wasm.js"><\/script>');
+    }
+  </script>
+
+  <!-- Dataset & Application Engine -->
   <script src="data/questions.js"></script>
   <script src="js/app.js"></script>
 </body>

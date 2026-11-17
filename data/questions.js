@@ -1,7 +1,8 @@
 /**
  * BANK SOAL RESMI SKD CASN / CPNS (TWK, TIU, TKP)
- * Standar Simulasi CAT BKN (Badan Kepegawaian Negara)
- * Berdasarkan PermenPAN-RB No. 321 Tahun 2024 & Kisi-Kisi Resmi
+ * Standar CAT BKN & PermenPAN-RB No. 321 Tahun 2024
+ * Metadata Lengkap: Dokumen Sumber Resmi, URL JDIH, Halaman, Nomor Butir
+ * Video Embeds: youtube-nocookie.com dengan Timestamp Spesifik (MM:SS & startSeconds)
  * Total: 110 Soal (30 TWK, 35 TIU, 45 TKP)
  */
 
@@ -36,9 +37,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, berlebihan dan bertentangan dengan kebebasan beragama yang diakui dan dilindungi oleh konstitusi Pasal 29 UUD 1945."
     },
     "tips": "Kata kunci Sila 1: Toleransi antar-umat beragama, kebebasan beribadah, tidak memaksakan agama/atribut keyakinan kepada orang lain.",
-    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-1 & Pasal 29 Ayat (2) UUD 1945",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR (Hal. 14-16)",
+    "sumber_nama": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR",
+    "sumber_url": "https://jdih.setneg.go.id/view/285",
+    "sumber_halaman": "Hal. 14-16",
+    "sumber_no_soal": "Pasal 1 Butir 1-7 (Sila ke-1)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 2,
@@ -70,9 +84,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, penyelesaian masalah melalui viralitas media sosial tidak profesional dan bukan jalur penanganan koordinasi bencana yang efektif."
     },
     "tips": "Kata kunci Sila 2: Kemanusiaan, persamaan derajat manusia, empati/tolong-menolong korban bencana, non-diskriminasi, tenggang rasa.",
-    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-2 & UU No. 24 Tahun 2007 tentang Penanggulangan Bencana",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR (Hal. 16-18)",
+    "sumber_nama": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR",
+    "sumber_url": "https://jdih.setneg.go.id/view/285",
+    "sumber_halaman": "Hal. 16-18",
+    "sumber_no_soal": "Pasal 1 Butir 8-17 (Sila ke-2)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 3,
@@ -104,9 +131,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, sikap apatis bertentangan dengan tanggung jawab warga negara dalam menjaga keutuhan bangsa."
     },
     "tips": "Kata kunci Sila 3: Persatuan, kesatuan, keutuhan NKRI, cinta tanah air, rela berkorban untuk bangsa, meredam polarisasi.",
-    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-3 & UU No. 20 Tahun 2023 tentang Aparatur Sipil Negara (Fungsi Perekat Bangsa)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR (Hal. 18-20)",
+    "sumber_nama": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR",
+    "sumber_url": "https://jdih.setneg.go.id/view/285",
+    "sumber_halaman": "Hal. 18-20",
+    "sumber_no_soal": "Pasal 1 Butir 18-24 (Sila ke-3)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 4,
@@ -138,9 +178,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, melanggar tupoksi dan wewenang institusi pemerintah daerah."
     },
     "tips": "Kata kunci Sila 4: Musyawarah mufakat, semangat kekeluargaan, tidak memaksakan kehendak, menghormati pendapat, akal sehat.",
-    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-4 & PermenPAN-RB No. 321 Tahun 2024",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR (Hal. 20-22)",
+    "sumber_nama": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR",
+    "sumber_url": "https://jdih.setneg.go.id/view/285",
+    "sumber_halaman": "Hal. 20-22",
+    "sumber_no_soal": "Pasal 1 Butir 25-34 (Sila ke-4)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 5,
@@ -172,9 +225,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, tindakan pemerasan/korupsi aktif yang melanggar hukum dan nilai Pancasila."
     },
     "tips": "Kata kunci Sila 5: Keadilan sosial, tidak merugikan kepentingan umum, menghormati hak orang lain, pemerataan kesejahteraan, anti pemborosan/korupsi.",
-    "sumber": "TAP MPR No. I/MPR/2003 Butir Sila ke-5 & UU No. 31 Tahun 1999 jo UU No. 20 Tahun 2001 (Tipikor)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR (Hal. 22-25)",
+    "sumber_nama": "Ketetapan MPR RI No. I/MPR/2003 tentang Peninjauan Terhadap Materi dan Status Hukum Ketetapan MPRS dan MPR",
+    "sumber_url": "https://jdih.setneg.go.id/view/285",
+    "sumber_halaman": "Hal. 22-25",
+    "sumber_no_soal": "Pasal 1 Butir 35-45 (Sila ke-5)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 6,
@@ -206,9 +272,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, ormas Islam awalnya mendukung Piagam Jakarta namun legawa bermufakat demi keutuhan NKRI."
     },
     "tips": "Fakta sejarah penting: Perubahan 7 kata Piagam Jakarta terjadi 18 Agustus 1945 diprakarsai Moh. Hatta bersama 4 tokoh Islam demi integrasi bangsa.",
-    "sumber": "Risalah Sidang BPUPKI dan PPKI (Sekretariat Negara RI) & Modul Resmi TWK BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Risalah Sidang Badan Penyelidik Usaha-Usaha Persiapan Kemerdekaan Indonesia (BPUPKI) Sekretariat Negara RI (Bab II Hal. 68-75)",
+    "sumber_nama": "Risalah Sidang Badan Penyelidik Usaha-Usaha Persiapan Kemerdekaan Indonesia (BPUPKI) Sekretariat Negara RI",
+    "sumber_url": "https://perpustakaan.setneg.go.id/records/bpupki-1945",
+    "sumber_halaman": "Bab II Hal. 68-75",
+    "sumber_no_soal": "Pidato Lahirnya Pancasila 1 Juni 1945",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 7,
@@ -240,9 +319,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, Pancasila adalah norma fundamental negara (staatsfundamentalnorm) yang mengikat seluruh bangsa secara permanen."
     },
     "tips": "3 Dimensi Ideologi Terbuka: Realitas (nilai riil masyarakat), Idealisme (cita-cita luhur masa depan), Fleksibilitas (dinamis & adaptif terhadap zaman pada nilai instrumental).",
-    "sumber": "Pendidikan Kewarganegaraan Lemhannas & Kisi-Kisi Resmi PermenPAN-RB",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ketetapan MPR RI No. XVIII/MPR/1998 tentang Pencabutan P-4 dan Penegasan Pancasila sebagai Dasar Negara (Hal. 3-6)",
+    "sumber_nama": "Ketetapan MPR RI No. XVIII/MPR/1998 tentang Pencabutan P-4 dan Penegasan Pancasila sebagai Dasar Negara",
+    "sumber_url": "https://jdih.dpr.go.id/dokumen/detail/18-MPR-1998",
+    "sumber_halaman": "Hal. 3-6",
+    "sumber_no_soal": "Pasal 1 Kedudukan Ideologi Terbuka",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 8,
@@ -274,9 +366,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, bertentangan dengan prinsip Bhinneka Tunggal Ika yang menghargai kearifan lokal."
     },
     "tips": "Pancasila sebagai Paradigma Pembangunan: Pembangunan dari rakyat, oleh rakyat, untuk rakyat dengan tujuan memuliakan harkat & martabat manusia.",
-    "sumber": "Ketetapan MPR & Pokok Kebijakan Pembangunan Nasional Bappenas",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 1)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 1",
+    "sumber_no_soal": "Pasal 1 Ayat (2) dan Ayat (3)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 9,
@@ -308,9 +413,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, Penjelasan UUD 1945 ditiadakan statusnya, materi normatifnya dimasukkan ke batang tubuh."
     },
     "tips": "Ingat 5 Kesepakatan Amandemen: 1. Pembukaan TETAP, 2. NKRI TETAP, 3. Presidensial DIPERTEGAS, 4. Penjelasan DIHAPUS (masuk pasal), 5. Cara ADENDUM.",
-    "sumber": "Naskah Komprehensif Perubahan UUD 1945 (Sekretariat Jenderal Mahkamah Konstitusi RI)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 2-3)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 2-3",
+    "sumber_no_soal": "Pasal 7A dan Pasal 7B",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 10,
@@ -342,9 +460,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, pemberian grasi/rehabilitasi/amnesti adalah hak prerogatif Presiden (Pasal 14 UUD 1945)."
     },
     "tips": "Wewenang MK (4+1): Uji UU thd UUD, Sengketa Lembaga Negara (berwenang via UUD), Bubarkan Parpol, Perselisihan Hasil Pemilu + 1 Wajib Sidang Dugaan Pelanggaran Presiden.",
-    "sumber": "Pasal 24C UUD NRI 1945 & UU No. 24 Tahun 2003 tentang Mahkamah Konstitusi",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 4-5)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 4-5",
+    "sumber_no_soal": "Pasal 20A Ayat (1) dan Ayat (2)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 11,
@@ -376,9 +507,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, hak milik diatur dalam Pasal 28G dan tunduk pada fungsi sosial."
     },
     "tips": "Hafalkan 7 Hak Non-Derogable (Pasal 28I ayat 1): Hidup, Tidak disiksa, Pikiran & hati nurani, Beragama, Tidak diperbudak, Diakui di muka hukum, Tidak dituntut hukum berlaku surut.",
-    "sumber": "Pasal 28I Ayat (1) UUD NRI 1945 & Kovenan Internasional Hak Sipil dan Politik (ICCPR)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 6)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 6",
+    "sumber_no_soal": "Pasal 22D Ayat (1), (2), dan (3)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 12,
@@ -410,9 +554,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, warga negara wajib menjunjung hukum, bukan bebas tanpa aturan."
     },
     "tips": "Pasal 27 Ayat 1 UUD 1945 = Equality before the law (persamaan kedudukan hukum dan pemerintahan tanpa diskriminasi).",
-    "sumber": "Pasal 27 Ayat (1) UUD NRI 1945 & UU No. 39 Tahun 1999 tentang HAM",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 7-8)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 7-8",
+    "sumber_no_soal": "Pasal 24C Ayat (1) dan Ayat (2)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 13,
@@ -444,9 +601,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, koperasi dan pertanian lokal adalah urusan konkuren desentralisasi."
     },
     "tips": "Ingat 6 Urusan Absolut Pusat: POLKAM-YUS-MON-AGAMA (Politik LN, Pertahanan/Keamanan, Yustisi, Moneter/Fiskal, Agama).",
-    "sumber": "Pasal 18 UUD 1945 & Pasal 10 UU No. 23 Tahun 2014 tentang Pemerintahan Daerah",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 8)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 8",
+    "sumber_no_soal": "Pasal 24B Ayat (1)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 14,
@@ -478,9 +648,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, pasar bebas tanpa kendali negara bertentangan dengan demokrasi ekonomi Pasal 33."
     },
     "tips": "5 Aspek 'Dikuasai Negara' (Putusan MK): Kebijakan, Pengaturan, Pengurusan, Pengelolaan, dan Pengawasan demi kemakmuran rakyat.",
-    "sumber": "Pasal 33 Ayat (3) UUD NRI 1945 & Putusan Mahkamah Konstitusi No. 001-021-022/PUU-I/2003",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 9)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 9",
+    "sumber_no_soal": "Pasal 23E, 23F, dan 23G",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 15,
@@ -512,9 +695,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, Indonesia berpegang pada politik bebas aktif dan tidak bergabung dalam pakta militer pertahanan manapun."
     },
     "tips": "Pasal 30 Ayat 2 UUD 1945: Kekuatan Utama = TNI & POLRI. Kekuatan Pendukung = Rakyat.",
-    "sumber": "Pasal 30 Ayat (2) UUD NRI 1945 & UU No. 3 Tahun 2002 tentang Pertahanan Negara",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 10-12)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 10-12",
+    "sumber_no_soal": "Pasal 28I Ayat (1) Non-Derogable Rights",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 16,
@@ -546,9 +742,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, tidak berkaitan dengan doktrin dasar geopolitik nusantara."
     },
     "tips": "3 Unsur Pokok Wawasan Nusantara: WADAH (wilayah/organisasi negara), ISI (cita-cita & aspirasi bangsa), TATA LAKU (batiniah & lahiriah).",
-    "sumber": "Modul Geopolitik Indonesia / Wawasan Nusantara Lemhannas RI & Kisi-Kisi CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 15)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 15",
+    "sumber_no_soal": "Pasal 37 Ayat (1) s.d. (5)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 17,
@@ -580,9 +789,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, hak saling membubarkan hanya ada dalam sistem parlementer; di Indonesia Presiden tidak dapat membubarkan DPR (Pasal 7C)."
     },
     "tips": "Ciri Presidensial Indonesia: Presiden = Kepala Negara + Kepala Pemerintahan, Menteri tanggung jawab ke Presiden, Tidak ada mosi tidak percaya, Masa jabatan tetap (fixed term).",
-    "sumber": "Pasal 4 dan Pasal 17 UUD NRI 1945",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ketetapan MPR RI No. II/MPR/1993 tentang Garis-Garis Besar Haluan Negara (GBHN Wawasan Nusantara) (Bab II Hal. 24-28)",
+    "sumber_nama": "Ketetapan MPR RI No. II/MPR/1993 tentang Garis-Garis Besar Haluan Negara (GBHN Wawasan Nusantara)",
+    "sumber_url": "https://jdih.setneg.go.id/view/129",
+    "sumber_halaman": "Bab II Hal. 24-28",
+    "sumber_no_soal": "Asas Geopolitik & Wawasan Nusantara",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 18,
@@ -614,9 +836,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, Dekrit Presiden 5 Juli 1959 berkaitan dengan kembali ke UUD 1945 dan pembubaran Konstituante."
     },
     "tips": "Deklarasi Djuanda 13 Desember 1957: Laut bukan pemisah tapi pemersatu antarpulau, batas laut teritorial 12 mil, cikal bakal pengakuan Archipelagic State di UNCLOS 1982.",
-    "sumber": "Deklarasi Djuanda 1957, UU No. 4/Prp/1960 & UU No. 17 Tahun 1985 tentang Pengesahan UNCLOS 1982",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 2-4)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 2-4",
+    "sumber_no_soal": "Pasal 4 Ayat (1) dan Pasal 17",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 19,
@@ -648,9 +883,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, sentralisasi bertentangan dengan prinsip otonomi daerah Pasal 18 UUD 1945."
     },
     "tips": "Perbedaan Kunci: Desentralisasi = PENYERAHAN urusan ke Daerah Otonom. Dekonsentrasi = PELIMPAHAN wewenang ke Gubernur selaku Wakil Pusat. Tugas Pembantuan = PENUGASAN urusan tertentu.",
-    "sumber": "Pasal 1 UU No. 23 Tahun 2014 tentang Pemerintahan Daerah",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Deklarasi Djuanda 13 Desember 1957 & UU No. 4/Prp/1960 tentang Perairan Indonesia (Hal. 1-4)",
+    "sumber_nama": "Deklarasi Djuanda 13 Desember 1957 & UU No. 4/Prp/1960 tentang Perairan Indonesia",
+    "sumber_url": "https://kemlu.go.id/portal/id/read/43/halaman_list_lainnya/deklarasi-djuanda-dan-kedaulatan-maritim",
+    "sumber_halaman": "Hal. 1-4",
+    "sumber_no_soal": "Prinsip Negara Kepulauan (Archipelagic State)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 20,
@@ -682,9 +930,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, melanggar hukum internasional dan Piagam PBB."
     },
     "tips": "Bebas = Tidak terikat pakta/blok kekuatan adidaya. Aktif = Berinisiatif nyata menjaga perdamaian & menghapus penjajahan di muka bumi.",
-    "sumber": "Pidato Mohammad Hatta 1948, Pembukaan UUD NRI 1945 Alinea I & IV, UU No. 37 Tahun 1999 tentang Hubungan Luar Negeri",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Kitab Sutasoma karya Mpu Tantular & Penjelasan Lambang Negara Garuda Pancasila PP No. 66/1951 (Pupuh 139 Bait 5)",
+    "sumber_nama": "Kitab Sutasoma karya Mpu Tantular & Penjelasan Lambang Negara Garuda Pancasila PP No. 66/1951",
+    "sumber_url": "https://kebudayaan.kemdikbud.go.id/mengenal-semboyan-bhinneka-tunggal-ika/",
+    "sumber_halaman": "Pupuh 139 Bait 5",
+    "sumber_no_soal": "Kakawin Sutasoma dan Pasal 36A UUD 1945",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 21,
@@ -716,9 +977,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, Pararaton adalah kitab sastra sejarah tentang Ken Arok dan genealogi raja-raja."
     },
     "tips": "Ingat: Bhinneka Tunggal Ika = Kitab SUTASOMA (Mpu Tantular). Istilah Pancasila pertama kali disebut dalam Kitab NEGARAKERTAGAMA (Mpu Prapanca).",
-    "sumber": "Pasal 36A UUD 1945 & Modul Wawasan Kebangsaan BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 24 Tahun 2009 tentang Bendera, Bahasa, dan Lambang Negara, serta Lagu Kebangsaan (Hal. 12-16)",
+    "sumber_nama": "Undang-Undang No. 24 Tahun 2009 tentang Bendera, Bahasa, dan Lambang Negara, serta Lagu Kebangsaan",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38747/uu-no-24-tahun-2009",
+    "sumber_halaman": "Hal. 12-16",
+    "sumber_no_soal": "Pasal 25 s.d. Pasal 45 (Bahasa Indonesia)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 22,
@@ -750,9 +1024,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, konsep keterbukaan norma bersama lintas budaya."
     },
     "tips": "Etnosentrisme = Menganggap etnis sendiri superior & meremehkan etnis lain. Primordialisme = Keterikatan berlebihan pada asal usul sejak lahir (suku/ras/agama).",
-    "sumber": "Sosiologi Politik & Materi Wawasan Kebangsaan Perilaku ASN KemenPAN-RB",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat (Hal. 11-13)",
+    "sumber_nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasca Amandemen Keempat",
+    "sumber_url": "https://mkri.id/index.php?page=web.PeraturanUUD",
+    "sumber_halaman": "Hal. 11-13",
+    "sumber_no_soal": "Pasal 27 Ayat (3) dan Pasal 30 Ayat (1)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 23,
@@ -784,9 +1071,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, bukan indikator moderasi beragama."
     },
     "tips": "4 Indikator Moderasi Beragama: 1. Komitmen Kebangsaan, 2. Toleransi, 3. Anti-Kekerasan, 4. Akomodatif terhadap Budaya Lokal.",
-    "sumber": "Buku Saku Moderasi Beragama Kementerian Agama RI & Surat Edaran Bersama MenPAN-RB dan Kepala BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 23 Tahun 2019 tentang Pengelolaan Sumber Daya Nasional untuk Pertahanan Negara (Hal. 8-14)",
+    "sumber_nama": "Undang-Undang No. 23 Tahun 2019 tentang Pengelolaan Sumber Daya Nasional untuk Pertahanan Negara",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/123512/uu-no-23-tahun-2019",
+    "sumber_halaman": "Hal. 8-14",
+    "sumber_no_soal": "Pasal 6, 7, dan 8 (Komponen Cadangan)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 24,
@@ -818,9 +1118,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, perlakuan diskriminatif yang akan memperluas kecemburuan sosial dan konflik lanjutan."
     },
     "tips": "Fungsi ASN: Pelaksana Kebijakan Publik, Pelayan Publik, dan PEREKAT & PEMERSATU BANGSA. Selesaikan konflik via musyawarah inklusif & kepastian hukum.",
-    "sumber": "UU No. 20 Tahun 2023 tentang ASN (Pasal 10) & UU No. 7 Tahun 2012 tentang Penanganan Konflik Sosial",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Wawasan Kebangsaan dan Bela Negara Lembaga Administrasi Negara (LAN RI) (Bab III Hal. 35-42)",
+    "sumber_nama": "Modul Wawasan Kebangsaan dan Bela Negara Lembaga Administrasi Negara (LAN RI)",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-belanegara",
+    "sumber_halaman": "Bab III Hal. 35-42",
+    "sumber_no_soal": "Nilai Dasar Bela Negara No. 1 Cinta Tanah Air",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 25,
@@ -852,9 +1165,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, chauvinisme adalah bahaya ekstremisme, bukan cita-cita kemerdekaan."
     },
     "tips": "Chauvinisme = Nasionalisme sempit / fanatisme berlebihan yang merendahkan bangsa lain. Nasionalisme Pancasila = Cinta tanah air yang berprikemanusiaan.",
-    "sumber": "Pidato Lahirnya Pancasila 1 Juni 1945 & Materi Pembekalan Wawasan Kebangsaan BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Buku Sejarah Pergerakan Nasional Indonesia, Museum Kebangkitan Nasional Kemdikbud (Bab II Hal. 15-22)",
+    "sumber_nama": "Buku Sejarah Pergerakan Nasional Indonesia, Museum Kebangkitan Nasional Kemdikbud",
+    "sumber_url": "https://kebudayaan.kemdikbud.go.id/muskitnas/sejarah-budi-utomo-1908/",
+    "sumber_halaman": "Bab II Hal. 15-22",
+    "sumber_no_soal": "Kelahiran Boedi Oetomo 20 Mei 1908",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 26,
@@ -886,9 +1212,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, pengadaan harus mengedepankan prinsip 'value for money' dan efektivitas belanja publik."
     },
     "tips": "Nasionalisme Ekonomi di ASN: Utamakan Produk Dalam Negeri (PDN), verifikasi sertifikat TKDN (Tingkat Komponen Dalam Negeri), dukung UMKM nasional.",
-    "sumber": "Inpres No. 2 Tahun 2022 & Perpres No. 12 Tahun 2021 tentang Pengadaan Barang dan Jasa Pemerintah",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Risalah Rapat Panitia Persiapan Kemerdekaan Indonesia (PPKI) 18 Agustus 1945 (Hal. 1-12)",
+    "sumber_nama": "Risalah Rapat Panitia Persiapan Kemerdekaan Indonesia (PPKI) 18 Agustus 1945",
+    "sumber_url": "https://perpustakaan.setneg.go.id/records/ppki-18-agustus-1945",
+    "sumber_halaman": "Hal. 1-12",
+    "sumber_no_soal": "Hasil Sidang Pleno Pertama PPKI 18 Agustus",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 27,
@@ -920,9 +1259,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, ini adalah privilege yang tidak ada kaitannya dengan nilai dasar bela negara."
     },
     "tips": "5 Nilai Bela Negara (UU 23/2019): 1. Cinta Tanah Air, 2. Sadar Berbangsa & Bernegara, 3. Setia pada Pancasila, 4. Rela Berkorban, 5. Kemampuan Awal Bela Negara.",
-    "sumber": "Pasal 7 Ayat (3) UU No. 23 Tahun 2019 tentang Pengelolaan Sumber Daya Nasional untuk Pertahanan Negara",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 31 Tahun 1999 jo. UU No. 20 Tahun 2001 tentang Pemberantasan Tindak Pidana Korupsi (Hal. 5-8)",
+    "sumber_nama": "Undang-Undang No. 31 Tahun 1999 jo. UU No. 20 Tahun 2001 tentang Pemberantasan Tindak Pidana Korupsi",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/45145/uu-no-20-tahun-2001",
+    "sumber_halaman": "Hal. 5-8",
+    "sumber_no_soal": "Pasal 12B dan 12C (Gratifikasi ASN)",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 28,
@@ -954,9 +1306,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, sikap tidak bertanggung jawab yang bertolak belakang dengan etos kerja aparatur sipil negara."
     },
     "tips": "Bela Negara Non-Militer: Dilakukan melalui 'PENGABDIAN SESUAI PROFESI' untuk menangkal ancaman siber, krisis kesehatan, ketahanan pangan, dan disintegrasi.",
-    "sumber": "Pasal 9 Ayat (2) UU No. 3 Tahun 2002 & Doktrin Pertahanan Siber Kemenhan RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Buku Panduan Nilai-Nilai Integritas Anti-Korupsi Komisi Pemberantasan Korupsi (KPK RI) (Hal. 18-32)",
+    "sumber_nama": "Buku Panduan Nilai-Nilai Integritas Anti-Korupsi Komisi Pemberantasan Korupsi (KPK RI)",
+    "sumber_url": "https://aclc.kpk.go.id/materi-pembelajaran/pendidikan/buku/9-nilai-integritas",
+    "sumber_halaman": "Hal. 18-32",
+    "sumber_no_soal": "9 Nilai Integritas Anti Korupsi",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 29,
@@ -988,9 +1353,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, PNBP harus memiliki dasar tarif resmi undang-undang dan disetor ke kas negara melalui rekening resmi perbendaharaan."
     },
     "tips": "Perbedaan Tipikor: GRATIFIKASI = Pemberian terkait jabatan tanpa kesepakatan awal (wajib lapor KPK 30 hari). SUAP = Ada kesepakatan transaksional di awal. PEMERASAN = Inisiatif pegawai memaksa meminta uang/barang.",
-    "sumber": "Pasal 12B dan 12C UU No. 20 Tahun 2001 (Pemberantasan Tindak Pidana Korupsi) & Buku Panduan Gratifikasi KPK",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Ejaan Bahasa Indonesia yang Disempurnakan (EYD Edisi V) Kepka BSKAP No. 042/H/KR/2022 (Bab II Hal. 18-24)",
+    "sumber_nama": "Ejaan Bahasa Indonesia yang Disempurnakan (EYD Edisi V) Kepka BSKAP No. 042/H/KR/2022",
+    "sumber_url": "https://ejaan.kemdikbud.go.id/",
+    "sumber_halaman": "Bab II Hal. 18-24",
+    "sumber_no_soal": "Pedoman Penulisan Huruf Kapital dan Miring",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 30,
@@ -1022,9 +1400,22 @@ window.SKD_QUESTIONS = [
       "E": "Salah, pleonasme berlebihan (pemborosan kata jamak bertumpuk-tumpuk)."
     },
     "tips": "Ciri Kalimat Efektif: 1. Subjek & Predikat jelas (jangan mengawali Subjek dengan kata depan seperti 'Berdasarkan', 'Dalam', 'Bagi'), 2. Hemat kata (hindari pleonasme seperti 'para hadirin sekalian'), 3. Makna logis & lugas.",
-    "sumber": "Pedoman Umum Ejaan Bahasa Indonesia (Permendikbudristek No. 18 Tahun 2021 / EYD Edisi V) & PermenPAN-RB Tata Naskah Dinas",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Pedoman Umum Ejaan Bahasa Indonesia Permendikbudristek No. 18/2021 & Tata Naskah Dinas (Bab IV Hal. 42)",
+    "sumber_nama": "Pedoman Umum Ejaan Bahasa Indonesia Permendikbudristek No. 18/2021 & Tata Naskah Dinas",
+    "sumber_url": "https://ejaan.kemdikbud.go.id/",
+    "sumber_halaman": "Bab IV Hal. 42",
+    "sumber_no_soal": "Pedoman Kalimat Efektif dan Tata Naskah",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 31,
@@ -1056,14 +1447,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, sutra adalah jenis serat/bahan benang tertentu, bukan produk jadi seperti kain."
     },
     "tips": "Buatlah kalimat perantara yang tepat: 'Banyak [Kata 1] yang dirangkai menghasilkan [Kata 2]'. Kertas dirangkai membentuk buku, benang dirangkai membentuk kain.",
-    "sumber": "Simulasi Resmi CAT BKN & Kisi-Kisi PermenPAN-RB No. 321 Tahun 2024",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi (Modul Verbal Hal. 11)",
+    "sumber_nama": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Verbal Hal. 11",
+    "sumber_no_soal": "Analogi Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
-      "title": "Trik Menyelesaikan Soal Analogi Kata & Logika Verbal TIU CPNS",
+      "videoId": "bCDoV2dB3kc",
       "timestamp": "01:15",
-      "channel": "Privat Al Faiz"
+      "startSeconds": 75,
+      "title": "Trik Menyelesaikan Soal Analogi Kata & Hubungan Objek TIU CPNS",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Pembahasan Analogi Hubungan Bahan Baku dan Produk Hasil",
+      "url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=75&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=bCDoV2dB3kc&t=75s",
+      "thumbnail": "https://img.youtube.com/vi/bCDoV2dB3kc/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "bCDoV2dB3kc",
+      "timestamp": "01:15",
+      "startSeconds": 75,
+      "title": "Trik Menyelesaikan Soal Analogi Kata & Hubungan Objek TIU CPNS",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Pembahasan Analogi Hubungan Bahan Baku dan Produk Hasil",
+      "url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=75&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=bCDoV2dB3kc&t=75s",
+      "thumbnail": "https://img.youtube.com/vi/bCDoV2dB3kc/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=75&rel=0",
+    "video_title": "Trik Menyelesaikan Soal Analogi Kata & Hubungan Objek TIU CPNS",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "01:15",
+    "video_start_seconds": 75,
+    "video_topic_part": "Pembahasan Analogi Hubungan Bahan Baku dan Produk Hasil",
+    "is_active": 1
   },
   {
     "id": 32,
@@ -1095,14 +1514,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, astronom menggunakan teleskop untuk mengamati benda langit, bukan osiloskop."
     },
     "tips": "Identifikasi hubungan: [Alat diagnostik/ukur spesifik] digunakan oleh [Profesi khusus].",
-    "sumber": "Modul Latihan Soal CAT BKN TIU Verbal",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi (Modul Verbal Hal. 12)",
+    "sumber_nama": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Verbal Hal. 12",
+    "sumber_no_soal": "Analogi Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
-      "title": "Kupas Tuntas Analogi Verbal dan Hubungan Profesi-Alat TIU",
-      "timestamp": "04:30",
-      "channel": "Privat Al Faiz"
+      "videoId": "Eau9uJJOH-c",
+      "timestamp": "02:40",
+      "startSeconds": 160,
+      "title": "Analogi Profesi dan Instrumen Alat Kerja CPNS (Part 11)",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Pembahasan Analogi Instrumen / Alat Kerja & Profesi Terkait",
+      "url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=160&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=Eau9uJJOH-c&t=160s",
+      "thumbnail": "https://img.youtube.com/vi/Eau9uJJOH-c/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "Eau9uJJOH-c",
+      "timestamp": "02:40",
+      "startSeconds": 160,
+      "title": "Analogi Profesi dan Instrumen Alat Kerja CPNS (Part 11)",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Pembahasan Analogi Instrumen / Alat Kerja & Profesi Terkait",
+      "url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=160&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=Eau9uJJOH-c&t=160s",
+      "thumbnail": "https://img.youtube.com/vi/Eau9uJJOH-c/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=160&rel=0",
+    "video_title": "Analogi Profesi dan Instrumen Alat Kerja CPNS (Part 11)",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "02:40",
+    "video_start_seconds": 160,
+    "video_topic_part": "Pembahasan Analogi Instrumen / Alat Kerja & Profesi Terkait",
+    "is_active": 1
   },
   {
     "id": 33,
@@ -1134,14 +1581,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, pelangi adalah fenomena optik pembiasan cahaya, bukan akibat bencana dari hujan."
     },
     "tips": "Perhatikan pola kausalitas (Sebab -> Akibat). Kemarau menyebabkan kekeringan, hujan menyebabkan banjir.",
-    "sumber": "Bank Soal Resmi BKN Kemampuan Verbal",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi (Modul Verbal Hal. 13)",
+    "sumber_nama": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Verbal Hal. 13",
+    "sumber_no_soal": "Analogi Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
-      "title": "Trik Pola Hubungan Kausalitas Analogi Kata TIU",
-      "timestamp": "08:20",
-      "channel": "Privat Al Faiz"
+      "videoId": "bCDoV2dB3kc",
+      "timestamp": "04:22",
+      "startSeconds": 262,
+      "title": "Analogi Kausalitas Sebab Akibat Fenomena Alam TIU CPNS",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Analogi Sebab-Akibat (Kausalitas) dan Hubungan Fenomena",
+      "url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=262&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=bCDoV2dB3kc&t=262s",
+      "thumbnail": "https://img.youtube.com/vi/bCDoV2dB3kc/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "bCDoV2dB3kc",
+      "timestamp": "04:22",
+      "startSeconds": 262,
+      "title": "Analogi Kausalitas Sebab Akibat Fenomena Alam TIU CPNS",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Analogi Sebab-Akibat (Kausalitas) dan Hubungan Fenomena",
+      "url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=262&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=bCDoV2dB3kc&t=262s",
+      "thumbnail": "https://img.youtube.com/vi/bCDoV2dB3kc/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=262&rel=0",
+    "video_title": "Analogi Kausalitas Sebab Akibat Fenomena Alam TIU CPNS",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "04:22",
+    "video_start_seconds": 262,
+    "video_topic_part": "Trik Analogi Sebab-Akibat (Kausalitas) dan Hubungan Fenomena",
+    "is_active": 1
   },
   {
     "id": 34,
@@ -1173,14 +1648,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, kabut adalah uap air melayang di permukaan tanah, bukan hujan deras."
     },
     "tips": "Cek tingkatan intensitas: Hangat -> Panas (suhu makin tinggi); Gerimis -> Lebat (curah hujan makin deras).",
-    "sumber": "Buku Panduan Simulasi CAT BKN Materi Analogi",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi (Modul Verbal Hal. 14)",
+    "sumber_nama": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Verbal Hal. 14",
+    "sumber_no_soal": "Analogi Butir 4",
     "youtube": {
-      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
-      "title": "Trik Membaca Derajat Intensitas Analogi Verbal",
-      "timestamp": "12:45",
-      "channel": "Privat Al Faiz"
+      "videoId": "Eau9uJJOH-c",
+      "timestamp": "06:15",
+      "startSeconds": 375,
+      "title": "Trik Analogi Derajat Intensitas Kata & Logika Verbal TIU",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Analogi Tingkatan / Derajat Intensitas Kata Bertingkat",
+      "url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=375&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=Eau9uJJOH-c&t=375s",
+      "thumbnail": "https://img.youtube.com/vi/Eau9uJJOH-c/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "Eau9uJJOH-c",
+      "timestamp": "06:15",
+      "startSeconds": 375,
+      "title": "Trik Analogi Derajat Intensitas Kata & Logika Verbal TIU",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Analogi Tingkatan / Derajat Intensitas Kata Bertingkat",
+      "url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=375&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=Eau9uJJOH-c&t=375s",
+      "thumbnail": "https://img.youtube.com/vi/Eau9uJJOH-c/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=375&rel=0",
+    "video_title": "Trik Analogi Derajat Intensitas Kata & Logika Verbal TIU",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "06:15",
+    "video_start_seconds": 375,
+    "video_topic_part": "Trik Analogi Tingkatan / Derajat Intensitas Kata Bertingkat",
+    "is_active": 1
   },
   {
     "id": 35,
@@ -1212,14 +1715,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, generalisasi berlebihan (fallacy of hasty generalization) karena premis hanya membicarakan Pejabat X."
     },
     "tips": "Rumus Modus Tollens: [P -> Q] dan [~Q], maka kesimpulannya adalah [~P]. Jangan menambah opini atau asumsi di luar premis!",
-    "sumber": "Modul Logika Formal & Silogisme SKD CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Logika Formal & Silogisme Resmi CAT BKN (Modul Logika Hal. 20)",
+    "sumber_nama": "Modul Logika Formal & Silogisme Resmi CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Logika Hal. 20",
+    "sumber_no_soal": "Silogisme Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
+      "videoId": "N4tKi78Sxcs",
+      "timestamp": "01:45",
+      "startSeconds": 105,
       "title": "Trik Hitungan Detik Silogisme Modus Ponens & Modus Tollens TIU CPNS",
-      "timestamp": "02:10",
-      "channel": "DoseNdeso"
+      "channel": "DoseNdeso",
+      "topic_part": "Penerapan Rumus Cepat Modus Ponens & Tollens pada Soal Cerita",
+      "url": "https://www.youtube-nocookie.com/embed/N4tKi78Sxcs?start=105&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=N4tKi78Sxcs&t=105s",
+      "thumbnail": "https://img.youtube.com/vi/N4tKi78Sxcs/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "N4tKi78Sxcs",
+      "timestamp": "01:45",
+      "startSeconds": 105,
+      "title": "Trik Hitungan Detik Silogisme Modus Ponens & Modus Tollens TIU CPNS",
+      "channel": "DoseNdeso",
+      "topic_part": "Penerapan Rumus Cepat Modus Ponens & Tollens pada Soal Cerita",
+      "url": "https://www.youtube-nocookie.com/embed/N4tKi78Sxcs?start=105&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=N4tKi78Sxcs&t=105s",
+      "thumbnail": "https://img.youtube.com/vi/N4tKi78Sxcs/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/N4tKi78Sxcs?start=105&rel=0",
+    "video_title": "Trik Hitungan Detik Silogisme Modus Ponens & Modus Tollens TIU CPNS",
+    "video_channel": "DoseNdeso",
+    "video_timestamp": "01:45",
+    "video_start_seconds": 105,
+    "video_topic_part": "Penerapan Rumus Cepat Modus Ponens & Tollens pada Soal Cerita",
+    "is_active": 1
   },
   {
     "id": 36,
@@ -1251,14 +1782,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, premis tidak membicarakan kementerian lain."
     },
     "tips": "Trik Cepat Silogisme Kuantor: SEMUA + SEBAGIAN = SEBAGIAN. Jangan pernah memilih kesimpulan 'Semua' jika ada premis 'Sebagian'!",
-    "sumber": "Pedoman Penarikan Kesimpulan Silogisme BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Logika Formal & Silogisme Resmi CAT BKN (Modul Logika Hal. 21)",
+    "sumber_nama": "Modul Logika Formal & Silogisme Resmi CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Logika Hal. 21",
+    "sumber_no_soal": "Silogisme Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
+      "videoId": "saHKoLqaS1M",
+      "timestamp": "03:10",
+      "startSeconds": 190,
       "title": "Trik Silogisme Premis 'Semua' dan 'Sebagian' Tanpa Bingung",
-      "timestamp": "05:40",
-      "channel": "Privat Al Faiz"
+      "channel": "Privat Al Faiz",
+      "topic_part": "Logika Silogisme Kombinasi Premis Universal (Semua) & Partikular (Sebagian)",
+      "url": "https://www.youtube-nocookie.com/embed/saHKoLqaS1M?start=190&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=saHKoLqaS1M&t=190s",
+      "thumbnail": "https://img.youtube.com/vi/saHKoLqaS1M/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "saHKoLqaS1M",
+      "timestamp": "03:10",
+      "startSeconds": 190,
+      "title": "Trik Silogisme Premis 'Semua' dan 'Sebagian' Tanpa Bingung",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Logika Silogisme Kombinasi Premis Universal (Semua) & Partikular (Sebagian)",
+      "url": "https://www.youtube-nocookie.com/embed/saHKoLqaS1M?start=190&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=saHKoLqaS1M&t=190s",
+      "thumbnail": "https://img.youtube.com/vi/saHKoLqaS1M/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/saHKoLqaS1M?start=190&rel=0",
+    "video_title": "Trik Silogisme Premis 'Semua' dan 'Sebagian' Tanpa Bingung",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "03:10",
+    "video_start_seconds": 190,
+    "video_topic_part": "Logika Silogisme Kombinasi Premis Universal (Semua) & Partikular (Sebagian)",
+    "is_active": 1
   },
   {
     "id": 37,
@@ -1290,14 +1849,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, premis 1 menegaskan sistem whistleblowing merupakan syarat bagi WBK."
     },
     "tips": "Ingat hukum kontraposisi: Jika P -> Q, maka ~Q -> ~P. Jika sebagian tidak Q (~Q), maka sebagian tersebut tidak P (~P).",
-    "sumber": "Modul Penalaran Logis BKN & PermenPAN-RB Pembangunan ZI-WBK",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Logika Formal & Silogisme Resmi CAT BKN (Modul Logika Hal. 22)",
+    "sumber_nama": "Modul Logika Formal & Silogisme Resmi CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Logika Hal. 22",
+    "sumber_no_soal": "Silogisme Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
+      "videoId": "N4tKi78Sxcs",
+      "timestamp": "05:30",
+      "startSeconds": 330,
       "title": "Bongkar Trik Silogisme Negatif & Kontraposisi Cepat",
-      "timestamp": "09:15",
-      "channel": "DoseNdeso"
+      "channel": "DoseNdeso",
+      "topic_part": "Penyelesaian Silogisme Negatif Menggunakan Hukum Kontraposisi",
+      "url": "https://www.youtube-nocookie.com/embed/N4tKi78Sxcs?start=330&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=N4tKi78Sxcs&t=330s",
+      "thumbnail": "https://img.youtube.com/vi/N4tKi78Sxcs/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "N4tKi78Sxcs",
+      "timestamp": "05:30",
+      "startSeconds": 330,
+      "title": "Bongkar Trik Silogisme Negatif & Kontraposisi Cepat",
+      "channel": "DoseNdeso",
+      "topic_part": "Penyelesaian Silogisme Negatif Menggunakan Hukum Kontraposisi",
+      "url": "https://www.youtube-nocookie.com/embed/N4tKi78Sxcs?start=330&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=N4tKi78Sxcs&t=330s",
+      "thumbnail": "https://img.youtube.com/vi/N4tKi78Sxcs/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/N4tKi78Sxcs?start=330&rel=0",
+    "video_title": "Bongkar Trik Silogisme Negatif & Kontraposisi Cepat",
+    "video_channel": "DoseNdeso",
+    "video_timestamp": "05:30",
+    "video_start_seconds": 330,
+    "video_topic_part": "Penyelesaian Silogisme Negatif Menggunakan Hukum Kontraposisi",
+    "is_active": 1
   },
   {
     "id": 38,
@@ -1329,14 +1916,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, nilai per subtes tidak disebutkan dalam premis."
     },
     "tips": "Silogisme Rantai 3 Premis: P -> Q, Q -> R, ~R -> Kesimpulan: ~Q. Tarik hubungan paling dekat yang tidak mengandung multitafsir.",
-    "sumber": "KepmenPAN-RB Pengadaan CASN & Kisi-Kisi Resmi BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Logika Formal & Silogisme Resmi CAT BKN (Modul Logika Hal. 23)",
+    "sumber_nama": "Modul Logika Formal & Silogisme Resmi CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Logika Hal. 23",
+    "sumber_no_soal": "Silogisme Butir 4",
     "youtube": {
-      "url": "https://www.youtube.com/embed/k01WuuRDl_Y",
+      "videoId": "k01WuuRDl_Y",
+      "timestamp": "02:50",
+      "startSeconds": 170,
       "title": "The Secret of 3-Premised Syllogism | TIU SKD CPNS",
-      "timestamp": "03:45",
-      "channel": "ASN Institute"
+      "channel": "ASN Institute",
+      "topic_part": "Metode Rantai Silogisme 3 Premis (Syllogism Chain Rule)",
+      "url": "https://www.youtube-nocookie.com/embed/k01WuuRDl_Y?start=170&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=k01WuuRDl_Y&t=170s",
+      "thumbnail": "https://img.youtube.com/vi/k01WuuRDl_Y/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "k01WuuRDl_Y",
+      "timestamp": "02:50",
+      "startSeconds": 170,
+      "title": "The Secret of 3-Premised Syllogism | TIU SKD CPNS",
+      "channel": "ASN Institute",
+      "topic_part": "Metode Rantai Silogisme 3 Premis (Syllogism Chain Rule)",
+      "url": "https://www.youtube-nocookie.com/embed/k01WuuRDl_Y?start=170&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=k01WuuRDl_Y&t=170s",
+      "thumbnail": "https://img.youtube.com/vi/k01WuuRDl_Y/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/k01WuuRDl_Y?start=170&rel=0",
+    "video_title": "The Secret of 3-Premised Syllogism | TIU SKD CPNS",
+    "video_channel": "ASN Institute",
+    "video_timestamp": "02:50",
+    "video_start_seconds": 170,
+    "video_topic_part": "Metode Rantai Silogisme 3 Premis (Syllogism Chain Rule)",
+    "is_active": 1
   },
   {
     "id": 39,
@@ -1368,14 +1983,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, Hana lebih tinggi dari Farhan, posisi keduanya terbalik."
     },
     "tips": "Trik Rantai Pertidaksamaan: Tuliskan simbol '>' untuk setiap pernyataan lalu sambungkan rantai variabelnya: J > I > H > F > G > K.",
-    "sumber": "Bank Soal Simulasi Resmi Penalaran Analitis BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Penalaran Analitis Meja Bundar & Penjadwalan BKN (Modul Analitis Hal. 29)",
+    "sumber_nama": "Bank Soal Penalaran Analitis Meja Bundar & Penjadwalan BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Analitis Hal. 29",
+    "sumber_no_soal": "Analitis Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/saHKoLqaS1M",
-      "title": "Trik Menyusun Urutan Peringkat Nilai Penalaran Analitis Cepat",
-      "timestamp": "15:20",
-      "channel": "Privat Al Faiz"
+      "videoId": "qyOKpUMMza4",
+      "timestamp": "02:15",
+      "startSeconds": 135,
+      "title": "Penalaran Analitis Urutan Peringkat Nilai & Skor Tes SKD CPNS",
+      "channel": "Ping Lie",
+      "topic_part": "Trik Membuat Diagram Garis Tingkatan / Ranking Nilai Penalaran Analitis",
+      "url": "https://www.youtube-nocookie.com/embed/qyOKpUMMza4?start=135&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=qyOKpUMMza4&t=135s",
+      "thumbnail": "https://img.youtube.com/vi/qyOKpUMMza4/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "qyOKpUMMza4",
+      "timestamp": "02:15",
+      "startSeconds": 135,
+      "title": "Penalaran Analitis Urutan Peringkat Nilai & Skor Tes SKD CPNS",
+      "channel": "Ping Lie",
+      "topic_part": "Trik Membuat Diagram Garis Tingkatan / Ranking Nilai Penalaran Analitis",
+      "url": "https://www.youtube-nocookie.com/embed/qyOKpUMMza4?start=135&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=qyOKpUMMza4&t=135s",
+      "thumbnail": "https://img.youtube.com/vi/qyOKpUMMza4/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/qyOKpUMMza4?start=135&rel=0",
+    "video_title": "Penalaran Analitis Urutan Peringkat Nilai & Skor Tes SKD CPNS",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "02:15",
+    "video_start_seconds": 135,
+    "video_topic_part": "Trik Membuat Diagram Garis Tingkatan / Ranking Nilai Penalaran Analitis",
+    "is_active": 1
   },
   {
     "id": 40,
@@ -1407,14 +2050,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, P berhadapan dengan S."
     },
     "tips": "Gambar lingkaran dengan 6 titik (jam 12, 2, 4, 6, 8, 10). Ingat posisi 'berhadapan' selalu berjarak 3 langkah (lintas diameter). Orang menghadap ke pusat lingkaran!",
-    "sumber": "Modul Latihan Penalaran Posisi Meja Bundar BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Penalaran Analitis Meja Bundar & Penjadwalan BKN (Modul Analitis Hal. 30)",
+    "sumber_nama": "Bank Soal Penalaran Analitis Meja Bundar & Penjadwalan BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Analitis Hal. 30",
+    "sumber_no_soal": "Analitis Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
-      "title": "Trik Cepat Soal Meja Bundar dan Penalaran Analitis TIU CPNS",
-      "timestamp": "18:00",
-      "channel": "DoseNdeso"
+      "videoId": "SztJ1OE4Em4",
+      "timestamp": "03:45",
+      "startSeconds": 225,
+      "title": "Rahasia Soal Posisi Duduk Melingkar & Meja Bundar TIU CPNS",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Teknik Menggambar Posisi Duduk Meja Bundar & Berhadapan 6 Orang",
+      "url": "https://www.youtube-nocookie.com/embed/SztJ1OE4Em4?start=225&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=SztJ1OE4Em4&t=225s",
+      "thumbnail": "https://img.youtube.com/vi/SztJ1OE4Em4/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "SztJ1OE4Em4",
+      "timestamp": "03:45",
+      "startSeconds": 225,
+      "title": "Rahasia Soal Posisi Duduk Melingkar & Meja Bundar TIU CPNS",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Teknik Menggambar Posisi Duduk Meja Bundar & Berhadapan 6 Orang",
+      "url": "https://www.youtube-nocookie.com/embed/SztJ1OE4Em4?start=225&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=SztJ1OE4Em4&t=225s",
+      "thumbnail": "https://img.youtube.com/vi/SztJ1OE4Em4/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/SztJ1OE4Em4?start=225&rel=0",
+    "video_title": "Rahasia Soal Posisi Duduk Melingkar & Meja Bundar TIU CPNS",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "03:45",
+    "video_start_seconds": 225,
+    "video_topic_part": "Teknik Menggambar Posisi Duduk Meja Bundar & Berhadapan 6 Orang",
+    "is_active": 1
   },
   {
     "id": 41,
@@ -1446,14 +2117,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, Jumat ditempati oleh Andi yang hanya bisa piket di hari Jumat (karena hari Rabu sudah diisi Budi)."
     },
     "tips": "Buat grid tabel Senin s.d. Jumat. Kunci terlebih dahulu yang pasti (Dedi=Senin, Citra=Selasa), lalu tempatkan pasangan blok gandeng (Citra-Budi), kemudian penuhi batasan khusus.",
-    "sumber": "Modul Penalaran Analitis Penjadwalan Kerja BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Penalaran Analitis Meja Bundar & Penjadwalan BKN (Modul Analitis Hal. 31)",
+    "sumber_nama": "Bank Soal Penalaran Analitis Meja Bundar & Penjadwalan BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Analitis Hal. 31",
+    "sumber_no_soal": "Analitis Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/N4tKi78Sxcs",
+      "videoId": "qyOKpUMMza4",
+      "timestamp": "07:20",
+      "startSeconds": 440,
       "title": "Trik Penjadwalan Hari dan Shift Kerja Penalaran Analitis TIU",
-      "timestamp": "22:15",
-      "channel": "DoseNdeso"
+      "channel": "Ping Lie",
+      "topic_part": "Trik Matriks Tabel Penjadwalan Hari Kerja & Syarat Pembatas",
+      "url": "https://www.youtube-nocookie.com/embed/qyOKpUMMza4?start=440&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=qyOKpUMMza4&t=440s",
+      "thumbnail": "https://img.youtube.com/vi/qyOKpUMMza4/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "qyOKpUMMza4",
+      "timestamp": "07:20",
+      "startSeconds": 440,
+      "title": "Trik Penjadwalan Hari dan Shift Kerja Penalaran Analitis TIU",
+      "channel": "Ping Lie",
+      "topic_part": "Trik Matriks Tabel Penjadwalan Hari Kerja & Syarat Pembatas",
+      "url": "https://www.youtube-nocookie.com/embed/qyOKpUMMza4?start=440&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=qyOKpUMMza4&t=440s",
+      "thumbnail": "https://img.youtube.com/vi/qyOKpUMMza4/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/qyOKpUMMza4?start=440&rel=0",
+    "video_title": "Trik Penjadwalan Hari dan Shift Kerja Penalaran Analitis TIU",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "07:20",
+    "video_start_seconds": 440,
+    "video_topic_part": "Trik Matriks Tabel Penjadwalan Hari Kerja & Syarat Pembatas",
+    "is_active": 1
   },
   {
     "id": 42,
@@ -1485,14 +2184,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, estimasi pembagian tidak akurat."
     },
     "tips": "Urutan operasi (Kabataku): Dahulukan tanda kurung, lalu perkalian/pembagian (ubah bagi menjadi kali dengan membalik pecahan kedua), terakhir penjumlahan/pengurangan.",
-    "sumber": "Bank Soal Numerik Berhitung Cepat CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN (Modul Aritmatika Hal. 37)",
+    "sumber_nama": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Aritmatika Hal. 37",
+    "sumber_no_soal": "Numerik Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/hC0wV15OIkg",
+      "videoId": "hC0wV15OIkg",
+      "timestamp": "01:30",
+      "startSeconds": 90,
       "title": "Dasar-Dasar Hitung Cepat Pecahan & Operasi Campuran TIU",
-      "timestamp": "04:10",
-      "channel": "Privat Al Faiz"
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Mengubah Pecahan Campuran ke Biasa & Prioritas Operasi Hitung",
+      "url": "https://www.youtube-nocookie.com/embed/hC0wV15OIkg?start=90&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=hC0wV15OIkg&t=90s",
+      "thumbnail": "https://img.youtube.com/vi/hC0wV15OIkg/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "hC0wV15OIkg",
+      "timestamp": "01:30",
+      "startSeconds": 90,
+      "title": "Dasar-Dasar Hitung Cepat Pecahan & Operasi Campuran TIU",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Mengubah Pecahan Campuran ke Biasa & Prioritas Operasi Hitung",
+      "url": "https://www.youtube-nocookie.com/embed/hC0wV15OIkg?start=90&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=hC0wV15OIkg&t=90s",
+      "thumbnail": "https://img.youtube.com/vi/hC0wV15OIkg/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/hC0wV15OIkg?start=90&rel=0",
+    "video_title": "Dasar-Dasar Hitung Cepat Pecahan & Operasi Campuran TIU",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "01:30",
+    "video_start_seconds": 90,
+    "video_topic_part": "Trik Mengubah Pecahan Campuran ke Biasa & Prioritas Operasi Hitung",
+    "is_active": 1
   },
   {
     "id": 43,
@@ -1524,14 +2251,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, perkalian tidak tepat."
     },
     "tips": "Trik Aljabar Cepat: Ingat selalu bentuk a^2 - b^2 = (a - b)(a + b). Jika (a + b) menghasilkan angka puluhan/ratusan bulat seperti 100, langsung kalikan dengan (a - b)!",
-    "sumber": "Modul Trik Hitung Cepat Aljabar BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN (Modul Aritmatika Hal. 38)",
+    "sumber_nama": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Aritmatika Hal. 38",
+    "sumber_no_soal": "Numerik Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/hC0wV15OIkg",
-      "title": "Trik Hitung Cepat Kuadrat Aljabar Tanpa Mengalikan Manual",
-      "timestamp": "08:50",
-      "channel": "Privat Al Faiz"
+      "videoId": "w_hD4sbv0_E",
+      "timestamp": "02:05",
+      "startSeconds": 125,
+      "title": "Trik Hitung Cepat Bentuk Kuadrat a^2 - b^2 Bahas FR TIU CPNS",
+      "channel": "Sobat Lesedu",
+      "topic_part": "Penerapan Rumus Cepat Bentuk Kuadrat a^2 - b^2 = (a+b)(a-b)",
+      "url": "https://www.youtube-nocookie.com/embed/w_hD4sbv0_E?start=125&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=w_hD4sbv0_E&t=125s",
+      "thumbnail": "https://img.youtube.com/vi/w_hD4sbv0_E/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "w_hD4sbv0_E",
+      "timestamp": "02:05",
+      "startSeconds": 125,
+      "title": "Trik Hitung Cepat Bentuk Kuadrat a^2 - b^2 Bahas FR TIU CPNS",
+      "channel": "Sobat Lesedu",
+      "topic_part": "Penerapan Rumus Cepat Bentuk Kuadrat a^2 - b^2 = (a+b)(a-b)",
+      "url": "https://www.youtube-nocookie.com/embed/w_hD4sbv0_E?start=125&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=w_hD4sbv0_E&t=125s",
+      "thumbnail": "https://img.youtube.com/vi/w_hD4sbv0_E/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/w_hD4sbv0_E?start=125&rel=0",
+    "video_title": "Trik Hitung Cepat Bentuk Kuadrat a^2 - b^2 Bahas FR TIU CPNS",
+    "video_channel": "Sobat Lesedu",
+    "video_timestamp": "02:05",
+    "video_start_seconds": 125,
+    "video_topic_part": "Penerapan Rumus Cepat Bentuk Kuadrat a^2 - b^2 = (a+b)(a-b)",
+    "is_active": 1
   },
   {
     "id": 44,
@@ -1563,14 +2318,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, estimasi terlalu besar."
     },
     "tips": "Hafalkan Persen Istimewa: 62,5% = 5/8. 37,5% = 3/8. 16,67% = 1/6. 33,33% = 1/3. 83,33% = 5/6.",
-    "sumber": "Kumpulan Rumus Cepat Numerik CPNS & PermenPAN-RB",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN (Modul Aritmatika Hal. 39)",
+    "sumber_nama": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Aritmatika Hal. 39",
+    "sumber_no_soal": "Numerik Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/hC0wV15OIkg",
+      "videoId": "hC0wV15OIkg",
+      "timestamp": "05:40",
+      "startSeconds": 340,
       "title": "Trik Hafalan Pecahan Istimewa dan Persentase Hitung Cepat",
-      "timestamp": "14:10",
-      "channel": "Privat Al Faiz"
+      "channel": "Privat Al Faiz",
+      "topic_part": "Tabel Hafalan Sakti Pecahan Istimewa (62,5% = 5/8) Hitungan Detik",
+      "url": "https://www.youtube-nocookie.com/embed/hC0wV15OIkg?start=340&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=hC0wV15OIkg&t=340s",
+      "thumbnail": "https://img.youtube.com/vi/hC0wV15OIkg/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "hC0wV15OIkg",
+      "timestamp": "05:40",
+      "startSeconds": 340,
+      "title": "Trik Hafalan Pecahan Istimewa dan Persentase Hitung Cepat",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Tabel Hafalan Sakti Pecahan Istimewa (62,5% = 5/8) Hitungan Detik",
+      "url": "https://www.youtube-nocookie.com/embed/hC0wV15OIkg?start=340&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=hC0wV15OIkg&t=340s",
+      "thumbnail": "https://img.youtube.com/vi/hC0wV15OIkg/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/hC0wV15OIkg?start=340&rel=0",
+    "video_title": "Trik Hafalan Pecahan Istimewa dan Persentase Hitung Cepat",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "05:40",
+    "video_start_seconds": 340,
+    "video_topic_part": "Tabel Hafalan Sakti Pecahan Istimewa (62,5% = 5/8) Hitungan Detik",
+    "is_active": 1
   },
   {
     "id": 45,
@@ -1602,14 +2385,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, kedua nilai dapat ditentukan secara eksak dengan mudah."
     },
     "tips": "Trik Selisih Pecahan: Jika selisih angka penyebut sama (|17-14| = 3 dan |18-15| = 3), maka pecahan dengan angka-angka yang lebih kecil SELALU bernilai LEBIH BESAR.",
-    "sumber": "Modul Perbandingan Kuantitatif Cepat BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN (Modul Aritmatika Hal. 40)",
+    "sumber_nama": "Modul Hitung Cepat Aritmatika & Aljabar Kuadrat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Aritmatika Hal. 40",
+    "sumber_no_soal": "Numerik Butir 4",
     "youtube": {
-      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
-      "title": "Trik Perbandingan Pecahan Kuantitatif x dan y Tanpa Menghitung Penuh",
-      "timestamp": "06:30",
-      "channel": "Eduvid"
+      "videoId": "QX4QUoT4TiQ",
+      "timestamp": "03:35",
+      "startSeconds": 215,
+      "title": "Trik Menjawab Cepat ALJABAR Perbandingan Kuantitatif x & y TIU",
+      "channel": "Ping Lie",
+      "topic_part": "Analisis Perbandingan Selisih Pecahan Berpembilang Sama Tanpa Menghitung",
+      "url": "https://www.youtube-nocookie.com/embed/QX4QUoT4TiQ?start=215&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=QX4QUoT4TiQ&t=215s",
+      "thumbnail": "https://img.youtube.com/vi/QX4QUoT4TiQ/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "QX4QUoT4TiQ",
+      "timestamp": "03:35",
+      "startSeconds": 215,
+      "title": "Trik Menjawab Cepat ALJABAR Perbandingan Kuantitatif x & y TIU",
+      "channel": "Ping Lie",
+      "topic_part": "Analisis Perbandingan Selisih Pecahan Berpembilang Sama Tanpa Menghitung",
+      "url": "https://www.youtube-nocookie.com/embed/QX4QUoT4TiQ?start=215&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=QX4QUoT4TiQ&t=215s",
+      "thumbnail": "https://img.youtube.com/vi/QX4QUoT4TiQ/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/QX4QUoT4TiQ?start=215&rel=0",
+    "video_title": "Trik Menjawab Cepat ALJABAR Perbandingan Kuantitatif x & y TIU",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "03:35",
+    "video_start_seconds": 215,
+    "video_topic_part": "Analisis Perbandingan Selisih Pecahan Berpembilang Sama Tanpa Menghitung",
+    "is_active": 1
   },
   {
     "id": 46,
@@ -1641,14 +2452,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, tidak sesuai pola konsisten deret."
     },
     "tips": "Trik Deret Angka: Cari selisih antar suku terlebih dahulu. Jika polanya bergantian (+2, +3, +2, +3), lanjutkan siklusnya.",
-    "sumber": "Bank Soal Resmi BKN Deret Aritmatika",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN (Modul Deret Hal. 46)",
+    "sumber_nama": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Deret Hal. 46",
+    "sumber_no_soal": "Deret Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/BeEoy4zm9CE",
+      "videoId": "BeEoy4zm9CE",
+      "timestamp": "01:50",
+      "startSeconds": 110,
       "title": "Bongkar Trik Pola Deret Angka Selisih Bergantian TIU",
-      "timestamp": "03:15",
-      "channel": "Privat Al Faiz"
+      "channel": "Privat Al Faiz",
+      "topic_part": "Identifikasi Pola Selisih Bergantian Dua Operasi Aritmatika (+2, +3)",
+      "url": "https://www.youtube-nocookie.com/embed/BeEoy4zm9CE?start=110&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=BeEoy4zm9CE&t=110s",
+      "thumbnail": "https://img.youtube.com/vi/BeEoy4zm9CE/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "BeEoy4zm9CE",
+      "timestamp": "01:50",
+      "startSeconds": 110,
+      "title": "Bongkar Trik Pola Deret Angka Selisih Bergantian TIU",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Identifikasi Pola Selisih Bergantian Dua Operasi Aritmatika (+2, +3)",
+      "url": "https://www.youtube-nocookie.com/embed/BeEoy4zm9CE?start=110&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=BeEoy4zm9CE&t=110s",
+      "thumbnail": "https://img.youtube.com/vi/BeEoy4zm9CE/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/BeEoy4zm9CE?start=110&rel=0",
+    "video_title": "Bongkar Trik Pola Deret Angka Selisih Bergantian TIU",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "01:50",
+    "video_start_seconds": 110,
+    "video_topic_part": "Identifikasi Pola Selisih Bergantian Dua Operasi Aritmatika (+2, +3)",
+    "is_active": 1
   },
   {
     "id": 47,
@@ -1680,14 +2519,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, perkiraan yang keliru."
     },
     "tips": "Kenali Pola Fibonacci: Jumlahkan 2 angka di depannya untuk menghasilkan angka berikutnya: 13 + 21 = 34, 21 + 34 = 55.",
-    "sumber": "Modul Barisan & Deret BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN (Modul Deret Hal. 47)",
+    "sumber_nama": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Deret Hal. 47",
+    "sumber_no_soal": "Deret Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/ZC7l5Zt2gNE",
+      "videoId": "ZC7l5Zt2gNE",
+      "timestamp": "02:40",
+      "startSeconds": 160,
       "title": "Trik Mengidentifikasi Deret Fibonacci & Variasinya",
-      "timestamp": "05:10",
-      "channel": "Synapsa Project"
+      "channel": "Synapsa Project",
+      "topic_part": "Ciri Khas dan Trik Cepat Mengenali Barisan Bilangan Fibonacci",
+      "url": "https://www.youtube-nocookie.com/embed/ZC7l5Zt2gNE?start=160&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=ZC7l5Zt2gNE&t=160s",
+      "thumbnail": "https://img.youtube.com/vi/ZC7l5Zt2gNE/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "ZC7l5Zt2gNE",
+      "timestamp": "02:40",
+      "startSeconds": 160,
+      "title": "Trik Mengidentifikasi Deret Fibonacci & Variasinya",
+      "channel": "Synapsa Project",
+      "topic_part": "Ciri Khas dan Trik Cepat Mengenali Barisan Bilangan Fibonacci",
+      "url": "https://www.youtube-nocookie.com/embed/ZC7l5Zt2gNE?start=160&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=ZC7l5Zt2gNE&t=160s",
+      "thumbnail": "https://img.youtube.com/vi/ZC7l5Zt2gNE/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/ZC7l5Zt2gNE?start=160&rel=0",
+    "video_title": "Trik Mengidentifikasi Deret Fibonacci & Variasinya",
+    "video_channel": "Synapsa Project",
+    "video_timestamp": "02:40",
+    "video_start_seconds": 160,
+    "video_topic_part": "Ciri Khas dan Trik Cepat Mengenali Barisan Bilangan Fibonacci",
+    "is_active": 1
   },
   {
     "id": 48,
@@ -1719,14 +2586,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, tidak sesuai pola tingkat kedua."
     },
     "tips": "Deret Aritmatika Bertingkat: Jika selisih pertama belum teratur, cari selisih dari selisih tersebut (+3, +5, +7, +9, +11, +13).",
-    "sumber": "Bank Soal Deret Bertingkat CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN (Modul Deret Hal. 48)",
+    "sumber_nama": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Deret Hal. 48",
+    "sumber_no_soal": "Deret Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/jjRBvH9Cbj4",
+      "videoId": "jjRBvH9Cbj4",
+      "timestamp": "03:15",
+      "startSeconds": 195,
       "title": "Trik Deret Bertingkat HOTS TIU CPNS",
-      "timestamp": "07:20",
-      "channel": "Agus Arta"
+      "channel": "Agus Arta",
+      "topic_part": "Pola Deret Bertingkat Dua Tingkat (Selisih Bertambah Konstan +2)",
+      "url": "https://www.youtube-nocookie.com/embed/jjRBvH9Cbj4?start=195&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=jjRBvH9Cbj4&t=195s",
+      "thumbnail": "https://img.youtube.com/vi/jjRBvH9Cbj4/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "jjRBvH9Cbj4",
+      "timestamp": "03:15",
+      "startSeconds": 195,
+      "title": "Trik Deret Bertingkat HOTS TIU CPNS",
+      "channel": "Agus Arta",
+      "topic_part": "Pola Deret Bertingkat Dua Tingkat (Selisih Bertambah Konstan +2)",
+      "url": "https://www.youtube-nocookie.com/embed/jjRBvH9Cbj4?start=195&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=jjRBvH9Cbj4&t=195s",
+      "thumbnail": "https://img.youtube.com/vi/jjRBvH9Cbj4/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/jjRBvH9Cbj4?start=195&rel=0",
+    "video_title": "Trik Deret Bertingkat HOTS TIU CPNS",
+    "video_channel": "Agus Arta",
+    "video_timestamp": "03:15",
+    "video_start_seconds": 195,
+    "video_topic_part": "Pola Deret Bertingkat Dua Tingkat (Selisih Bertambah Konstan +2)",
+    "is_active": 1
   },
   {
     "id": 49,
@@ -1758,14 +2653,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, keliru pola kuadrat."
     },
     "tips": "Trik Pola Lompat (Multi-Series): Jika angka naik-turun selang-seling, pisahkan menjadi suku bernomor ganjil dan suku bernomor genap.",
-    "sumber": "Modul Pola Bilangan Ganda BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN (Modul Deret Hal. 49)",
+    "sumber_nama": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Deret Hal. 49",
+    "sumber_no_soal": "Deret Butir 4",
     "youtube": {
-      "url": "https://www.youtube.com/embed/BeEoy4zm9CE",
+      "videoId": "BeEoy4zm9CE",
+      "timestamp": "06:25",
+      "startSeconds": 385,
       "title": "Trik Menyelesaikan Deret Pola Lompat 2 dan Kuadrat",
-      "timestamp": "11:05",
-      "channel": "Privat Al Faiz"
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Memisahkan Larik Ganjil dan Larik Genap pada Deret Campuran",
+      "url": "https://www.youtube-nocookie.com/embed/BeEoy4zm9CE?start=385&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=BeEoy4zm9CE&t=385s",
+      "thumbnail": "https://img.youtube.com/vi/BeEoy4zm9CE/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "BeEoy4zm9CE",
+      "timestamp": "06:25",
+      "startSeconds": 385,
+      "title": "Trik Menyelesaikan Deret Pola Lompat 2 dan Kuadrat",
+      "channel": "Privat Al Faiz",
+      "topic_part": "Trik Memisahkan Larik Ganjil dan Larik Genap pada Deret Campuran",
+      "url": "https://www.youtube-nocookie.com/embed/BeEoy4zm9CE?start=385&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=BeEoy4zm9CE&t=385s",
+      "thumbnail": "https://img.youtube.com/vi/BeEoy4zm9CE/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/BeEoy4zm9CE?start=385&rel=0",
+    "video_title": "Trik Menyelesaikan Deret Pola Lompat 2 dan Kuadrat",
+    "video_channel": "Privat Al Faiz",
+    "video_timestamp": "06:25",
+    "video_start_seconds": 385,
+    "video_topic_part": "Trik Memisahkan Larik Ganjil dan Larik Genap pada Deret Campuran",
+    "is_active": 1
   },
   {
     "id": 50,
@@ -1797,14 +2720,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, V adalah huruf ke-22 (+7)."
     },
     "tips": "Trik Deret Huruf: Segera konversi huruf menjadi angka urut (A=1 s/d Z=26). Kerjakan seperti deret angka biasa, lalu kembalikan ke bentuk huruf.",
-    "sumber": "Bank Soal Deret Alfabetis BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN (Modul Deret Hal. 50)",
+    "sumber_nama": "Kumpulan Barisan & Deret Bilangan Bertingkat CAT BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Deret Hal. 50",
+    "sumber_no_soal": "Deret Butir 5",
     "youtube": {
-      "url": "https://www.youtube.com/embed/ZC7l5Zt2gNE",
+      "videoId": "ZC7l5Zt2gNE",
+      "timestamp": "05:10",
+      "startSeconds": 310,
       "title": "Trik Konversi Huruf ke Angka Deret Alfabet Cepat",
-      "timestamp": "09:40",
-      "channel": "Synapsa Project"
+      "channel": "Synapsa Project",
+      "topic_part": "Trik Cepat Konversi Huruf Alfabet Menjadi Angka Urutan 1-26",
+      "url": "https://www.youtube-nocookie.com/embed/ZC7l5Zt2gNE?start=310&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=ZC7l5Zt2gNE&t=310s",
+      "thumbnail": "https://img.youtube.com/vi/ZC7l5Zt2gNE/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "ZC7l5Zt2gNE",
+      "timestamp": "05:10",
+      "startSeconds": 310,
+      "title": "Trik Konversi Huruf ke Angka Deret Alfabet Cepat",
+      "channel": "Synapsa Project",
+      "topic_part": "Trik Cepat Konversi Huruf Alfabet Menjadi Angka Urutan 1-26",
+      "url": "https://www.youtube-nocookie.com/embed/ZC7l5Zt2gNE?start=310&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=ZC7l5Zt2gNE&t=310s",
+      "thumbnail": "https://img.youtube.com/vi/ZC7l5Zt2gNE/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/ZC7l5Zt2gNE?start=310&rel=0",
+    "video_title": "Trik Konversi Huruf ke Angka Deret Alfabet Cepat",
+    "video_channel": "Synapsa Project",
+    "video_timestamp": "05:10",
+    "video_start_seconds": 310,
+    "video_topic_part": "Trik Cepat Konversi Huruf Alfabet Menjadi Angka Urutan 1-26",
+    "is_active": 1
   },
   {
     "id": 51,
@@ -1836,14 +2787,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, tidak mungkin bertambah."
     },
     "tips": "Rumus Cepat: Jika suatu nilai naik a% lalu turun a%, hasilnya SELALU TURUN sebesar (a^2 / 100)%. Contoh: Naik 20% turun 20% -> Turun (20^2/100)% = Turun 4%.",
-    "sumber": "Modul Aritmatika Sosial & Geometri BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN (Modul Perbandingan Hal. 56)",
+    "sumber_nama": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Perbandingan Hal. 56",
+    "sumber_no_soal": "Perbandingan Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "04:15",
+      "startSeconds": 255,
       "title": "Trik Cepat Persentase Perubahan Luas & Rumus Cepat (x^2/100)",
-      "timestamp": "04:50",
-      "channel": "Ping Lie"
+      "channel": "Ping Lie",
+      "topic_part": "Rumus Kilat Perubahan Luas Persentase Sama Bertolak Belakang (-x^2/100)",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=255&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=255s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "04:15",
+      "startSeconds": 255,
+      "title": "Trik Cepat Persentase Perubahan Luas & Rumus Cepat (x^2/100)",
+      "channel": "Ping Lie",
+      "topic_part": "Rumus Kilat Perubahan Luas Persentase Sama Bertolak Belakang (-x^2/100)",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=255&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=255s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=255&rel=0",
+    "video_title": "Trik Cepat Persentase Perubahan Luas & Rumus Cepat (x^2/100)",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "04:15",
+    "video_start_seconds": 255,
+    "video_topic_part": "Rumus Kilat Perubahan Luas Persentase Sama Bertolak Belakang (-x^2/100)",
+    "is_active": 1
   },
   {
     "id": 52,
@@ -1875,14 +2854,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, kedua nilai sangat terdefinisi jelas."
     },
     "tips": "Hafalkan akar kuadrat penting: sqrt(576) = 24, sqrt(625) = 25, sqrt(676) = 26, sqrt(729) = 27.",
-    "sumber": "Bank Soal Perbandingan Nilai Kuantitatif BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN (Modul Perbandingan Hal. 57)",
+    "sumber_nama": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Perbandingan Hal. 57",
+    "sumber_no_soal": "Perbandingan Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
-      "title": "Trik Menentukan Hubungan Kuantitatif x dan y Cepat",
-      "timestamp": "12:10",
-      "channel": "Eduvid"
+      "videoId": "QX4QUoT4TiQ",
+      "timestamp": "06:40",
+      "startSeconds": 400,
+      "title": "Trik Menentukan Hubungan Kuantitatif Nilai Variabel Cepat",
+      "channel": "Ping Lie",
+      "topic_part": "Trik Penarikan Akar Kuadrat 3 Digit dan Perkalian Pecahan",
+      "url": "https://www.youtube-nocookie.com/embed/QX4QUoT4TiQ?start=400&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=QX4QUoT4TiQ&t=400s",
+      "thumbnail": "https://img.youtube.com/vi/QX4QUoT4TiQ/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "QX4QUoT4TiQ",
+      "timestamp": "06:40",
+      "startSeconds": 400,
+      "title": "Trik Menentukan Hubungan Kuantitatif Nilai Variabel Cepat",
+      "channel": "Ping Lie",
+      "topic_part": "Trik Penarikan Akar Kuadrat 3 Digit dan Perkalian Pecahan",
+      "url": "https://www.youtube-nocookie.com/embed/QX4QUoT4TiQ?start=400&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=QX4QUoT4TiQ&t=400s",
+      "thumbnail": "https://img.youtube.com/vi/QX4QUoT4TiQ/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/QX4QUoT4TiQ?start=400&rel=0",
+    "video_title": "Trik Menentukan Hubungan Kuantitatif Nilai Variabel Cepat",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "06:40",
+    "video_start_seconds": 400,
+    "video_topic_part": "Trik Penarikan Akar Kuadrat 3 Digit dan Perkalian Pecahan",
+    "is_active": 1
   },
   {
     "id": 53,
@@ -1914,14 +2921,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, 30 x 12 = 360 km."
     },
     "tips": "Perbandingan Senilai: Cari rasio satuan terlebih dahulu! 180 km : 15 liter = 12 km/liter. Maka 300 km : 12 = 25 liter.",
-    "sumber": "Modul Aritmatika Perbandingan BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN (Modul Perbandingan Hal. 58)",
+    "sumber_nama": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Perbandingan Hal. 58",
+    "sumber_no_soal": "Perbandingan Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "01:25",
+      "startSeconds": 85,
       "title": "Bedain Perbandingan Senilai dan Berbalik Nilai TIU SKD CPNS",
-      "timestamp": "02:30",
-      "channel": "Ping Lie"
+      "channel": "Ping Lie",
+      "topic_part": "Konsep Dasar Perbandingan Senilai dan Rumus Silang Perbandingan",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=85&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=85s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "01:25",
+      "startSeconds": 85,
+      "title": "Bedain Perbandingan Senilai dan Berbalik Nilai TIU SKD CPNS",
+      "channel": "Ping Lie",
+      "topic_part": "Konsep Dasar Perbandingan Senilai dan Rumus Silang Perbandingan",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=85&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=85s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=85&rel=0",
+    "video_title": "Bedain Perbandingan Senilai dan Berbalik Nilai TIU SKD CPNS",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "01:25",
+    "video_start_seconds": 85,
+    "video_topic_part": "Konsep Dasar Perbandingan Senilai dan Rumus Silang Perbandingan",
+    "is_active": 1
   },
   {
     "id": 54,
@@ -1953,14 +2988,42 @@ window.SKD_QUESTIONS = [
       "E": "Benar (Kunci Jawaban), Tambahan pekerja = (6 hari libur x 20 pekerja) / 12 sisa hari = 10 orang pekerja tambahan."
     },
     "tips": "Rumus Kilat Proyek Terhenti: Tambahan Pekerja = (Hari Berhenti x Pekerja Mula-mula) / (Sisa Hari Efektif).",
-    "sumber": "Bank Soal Perbandingan Berbalik Nilai CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN (Modul Perbandingan Hal. 59)",
+    "sumber_nama": "Modul Perbandingan Kuantitatif Senilai & Berbalik Nilai BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Perbandingan Hal. 59",
+    "sumber_no_soal": "Perbandingan Butir 4",
     "youtube": {
-      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "08:50",
+      "startSeconds": 530,
       "title": "Trik Rumus Cepat Proyek Terhenti Perbandingan Berbalik Nilai",
-      "timestamp": "08:15",
-      "channel": "Ping Lie"
+      "channel": "Ping Lie",
+      "topic_part": "Rumus Sakti Proyek Terhenti: (Hari Libur x Pekerja Awal) / Sisa Hari",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=530&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=530s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "08:50",
+      "startSeconds": 530,
+      "title": "Trik Rumus Cepat Proyek Terhenti Perbandingan Berbalik Nilai",
+      "channel": "Ping Lie",
+      "topic_part": "Rumus Sakti Proyek Terhenti: (Hari Libur x Pekerja Awal) / Sisa Hari",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=530&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=530s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=530&rel=0",
+    "video_title": "Trik Rumus Cepat Proyek Terhenti Perbandingan Berbalik Nilai",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "08:50",
+    "video_start_seconds": 530,
+    "video_topic_part": "Rumus Sakti Proyek Terhenti: (Hari Libur x Pekerja Awal) / Sisa Hari",
+    "is_active": 1
   },
   {
     "id": 55,
@@ -1992,14 +3055,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, waktu tempuh 3,5 jam terlalu lama."
     },
     "tips": "Rumus Berpapasan (Waktu Sama): t = Jarak Total / (V1 + V2). Tambahkan hasilnya ke jam keberangkatan.",
-    "sumber": "Modul Fisika Terapan / Kinematika Gerak BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN (Modul Cerita Hal. 65)",
+    "sumber_nama": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Cerita Hal. 65",
+    "sumber_no_soal": "Soal Cerita Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/HtAmgbrUar8",
+      "videoId": "HtAmgbrUar8",
+      "timestamp": "02:30",
+      "startSeconds": 150,
       "title": "Pembahasan Soal Kecepatan Jarak Waktu Berpapasan TIU CPNS",
-      "timestamp": "03:40",
-      "channel": "Bimbel CPNS"
+      "channel": "Mohammad Jafar",
+      "topic_part": "Rumus Cepat Waktu Berpapasan: t = S / (v1 + v2)",
+      "url": "https://www.youtube-nocookie.com/embed/HtAmgbrUar8?start=150&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=HtAmgbrUar8&t=150s",
+      "thumbnail": "https://img.youtube.com/vi/HtAmgbrUar8/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "HtAmgbrUar8",
+      "timestamp": "02:30",
+      "startSeconds": 150,
+      "title": "Pembahasan Soal Kecepatan Jarak Waktu Berpapasan TIU CPNS",
+      "channel": "Mohammad Jafar",
+      "topic_part": "Rumus Cepat Waktu Berpapasan: t = S / (v1 + v2)",
+      "url": "https://www.youtube-nocookie.com/embed/HtAmgbrUar8?start=150&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=HtAmgbrUar8&t=150s",
+      "thumbnail": "https://img.youtube.com/vi/HtAmgbrUar8/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/HtAmgbrUar8?start=150&rel=0",
+    "video_title": "Pembahasan Soal Kecepatan Jarak Waktu Berpapasan TIU CPNS",
+    "video_channel": "Mohammad Jafar",
+    "video_timestamp": "02:30",
+    "video_start_seconds": 150,
+    "video_topic_part": "Rumus Cepat Waktu Berpapasan: t = S / (v1 + v2)",
+    "is_active": 1
   },
   {
     "id": 56,
@@ -2031,14 +3122,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, 1,5 jam setelah mobil berangkat posisinya sudah jauh mendahului."
     },
     "tips": "Rumus Cepat Menyusul: t_susul = (V1 * delta_t) / (V2 - V1). Lalu tambahkan t_susul ke jam keberangkatan orang kedua!",
-    "sumber": "Bank Soal Kecepatan Jarak Waktu CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN (Modul Cerita Hal. 66)",
+    "sumber_nama": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Cerita Hal. 66",
+    "sumber_no_soal": "Soal Cerita Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/byHKRGVEZOE",
+      "videoId": "byHKRGVEZOE",
+      "timestamp": "03:40",
+      "startSeconds": 220,
       "title": "Trik Kilat Soal Menyusul TIU SKD CPNS Tanpa Rumus Rumit",
-      "timestamp": "05:15",
-      "channel": "DoseNdeso"
+      "channel": "DoseNdeso",
+      "topic_part": "Rumus Kilat Waktu Menyusul: Selisih Jarak / (v2 - v1)",
+      "url": "https://www.youtube-nocookie.com/embed/byHKRGVEZOE?start=220&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=byHKRGVEZOE&t=220s",
+      "thumbnail": "https://img.youtube.com/vi/byHKRGVEZOE/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "byHKRGVEZOE",
+      "timestamp": "03:40",
+      "startSeconds": 220,
+      "title": "Trik Kilat Soal Menyusul TIU SKD CPNS Tanpa Rumus Rumit",
+      "channel": "DoseNdeso",
+      "topic_part": "Rumus Kilat Waktu Menyusul: Selisih Jarak / (v2 - v1)",
+      "url": "https://www.youtube-nocookie.com/embed/byHKRGVEZOE?start=220&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=byHKRGVEZOE&t=220s",
+      "thumbnail": "https://img.youtube.com/vi/byHKRGVEZOE/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/byHKRGVEZOE?start=220&rel=0",
+    "video_title": "Trik Kilat Soal Menyusul TIU SKD CPNS Tanpa Rumus Rumit",
+    "video_channel": "DoseNdeso",
+    "video_timestamp": "03:40",
+    "video_start_seconds": 220,
+    "video_topic_part": "Rumus Kilat Waktu Menyusul: Selisih Jarak / (v2 - v1)",
+    "is_active": 1
   },
   {
     "id": 57,
@@ -2070,14 +3189,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, kekeliruan membagi persamaan."
     },
     "tips": "Hati-hati Pertanyaan Jebakan: Selalu perhatikan frasa waktu pada pertanyaan akhir ('saat ini', 'n tahun lalu', atau 'n tahun mendatang'). Tambahkan sesuai waktu yang diminta!",
-    "sumber": "Modul Aljabar Linier Dua Variabel BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN (Modul Cerita Hal. 67)",
+    "sumber_nama": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Cerita Hal. 67",
+    "sumber_no_soal": "Soal Cerita Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/e22iVO4yW5A",
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "11:15",
+      "startSeconds": 675,
       "title": "Trik Soal Cerita Perbandingan Umur TIU SKD CPNS",
-      "timestamp": "12:40",
-      "channel": "Ping Lie"
+      "channel": "Ping Lie",
+      "topic_part": "Metode Substitusi dan Eliminasi Cepat Sistem Persamaan Umur",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=675&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=675s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "e22iVO4yW5A",
+      "timestamp": "11:15",
+      "startSeconds": 675,
+      "title": "Trik Soal Cerita Perbandingan Umur TIU SKD CPNS",
+      "channel": "Ping Lie",
+      "topic_part": "Metode Substitusi dan Eliminasi Cepat Sistem Persamaan Umur",
+      "url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=675&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=e22iVO4yW5A&t=675s",
+      "thumbnail": "https://img.youtube.com/vi/e22iVO4yW5A/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/e22iVO4yW5A?start=675&rel=0",
+    "video_title": "Trik Soal Cerita Perbandingan Umur TIU SKD CPNS",
+    "video_channel": "Ping Lie",
+    "video_timestamp": "11:15",
+    "video_start_seconds": 675,
+    "video_topic_part": "Metode Substitusi dan Eliminasi Cepat Sistem Persamaan Umur",
+    "is_active": 1
   },
   {
     "id": 58,
@@ -2109,14 +3256,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, tidak sesuai rumus rata-rata gabungan."
     },
     "tips": "Jangan Terjebak Rata-rata Langsung: Jangan hitung (75 + 85) / 2 = 80! Gunakan pembobotan rasio orang (2 pria : 3 wanita) -> 75 + (3/5 x 10) = 81.",
-    "sumber": "Modul Statistik Terapan CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN (Modul Cerita Hal. 68)",
+    "sumber_nama": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Cerita Hal. 68",
+    "sumber_no_soal": "Soal Cerita Butir 4",
     "youtube": {
-      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
+      "videoId": "veNpLt0wRRQ",
+      "timestamp": "02:00",
+      "startSeconds": 120,
       "title": "Trik Hitungan Detik Rata-Rata Gabungan TIU CPNS",
-      "timestamp": "16:20",
-      "channel": "Eduvid"
+      "channel": "EduVid",
+      "topic_part": "Metode Timbangan / Garis Selisih untuk Rata-Rata Gabungan Cepat",
+      "url": "https://www.youtube-nocookie.com/embed/veNpLt0wRRQ?start=120&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=veNpLt0wRRQ&t=120s",
+      "thumbnail": "https://img.youtube.com/vi/veNpLt0wRRQ/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "veNpLt0wRRQ",
+      "timestamp": "02:00",
+      "startSeconds": 120,
+      "title": "Trik Hitungan Detik Rata-Rata Gabungan TIU CPNS",
+      "channel": "EduVid",
+      "topic_part": "Metode Timbangan / Garis Selisih untuk Rata-Rata Gabungan Cepat",
+      "url": "https://www.youtube-nocookie.com/embed/veNpLt0wRRQ?start=120&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=veNpLt0wRRQ&t=120s",
+      "thumbnail": "https://img.youtube.com/vi/veNpLt0wRRQ/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/veNpLt0wRRQ?start=120&rel=0",
+    "video_title": "Trik Hitungan Detik Rata-Rata Gabungan TIU CPNS",
+    "video_channel": "EduVid",
+    "video_timestamp": "02:00",
+    "video_start_seconds": 120,
+    "video_topic_part": "Metode Timbangan / Garis Selisih untuk Rata-Rata Gabungan Cepat",
+    "is_active": 1
   },
   {
     "id": 59,
@@ -2148,14 +3323,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, estimasi penjumlahan keliru."
     },
     "tips": "Rumus Cepat Irisan (Keduanya): (A + B + Luar) - Total Semesta = Irisan. (65 + 45 + 10) - 100 = 120 - 100 = 20 orang!",
-    "sumber": "Bank Soal Himpunan Matematika Dasar BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN (Modul Cerita Hal. 69)",
+    "sumber_nama": "Bank Soal Cerita Kinematika, Umur & Himpunan Venn BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Cerita Hal. 69",
+    "sumber_no_soal": "Soal Cerita Butir 5",
     "youtube": {
-      "url": "https://www.youtube.com/embed/veNpLt0wRRQ",
+      "videoId": "veNpLt0wRRQ",
+      "timestamp": "06:10",
+      "startSeconds": 370,
       "title": "Trik Kilat Diagram Venn Himpunan TIU CPNS",
-      "timestamp": "19:45",
-      "channel": "Eduvid"
+      "channel": "EduVid",
+      "topic_part": "Rumus Praktis Diagram Venn 2 Himpunan: Irisan = (A + B + Tidak Ada) - Semesta",
+      "url": "https://www.youtube-nocookie.com/embed/veNpLt0wRRQ?start=370&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=veNpLt0wRRQ&t=370s",
+      "thumbnail": "https://img.youtube.com/vi/veNpLt0wRRQ/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "veNpLt0wRRQ",
+      "timestamp": "06:10",
+      "startSeconds": 370,
+      "title": "Trik Kilat Diagram Venn Himpunan TIU CPNS",
+      "channel": "EduVid",
+      "topic_part": "Rumus Praktis Diagram Venn 2 Himpunan: Irisan = (A + B + Tidak Ada) - Semesta",
+      "url": "https://www.youtube-nocookie.com/embed/veNpLt0wRRQ?start=370&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=veNpLt0wRRQ&t=370s",
+      "thumbnail": "https://img.youtube.com/vi/veNpLt0wRRQ/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/veNpLt0wRRQ?start=370&rel=0",
+    "video_title": "Trik Kilat Diagram Venn Himpunan TIU CPNS",
+    "video_channel": "EduVid",
+    "video_timestamp": "06:10",
+    "video_start_seconds": 370,
+    "video_topic_part": "Rumus Praktis Diagram Venn 2 Himpunan: Irisan = (A + B + Tidak Ada) - Semesta",
+    "is_active": 1
   },
   {
     "id": 60,
@@ -2187,14 +3390,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, warna dan posisi lingkaran tidak memenuhi aturan perubahan."
     },
     "tips": "Analisis Figural Serial: Pisahkan pengamatan menjadi 2 fokus: 1. Arah rotasi/sudut putar (searah atau berlawanan jarum jam), 2. Perubahan elemen minor (warna, jumlah sisi, posisi).",
-    "sumber": "Modul Tes Figural Penalaran Spasial BKN CAT",
+    "has_image": 1,
+    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='40' y1='60' x2='40' y2='20' stroke='#0f4c81' stroke-width='4' marker-end='url(#arrow)'/><circle cx='40' cy='20' r='6' fill='#0f4c81'/><rect x='85' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='100' y1='40' x2='140' y2='40' stroke='#0f4c81' stroke-width='4'/><circle cx='105' cy='40' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2'/><rect x='165' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='200' y1='20' x2='200' y2='60' stroke='#0f4c81' stroke-width='4'/><circle cx='200' cy='60' r='6' fill='#0f4c81'/><rect x='245' y='5' width='70' height='70' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='4' stroke-width='2'/><text x='275' y='45' font-size='20' fill='#64748b' text-anchor='middle'>?</text></svg>",
+    "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN (Modul Figural Hal. 75)",
+    "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Figural Hal. 75",
+    "sumber_no_soal": "Figural Butir 1",
     "youtube": {
-      "url": "https://www.youtube.com/embed/cJdOppiYjT8",
+      "videoId": "cJdOppiYjT8",
+      "timestamp": "01:40",
+      "startSeconds": 100,
       "title": "Bongkar Trik Soal Figural Serial Gambar TIU CPNS",
-      "timestamp": "02:40",
-      "channel": "AyoCPNS"
+      "channel": "AyoCPNS",
+      "topic_part": "Analisis Arah Rotasi Jarum Jam & Perubahan Unsur Elemen Titik/Garis",
+      "url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=100&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=cJdOppiYjT8&t=100s",
+      "thumbnail": "https://img.youtube.com/vi/cJdOppiYjT8/hqdefault.jpg"
     },
-    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='40' y1='60' x2='40' y2='20' stroke='#0f4c81' stroke-width='4' marker-end='url(#arrow)'/><circle cx='40' cy='20' r='6' fill='#0f4c81'/><rect x='85' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='100' y1='40' x2='140' y2='40' stroke='#0f4c81' stroke-width='4'/><circle cx='105' cy='40' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2'/><rect x='165' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='200' y1='20' x2='200' y2='60' stroke='#0f4c81' stroke-width='4'/><circle cx='200' cy='60' r='6' fill='#0f4c81'/><rect x='245' y='5' width='70' height='70' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='4' stroke-width='2'/><text x='275' y='45' font-size='20' fill='#64748b' text-anchor='middle'>?</text></svg>"
+    "video": {
+      "videoId": "cJdOppiYjT8",
+      "timestamp": "01:40",
+      "startSeconds": 100,
+      "title": "Bongkar Trik Soal Figural Serial Gambar TIU CPNS",
+      "channel": "AyoCPNS",
+      "topic_part": "Analisis Arah Rotasi Jarum Jam & Perubahan Unsur Elemen Titik/Garis",
+      "url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=100&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=cJdOppiYjT8&t=100s",
+      "thumbnail": "https://img.youtube.com/vi/cJdOppiYjT8/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=100&rel=0",
+    "video_title": "Bongkar Trik Soal Figural Serial Gambar TIU CPNS",
+    "video_channel": "AyoCPNS",
+    "video_timestamp": "01:40",
+    "video_start_seconds": 100,
+    "video_topic_part": "Analisis Arah Rotasi Jarum Jam & Perubahan Unsur Elemen Titik/Garis",
+    "is_active": 1
   },
   {
     "id": 61,
@@ -2226,14 +3457,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, jumlah sisi bangun tidak bertambah."
     },
     "tips": "Trik Hitung Sisi & Titik: Catat angka pasangan (3 sisi, 1 titik) -> (4 sisi, 2 titik) -> (5 sisi, 3 titik) -> Selanjutnya pasti (6 sisi, 4 titik).",
-    "sumber": "Modul Pola Geometri Figural CAT BKN",
+    "has_image": 1,
+    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><polygon points='40,15 20,65 60,65' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='40' cy='50' r='4' fill='#0f4c81'/><rect x='95' y='20' width='50' height='50' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='110' cy='45' r='4' fill='#0f4c81'/><circle cx='130' cy='45' r='4' fill='#0f4c81'/><polygon points='200,15 225,35 215,65 185,65 175,35' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='190' cy='45' r='3' fill='#0f4c81'/><circle cx='200' cy='45' r='3' fill='#0f4c81'/><circle cx='210' cy='45' r='3' fill='#0f4c81'/><rect x='245' y='10' width='65' height='65' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='4'/><text x='277' y='48' font-size='20' fill='#64748b' text-anchor='middle'>?</text></svg>",
+    "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN (Modul Figural Hal. 76)",
+    "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Figural Hal. 76",
+    "sumber_no_soal": "Figural Butir 2",
     "youtube": {
-      "url": "https://www.youtube.com/embed/cJdOppiYjT8",
+      "videoId": "cJdOppiYjT8",
+      "timestamp": "04:55",
+      "startSeconds": 295,
       "title": "Trik Menghitung Elemen Geometris Figural Serial",
-      "timestamp": "06:15",
-      "channel": "AyoCPNS"
+      "channel": "AyoCPNS",
+      "topic_part": "Trik Hubungan Jumlah Sisi Poligon & Kuantitas Objek Pendukung",
+      "url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=295&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=cJdOppiYjT8&t=295s",
+      "thumbnail": "https://img.youtube.com/vi/cJdOppiYjT8/hqdefault.jpg"
     },
-    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><polygon points='40,15 20,65 60,65' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='40' cy='50' r='4' fill='#0f4c81'/><rect x='95' y='20' width='50' height='50' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='110' cy='45' r='4' fill='#0f4c81'/><circle cx='130' cy='45' r='4' fill='#0f4c81'/><polygon points='200,15 225,35 215,65 185,65 175,35' fill='none' stroke='#0f4c81' stroke-width='2'/><circle cx='190' cy='45' r='3' fill='#0f4c81'/><circle cx='200' cy='45' r='3' fill='#0f4c81'/><circle cx='210' cy='45' r='3' fill='#0f4c81'/><rect x='245' y='10' width='65' height='65' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='4'/><text x='277' y='48' font-size='20' fill='#64748b' text-anchor='middle'>?</text></svg>"
+    "video": {
+      "videoId": "cJdOppiYjT8",
+      "timestamp": "04:55",
+      "startSeconds": 295,
+      "title": "Trik Menghitung Elemen Geometris Figural Serial",
+      "channel": "AyoCPNS",
+      "topic_part": "Trik Hubungan Jumlah Sisi Poligon & Kuantitas Objek Pendukung",
+      "url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=295&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=cJdOppiYjT8&t=295s",
+      "thumbnail": "https://img.youtube.com/vi/cJdOppiYjT8/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=295&rel=0",
+    "video_title": "Trik Menghitung Elemen Geometris Figural Serial",
+    "video_channel": "AyoCPNS",
+    "video_timestamp": "04:55",
+    "video_start_seconds": 295,
+    "video_topic_part": "Trik Hubungan Jumlah Sisi Poligon & Kuantitas Objek Pendukung",
+    "is_active": 1
   },
   {
     "id": 62,
@@ -2265,14 +3524,42 @@ window.SKD_QUESTIONS = [
       "E": "Benar (Kunci Jawaban), trapesium sembarang bukan poligon beraturan dan tidak memiliki 2 sumbu simetri lipat (tidak sesuai kelompok)."
     },
     "tips": "Trik Soal Ketidaksamaan Gambar: Cek 3 parameter utama: 1. Simetri lipat & putar, 2. Keteraturan sisi/sudut (poligon beraturan vs sembarang), 3. Arah orientasi/rotasi searah jarum jam.",
-    "sumber": "Modul Ujian Figural Ketidaksamaan BKN CAT",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN (Modul Figural Hal. 77)",
+    "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Figural Hal. 77",
+    "sumber_no_soal": "Figural Butir 3",
     "youtube": {
-      "url": "https://www.youtube.com/embed/mKgvPC4yDoc",
+      "videoId": "mKgvPC4yDoc",
+      "timestamp": "02:10",
+      "startSeconds": 130,
       "title": "Trik Menemukan Gambar Berbeda (Ketidaksamaan Gambar) Figural",
-      "timestamp": "04:05",
-      "channel": "Agus Arta Wiguna"
+      "channel": "Agus Arta",
+      "topic_part": "Klasifikasi Karakteristik Bentuk Dasar & Hubungan Garis Simetri",
+      "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=130&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=130s",
+      "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "mKgvPC4yDoc",
+      "timestamp": "02:10",
+      "startSeconds": 130,
+      "title": "Trik Menemukan Gambar Berbeda (Ketidaksamaan Gambar) Figural",
+      "channel": "Agus Arta",
+      "topic_part": "Klasifikasi Karakteristik Bentuk Dasar & Hubungan Garis Simetri",
+      "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=130&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=130s",
+      "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=130&rel=0",
+    "video_title": "Trik Menemukan Gambar Berbeda (Ketidaksamaan Gambar) Figural",
+    "video_channel": "Agus Arta",
+    "video_timestamp": "02:10",
+    "video_start_seconds": 130,
+    "video_topic_part": "Klasifikasi Karakteristik Bentuk Dasar & Hubungan Garis Simetri",
+    "is_active": 1
   },
   {
     "id": 63,
@@ -2304,14 +3591,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, hasil rotasi murni 270 derajat."
     },
     "tips": "Bedakan Rotasi vs Refleksi: Rotasi hanya memutar arah tanpa mengubah tangan (kanan tetap kanan). Refleksi/Cermin membalik orientasi (kanan menjadi kiri).",
-    "sumber": "Bank Soal Figural Spasial CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN (Modul Figural Hal. 78)",
+    "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Figural Hal. 78",
+    "sumber_no_soal": "Figural Butir 4",
     "youtube": {
-      "url": "https://www.youtube.com/embed/mKgvPC4yDoc",
+      "videoId": "mKgvPC4yDoc",
+      "timestamp": "05:35",
+      "startSeconds": 335,
       "title": "Trik Membedakan Rotasi dan Pencerminan (Mirroring) Soal Figural",
-      "timestamp": "08:30",
-      "channel": "Agus Arta Wiguna"
+      "channel": "Agus Arta",
+      "topic_part": "Teknik Membedakan Bangun Hasil Rotasi vs Hasil Pencerminan (Mirror)",
+      "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=335&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=335s",
+      "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "mKgvPC4yDoc",
+      "timestamp": "05:35",
+      "startSeconds": 335,
+      "title": "Trik Membedakan Rotasi dan Pencerminan (Mirroring) Soal Figural",
+      "channel": "Agus Arta",
+      "topic_part": "Teknik Membedakan Bangun Hasil Rotasi vs Hasil Pencerminan (Mirror)",
+      "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=335&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=335s",
+      "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=335&rel=0",
+    "video_title": "Trik Membedakan Rotasi dan Pencerminan (Mirroring) Soal Figural",
+    "video_channel": "Agus Arta",
+    "video_timestamp": "05:35",
+    "video_start_seconds": 335,
+    "video_topic_part": "Teknik Membedakan Bangun Hasil Rotasi vs Hasil Pencerminan (Mirror)",
+    "is_active": 1
   },
   {
     "id": 64,
@@ -2343,14 +3658,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, menyimpang dari aturan penukaran analogi bangun."
     },
     "tips": "Formula Analogi Gambar: Identifikasi 3 hal: 1. Posisi bertukar (Luar <-> Dalam), 2. Ukuran berubah (Besar <-> Kecil), 3. Warna/arsiran berinversi (Hitam <-> Putih).",
-    "sumber": "Modul Analogi Figural CAT BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN (Modul Figural Hal. 79)",
+    "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Figural Hal. 79",
+    "sumber_no_soal": "Figural Butir 5",
     "youtube": {
-      "url": "https://www.youtube.com/embed/cJdOppiYjT8",
+      "videoId": "cJdOppiYjT8",
+      "timestamp": "08:20",
+      "startSeconds": 500,
       "title": "Trik Menyelesaikan Analogi Figural 3 Aturan Perubahan",
-      "timestamp": "11:00",
-      "channel": "AyoCPNS"
+      "channel": "AyoCPNS",
+      "topic_part": "Pemetaan 3 Parameter Analogi Gambar (Ukuran, Posisi, Inversi Warna)",
+      "url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=500&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=cJdOppiYjT8&t=500s",
+      "thumbnail": "https://img.youtube.com/vi/cJdOppiYjT8/hqdefault.jpg"
     },
-    "gambar": null
+    "video": {
+      "videoId": "cJdOppiYjT8",
+      "timestamp": "08:20",
+      "startSeconds": 500,
+      "title": "Trik Menyelesaikan Analogi Figural 3 Aturan Perubahan",
+      "channel": "AyoCPNS",
+      "topic_part": "Pemetaan 3 Parameter Analogi Gambar (Ukuran, Posisi, Inversi Warna)",
+      "url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=500&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=cJdOppiYjT8&t=500s",
+      "thumbnail": "https://img.youtube.com/vi/cJdOppiYjT8/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/cJdOppiYjT8?start=500&rel=0",
+    "video_title": "Trik Menyelesaikan Analogi Figural 3 Aturan Perubahan",
+    "video_channel": "AyoCPNS",
+    "video_timestamp": "08:20",
+    "video_start_seconds": 500,
+    "video_topic_part": "Pemetaan 3 Parameter Analogi Gambar (Ukuran, Posisi, Inversi Warna)",
+    "is_active": 1
   },
   {
     "id": 65,
@@ -2382,14 +3725,42 @@ window.SKD_QUESTIONS = [
       "E": "Salah, sisi 6 berhadapan dengan sayap kiri (sisi 5)."
     },
     "tips": "Kaidah Emas Jaring Kubus: Dua sisi yang berhadapan selalu BERSELANG 1 KOTAK pada lajur lurus. Sisi 1 berhadapan dengan 3, Sisi 2 berhadapan dengan 4, Sayap kiri (5) berhadapan dengan Sayap kanan (6)!",
-    "sumber": "Modul Penalaran Spasial Jaring Bangun Ruang BKN",
+    "has_image": 1,
+    "gambar": "<svg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><rect x='70' y='10' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='90' y='35' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>1</text><rect x='30' y='50' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='50' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>5</text><rect x='70' y='50' width='40' height='40' fill='#bfdbfe' stroke='#0f4c81' stroke-width='2'/><text x='90' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>2</text><rect x='110' y='50' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='130' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>6</text><rect x='70' y='90' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='90' y='115' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>3</text><rect x='70' y='130' width='40' height='40' fill='#dbeafe' stroke='#0f4c81' stroke-width='2'/><text x='90' y='155' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>4</text></svg>",
+    "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN (Modul Figural Hal. 80)",
+    "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN",
+    "sumber_url": "https://cat.bkn.go.id/simulasi/",
+    "sumber_halaman": "Modul Figural Hal. 80",
+    "sumber_no_soal": "Figural Butir 6",
     "youtube": {
-      "url": "https://www.youtube.com/embed/mKgvPC4yDoc",
+      "videoId": "mKgvPC4yDoc",
+      "timestamp": "10:15",
+      "startSeconds": 615,
       "title": "Trik Kilat Soal Jaring-Jaring Kubus & Spasial 3 Dimensi",
-      "timestamp": "12:50",
-      "channel": "Agus Arta Wiguna"
+      "channel": "Agus Arta",
+      "topic_part": "Trik Cepat Menentukan Sisi Berhadapan/Berseberangan Jaring Kubus",
+      "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=615&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=615s",
+      "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
     },
-    "gambar": "<svg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><rect x='70' y='10' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='90' y='35' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>1</text><rect x='30' y='50' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='50' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>5</text><rect x='70' y='50' width='40' height='40' fill='#bfdbfe' stroke='#0f4c81' stroke-width='2'/><text x='90' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>2</text><rect x='110' y='50' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='130' y='75' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>6</text><rect x='70' y='90' width='40' height='40' fill='#e2e8f0' stroke='#0f4c81' stroke-width='2'/><text x='90' y='115' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>3</text><rect x='70' y='130' width='40' height='40' fill='#dbeafe' stroke='#0f4c81' stroke-width='2'/><text x='90' y='155' font-size='16' font-weight='bold' fill='#0f4c81' text-anchor='middle'>4</text></svg>"
+    "video": {
+      "videoId": "mKgvPC4yDoc",
+      "timestamp": "10:15",
+      "startSeconds": 615,
+      "title": "Trik Kilat Soal Jaring-Jaring Kubus & Spasial 3 Dimensi",
+      "channel": "Agus Arta",
+      "topic_part": "Trik Cepat Menentukan Sisi Berhadapan/Berseberangan Jaring Kubus",
+      "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=615&rel=0",
+      "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=615s",
+      "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
+    },
+    "video_url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=615&rel=0",
+    "video_title": "Trik Kilat Soal Jaring-Jaring Kubus & Spasial 3 Dimensi",
+    "video_channel": "Agus Arta",
+    "video_timestamp": "10:15",
+    "video_start_seconds": 615,
+    "video_topic_part": "Trik Cepat Menentukan Sisi Berhadapan/Berseberangan Jaring Kubus",
+    "is_active": 1
   },
   {
     "id": 66,
@@ -2421,9 +3792,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Sangat tidak bertanggung jawab, menelantarkan warga lansia, dan melanggar integritas moral aparatur negara."
     },
     "tips": "Tips TKP Pelayanan Publik: Utamakan EMPATI TINGGI, AKSI TUNTAS, dan KEADILAN bagi kelompok rentan tanpa pungutan liar.",
-    "sumber": "UU No. 25 Tahun 2009 tentang Pelayanan Publik & Core Values ASN BerAKHLAK (Berorientasi Pelayanan)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 16)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 16",
+    "sumber_no_soal": "Pelayanan Publik Kasus 1",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 67,
@@ -2455,9 +3839,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Defensif, melempar tanggung jawab kendala teknis, dan kurang memberikan rasa kepastian kepada pemohon."
     },
     "tips": "Krisis Layanan: Hadapi warga langsung + Minta maaf tulus + Aktifkan sistem manual darurat.",
-    "sumber": "PermenPAN-RB Standar Pelayanan Publik & Surat Edaran BKN Pelayanan Responsif",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 17)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 17",
+    "sumber_no_soal": "Pelayanan Publik Kasus 2",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 68,
@@ -2489,9 +3886,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 3: Membantu secara manual namun fasilitas infrastruktur fisik yang ramah difabel tetap menjadi kebutuhan mendasar."
     },
     "tips": "Pelayanan Inklusif: Pastikan infrastruktur ramah disabilitas menjadi prioritas utama penataan fasilitas publik.",
-    "sumber": "UU No. 8 Tahun 2016 tentang Penyandang Disabilitas & PermenPAN-RB Pelayanan Ramah Kelompok Rentan",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 18)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 18",
+    "sumber_no_soal": "Pelayanan Publik Kasus 3",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 69,
@@ -2523,9 +3933,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Tegas menjaga integritas, santun, dan memberikan edukasi prinsip pelayanan bersih bebas korupsi."
     },
     "tips": "Integritas Hadiah: Tolak tegas + Bahasa santun + Jelaskan bahwa melayani dengan prima adalah kewajiban negara.",
-    "sumber": "UU No. 20 Tahun 2001 (Tipikor) & Core Values ASN BerAKHLAK (Akuntabel)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 19)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 19",
+    "sumber_no_soal": "Pelayanan Publik Kasus 4",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 70,
@@ -2557,9 +3980,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Melanggar hukum, menyuburkan praktik percaloan liar, dan merusak tata kelola pelayanan publik."
     },
     "tips": "Inovasi Birokrasi: Pangkas alur berbelit + Manfaatkan digitalisasi/otomasi demi kemudahan warga.",
-    "sumber": "PermenPAN-RB No. 30 Tahun 2014 tentang Inovasi Pelayanan Publik",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 20)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 20",
+    "sumber_no_soal": "Pelayanan Publik Kasus 5",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 71,
@@ -2591,9 +4027,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Pasif dan tidak peduli terhadap citra lembaga serta hak kepastian pelayanan warga."
     },
     "tips": "Keluhan Publik di Medsos: Minta maaf santun + Minta kronologi detail via DM + Tuntaskan berkasnya segera.",
-    "sumber": "SP4N-LAPOR! & PermenPAN-RB No. 62 Tahun 2018 tentang Pengelolaan Pengaduan Pelayanan Publik",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 21)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 21",
+    "sumber_no_soal": "Pelayanan Publik Kasus 6",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 72,
@@ -2625,9 +4074,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Melanggar hukum UU KIP, tidak transparan, dan merupakan maladministrasi berat."
     },
     "tips": "Keterbukaan Informasi: Jika dokumen berstatus terbuka menurut UU KIP, berikan melalui prosedur PPID secara profesional.",
-    "sumber": "UU No. 14 Tahun 2008 tentang Keterbukaan Informasi Publik & Standar Layanan Informasi BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 22)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 22",
+    "sumber_no_soal": "Pelayanan Publik Kasus 7",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 73,
@@ -2659,9 +4121,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Mengorbankan keadilan dan hak puluhan warga yang tertib demi menghindari konflik sesaat."
     },
     "tips": "Warga Arogan/Emosional: Ajak ke ruang tenang + Bicara santun namun tegas + Tegakkan prinsip antrean tanpa diskriminasi.",
-    "sumber": "Core Values ASN BerAKHLAK (Berorientasi Pelayanan & Akuntabel) & Standar Pelayanan Publik Ombudsman RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB (Hal. 23)",
+    "sumber_nama": "Undang-Undang No. 25 Tahun 2009 tentang Pelayanan Publik & PermenPAN-RB",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/38748/uu-no-25-tahun-2009",
+    "sumber_halaman": "Hal. 23",
+    "sumber_no_soal": "Pelayanan Publik Kasus 8",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 74,
@@ -2693,9 +4168,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Sangat kolaboratif, membangun rasa saling percaya, memetakan potensi sinergi, dan merumuskan konsensus kerja bersama."
     },
     "tips": "Sinergi Lintas Sektor: Bangun kepercayaan + Samakan visi bersama + Petakan keahlian anggota secara inklusif.",
-    "sumber": "Modul Kolaboratif ASN BerAKHLAK (Whole of Government) LAN RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI (Hal. 34)",
+    "sumber_nama": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-kolaboratif",
+    "sumber_halaman": "Hal. 34",
+    "sumber_no_soal": "Jejaring Kerja Kasus 1",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 75,
@@ -2727,9 +4215,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 4: Bagus mengedepankan musyawarah tim, namun pendekatan personal terlebih dahulu dapat menghindari rekan tersebut merasa dihakimi di depan umum."
     },
     "tips": "Menghadapi Rekan Kerja Pasif: Dekati personal empatik -> Cari akar hambatan -> Dampingi solusinya secara terukur.",
-    "sumber": "Modul Harmonis & Kolaboratif Core Values ASN LAN RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI (Hal. 35)",
+    "sumber_nama": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-kolaboratif",
+    "sumber_halaman": "Hal. 35",
+    "sumber_no_soal": "Jejaring Kerja Kasus 2",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 76,
@@ -2761,9 +4262,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Arogan, toksik, merusak keharmonisan, dan mencederai etos kemitraan jejaring aparatur."
     },
     "tips": "Knowledge Sharing: Inisiasi workshop/mentoring internal untuk mengangkat kompetensi seluruh rekan satu tim.",
-    "sumber": "Core Values ASN BerAKHLAK (Kompeten & Kolaboratif) & Pedoman Bangkom LAN RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI (Hal. 36)",
+    "sumber_nama": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-kolaboratif",
+    "sumber_halaman": "Hal. 36",
+    "sumber_no_soal": "Jejaring Kerja Kasus 3",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 77,
@@ -2795,9 +4309,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Arogansi birokrasi sepihak yang membuat mitra eksternal enggan berkolaborasi secara berkelanjutan."
     },
     "tips": "Jejaring Eksternal: Dengarkan aspirasi mitra + Rumuskan win-win solution + Jaga hubungan silaturahmi berkala.",
-    "sumber": "Panduan Kemitraan Pemerintah-Swasta Bappenas & Core Values Kolaboratif",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI (Hal. 37)",
+    "sumber_nama": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-kolaboratif",
+    "sumber_halaman": "Hal. 37",
+    "sumber_no_soal": "Jejaring Kerja Kasus 4",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 78,
@@ -2829,9 +4356,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Sangat destruktif, merusak keutuhan institusi, dan mencerminkan karakter aparatur yang berbahaya."
     },
     "tips": "Konflik Antar-Divisi: Jadilah penengah konstruktif (jembatan komunikasi) yang mengurai sumbatan proses bisnis.",
-    "sumber": "Modul Harmonis dan Kolaboratif Core Values ASN BerAKHLAK LAN RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI (Hal. 38)",
+    "sumber_nama": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-kolaboratif",
+    "sumber_halaman": "Hal. 38",
+    "sumber_no_soal": "Jejaring Kerja Kasus 5",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 79,
@@ -2863,9 +4403,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Sangat bijaksana, memanfaatkan jejaring tokoh kunci lokal, persuasif, menghormati kearifan lokal, dan menjamin keberlanjutan program."
     },
     "tips": "Jejaring Warga: Gandeng Tokoh Kunci (Opinion Leader) lokal agar warga bergerak sukarela dan percaya program negara.",
-    "sumber": "Pedoman Penanganan Stunting Terintegrasi Bappenas & Kemendagri",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI (Hal. 39)",
+    "sumber_nama": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-kolaboratif",
+    "sumber_halaman": "Hal. 39",
+    "sumber_no_soal": "Jejaring Kerja Kasus 6",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 80,
@@ -2897,9 +4450,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 3: Cukup baik mengapresiasi secara informal, namun pengakuan publik atas kerja keras anggota tim tetap krusial."
     },
     "tips": "Pengakuan Tim: Saat berhasil, berikan kredit kepada SELURUH TIM. Jangan pernah mengklaim kemenangan kerja kelompok sebagai milik pribadi.",
-    "sumber": "Modul Kepemimpinan Melayani (Servant Leadership) LAN RI & Core Values Loyal",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI (Hal. 40)",
+    "sumber_nama": "Modul Core Values ASN BerAKHLAK (Harmonis & Kolaboratif) LAN RI",
+    "sumber_url": "https://asnberakhlak.lan.go.id/modul-kolaboratif",
+    "sumber_halaman": "Hal. 40",
+    "sumber_no_soal": "Jejaring Kerja Kasus 7",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 81,
@@ -2931,9 +4497,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 4: Berupaya berkompromi menghargai adat semampunya dengan tetap menjaga kenyamanan tubuh."
     },
     "tips": "Adaptasi Adat Daerah: Hormati simbol tradisi + Terima penuh kesantunan + Jelaskan kendala fisik secara tulus.",
-    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN (Hal. 26)",
+    "sumber_nama": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "sumber_url": "https://jdih.menpan.go.id/dokumen-hukum/permen/38-2017",
+    "sumber_halaman": "Hal. 26",
+    "sumber_no_soal": "Sosial Budaya Kasus 1",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 82,
@@ -2965,9 +4544,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Intoleransi ekstrem, melanggar konstitusi kebebasan beragama, dan merusak kerukunan tempat kerja."
     },
     "tips": "Toleransi Aktif di Kantor: Berikan ucapan tulus + Bersedia gantikan jadwal piket secara adil bergantian.",
-    "sumber": "Core Values ASN BerAKHLAK (Harmonis) & Panduan Moderasi Beragama Kemenag",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN (Hal. 27)",
+    "sumber_nama": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "sumber_url": "https://jdih.menpan.go.id/dokumen-hukum/permen/38-2017",
+    "sumber_halaman": "Hal. 27",
+    "sumber_no_soal": "Sosial Budaya Kasus 2",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 83,
@@ -2999,9 +4591,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Kompromistis yang keliru terhadap tindakan yang mencederai nilai Bhinneka Tunggal Ika."
     },
     "tips": "Candaan SARA: Jangan ikut tertawa! Tegur santun bahwa SARA bukan bahan lelucon + Rangkul rekan yang terluka.",
-    "sumber": "UU No. 40 Tahun 2008 tentang Penghapusan Diskriminasi Ras dan Etnis & Nilai Harmonis BerAKHLAK",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN (Hal. 28)",
+    "sumber_nama": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "sumber_url": "https://jdih.menpan.go.id/dokumen-hukum/permen/38-2017",
+    "sumber_halaman": "Hal. 28",
+    "sumber_no_soal": "Sosial Budaya Kasus 3",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 84,
@@ -3033,9 +4638,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Sangat inklusif, mengedukasi rekan mengenai keragaman budaya nusantara, proaktif menyatukan lingkungan kerja majemuk."
     },
     "tips": "Perbedaan Logat/Budaya: Sambut dengan hangat + Jadilah jembatan yang menjelaskan keragaman budaya nusantara.",
-    "sumber": "UU No. 20 Tahun 2023 (Fungsi Perekat Pemersatu Bangsa) & Modul Sosiokultural LAN RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN (Hal. 29)",
+    "sumber_nama": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "sumber_url": "https://jdih.menpan.go.id/dokumen-hukum/permen/38-2017",
+    "sumber_halaman": "Hal. 29",
+    "sumber_no_soal": "Sosial Budaya Kasus 4",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 85,
@@ -3067,9 +4685,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Kurang menghormati kenyamanan warga dan berisiko melanggar batas etika adat yang berlaku."
     },
     "tips": "Masyarakat Adat: Hormati norma tabu/adat + Gandeng kader perempuan/tetua desa + Sesuaikan jadwal kunjungan.",
-    "sumber": "Pasal 18B Ayat (2) UUD 1945 & Pedoman Sensus BPS Berbasis Kearifan Lokal",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN (Hal. 30)",
+    "sumber_nama": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "sumber_url": "https://jdih.menpan.go.id/dokumen-hukum/permen/38-2017",
+    "sumber_halaman": "Hal. 30",
+    "sumber_no_soal": "Sosial Budaya Kasus 5",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 86,
@@ -3101,9 +4732,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 3: Solusi kompromi pribadi yang aman, namun kurang menangkap semangat pelestarian keragaman pakaian adat nusantara."
     },
     "tips": "Cinta Budaya Nasional: Tunjukkan rasa bangga berbusana tradisional nusantara dan ajak rekan mencintainya.",
-    "sumber": "Surat Edaran Kemendikbudristek Pelestarian Busana Adat Nusantara & Core Values Harmonis",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN (Hal. 31)",
+    "sumber_nama": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "sumber_url": "https://jdih.menpan.go.id/dokumen-hukum/permen/38-2017",
+    "sumber_halaman": "Hal. 31",
+    "sumber_no_soal": "Sosial Budaya Kasus 6",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 87,
@@ -3135,9 +4779,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 4: Berani menyuarakan perdamaian di forum warga, akan semakin kokoh bila dikolaborasikan bersama FKUB."
     },
     "tips": "Isu Pendirian Rumah Ibadah: Gandeng FKUB & RT/RW + Edukasi hak konstitusional beribadah + Utamakan musyawarah damai.",
-    "sumber": "Peraturan Bersama Menteri Agama & Mendagri No. 9 & 8 Tahun 2006 (FKUB & Kerukunan Beragama)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN (Hal. 32)",
+    "sumber_nama": "PermenPAN-RB No. 38 Tahun 2017 tentang Standar Kompetensi Sosio-Kultural ASN",
+    "sumber_url": "https://jdih.menpan.go.id/dokumen-hukum/permen/38-2017",
+    "sumber_halaman": "Hal. 32",
+    "sumber_no_soal": "Sosial Budaya Kasus 7",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 88,
@@ -3169,9 +4826,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Mencederai agenda transformasi digital SPBE dan merusak relasi harmonis antargenerasi di kantor."
     },
     "tips": "Transformasi Digital: Dampingi dengan sabar + Tunjukkan cara praktisnya hingga mandiri.",
-    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Core Values ASN BerAKHLAK (Adaptif)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN (Hal. 28)",
+    "sumber_nama": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN",
+    "sumber_url": "https://jdih.setkab.go.id/PUUdoc/175620/Perpres_Nomor_95_Tahun_2018.pdf",
+    "sumber_halaman": "Hal. 28",
+    "sumber_no_soal": "TIK Kasus 1",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 89,
@@ -3203,9 +4873,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Sangat berintegritas, taat hukum UU PDP, tegas melindungi privasi warga, dan tidak tergoda nepotisme/uang komisi."
     },
     "tips": "Privasi Data TIK: Data warga amanah negara. Tolak tegas jual-beli data pribadi tanpa kompromi!",
-    "sumber": "UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP) & Standar Keamanan BSSN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN (Hal. 29)",
+    "sumber_nama": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN",
+    "sumber_url": "https://jdih.setkab.go.id/PUUdoc/175620/Perpres_Nomor_95_Tahun_2018.pdf",
+    "sumber_halaman": "Hal. 29",
+    "sumber_no_soal": "TIK Kasus 2",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 90,
@@ -3237,9 +4920,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Tidak berdaya juang, melempar tanggung jawab, dan mengakibatkan sanksi administrasi keterlambatan bagi pemda."
     },
     "tips": "Internet Mati Jelang Deadline: Aktifkan tethering hotspot aman / cari kantor terdekat + Tuntaskan upload segera.",
-    "sumber": "Core Values ASN BerAKHLAK (Adaptif & Akuntabel) & Manajemen Kontinjensi SPBE",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN (Hal. 30)",
+    "sumber_nama": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN",
+    "sumber_url": "https://jdih.setkab.go.id/PUUdoc/175620/Perpres_Nomor_95_Tahun_2018.pdf",
+    "sumber_halaman": "Hal. 30",
+    "sumber_no_soal": "TIK Kasus 3",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 91,
@@ -3271,9 +4967,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Resistensi fobia teknologi yang menghambat efisiensi birokrasi modern."
     },
     "tips": "AI di Pemerintahan: Gunakan AI untuk riset cepat + Verifikasi kebenaran faktual secara manual + Jaga kerahasiaan berkas.",
-    "sumber": "Surat Edaran Menkominfo tentang Etika Kecerdasan Buatan & Roadmap Transformasi Digital SPBE",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN (Hal. 31)",
+    "sumber_nama": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN",
+    "sumber_url": "https://jdih.setkab.go.id/PUUdoc/175620/Perpres_Nomor_95_Tahun_2018.pdf",
+    "sumber_halaman": "Hal. 31",
+    "sumber_no_soal": "TIK Kasus 4",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 92,
@@ -3305,9 +5014,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 3: Bijak menjaga privasi pengirim berita, namun anggota keluarga lain di grup masih berpotensi mempercayai hoaks tersebut jika tidak diklarifikasi di grup."
     },
     "tips": "Menangkal Hoaks: Saring sebelum sharing! Berikan bukti klarifikasi dari portal resmi pemerintah secara santun.",
-    "sumber": "UU ITE & Modul Literasi Digital Nasional Kementerian Komunikasi dan Informatika",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN (Hal. 32)",
+    "sumber_nama": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN",
+    "sumber_url": "https://jdih.setkab.go.id/PUUdoc/175620/Perpres_Nomor_95_Tahun_2018.pdf",
+    "sumber_halaman": "Hal. 32",
+    "sumber_no_soal": "TIK Kasus 5",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 93,
@@ -3339,9 +5061,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 4: Tindakan mitigasi darurat yang cepat memutus celah akses sembari menunggu perbaikan permanen."
     },
     "tips": "Bug/Celah Keamanan: Dokumentasikan rahasia + Lapor CSIRT/Pimpinan segera + Lakukan patching penutupan celah.",
-    "sumber": "Panduan Penanganan Insiden Siber Badan Siber dan Sandi Negara (BSSN) & Framework ISO 27001",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN (Hal. 33)",
+    "sumber_nama": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN",
+    "sumber_url": "https://jdih.setkab.go.id/PUUdoc/175620/Perpres_Nomor_95_Tahun_2018.pdf",
+    "sumber_halaman": "Hal. 33",
+    "sumber_no_soal": "TIK Kasus 6",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 94,
@@ -3373,9 +5108,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Komprehensif, aman, sistematis, mematuhi standar kearsipan digital, dan menjamin integritas data institusi."
     },
     "tips": "Migrasi Cloud Storage: SOP metadata sistematis + Hak akses role-based 2FA + Enkripsi & Backup berkala.",
-    "sumber": "Pedoman Pengelolaan Arsip Elektronik Arsip Nasional Republik Indonesia (ANRI) & Standar SPBE",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN (Hal. 34)",
+    "sumber_nama": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN",
+    "sumber_url": "https://jdih.setkab.go.id/PUUdoc/175620/Perpres_Nomor_95_Tahun_2018.pdf",
+    "sumber_halaman": "Hal. 34",
+    "sumber_no_soal": "TIK Kasus 7",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 95,
@@ -3407,9 +5155,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Menghindari tanggung jawab tugas negara yang bersifat kritis dan mendesak."
     },
     "tips": "Tugas Darurat Negara: Komunikasikan santun ke keluarga + Tuntaskan amanah dinas darurat dengan kualitas prima.",
-    "sumber": "PP No. 94 Tahun 2021 tentang Disiplin PNS & Core Values ASN BerAKHLAK (Loyal)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 25)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 25",
+    "sumber_no_soal": "Profesionalisme Kasus 1",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 96,
@@ -3441,9 +5202,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Emosional, tidak memiliki kematangan karakter, dan merusak etika tata krama birokrasi pemerintahan."
     },
     "tips": "Menghadapi Kritik Pedas: Pisahkan emosi dari substansi -> Fokus pada koreksi data/ketelitian -> Terus bertumbuh makin unggul.",
-    "sumber": "Modul Pengembangan Kapasitas Mental dan Resiliensi ASN LAN RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 26)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 26",
+    "sumber_no_soal": "Profesionalisme Kasus 2",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 97,
@@ -3475,9 +5249,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Kepatuhan bersyarat yang tetap terlibat dalam perbuatan melawan hukum administratif perbendaharaan negara."
     },
     "tips": "Perintah Menyimpang: TOLAK DENGAN TEGAS & SANTUN + Jelaskan risiko hukum BPK + Berikan alternatif yang sah.",
-    "sumber": "UU No. 30 Tahun 2014 tentang Administrasi Pemerintahan & UU Tipikor",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 27)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 27",
+    "sumber_no_soal": "Profesionalisme Kasus 3",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 98,
@@ -3509,9 +5296,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 3: Melaksanakan sebagian tugas, namun kurang memiliki ketahanan fisik dan dedikasi pengawasan menyeluruh."
     },
     "tips": "Kerja Tanpa Pengawasan: Disiplin mandiri + Turun ke titik fisik lapangan + Sajikan data objektif apa adanya.",
-    "sumber": "Standar Audit Lapangan BPKP & Core Values ASN BerAKHLAK (Akuntabel)",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 28)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 28",
+    "sumber_no_soal": "Profesionalisme Kasus 4",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 99,
@@ -3543,9 +5343,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Sangat terencana, menerapkan metodologi manajemen waktu yang teruji, fokus pada prioritas kritis, dan efektif."
     },
     "tips": "Beban Kerja Menumpuk: Petakan Prioritas (Penting & Mendesak) -> Delegasikan yang bisa didelegasikan -> Tuntaskan bertahap.",
-    "sumber": "Modul Manajemen Kinerja Individu ASN LAN RI",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 29)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 29",
+    "sumber_no_soal": "Profesionalisme Kasus 5",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 100,
@@ -3577,9 +5390,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Persekongkolan korupsi penggelapan uang negara yang merupakan tindak pidana berat."
     },
     "tips": "Salah Input/Eror Sendiri: AKUI JUJUR SEGERA + Lapor atasan + Proses pengembalian ke kas negara secara tertib.",
-    "sumber": "Peraturan Pemerintah Pengelolaan Keuangan Negara & Core Values Akuntabel",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 30)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 30",
+    "sumber_no_soal": "Profesionalisme Kasus 6",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 101,
@@ -3611,9 +5437,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Terjebak dalam zona nyaman (complacency) yang membuat peningkatan kompetensi karier mandek."
     },
     "tips": "Peluang Upskilling Sertifikasi: Ambil tantangan + Disiplin belajar mandiri + Dedikasikan ilmu bagi perbaikan institusi.",
-    "sumber": "UU No. 20 Tahun 2023 tentang ASN (Pasal Kewajiban Pengembangan Kompetensi) & Core Values Kompeten",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 31)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 31",
+    "sumber_no_soal": "Profesionalisme Kasus 7",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 102,
@@ -3645,9 +5484,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Emosional, tidak profesional, dan merendahkan standar etika pejabat pengadaan barang jasa pemerintah."
     },
     "tips": "Menghadapi Sanggahan Tender: Jawab berbasis DOKUMEN FAKTA & REGULASI secara lugas, transparan, dan tenang.",
-    "sumber": "Perpres No. 12 Tahun 2021 tentang Pengadaan Barang dan Jasa Pemerintah & Pedoman LKPP",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil (Hal. 32)",
+    "sumber_nama": "Peraturan Pemerintah No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+    "sumber_url": "https://peraturan.bpk.go.id/Details/175850/pp-no-94-tahun-2021",
+    "sumber_halaman": "Hal. 32",
+    "sumber_no_soal": "Profesionalisme Kasus 8",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 103,
@@ -3679,9 +5531,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Apatis dan membiarkan bibit propaganda anti-Pancasila menyebar leluasa di internal aparatur sipil negara."
     },
     "tips": "Anti-Radikalisme: Jangan kompromi! TEGUR TEGAS + SIMPAN BUKTI SCREENSHOT + LAPOR INSPEKTORAT.",
-    "sumber": "SKB 11 Menteri/Lembaga tentang Penanganan Radikalisme ASN & UU No. 20 Tahun 2023",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 18)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 18",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 1",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 104,
@@ -3713,9 +5578,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Memiliki kewaspadaan tinggi, tegas menolak doktrin ekstremis, mengutamakan keselamatan, dan proaktif melaporkan kepada aparat berwenang."
     },
     "tips": "Kajian Ekstremis Kekerasan: Tinggalkan lokasi dengan tenang & waspada + Tolak doktrinnya + Laporkan segera ke aparat keamanan.",
-    "sumber": "UU No. 5 Tahun 2018 tentang Penanggulangan Tindak Pidana Terorisme & Perpres No. 7 Tahun 2021",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 19)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 19",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 2",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 105,
@@ -3747,9 +5625,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 4: Langkah edukasi preventif yang sangat baik dan terarah untuk membuka cakrawala berpikir pemuda."
     },
     "tips": "Mencegah Radikalisme Pemuda: Buka ruang dialog inklusif + Perkuat literasi kritis + Berdayakan dalam kegiatan sosial positif.",
-    "sumber": "Pedoman Kesiapsiagaan Nasional BNPT & Strategi Moderasi Beragama Kemenag",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 20)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 20",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 3",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 106,
@@ -3781,9 +5672,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Fitnah keji, merusak nama baik, menimbulkan histeria ketakutan di kantor, dan melanggar etika ASN."
     },
     "tips": "Deteksi Perubahan Perilaku: Rangkul empatik personal -> Jangan kucilkan -> Libatkan konselor/atasan untuk pendampingan.",
-    "sumber": "Buku Saku Deteksi Dini Radikalisme ASN BKN & Pedoman Konseling Kepegawaian",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 21)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 21",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 4",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 107,
@@ -3815,9 +5719,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 2: Ketidakjujuran disiplin aparatur negara yang mencoreng integritas moral pribadi."
     },
     "tips": "Wawasan Kebangsaan: Jadilah teladan kehadiran + Sadari pentingnya pembinaan ideologi Pancasila bagi keutuhan negara.",
-    "sumber": "SE MenPAN-RB tentang Jam Kerja ASN & Pedoman Pembinaan Wawasan Kebangsaan BKN",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 22)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 22",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 5",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 108,
@@ -3849,9 +5766,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 1: Kecerobohan fatal yang menyebarluaskan materi terorisme terlarang dan dapat dijerat pasal pidana UU Terorisme."
     },
     "tips": "Konten Terorisme/Bom Online: JANGAN DISEBARKAN! Laporkan URL ke Aduan Konten Komdigi & Bareskrim Polri.",
-    "sumber": "UU No. 5 Tahun 2018 tentang Pemberantasan Tindak Pidana Terorisme & Portal Aduan Konten Komdigi",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 23)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 23",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 6",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 109,
@@ -3883,9 +5813,22 @@ window.SKD_QUESTIONS = [
       "E": "Poin 5: Tegas menjaga supremasi hukum, menolak vigilantisme ormas intoleran, dan melindungi hak rasa aman warga negara."
     },
     "tips": "Sweeping/Main Hakim Sendiri Ormas: TOLAK TEGAS! Tindakan sweeping ilegal dan bertentangan dengan hukum negara.",
-    "sumber": "UU No. 16 Tahun 2017 tentang Ormas & UU Ketertiban Umum",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 24)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 24",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 7",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   },
   {
     "id": 110,
@@ -3917,8 +5860,21 @@ window.SKD_QUESTIONS = [
       "E": "Poin 3: Tertib kedinasan, namun filosofi pengabdian aparatur negara melampaui sekadar kepatuhan administratif rutin."
     },
     "tips": "Filosofi Tertinggi ASN: LOYALITAS MUTLAK PADA PANCASILA, UUD 1945, NKRI & PELAYANAN TULUS UNTUK RAKYAT INDONESIA.",
-    "sumber": "Pasal 24 UU No. 20 Tahun 2023 tentang Aparatur Sipil Negara & Core Values ASN BerAKHLAK",
+    "has_image": 0,
+    "gambar": null,
+    "sumber": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018 (Hal. 25)",
+    "sumber_nama": "SKB 11 Menteri/Lembaga Penanganan Radikalisme ASN & UU No. 5 Tahun 2018",
+    "sumber_url": "https://bkn.go.id/skb-11-menteri-radikalisme",
+    "sumber_halaman": "Hal. 25",
+    "sumber_no_soal": "Anti-Radikalisme Kasus 8",
     "youtube": null,
-    "gambar": null
+    "video": null,
+    "video_url": null,
+    "video_title": null,
+    "video_channel": null,
+    "video_timestamp": null,
+    "video_start_seconds": 0,
+    "video_topic_part": null,
+    "is_active": 1
   }
 ];

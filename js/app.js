@@ -1,8 +1,8 @@
 /**
  * ============================================================================
- * SIMULASI CAT BKN - CASN (BADAN KEPEGAWAIAN NEGARA)
- * Core Application Engine & Scoring Logic
- * Conforms to PermenPAN-RB / KepmenPAN-RB SKD Standards
+ * CAT ASSESSMENT SYSTEM - SKD CASN
+ * Core Application Engine, Scoring Logic, SQLite History & Bank Soal CRUD
+ * Conforms to PermenPAN-RB No. 321/2024 Standards
  * ============================================================================
  */
 
@@ -11,12 +11,17 @@
 
   // --- 1. CONFIGURATION & PERMENPAN-RB STANDARDS ---
   const CONFIG = {
-    STORAGE_KEY: 'CAT_BKN_SIMULASI_STATE_V2',
+    STORAGE_KEY: 'CAT_SIMULASI_STATE_V3',
+    HISTORY_FALLBACK_KEY: 'CAT_HISTORY_SESSIONS_V3',
+    BANK_FALLBACK_KEY: 'CAT_BANK_SOAL_LOCAL_V3',
+    IDB_NAME: 'CAT_CASN_SQLITE_STORAGE',
+    IDB_STORE: 'sqlite_store',
+    IDB_KEY: 'database_file',
     EXAM_DURATION_SECONDS: 100 * 60, // 100 minutes (6,000 seconds)
     PASSING_GRADES: {
-      TWK: 65,  // Nilai Ambang Batas TWK (PermenPAN-RB)
-      TIU: 80,  // Nilai Ambang Batas TIU (PermenPAN-RB)
-      TKP: 166, // Nilai Ambang Batas TKP (PermenPAN-RB)
+      TWK: 65,  // Nilai Ambang Batas TWK
+      TIU: 80,  // Nilai Ambang Batas TIU
+      TKP: 166, // Nilai Ambang Batas TKP
       TOTAL: 311
     },
     MAX_SCORES: {
@@ -35,9 +40,11 @@
 
   // --- 2. GLOBAL APPLICATION STATE ---
   const state = {
+    currentScreen: 'landing',     // 'landing' | 'exam' | 'history' | 'bank-soal'
     mode: 'simulasi',             // 'simulasi' | 'belajar' | 'review'
     currentIndex: 0,              // 0-indexed across normalized questions
-    questions: [],                // Normalized questions list
+    questions: [],                // Normalized active questions list for simulation/study
+    allBankQuestions: [],         // Full questions list (active + inactive) for Bank Soal
     answers: {},                  // { [qId]: 'A' | 'B' | 'C' | 'D' | 'E' }
     ragu: {},                     // { [qId]: boolean }
     visited: {},                  // { [qId]: boolean }
@@ -46,17 +53,36 @@
     isFinished: false,
     startTime: null,
     finishTime: null,
+    activeSessionId: null,        // Set when evaluating a saved session from SQLite
+    activeSessionMeta: null,
     categoryFilter: 'all',        // 'all' | 'TWK' | 'TIU' | 'TKP'
     gridRangeFilter: 'all',       // 'all' | 'TWK' | 'TIU' | 'TKP'
     reviewFilter: 'all',          // 'all' | 'wrong' | 'correct' | 'ragu' | 'TWK' | 'TIU' | 'TKP'
     studyRevealed: {},            // { [qId]: boolean } in study mode
     studyAnswers: {},             // { [qId]: 'A'|'B'|... } in study mode
-    fontSize: 'font-md'           // 'font-sm' | 'font-md' | 'font-lg'
+    fontSize: 'font-md',          // 'font-sm' | 'font-md' | 'font-lg'
+
+    // Bank Soal View State
+    bankFilterCat: 'all',
+    bankFilterStatus: 'all',
+    bankSearchQuery: '',
+    editingQuestionId: null,
+    deletingQuestionObj: null,
+    currentDetailQuestionObj: null
   };
 
   // --- 3. DOM ELEMENT CACHE ---
   const DOM = {
-    // Header & Timer
+    // Screens
+    landingScreen: document.getElementById('landing-screen'),
+    examScreen: document.getElementById('exam-screen'),
+    historyScreen: document.getElementById('history-screen'),
+    bankSoalScreen: document.getElementById('bank-soal-screen'),
+
+    // Top Header
+    brandHomeLink: document.getElementById('brand-home-link'),
+    btnHeaderHistory: document.getElementById('btn-header-history'),
+    btnHeaderBankSoal: document.getElementById('btn-header-bank-soal'),
     timerBox: document.getElementById('timer-box'),
     timerCountdown: document.getElementById('timer-countdown'),
     btnFinishExam: document.getElementById('btn-finish-exam'),
@@ -65,8 +91,16 @@
     candidateId: document.getElementById('candidate-id'),
     candidatePin: document.getElementById('candidate-pin'),
 
-    // Mode Selector & Nav
-    tabModeSimulasi: document.getElementById('tab-mode-simulasi'),
+    // Landing Screen Elements
+    btnStartStudy: document.getElementById('btn-start-study'),
+    btnStartSimulation: document.getElementById('btn-start-simulation'),
+    btnViewHistory: document.getElementById('btn-view-history'),
+    btnViewBankSoal: document.getElementById('btn-view-bank-soal'),
+
+    // Exam Subnav & Mode Lock
+    btnExamBackHome: document.getElementById('btn-exam-back-home'),
+    badgeSimLocked: document.getElementById('badge-sim-locked'),
+    modeTabsWrap: document.getElementById('mode-tabs-wrap'),
     tabModeBelajar: document.getElementById('tab-mode-belajar'),
     tabModeReview: document.getElementById('tab-mode-review'),
     categoryFilterBtns: document.querySelectorAll('[data-category-filter]'),
@@ -78,7 +112,7 @@
     btnFontReset: document.getElementById('btn-font-reset'),
     btnFontInc: document.getElementById('btn-font-inc'),
 
-    // Main Question Viewport
+    // Question Viewport
     questionViewport: document.getElementById('question-viewport'),
     bannerModeBelajar: document.getElementById('banner-mode-belajar'),
     questionCard: document.getElementById('question-card'),
@@ -115,6 +149,8 @@
     tipsText: document.getElementById('tips-text'),
     videoSection: document.getElementById('video-section'),
     videoTitleText: document.getElementById('video-title-text'),
+    videoTimestampBadge: document.getElementById('video-timestamp-badge'),
+    videoChannelText: document.getElementById('video-channel-text'),
     videoIframe: document.getElementById('video-iframe'),
     videoDirectLink: document.getElementById('video-direct-link'),
     sourceBox: document.getElementById('source-box'),
@@ -122,6 +158,10 @@
 
     // Review Session View
     reviewSessionView: document.getElementById('review-session-view'),
+    reviewSessionInfoBanner: document.getElementById('review-session-info-banner'),
+    reviewSessionInfoText: document.getElementById('review-session-info-text'),
+    btnBackToHistoryFromReview: document.getElementById('btn-back-to-history-from-review'),
+    btnBackToHomeFromReview: document.getElementById('btn-back-to-home-from-review'),
     reviewFilterChips: document.querySelectorAll('[data-review-filter]'),
     reviewQuestionsList: document.getElementById('review-questions-list'),
     btnBackToExamFromReview: document.getElementById('btn-back-to-exam-from-review'),
@@ -138,7 +178,115 @@
     legendCountRagu: document.getElementById('legend-count-ragu'),
     legendCountUnanswered: document.getElementById('legend-count-unanswered'),
 
-    // Modal: Confirmation
+    // Session History Screen
+    btnHistoryBack: document.getElementById('btn-history-back'),
+    btnResetAllHistory: document.getElementById('btn-reset-all-history'),
+    btnHistoryExportDb: document.getElementById('btn-history-export-db'),
+    btnHistoryImportDbTrigger: document.getElementById('btn-history-import-db-trigger'),
+    inputHistoryImportDb: document.getElementById('input-history-import-db'),
+    statHistoryTotal: document.getElementById('stat-history-total'),
+    statHistoryPassed: document.getElementById('stat-history-passed'),
+    statHistoryHighest: document.getElementById('stat-history-highest'),
+    statHistoryAvg: document.getElementById('stat-history-avg'),
+    historyTableContainer: document.getElementById('history-table-container'),
+    historyTableBody: document.getElementById('history-table-body'),
+    historyEmptyState: document.getElementById('history-empty-state'),
+    btnEmptyStartSim: document.getElementById('btn-empty-start-sim'),
+
+    // Screen 4: Bank Soal Management
+    btnBankSoalBack: document.getElementById('btn-bank-soal-back'),
+    btnAddQuestion: document.getElementById('btn-add-question'),
+    btnExportDb: document.getElementById('btn-export-db'),
+    btnImportDbTrigger: document.getElementById('btn-import-db-trigger'),
+    inputImportDb: document.getElementById('input-import-db'),
+    sqliteStatusBadge: document.getElementById('sqlite-status-badge'),
+    bankSoalSearch: document.getElementById('bank-soal-search'),
+    bankSoalFilterCat: document.getElementById('bank-soal-filter-cat'),
+    bankSoalFilterStatus: document.getElementById('bank-soal-filter-status'),
+    bankSoalCountBadge: document.getElementById('bank-soal-count-badge'),
+    bankSoalTable: document.getElementById('bank-soal-table'),
+    bankSoalTableBody: document.getElementById('bank-soal-table-body'),
+    bankSoalEmptyState: document.getElementById('bank-soal-empty-state'),
+    btnResetBankFilters: document.getElementById('btn-reset-bank-filters'),
+
+    // Modal Form Tambah/Edit Soal
+    modalQuestionForm: document.getElementById('modal-question-form'),
+    formQuestion: document.getElementById('form-question'),
+    formQuestionId: document.getElementById('form-question-id'),
+    formTitleText: document.getElementById('form-title-text'),
+    btnCloseFormX: document.getElementById('btn-close-form-x'),
+    formKategori: document.getElementById('form-kategori'),
+    formSubkategori: document.getElementById('form-subkategori'),
+    formIsActive: document.getElementById('form-is-active'),
+    formSoal: document.getElementById('form-soal'),
+    formHasImage: document.getElementById('form-has-image'),
+    formImageData: document.getElementById('form-image-data'),
+    formKunci: document.getElementById('form-kunci'),
+    formOpsiA: document.getElementById('form-opsi-A'),
+    formBobotA: document.getElementById('form-bobot-A'),
+    formOpsiB: document.getElementById('form-opsi-B'),
+    formBobotB: document.getElementById('form-bobot-B'),
+    formOpsiC: document.getElementById('form-opsi-C'),
+    formBobotC: document.getElementById('form-bobot-C'),
+    formOpsiD: document.getElementById('form-opsi-D'),
+    formBobotD: document.getElementById('form-bobot-D'),
+    formOpsiE: document.getElementById('form-opsi-E'),
+    formBobotE: document.getElementById('form-bobot-E'),
+    formPembahasan: document.getElementById('form-pembahasan'),
+    formAnalisisA: document.getElementById('form-analisis-A'),
+    formAnalisisB: document.getElementById('form-analisis-B'),
+    formAnalisisC: document.getElementById('form-analisis-C'),
+    formAnalisisD: document.getElementById('form-analisis-D'),
+    formAnalisisE: document.getElementById('form-analisis-E'),
+    formTips: document.getElementById('form-tips'),
+    formVideoUrl: document.getElementById('form-video-url'),
+    formVideoTitle: document.getElementById('form-video-title'),
+    formVideoChannel: document.getElementById('form-video-channel'),
+    formVideoTimestamp: document.getElementById('form-video-timestamp'),
+    formVideoStartSeconds: document.getElementById('form-video-start-seconds'),
+    formSumberNama: document.getElementById('form-sumber-nama'),
+    formSumberUrl: document.getElementById('form-sumber-url'),
+    formSumberHalaman: document.getElementById('form-sumber-halaman'),
+    formSumberNo: document.getElementById('form-sumber-no'),
+    btnCancelForm: document.getElementById('btn-cancel-form'),
+    btnSaveQuestion: document.getElementById('btn-save-question'),
+
+    // Modal Detail Preview Soal
+    modalQuestionDetail: document.getElementById('modal-question-detail'),
+    detailHeaderText: document.getElementById('detail-header-text'),
+    btnCloseDetailX: document.getElementById('btn-close-detail-x'),
+    detailBadgeId: document.getElementById('detail-badge-id'),
+    detailBadgeCat: document.getElementById('detail-badge-cat'),
+    detailBadgeSubcat: document.getElementById('detail-badge-subcat'),
+    detailBadgeStatus: document.getElementById('detail-badge-status'),
+    detailSoalText: document.getElementById('detail-soal-text'),
+    detailMediaContainer: document.getElementById('detail-media-container'),
+    detailOptionsContainer: document.getElementById('detail-options-container'),
+    detailPembahasanText: document.getElementById('detail-pembahasan-text'),
+    detailAnalysisContainer: document.getElementById('detail-analysis-container'),
+    detailTipsBox: document.getElementById('detail-tips-box'),
+    detailTipsText: document.getElementById('detail-tips-text'),
+    detailVideoContainer: document.getElementById('detail-video-container'),
+    detailVideoIframe: document.getElementById('detail-video-iframe'),
+    detailVideoTitle: document.getElementById('detail-video-title'),
+    detailVideoTimestamp: document.getElementById('detail-video-timestamp'),
+    detailVideoChannel: document.getElementById('detail-video-channel'),
+    detailVideoLink: document.getElementById('detail-video-link'),
+    detailSourceCard: document.getElementById('detail-source-card'),
+    detailSumberNama: document.getElementById('detail-sumber-nama'),
+    detailSumberUrl: document.getElementById('detail-sumber-url'),
+    detailSumberHalaman: document.getElementById('detail-sumber-halaman'),
+    detailSumberNo: document.getElementById('detail-sumber-no'),
+    btnCloseDetail: document.getElementById('btn-close-detail'),
+    btnDetailToEdit: document.getElementById('btn-detail-to-edit'),
+
+    // Modal Delete Confirm
+    modalConfirmDeleteQ: document.getElementById('modal-confirm-delete-q'),
+    deleteQSnippet: document.getElementById('delete-q-snippet'),
+    btnCancelDeleteQ: document.getElementById('btn-cancel-delete-q'),
+    btnConfirmDeleteQ: document.getElementById('btn-confirm-delete-q'),
+
+    // Modals Selesai & Hasil
     modalConfirmFinish: document.getElementById('modal-confirm-finish'),
     confirmStatAnswered: document.getElementById('confirm-stat-answered'),
     confirmStatRagu: document.getElementById('confirm-stat-ragu'),
@@ -147,7 +295,6 @@
     btnCancelFinish: document.getElementById('btn-cancel-finish'),
     btnSubmitExamFinal: document.getElementById('btn-submit-exam-final'),
 
-    // Modal: Result Certificate
     modalResult: document.getElementById('modal-result'),
     certCandidateName: document.getElementById('cert-candidate-name'),
     certCandidateId: document.getElementById('cert-candidate-id'),
@@ -165,15 +312,13 @@
     finalStatusTitle: document.getElementById('final-status-title'),
     finalStatusDesc: document.getElementById('final-status-desc'),
     btnOpenReview: document.getElementById('btn-open-review'),
+    btnOpenHistoryFromCert: document.getElementById('btn-open-history-from-cert'),
     btnPrintResult: document.getElementById('btn-print-result'),
     btnRestartExam: document.getElementById('btn-restart-exam')
   };
 
   // --- 4. UTILITIES & HELPERS ---
 
-  /**
-   * Safe HTML Escaping
-   */
   function escapeHTML(str) {
     if (str === null || str === undefined) return '';
     return String(str)
@@ -184,34 +329,66 @@
       .replace(/'/g, '&#039;');
   }
 
-  /**
-   * Converts any YouTube watch/short link to a clean responsive embed URL
-   */
-  function toYouTubeEmbedUrl(url) {
+  function extractYouTubeVideoId(url) {
     if (!url || typeof url !== 'string') return '';
-    if (url.includes('/embed/')) return url;
-    const match = url.match(/(?:watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/);
-    if (match && match[1]) {
-      return `https://www.youtube.com/embed/${match[1]}?enablejsapi=1&rel=0`;
-    }
-    return url;
+    const match = url.match(/(?:embed\/|watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/);
+    return match ? match[1] : '';
   }
 
-  /**
-   * Converts an embed URL to a standard YouTube watch URL for direct viewing
-   */
-  function toYouTubeWatchUrl(url) {
+  function extractYouTubeStartSeconds(url) {
+    if (!url || typeof url !== 'string') return 0;
+    const match = url.match(/[?&](?:start|t)=(\d+)/);
+    return match ? parseInt(match[1], 10) : 0;
+  }
+
+  function formatTimestamp(seconds) {
+    if (!seconds || seconds <= 0) return '00:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  }
+
+  function parseTimestampToSeconds(ts) {
+    if (!ts) return 0;
+    if (typeof ts === 'number') return Math.floor(ts);
+    if (typeof ts === 'string') {
+      const parts = ts.trim().split(':');
+      if (parts.length === 2) {
+        return (parseInt(parts[0], 10) || 0) * 60 + (parseInt(parts[1], 10) || 0);
+      }
+      if (parts.length === 3) {
+        return (parseInt(parts[0], 10) || 0) * 3600 + (parseInt(parts[1], 10) || 0) * 60 + (parseInt(parts[2], 10) || 0);
+      }
+      const num = parseInt(ts, 10);
+      return !isNaN(num) ? num : 0;
+    }
+    return 0;
+  }
+
+  function toYouTubeEmbedUrl(url, startSec = 0) {
+    if (!url || typeof url !== 'string') return '';
+    const id = extractYouTubeVideoId(url);
+    if (!id) return url;
+    const sec = startSec > 0 ? startSec : extractYouTubeStartSeconds(url);
+    let embed = `https://www.youtube-nocookie.com/embed/${id}?rel=0&enablejsapi=1`;
+    if (sec > 0) {
+      embed += `&start=${sec}`;
+    }
+    return embed;
+  }
+
+  function toYouTubeWatchUrl(url, startSec = 0) {
     if (!url || typeof url !== 'string') return '#';
-    const match = url.match(/(?:embed\/|watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-    if (match && match[1]) {
-      return `https://www.youtube.com/watch?v=${match[1]}`;
+    const id = extractYouTubeVideoId(url);
+    if (!id) return url;
+    const sec = startSec > 0 ? startSec : extractYouTubeStartSeconds(url);
+    let watch = `https://www.youtube.com/watch?v=${id}`;
+    if (sec > 0) {
+      watch += `&t=${sec}s`;
     }
-    return url;
+    return watch;
   }
 
-  /**
-   * Indonesian date formatter (e.g., "16 November 2024")
-   */
   function formatIndonesianDate(d = new Date()) {
     const months = [
       'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
@@ -220,9 +397,6 @@
     return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
   }
 
-  /**
-   * Formats seconds into MM:SS
-   */
   function formatTime(seconds) {
     const safeSec = Math.max(0, Math.floor(seconds));
     const mins = Math.floor(safeSec / 60);
@@ -230,13 +404,9 @@
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   }
 
-  /**
-   * Standardizes raw question objects from window.SKD_QUESTIONS
-   */
   function normalizeQuestion(raw, index) {
     const id = raw.id || raw.no || (index + 1);
     
-    // Category detection: TWK (1-30), TIU (31-65), TKP (66-110)
     let kategori = (raw.kategori || raw.category || '').toUpperCase().trim();
     if (!kategori) {
       if (index < 30) kategori = 'TWK';
@@ -245,13 +415,13 @@
     }
 
     const subkategori = raw.subkategori || raw.materi || raw.topik || 
-      (kategori === 'TWK' ? 'Nasionalisme & Wawasan Kebangsaan' : 
-       kategori === 'TIU' ? 'Kemampuan Numerik & Logika' : 'Karakteristik Pribadi & Profesionalisme');
+      (kategori === 'TWK' ? 'Wawasan Kebangsaan' : 
+       kategori === 'TIU' ? 'Inteligensi Umum' : 'Karakteristik Pribadi');
 
     const soal = raw.soal || raw.pertanyaan || raw.question || '';
-    const media = raw.media || raw.gambar || raw.svg || null;
+    const hasImage = (raw.has_image || !emptyMedia(raw.media || raw.gambar || raw.image_data)) ? 1 : 0;
+    const imageData = raw.image_data || raw.media || raw.gambar || null;
 
-    // Normalizing options { A, B, C, D, E }
     const rawOptions = raw.opsi || raw.pilihan || raw.options || {};
     const opsi = {};
     const optionKeys = ['A', 'B', 'C', 'D', 'E'];
@@ -265,77 +435,96 @@
       });
     } else {
       optionKeys.forEach(k => {
-        opsi[k] = rawOptions[k] || rawOptions[k.toLowerCase()] || '';
+        opsi[k] = rawOptions[k] || rawOptions[k.toLowerCase()] || raw[`opsi_${k.toLowerCase()}`] || '';
       });
     }
 
-    // Normalizing Key
     let kunci = String(raw.kunci || raw.kunci_jawaban || raw.jawaban_benar || raw.jawaban || 'A').toUpperCase().trim();
-    if (kunci.length > 1) {
-      kunci = kunci.charAt(0);
-    }
+    if (kunci.length > 1) kunci = kunci.charAt(0);
 
-    // Normalizing Weights (Bobot)
     let bobot = {};
     if (kategori === 'TKP') {
       const rawBobot = raw.bobot || raw.points || raw.skor_opsi || {};
       optionKeys.forEach((k, idx) => {
-        let weight = rawBobot[k] ?? rawBobot[k.toLowerCase()];
+        let weight = rawBobot[k] ?? rawBobot[k.toLowerCase()] ?? raw[`bobot_${k.toLowerCase()}`];
         if (typeof weight !== 'number') {
-          // If weights provided inside options array
           if (Array.isArray(rawOptions) && rawOptions[idx] && typeof rawOptions[idx].skor === 'number') {
             weight = rawOptions[idx].skor;
           } else {
-            // Default descending weights if unspecified
             weight = 5 - idx;
           }
         }
         bobot[k] = Number(weight);
       });
-      // For TKP, official key is the option that awards 5 points
       const bestOpt = optionKeys.find(k => bobot[k] === 5);
       if (bestOpt) kunci = bestOpt;
     } else {
-      // TWK & TIU: 5 points for key, 0 for others
       optionKeys.forEach(k => {
         bobot[k] = (k === kunci) ? 5 : 0;
       });
     }
 
-    // Normalizing Explanations
-    const pembahasan = raw.pembahasan || raw.penjelasan || raw.explanation || 'Pembahasan materi resmi Seleksi Kompetensi Dasar BKN.';
-    
-    // Normalizing Option-by-Option Rationale
+    const pembahasan = raw.pembahasan || raw.penjelasan || raw.explanation || 'Pembahasan materi resmi CAT SKD.';
     const rawAnalisis = raw.analisis_opsi || raw.alasan_opsi || raw.pembahasan_opsi || {};
     const analisis_opsi = {};
     optionKeys.forEach(k => {
-      analisis_opsi[k] = rawAnalisis[k] || rawAnalisis[k.toLowerCase()] || 
-        (k === kunci ? `Opsi ${k} adalah jawaban paling tepat sesuai substansi materi.` : `Opsi ${k} kurang tepat atau tidak memenuhi kriteria pokok soal.`);
+      analisis_opsi[k] = rawAnalisis[k] || rawAnalisis[k.toLowerCase()] || raw[`analisis_${k.toLowerCase()}`] || 
+        (k === kunci ? `Opsi ${k} adalah jawaban paling tepat sesuai substansi materi.` : `Opsi ${k} kurang tepat.`);
     });
 
-    const tips = raw.tips || raw.trik || raw.rumus || 'Gunakan teknik eliminasi opsi yang tidak logis dan cermati kata kunci pada pokok soal.';
-    const sumber = raw.sumber || raw.source || 'KepmenPAN-RB No. 321 / BKN RI';
+    const tips = raw.tips || raw.trik || raw.rumus || 'Gunakan eliminasi opsi yang tidak logis dan cermati kata kunci pokok soal.';
+    
+    const sumberNama = raw.sumber_nama || raw.sumber || 'KepmenPAN-RB No. 321';
+    const sumberUrl = raw.sumber_url || 'https://menpan.go.id';
+    const sumberHalaman = raw.sumber_halaman || '';
+    const sumberNoSoal = raw.sumber_no_soal || `Butir #${id}`;
 
-    // Normalizing Video (TIU Math / Logic / Formulas)
     let video = null;
     const rawVideo = raw.video || raw.youtube || raw.youtube_url || raw.video_url || null;
     if (rawVideo) {
+      let vUrl = '';
+      let vTitle = `Video Pembahasan Soal No. ${id} - ${subkategori}`;
+      let vChannel = 'Edukasi CASN BKN';
+      let vStart = 0;
+      let vTimestamp = '';
+      let vTopic = '';
+
       if (typeof rawVideo === 'string') {
-        video = {
-          url: toYouTubeEmbedUrl(rawVideo),
-          watchUrl: toYouTubeWatchUrl(rawVideo),
-          title: `Video Pembahasan Soal No. ${id} - ${subkategori}`
-        };
+        vUrl = rawVideo;
+        vStart = extractYouTubeStartSeconds(rawVideo);
       } else if (typeof rawVideo === 'object') {
-        const rawUrl = rawVideo.url || rawVideo.embedUrl || rawVideo.src || '';
-        const channelName = rawVideo.channel ? ` (${rawVideo.channel})` : '';
-        video = {
-          url: toYouTubeEmbedUrl(rawUrl),
-          watchUrl: toYouTubeWatchUrl(rawUrl),
-          title: (rawVideo.title ? `${rawVideo.title}${channelName}` : `Video Pembahasan Soal No. ${id} - ${subkategori}`)
-        };
+        vUrl = rawVideo.url || rawVideo.embedUrl || rawVideo.src || '';
+        vTitle = rawVideo.title || raw.video_title || vTitle;
+        vChannel = rawVideo.channel || raw.video_channel || vChannel;
+        vTopic = rawVideo.topic_part || rawVideo.topic || raw.video_topic || '';
+        if (rawVideo.startSeconds !== undefined && rawVideo.startSeconds !== null) {
+          vStart = parseInt(rawVideo.startSeconds, 10) || 0;
+        } else if (rawVideo.start !== undefined && rawVideo.start !== null) {
+          vStart = parseInt(rawVideo.start, 10) || 0;
+        } else if (rawVideo.timestamp) {
+          vStart = parseTimestampToSeconds(rawVideo.timestamp);
+        } else {
+          vStart = extractYouTubeStartSeconds(vUrl);
+        }
+        vTimestamp = rawVideo.timestamp || (vStart > 0 ? formatTimestamp(vStart) : '');
       }
+
+      if (!vTimestamp && vStart > 0) {
+        vTimestamp = formatTimestamp(vStart);
+      }
+
+      video = {
+        url: toYouTubeEmbedUrl(vUrl, vStart),
+        watchUrl: toYouTubeWatchUrl(vUrl, vStart),
+        title: vTitle,
+        channel: vChannel,
+        startSeconds: vStart,
+        timestamp: vTimestamp,
+        topic_part: vTopic
+      };
     }
+
+    const isActive = (raw.is_active !== undefined && raw.is_active !== null) ? (raw.is_active ? 1 : 0) : 1;
 
     return {
       id,
@@ -343,21 +532,78 @@
       kategori,
       subkategori,
       soal,
-      media,
+      has_image: hasImage,
+      image_data: imageData,
+      media: imageData,
       opsi,
       kunci,
       bobot,
       pembahasan,
       analisis_opsi,
       tips,
-      sumber,
-      video
+      sumber_nama: sumberNama,
+      sumber_url: sumberUrl,
+      sumber_halaman: sumberHalaman,
+      sumber_no_soal: sumberNoSoal,
+      sumber: sumberNama ? (sumberNama + (sumberHalaman ? ` (Hal: ${sumberHalaman})` : '')) : 'KepmenPAN-RB',
+      video,
+      video_url: video ? video.url : '',
+      video_title: video ? video.title : '',
+      video_channel: video ? video.channel : '',
+      is_active: isActive
     };
   }
 
-  // --- 5. LOCAL STORAGE PERSISTENCE ---
+  function emptyMedia(val) {
+    return !val || String(val).trim() === '';
+  }
 
-  function saveState() {
+  // --- 5. SCREEN MANAGEMENT CONTROLLER ---
+
+  function showScreen(targetScreen) {
+    state.currentScreen = targetScreen;
+
+    if (DOM.landingScreen) DOM.landingScreen.classList.remove('active');
+    if (DOM.examScreen) DOM.examScreen.classList.remove('active');
+    if (DOM.historyScreen) DOM.historyScreen.classList.remove('active');
+    if (DOM.bankSoalScreen) DOM.bankSoalScreen.classList.remove('active');
+
+    // Close any playing video
+    if (DOM.videoIframe) DOM.videoIframe.src = '';
+    if (DOM.detailVideoIframe) DOM.detailVideoIframe.src = '';
+
+    if (targetScreen === 'landing') {
+      if (DOM.landingScreen) DOM.landingScreen.classList.add('active');
+      if (DOM.timerBox) DOM.timerBox.style.display = 'none';
+      if (DOM.btnFinishExam) DOM.btnFinishExam.style.display = 'none';
+      document.body.classList.remove('simulation-mode-active');
+      pauseTimer();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (targetScreen === 'history') {
+      if (DOM.historyScreen) DOM.historyScreen.classList.add('active');
+      if (DOM.timerBox) DOM.timerBox.style.display = 'none';
+      if (DOM.btnFinishExam) DOM.btnFinishExam.style.display = 'none';
+      document.body.classList.remove('simulation-mode-active');
+      pauseTimer();
+      loadAndRenderHistory();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (targetScreen === 'bank-soal') {
+      if (DOM.bankSoalScreen) DOM.bankSoalScreen.classList.add('active');
+      if (DOM.timerBox) DOM.timerBox.style.display = 'none';
+      if (DOM.btnFinishExam) DOM.btnFinishExam.style.display = 'none';
+      document.body.classList.remove('simulation-mode-active');
+      pauseTimer();
+      loadAndRenderBankSoal();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (targetScreen === 'exam') {
+      if (DOM.examScreen) DOM.examScreen.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  // --- 6. LOCAL STORAGE PERSISTENCE (ACTIVE SIMULATION) ---
+
+  function saveActiveExamState() {
     try {
       const payload = {
         answers: state.answers,
@@ -376,11 +622,11 @@
       };
       localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(payload));
     } catch (e) {
-      console.warn('Gagal menyimpan state ke localStorage:', e);
+      console.warn('Gagal menyimpan state aktif ke localStorage:', e);
     }
   }
 
-  function loadState() {
+  function loadActiveExamState() {
     try {
       const raw = localStorage.getItem(CONFIG.STORAGE_KEY);
       if (!raw) return false;
@@ -401,20 +647,20 @@
         return true;
       }
     } catch (e) {
-      console.warn('Gagal memuat state dari localStorage:', e);
+      console.warn('Gagal memuat state aktif dari localStorage:', e);
     }
     return false;
   }
 
-  function clearState() {
+  function clearActiveExamState() {
     try {
       localStorage.removeItem(CONFIG.STORAGE_KEY);
     } catch (e) {
-      console.warn('Gagal menghapus state dari localStorage:', e);
+      console.warn('Gagal membersihkan state aktif dari localStorage:', e);
     }
   }
 
-  // --- 6. SCORING ENGINE (PERMENPAN-RB) ---
+  // --- 7. SCORING ENGINE (PERMENPAN-RB) ---
 
   function calculateScores() {
     let twkScore = 0;
@@ -470,6 +716,7 @@
       }
 
       return {
+        id: q.id,
         question: q,
         index: idx,
         userChoice,
@@ -503,12 +750,11 @@
     };
   }
 
-  // --- 7. TIMER CONTROLLER ---
+  // --- 8. TIMER CONTROLLER (SIMULASI CAT) ---
 
   function startTimer() {
     if (state.timerInterval) clearInterval(state.timerInterval);
 
-    // Initial display
     updateTimerDisplay();
 
     state.timerInterval = setInterval(() => {
@@ -523,16 +769,15 @@
         updateTimerDisplay();
         clearInterval(state.timerInterval);
         state.timerInterval = null;
-        alert('WAKTU UJIAN HABIS! Sistem otomatis menyimpan dan menilai lembar jawaban Anda.');
+        alert('WAKTU 100 MENIT TELAH HABIS!\nSistem otomatis mengunci dan mengirim lembar jawaban Anda untuk dinilai.');
         finishExam(true);
         return;
       }
 
       updateTimerDisplay();
 
-      // Save state every 10 seconds
       if (state.timeRemaining % 10 === 0) {
-        saveState();
+        saveActiveExamState();
       }
     }, 1000);
   }
@@ -542,17 +787,13 @@
 
     if (state.mode === 'belajar') {
       DOM.timerCountdown.textContent = 'BELAJAR';
-      if (DOM.timerBox) {
-        DOM.timerBox.classList.remove('warning', 'danger');
-      }
+      if (DOM.timerBox) DOM.timerBox.classList.remove('warning', 'danger');
       return;
     }
 
     if (state.mode === 'review' || state.isFinished) {
       DOM.timerCountdown.textContent = 'SELESAI';
-      if (DOM.timerBox) {
-        DOM.timerBox.classList.remove('warning', 'danger');
-      }
+      if (DOM.timerBox) DOM.timerBox.classList.remove('warning', 'danger');
       return;
     }
 
@@ -578,12 +819,11 @@
     }
   }
 
-  // --- 8. QUESTION VIEWPORT RENDERING ---
+  // --- 9. QUESTION VIEWPORT RENDERING ---
 
   function renderCurrentQuestion() {
     if (!state.questions || state.questions.length === 0) return;
 
-    // Boundary check
     if (state.currentIndex < 0) state.currentIndex = 0;
     if (state.currentIndex >= state.questions.length) {
       state.currentIndex = state.questions.length - 1;
@@ -592,9 +832,8 @@
     const q = state.questions[state.currentIndex];
     state.visited[q.id] = true;
 
-    // Header Badges
     if (DOM.badgeQuestionNumber) {
-      DOM.badgeQuestionNumber.textContent = `Soal No. ${q.id}`;
+      DOM.badgeQuestionNumber.textContent = `Soal No. ${state.currentIndex + 1}`;
     }
 
     if (DOM.badgeCategoryText) {
@@ -611,7 +850,6 @@
       }
     }
 
-    // Status Pill
     const isAnswered = !!state.answers[q.id];
     const isRagu = !!state.ragu[q.id];
 
@@ -629,15 +867,13 @@
       }
     }
 
-    // Question Text
     if (DOM.questionText) {
       DOM.questionText.innerHTML = q.soal;
     }
 
-    // Question Media / Figural
     if (DOM.questionMedia) {
-      if (q.media) {
-        DOM.questionMedia.innerHTML = q.media;
+      if (q.media || q.image_data) {
+        DOM.questionMedia.innerHTML = q.image_data || q.media;
         DOM.questionMedia.style.display = 'block';
       } else {
         DOM.questionMedia.innerHTML = '';
@@ -645,22 +881,11 @@
       }
     }
 
-    // Render Options A - E
     renderOptions(q);
 
-    // Ragu-Ragu Checkbox
-    if (DOM.checkboxRagu) {
-      DOM.checkboxRagu.checked = isRagu;
-    }
-    if (DOM.btnRagu) {
-      if (isRagu) {
-        DOM.btnRagu.classList.add('active');
-      } else {
-        DOM.btnRagu.classList.remove('active');
-      }
-    }
+    if (DOM.checkboxRagu) DOM.checkboxRagu.checked = isRagu;
+    if (DOM.btnRagu) DOM.btnRagu.classList.toggle('active', isRagu);
 
-    // Navigation buttons state
     if (DOM.btnPrev) {
       DOM.btnPrev.disabled = (state.currentIndex === 0);
     }
@@ -672,7 +897,6 @@
       }
     }
 
-    // Mode-specific Controls and Pembahasan Handling
     if (state.mode === 'belajar') {
       if (DOM.btnToggleStudyPembahasan) DOM.btnToggleStudyPembahasan.style.display = 'inline-flex';
       if (DOM.btnRetryQuestion) DOM.btnRetryQuestion.style.display = 'inline-flex';
@@ -700,24 +924,18 @@
         DOM.pembahasanBox.classList.add('visible');
       }
     } else {
-      // Mode Simulasi: Pembahasan is completely hidden
       if (DOM.btnToggleStudyPembahasan) DOM.btnToggleStudyPembahasan.style.display = 'none';
       if (DOM.btnRetryQuestion) DOM.btnRetryQuestion.style.display = 'none';
       if (DOM.pembahasanBox) {
         DOM.pembahasanBox.classList.remove('visible');
-        // Stop any playing video
         if (DOM.videoIframe) DOM.videoIframe.src = '';
       }
     }
 
-    // Update Sidebar Navigation Grid
     renderSidebar();
-    saveState();
+    saveActiveExamState();
   }
 
-  /**
-   * Renders Option cards (A - E) for the current question
-   */
   function renderOptions(q) {
     if (!DOM.optionsContainer) return;
     DOM.optionsContainer.innerHTML = '';
@@ -740,47 +958,31 @@
       label.className = 'option-card';
       label.setAttribute('data-option', key);
 
-      // Classes for Mode Belajar & Review
       if (isStudyFeedbackActive || isReviewMode) {
         label.classList.add('show-feedback');
-        if (isKey) {
-          label.classList.add('is-correct-key');
-        }
-        if (isSelected && !isKey && q.kategori !== 'TKP') {
-          label.classList.add('is-wrong-selection');
-        }
-        if (isSelected && q.kategori === 'TKP' && weight < 5) {
-          label.classList.add('is-suboptimal');
-        }
+        if (isKey) label.classList.add('is-correct-key');
+        if (isSelected && !isKey && q.kategori !== 'TKP') label.classList.add('is-wrong-selection');
+        if (isSelected && q.kategori === 'TKP' && weight < 5) label.classList.add('is-suboptimal');
       }
 
-      if (isSelected) {
-        label.classList.add('selected');
-      }
+      if (isSelected) label.classList.add('selected');
 
-      // Input Radio
       const radio = document.createElement('input');
       radio.type = 'radio';
       radio.name = `skd_answer_${q.id}`;
       radio.value = key;
       radio.checked = isSelected;
 
-      // In Review mode, options are read-only
-      if (isReviewMode) {
-        radio.disabled = true;
-      }
+      if (isReviewMode) radio.disabled = true;
 
-      // Indicator badge (A, B, C, D, E)
       const indicator = document.createElement('span');
       indicator.className = 'option-indicator';
       indicator.textContent = key;
 
-      // Option text
       const textDiv = document.createElement('div');
       textDiv.className = 'option-text';
       textDiv.innerHTML = optionText;
 
-      // Option score pill
       const scorePill = document.createElement('span');
       scorePill.className = 'option-score-pill';
       if (q.kategori === 'TKP') {
@@ -794,8 +996,7 @@
       label.appendChild(textDiv);
       label.appendChild(scorePill);
 
-      // Event Listener: Option Click
-      label.addEventListener('click', (e) => {
+      label.addEventListener('click', () => {
         if (isReviewMode) return;
         selectOption(q, key);
       });
@@ -804,9 +1005,6 @@
     });
   }
 
-  /**
-   * Handles user selecting an option
-   */
   function selectOption(q, chosenKey) {
     if (state.mode === 'simulasi') {
       state.answers[q.id] = chosenKey;
@@ -819,13 +1017,9 @@
     }
   }
 
-  /**
-   * Renders Exhaustive Pembahasan Box
-   */
   function renderPembahasan(q, userChoice) {
     if (!DOM.pembahasanBox) return;
 
-    // Official Key & Rationale Badge
     if (DOM.kunciJawabanText) {
       if (q.kategori === 'TKP') {
         const bestOpt = ['A', 'B', 'C', 'D', 'E'].find(k => q.bobot[k] === 5) || q.kunci;
@@ -835,12 +1029,10 @@
       }
     }
 
-    // Main Rationale
     if (DOM.rationaleMainContent) {
       DOM.rationaleMainContent.innerHTML = q.pembahasan;
     }
 
-    // Option-by-Option Breakdown (A - E)
     const optionKeys = ['A', 'B', 'C', 'D', 'E'];
     optionKeys.forEach(k => {
       const breakdownEl = document.getElementById(`breakdown-opt-${k}`);
@@ -865,37 +1057,61 @@
       `;
     });
 
-    // Tips & Trik Box
     if (DOM.tipsText) {
-      DOM.tipsText.innerHTML = q.tips || 'Perhatikan kata kunci pada pokok soal dan eliminasi opsi yang bertentangan.';
+      DOM.tipsText.innerHTML = q.tips || 'Gunakan eliminasi opsi yang tidak logis dan perhatikan kata kunci pokok soal.';
     }
 
-    // Playable YouTube Video Embed (TIU Numerik/Logika/Figural)
-    if (DOM.videoSection && DOM.videoIframe) {
+    if (DOM.videoSection) {
       if (q.video && q.video.url) {
         DOM.videoSection.style.display = 'block';
-        if (DOM.videoIframe.src !== q.video.url) {
-          DOM.videoIframe.src = q.video.url;
+        const embedUrl = toYouTubeEmbedUrl(q.video.url, q.video.startSeconds);
+        if (DOM.videoIframe) {
+          DOM.videoIframe.referrerPolicy = 'strict-origin-when-cross-origin';
+          DOM.videoIframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          DOM.videoIframe.setAttribute('allowfullscreen', 'true');
+          if (DOM.videoIframe.src !== embedUrl) {
+            DOM.videoIframe.src = embedUrl;
+          }
         }
         if (DOM.videoTitleText) {
           DOM.videoTitleText.textContent = q.video.title || `Video Pembahasan Soal No. ${q.id}`;
         }
+        if (DOM.videoChannelText) {
+          DOM.videoChannelText.textContent = 'Channel: ' + (q.video.channel || 'Edukasi CASN');
+        }
+        if (DOM.videoTimestampBadge) {
+          if (q.video.startSeconds > 0 || q.video.timestamp) {
+            const timeLabel = q.video.timestamp || formatTimestamp(q.video.startSeconds);
+            const topicLabel = q.video.topic_part ? ` - ${q.video.topic_part}` : '';
+            DOM.videoTimestampBadge.textContent = `⏱️ Langsung ke Pembahasan: Menit ${timeLabel}${topicLabel}`;
+            DOM.videoTimestampBadge.style.display = 'inline-flex';
+          } else {
+            DOM.videoTimestampBadge.style.display = 'none';
+          }
+        }
         if (DOM.videoDirectLink) {
-          DOM.videoDirectLink.href = q.video.watchUrl || q.video.url;
+          const watchUrl = q.video.watchUrl || toYouTubeWatchUrl(q.video.url, q.video.startSeconds);
+          DOM.videoDirectLink.href = watchUrl;
+          const textSpan = DOM.videoDirectLink.querySelector('span');
+          if (q.video.startSeconds > 0 || q.video.timestamp) {
+            const timeLabel = q.video.timestamp || formatTimestamp(q.video.startSeconds);
+            if (textSpan) textSpan.textContent = `Buka & Tonton Langsung pada Menit ${timeLabel} →`;
+          } else {
+            if (textSpan) textSpan.textContent = 'Buka & Tonton Langsung di YouTube →';
+          }
         }
       } else {
         DOM.videoSection.style.display = 'none';
-        DOM.videoIframe.src = '';
+        if (DOM.videoIframe) DOM.videoIframe.src = '';
       }
     }
 
-    // Official Source
     if (DOM.sourceText) {
-      DOM.sourceText.textContent = q.sumber || 'KepmenPAN-RB / FR Resmi CAT BKN';
+      DOM.sourceText.textContent = q.sumber || 'KepmenPAN-RB / FR Resmi CAT SKD';
     }
   }
 
-  // --- 9. SIDEBAR & QUESTION GRID CONTROLLER ---
+  // --- 10. SIDEBAR & QUESTION GRID CONTROLLER ---
 
   function renderSidebar() {
     if (!state.questions || state.questions.length === 0) return;
@@ -908,41 +1124,36 @@
       const hasAnswer = !!state.answers[q.id];
       const hasRagu = !!state.ragu[q.id];
 
-      if (hasRagu) {
-        raguCount++;
-      } else if (hasAnswer) {
-        answeredCount++;
-      } else {
-        unansweredCount++;
-      }
+      if (hasRagu) raguCount++;
+      else if (hasAnswer) answeredCount++;
+      else unansweredCount++;
     });
 
     const totalQuestions = state.questions.length;
 
-    // Header counters
     if (DOM.statAnswered) DOM.statAnswered.textContent = answeredCount;
     if (DOM.statRagu) DOM.statRagu.textContent = raguCount;
     if (DOM.statUnanswered) DOM.statUnanswered.textContent = unansweredCount;
     if (DOM.statTotal) DOM.statTotal.textContent = totalQuestions;
 
-    // Progress bar fill percentage
     if (DOM.progressBarFill) {
       const pct = Math.round(((answeredCount + raguCount) / totalQuestions) * 100);
       DOM.progressBarFill.style.width = `${pct}%`;
     }
 
-    // Legend counters
     if (DOM.legendCountAnswered) DOM.legendCountAnswered.textContent = `(${answeredCount})`;
     if (DOM.legendCountRagu) DOM.legendCountRagu.textContent = `(${raguCount})`;
     if (DOM.legendCountUnanswered) DOM.legendCountUnanswered.textContent = `(${unansweredCount})`;
 
-    // Filter Badges Count
-    if (DOM.countFilterAll) DOM.countFilterAll.textContent = totalQuestions;
-    if (DOM.countFilterTwk) DOM.countFilterTwk.textContent = CONFIG.COUNTS.TWK;
-    if (DOM.countFilterTiu) DOM.countFilterTiu.textContent = CONFIG.COUNTS.TIU;
-    if (DOM.countFilterTkp) DOM.countFilterTkp.textContent = CONFIG.COUNTS.TKP;
+    const twkCount = state.questions.filter(q => q.kategori === 'TWK').length;
+    const tiuCount = state.questions.filter(q => q.kategori === 'TIU').length;
+    const tkpCount = state.questions.filter(q => q.kategori === 'TKP').length;
 
-    // Render Grid Buttons
+    if (DOM.countFilterAll) DOM.countFilterAll.textContent = totalQuestions;
+    if (DOM.countFilterTwk) DOM.countFilterTwk.textContent = twkCount;
+    if (DOM.countFilterTiu) DOM.countFilterTiu.textContent = tiuCount;
+    if (DOM.countFilterTkp) DOM.countFilterTkp.textContent = tkpCount;
+
     renderGridButtons();
   }
 
@@ -951,7 +1162,6 @@
     DOM.questionGrid.innerHTML = '';
 
     state.questions.forEach((q, idx) => {
-      // Range Filter check
       if (state.gridRangeFilter !== 'all' && q.kategori !== state.gridRangeFilter) {
         return;
       }
@@ -959,25 +1169,19 @@
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'grid-btn';
-      btn.textContent = q.id;
+      btn.textContent = idx + 1;
       btn.setAttribute('data-index', idx);
-      btn.setAttribute('aria-label', `Soal No. ${q.id} - ${q.kategori}`);
+      btn.setAttribute('aria-label', `Soal No. ${idx + 1} - ${q.kategori}`);
 
       const hasAnswer = !!state.answers[q.id];
       const hasRagu = !!state.ragu[q.id];
       const isCurrent = (idx === state.currentIndex);
 
-      if (hasRagu) {
-        btn.classList.add('ragu');
-      } else if (hasAnswer) {
-        btn.classList.add('answered');
-      } else {
-        btn.classList.add('unanswered');
-      }
+      if (hasRagu) btn.classList.add('ragu');
+      else if (hasAnswer) btn.classList.add('answered');
+      else btn.classList.add('unanswered');
 
-      if (isCurrent) {
-        btn.classList.add('current');
-      }
+      if (isCurrent) btn.classList.add('current');
 
       btn.addEventListener('click', () => {
         state.currentIndex = idx;
@@ -992,7 +1196,7 @@
     });
   }
 
-  // --- 10. POST-EXAM REVIEW SESI VIEW ---
+  // --- 11. POST-EXAM REVIEW SESI VIEW ---
 
   function renderReviewSessionView() {
     if (!DOM.reviewQuestionsList) return;
@@ -1000,7 +1204,6 @@
 
     const results = calculateScores();
 
-    // Calculate dynamic counts for review chips
     const wrongCount = results.detailedList.filter(item => !item.isCorrect).length;
     const correctCount = results.detailedList.filter(item => item.isCorrect).length;
     const raguCount = results.detailedList.filter(item => item.isRagu).length;
@@ -1008,7 +1211,6 @@
     const tiuCount = results.detailedList.filter(item => item.question.kategori === 'TIU').length;
     const tkpCount = results.detailedList.filter(item => item.question.kategori === 'TKP').length;
 
-    // Update filter chip labels
     if (DOM.reviewFilterChips) {
       DOM.reviewFilterChips.forEach(chip => {
         const filterKey = chip.getAttribute('data-review-filter');
@@ -1022,44 +1224,31 @@
       });
     }
 
-    // Filter questions according to state.reviewFilter
     const filtered = results.detailedList.filter(item => {
       const q = item.question;
       switch (state.reviewFilter) {
-        case 'wrong':
-          return !item.isCorrect;
-        case 'correct':
-          return item.isCorrect;
-        case 'ragu':
-          return item.isRagu;
-        case 'TWK':
-          return q.kategori === 'TWK';
-        case 'TIU':
-          return q.kategori === 'TIU';
-        case 'TKP':
-          return q.kategori === 'TKP';
+        case 'wrong': return !item.isCorrect;
+        case 'correct': return item.isCorrect;
+        case 'ragu': return item.isRagu;
+        case 'TWK': return q.kategori === 'TWK';
+        case 'TIU': return q.kategori === 'TIU';
+        case 'TKP': return q.kategori === 'TKP';
         case 'all':
-        default:
-          return true;
+        default: return true;
       }
     });
 
     if (filtered.length === 0) {
       DOM.reviewQuestionsList.innerHTML = `
         <div style="text-align:center; padding:3rem 1rem; color:var(--text-muted); background:#ffffff; border-radius:var(--radius-md); border:1px solid var(--border-color);">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:0.75rem; opacity:0.6;">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
-          <h4 style="margin:0 0 0.25rem 0; font-size:1.05rem;">Tidak ada soal dalam filter ini</h4>
-          <p style="margin:0; font-size:0.875rem;">Silakan pilih filter lain di atas untuk melihat soal lainnya.</p>
+          <h4 style="margin:0 0 0.25rem 0; font-size:1.05rem;">Tidak ada butir soal dalam filter ini</h4>
+          <p style="margin:0; font-size:0.875rem;">Silakan pilih filter lain di atas untuk meninjau soal lainnya.</p>
         </div>
       `;
       return;
     }
 
-    filtered.forEach(item => {
+    filtered.forEach((item, fIdx) => {
       const q = item.question;
       const userChoice = item.userChoice;
       const isCorrect = item.isCorrect;
@@ -1067,20 +1256,14 @@
       const card = document.createElement('article');
       card.className = 'review-card';
 
-      if (item.isRagu) {
-        card.classList.add('status-ragu');
-      } else if (!userChoice) {
-        card.classList.add('status-unanswered');
-      } else if (isCorrect) {
-        card.classList.add('status-correct');
-      } else {
-        card.classList.add('status-wrong');
-      }
+      if (item.isRagu) card.classList.add('status-ragu');
+      else if (!userChoice) card.classList.add('status-unanswered');
+      else if (isCorrect) card.classList.add('status-correct');
+      else card.classList.add('status-wrong');
 
-      // Result Badge Text
       let resultBadgeHtml = '';
       if (!userChoice) {
-        resultBadgeHtml = `<span class="review-user-result-badge unanswered">Belum Dijawab (0 Poin)</span>`;
+        resultBadgeHtml = `<span class="review-user-result-badge unanswered">Kosong (0 Poin)</span>`;
       } else if (q.kategori === 'TKP') {
         resultBadgeHtml = `<span class="review-user-result-badge ${item.scoreEarned === 5 ? 'correct' : 'wrong'}">Pilihan Anda: Opsi ${userChoice} (Skor: ${item.scoreEarned})</span>`;
       } else if (isCorrect) {
@@ -1089,7 +1272,6 @@
         resultBadgeHtml = `<span class="review-user-result-badge wrong">Salah: Opsi ${userChoice} (Kunci: ${q.kunci}) (0 Poin)</span>`;
       }
 
-      // Options List
       const optionKeys = ['A', 'B', 'C', 'D', 'E'];
       let optionsHtml = '';
 
@@ -1113,24 +1295,58 @@
         `;
       });
 
-      // Video Section HTML if available
       let videoHtml = '';
       if (q.video && q.video.url) {
+        const embedUrl = toYouTubeEmbedUrl(q.video.url);
+        const watchUrl = q.video.watchUrl || toYouTubeWatchUrl(q.video.url);
+        const vidTitle = escapeHTML(q.video.title || `Video Pembahasan Soal No. ${q.id}`);
+        const vidChannel = escapeHTML(q.video.channel || 'Edukasi CASN');
+
+        const tsLabel = (q.video && q.video.timestamp) ? q.video.timestamp : '';
+        const topicLabel = (q.video && q.video.topic_part) ? ` - ${escapeHTML(q.video.topic_part)}` : '';
+        const timestampBadgeHtml = tsLabel ? `<span class="video-timestamp-badge" style="display:inline-flex; margin-top:4px;">⏱️ Langsung ke Pembahasan: Menit ${escapeHTML(tsLabel)}${topicLabel}</span>` : '';
+        const buttonText = tsLabel ? `Buka & Tonton Langsung pada Menit ${escapeHTML(tsLabel)} &rarr;` : `Buka & Tonton Langsung di YouTube &rarr;`;
+
         videoHtml = `
           <div class="video-explainer-card" style="margin-top:0.75rem;">
             <div class="video-header">
-              <span class="video-badge">YOUTUBE PEMBAHASAN</span>
-              <span class="video-title">${escapeHTML(q.video.title)}</span>
+              <div class="video-title-wrap">
+                <span class="video-badge">YOUTUBE PEMBAHASAN</span>
+                <span class="video-title">${vidTitle}</span>
+                ${timestampBadgeHtml}
+              </div>
+              <span class="video-channel-tag" style="font-size:0.75rem; color:#cbd5e1; font-weight:600;">Channel: ${vidChannel}</span>
             </div>
             <div class="video-embed-container">
-              <iframe src="${escapeHTML(q.video.url)}" title="${escapeHTML(q.video.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe
+                src="${embedUrl}"
+                title="${vidTitle}"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
             </div>
-            <a href="${escapeHTML(q.video.watchUrl)}" target="_blank" rel="noopener noreferrer" class="video-fallback-link">Tonton langsung di YouTube &rarr;</a>
+            <div class="video-actions-bar">
+              <a href="${watchUrl}" target="_blank" rel="noopener noreferrer" class="btn-watch-youtube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <span>${buttonText}</span>
+              </a>
+            </div>
+            <div class="video-tip-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span><strong>Tips:</strong> Jika YouTube player menampilkan "Error 153" di browser saat offline file://, gunakan tombol di atas untuk menonton langsung di tab baru.</span>
+            </div>
           </div>
         `;
       }
 
-      // Option by option breakdown HTML
       let breakdownHtml = '';
       optionKeys.forEach(k => {
         const isKey = (k === q.kunci);
@@ -1146,7 +1362,7 @@
       card.innerHTML = `
         <header class="review-card-header">
           <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
-            <span class="badge-question-number">Soal No. ${q.id}</span>
+            <span class="badge-question-number">Soal No. ${item.index + 1}</span>
             <span class="badge-question-category">${escapeHTML(q.kategori)} - ${escapeHTML(q.subkategori)}</span>
           </div>
           <div>${resultBadgeHtml}</div>
@@ -1154,12 +1370,12 @@
 
         <div class="review-card-body">
           <div class="review-question-text">${q.soal}</div>
-          ${q.media ? `<div class="question-media-wrapper" style="margin-bottom:0.75rem;">${q.media}</div>` : ''}
+          ${(q.media || q.image_data) ? `<div class="question-media-wrapper" style="margin-bottom:0.75rem;">${q.image_data || q.media}</div>` : ''}
           <div class="review-options-grid">${optionsHtml}</div>
 
           <div class="review-pembahasan-box">
             <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; border-bottom:1px solid var(--border-color); padding-bottom:0.5rem;">
-              <strong style="color:var(--bkn-primary); font-size:0.95rem;">Pembahasan & Analisis Resmi:</strong>
+              <strong style="color:var(--cat-primary); font-size:0.95rem;">Pembahasan & Analisis Resmi:</strong>
               <span class="badge-kunci-resmi">Kunci: ${escapeHTML(q.kategori === 'TKP' ? q.kunci + ' (Skor 5)' : q.kunci)}</span>
             </div>
 
@@ -1195,7 +1411,7 @@
     });
   }
 
-  // --- 11. FINISH EXAM & RESULT MODAL ---
+  // --- 12. FINISH EXAM & AUTO SAVE TO SQLITE ---
 
   function openConfirmFinishModal() {
     let answered = 0;
@@ -1213,11 +1429,7 @@
     if (DOM.confirmStatUnanswered) DOM.confirmStatUnanswered.textContent = unanswered;
 
     if (DOM.confirmUnansweredWarning) {
-      if (unanswered > 0 || ragu > 0) {
-        DOM.confirmUnansweredWarning.style.display = 'flex';
-      } else {
-        DOM.confirmUnansweredWarning.style.display = 'none';
-      }
+      DOM.confirmUnansweredWarning.style.display = (unanswered > 0 || ragu > 0) ? 'flex' : 'none';
     }
 
     if (DOM.modalConfirmFinish) {
@@ -1240,13 +1452,11 @@
 
     const results = calculateScores();
 
-    // Populate Certificate Modal
     if (DOM.scoreValTwk) DOM.scoreValTwk.textContent = results.twkScore;
     if (DOM.scoreValTiu) DOM.scoreValTiu.textContent = results.tiuScore;
     if (DOM.scoreValTkp) DOM.scoreValTkp.textContent = results.tkpScore;
     if (DOM.scoreValTotal) DOM.scoreValTotal.textContent = results.totalScore;
 
-    // Badges Status
     const setStatusBadge = (el, passed) => {
       if (!el) return;
       el.className = 'score-badge-status ' + (passed ? 'pass' : 'fail');
@@ -1262,7 +1472,6 @@
       DOM.badgeStatusTotal.textContent = results.passTotal ? 'MEMENUHI NILAI' : 'TIDAK MEMENUHI';
     }
 
-    // Final Banner
     if (DOM.finalStatusBanner) {
       DOM.finalStatusBanner.className = 'final-status-card ' + (results.passTotal ? 'pass' : 'fail');
     }
@@ -1276,7 +1485,7 @@
     if (DOM.finalStatusDesc) {
       if (results.passTotal) {
         DOM.finalStatusDesc.textContent =
-          `Nilai Anda memenuhi seluruh passing grade PermenPAN-RB (TWK: ${results.twkScore}/${CONFIG.PASSING_GRADES.TWK}, TIU: ${results.tiuScore}/${CONFIG.PASSING_GRADES.TIU}, TKP: ${results.tkpScore}/${CONFIG.PASSING_GRADES.TKP}). Berpeluang besar lolos ke tahapan SKB sesuai kuota formasi!`;
+          `Nilai Anda memenuhi seluruh passing grade PermenPAN-RB (TWK: ${results.twkScore}/${CONFIG.PASSING_GRADES.TWK}, TIU: ${results.tiuScore}/${CONFIG.PASSING_GRADES.TIU}, TKP: ${results.tkpScore}/${CONFIG.PASSING_GRADES.TKP}). Berpeluang besar lolos ke tahapan SKB!`;
       } else {
         const failedAreas = [];
         if (!results.passTWK) failedAreas.push(`TWK (${results.twkScore} < ${CONFIG.PASSING_GRADES.TWK})`);
@@ -1284,44 +1493,1577 @@
         if (!results.passTKP) failedAreas.push(`TKP (${results.tkpScore} < ${CONFIG.PASSING_GRADES.TKP})`);
 
         DOM.finalStatusDesc.textContent =
-          `Peserta dinyatakan BELUM MEMENUHI karena perolehan nilai pada sub-tes berikut masih di bawah passing grade: ${failedAreas.join(', ')}. Pelajari kembali melalui Review Pembahasan!`;
+          `Peserta dinyatakan BELUM MEMENUHI karena perolehan nilai pada sub-tes berikut masih di bawah passing grade: ${failedAreas.join(', ')}.`;
       }
     }
 
-    // Exam Date & Duration in Certificate
     if (DOM.certExamDate) {
       DOM.certExamDate.textContent = formatIndonesianDate();
     }
+    const timeSpentSec = Math.max(0, CONFIG.EXAM_DURATION_SECONDS - state.timeRemaining);
     if (DOM.certExamDuration) {
-      const timeSpentSec = Math.max(0, CONFIG.EXAM_DURATION_SECONDS - state.timeRemaining);
       const spentMin = Math.ceil(timeSpentSec / 60);
       DOM.certExamDuration.textContent = `${spentMin} Menit (${timeSpentSec} detik)`;
     }
 
-    // Show Result Modal
     if (DOM.modalResult) {
       DOM.modalResult.classList.add('open');
     }
 
-    // Unhide Review Tab in Subnav
     if (DOM.tabModeReview) {
       DOM.tabModeReview.style.display = 'inline-flex';
     }
 
-    // Update Finish button label
-    if (DOM.btnFinishExam && DOM.btnFinishExam.querySelector('span')) {
-      DOM.btnFinishExam.querySelector('span').textContent = 'Sertifikat Nilai';
-    }
+    saveSessionToSQLite({
+      session_name: `Simulasi CAT SKD - ${formatIndonesianDate()}`,
+      mode: 'simulasi',
+      duration_seconds: timeSpentSec,
+      twk_score: results.twkScore,
+      tiu_score: results.tiuScore,
+      tkp_score: results.tkpScore,
+      total_score: results.totalScore,
+      pass_twk: results.passTWK ? 1 : 0,
+      pass_tiu: results.passTIU ? 1 : 0,
+      pass_tkp: results.passTKP ? 1 : 0,
+      pass_total: results.passTotal ? 1 : 0,
+      total_answered: results.answeredCount,
+      total_questions: state.questions.length,
+      answers: state.answers,
+      results: results.detailedList.map(item => ({
+        id: item.question.id,
+        userChoice: item.userChoice,
+        scoreEarned: item.scoreEarned,
+        isCorrect: item.isCorrect,
+        isRagu: item.isRagu
+      }))
+    });
 
-    saveState();
+    saveActiveExamState();
   }
 
-  function restartExam() {
-    if (!confirm('Apakah Anda yakin ingin mengulang ujian simulasi dari awal? Seluruh jawaban dan catatan waktu akan direset.')) {
+  // ==========================================================================
+  // --- 13. CLIENT-SIDE SQLITE ENGINE (sql.js WebAssembly & IndexedDB) ---
+  // ==========================================================================
+
+  let sqliteDB = null;
+  let isSQLiteReady = false;
+
+  function openIndexedDB() {
+    return new Promise((resolve, reject) => {
+      if (!window.indexedDB) {
+        return reject(new Error('Browser tidak mendukung IndexedDB'));
+      }
+      const req = window.indexedDB.open(CONFIG.IDB_NAME, 1);
+      req.onupgradeneeded = (e) => {
+        const idb = e.target.result;
+        if (!idb.objectStoreNames.contains(CONFIG.IDB_STORE)) {
+          idb.createObjectStore(CONFIG.IDB_STORE);
+        }
+      };
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+  }
+
+  async function getStoredSQLiteBinary() {
+    try {
+      const idb = await openIndexedDB();
+      return new Promise((resolve) => {
+        const tx = idb.transaction(CONFIG.IDB_STORE, 'readonly');
+        const store = tx.objectStore(CONFIG.IDB_STORE);
+        const req = store.get(CONFIG.IDB_KEY);
+        req.onsuccess = () => resolve(req.result || null);
+        req.onerror = () => resolve(null);
+      });
+    } catch (e) {
+      console.warn('[SQLite IDB] Gagal membaca binary dari IndexedDB:', e.message);
+      return null;
+    }
+  }
+
+  async function saveStoredSQLiteBinary(uint8Array) {
+    try {
+      const idb = await openIndexedDB();
+      return new Promise((resolve, reject) => {
+        const tx = idb.transaction(CONFIG.IDB_STORE, 'readwrite');
+        const store = tx.objectStore(CONFIG.IDB_STORE);
+        const req = store.put(uint8Array, CONFIG.IDB_KEY);
+        req.onsuccess = () => resolve(true);
+        req.onerror = () => reject(req.error);
+      });
+    } catch (e) {
+      console.warn('[SQLite IDB] Gagal menyimpan binary ke IndexedDB:', e.message);
+      return false;
+    }
+  }
+
+  async function persistSQLiteDB() {
+    if (!sqliteDB) return false;
+    try {
+      const binary = sqliteDB.export();
+      await saveStoredSQLiteBinary(binary);
+      return true;
+    } catch (e) {
+      console.warn('[SQLite IDB] Persist error:', e.message);
+      return false;
+    }
+  }
+
+  async function ensureSqlJsLoaded() {
+    if (typeof window.initSqlJs === 'function') {
+      return window.initSqlJs;
+    }
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/sql-wasm.js';
+      script.onload = () => {
+        if (typeof window.initSqlJs === 'function') {
+          resolve(window.initSqlJs);
+        } else {
+          reject(new Error('initSqlJs tidak ditemukan setelah script dimuat'));
+        }
+      };
+      script.onerror = () => reject(new Error('Gagal memuat sql-wasm.js dari CDN'));
+      document.head.appendChild(script);
+    });
+  }
+
+  function createTablesIfNotExist(db) {
+    db.run(`
+      CREATE TABLE IF NOT EXISTS exam_sessions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        session_name TEXT,
+        mode TEXT,
+        duration_seconds INTEGER DEFAULT 0,
+        twk_score INTEGER DEFAULT 0,
+        tiu_score INTEGER DEFAULT 0,
+        tkp_score INTEGER DEFAULT 0,
+        total_score INTEGER DEFAULT 0,
+        pass_twk INTEGER DEFAULT 0,
+        pass_tiu INTEGER DEFAULT 0,
+        pass_tkp INTEGER DEFAULT 0,
+        pass_total INTEGER DEFAULT 0,
+        total_answered INTEGER DEFAULT 0,
+        total_questions INTEGER DEFAULT 110,
+        answers_json TEXT,
+        results_json TEXT,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      );
+      CREATE INDEX IF NOT EXISTS idx_sessions_created ON exam_sessions(created_at DESC);
+
+      CREATE TABLE IF NOT EXISTS questions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        kategori TEXT NOT NULL,
+        subkategori TEXT,
+        soal TEXT NOT NULL,
+        opsi_a TEXT,
+        opsi_b TEXT,
+        opsi_c TEXT,
+        opsi_d TEXT,
+        opsi_e TEXT,
+        bobot_a INTEGER DEFAULT 0,
+        bobot_b INTEGER DEFAULT 0,
+        bobot_c INTEGER DEFAULT 0,
+        bobot_d INTEGER DEFAULT 0,
+        bobot_e INTEGER DEFAULT 0,
+        kunci TEXT NOT NULL,
+        has_image INTEGER DEFAULT 0,
+        image_data TEXT,
+        sumber_nama TEXT,
+        sumber_url TEXT,
+        sumber_halaman TEXT,
+        sumber_no_soal TEXT,
+        pembahasan TEXT,
+        analisis_a TEXT,
+        analisis_b TEXT,
+        analisis_c TEXT,
+        analisis_d TEXT,
+        analisis_e TEXT,
+        tips TEXT,
+        video_url TEXT,
+        video_title TEXT,
+        video_channel TEXT,
+        is_active INTEGER DEFAULT 1,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      );
+      CREATE INDEX IF NOT EXISTS idx_questions_kategori ON questions(kategori);
+      CREATE INDEX IF NOT EXISTS idx_questions_active ON questions(is_active);
+    `);
+  }
+
+  function seedQuestionsIfEmpty(db) {
+    try {
+      const res = db.exec("SELECT COUNT(*) AS cnt FROM questions;");
+      const count = (res.length > 0 && res[0].values.length > 0) ? res[0].values[0][0] : 0;
+      if (count > 0) {
+        console.log(`[SQLite JS] Tabel questions sudah terisi ${count} butir soal.`);
+        return;
+      }
+    } catch (e) {
+      console.warn('[SQLite JS] Check questions count error:', e.message);
+    }
+
+    const list = window.SKD_QUESTIONS || [];
+    if (!Array.isArray(list) || list.length === 0) {
+      console.warn('[SQLite JS] window.SKD_QUESTIONS kosong, seeding ditunda.');
       return;
     }
 
-    clearState();
+    console.log(`[SQLite JS] Mengisi data awal (seeding) ${list.length} butir soal ke SQLite...`);
+    db.run("BEGIN TRANSACTION;");
+    const stmt = db.prepare(`
+      INSERT INTO questions (
+        id, kategori, subkategori, soal,
+        opsi_a, opsi_b, opsi_c, opsi_d, opsi_e,
+        bobot_a, bobot_b, bobot_c, bobot_d, bobot_e,
+        kunci, has_image, image_data,
+        sumber_nama, sumber_url, sumber_halaman, sumber_no_soal,
+        pembahasan,
+        analisis_a, analisis_b, analisis_c, analisis_d, analisis_e,
+        tips, video_url, video_title, video_channel,
+        is_active
+      ) VALUES (
+        ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?, ?,
+        ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?, ?,
+        1
+      );
+    `);
+
+    list.forEach((q, idx) => {
+      const id = q.id || (idx + 1);
+      const kategori = (q.kategori || 'TWK').toUpperCase();
+      const subkategori = q.subkategori || '';
+      const soal = q.soal || '';
+      const opsi = q.opsi || {};
+      const bobot = q.bobot || {};
+      const kunci = (q.kunci || 'A').toUpperCase();
+      const hasImage = (q.has_image || q.gambar || q.media) ? 1 : 0;
+      const imageData = q.gambar || q.media || q.image_data || null;
+
+      const sumberNama = q.sumber_nama || q.sumber || 'KepmenPAN-RB No. 321 Tahun 2024';
+      const sumberUrl = q.sumber_url || 'https://menpan.go.id';
+      const sumberHalaman = q.sumber_halaman || 'Lampiran Materi';
+      const sumberNoSoal = q.sumber_no_soal || `Butir ${id}`;
+
+      const pembahasan = q.pembahasan || '';
+      const analisis = q.analisis_opsi || {};
+      const tips = q.tips || '';
+
+      let videoUrl = null;
+      let videoTitle = null;
+      let videoChannel = null;
+
+      if (q.youtube && typeof q.youtube === 'object') {
+        videoUrl = q.youtube.url || null;
+        videoTitle = q.youtube.title || null;
+        videoChannel = q.youtube.channel || null;
+      } else if (q.video && typeof q.video === 'object') {
+        videoUrl = q.video.url || null;
+        videoTitle = q.video.title || null;
+        videoChannel = q.video.channel || null;
+      } else if (q.video_url) {
+        videoUrl = q.video_url;
+        videoTitle = q.video_title || null;
+        videoChannel = q.video_channel || null;
+      }
+
+      stmt.run([
+        id, kategori, subkategori, soal,
+        opsi['A'] || '', opsi['B'] || '', opsi['C'] || '', opsi['D'] || '', opsi['E'] || '',
+        bobot['A'] ?? 0, bobot['B'] ?? 0, bobot['C'] ?? 0, bobot['D'] ?? 0, bobot['E'] ?? 0,
+        kunci, hasImage, imageData,
+        sumberNama, sumberUrl, sumberHalaman, sumberNoSoal,
+        pembahasan,
+        analisis['A'] || '', analisis['B'] || '', analisis['C'] || '', analisis['D'] || '', analisis['E'] || '',
+        tips, videoUrl, videoTitle, videoChannel
+      ]);
+    });
+
+    stmt.free();
+    db.run("COMMIT;");
+    console.log(`[SQLite JS] Seeding selesai! ${list.length} butir soal tersimpan.`);
+  }
+
+  async function initSQLiteEngine() {
+    try {
+      if (DOM.sqliteStatusBadge) {
+        DOM.sqliteStatusBadge.innerHTML = '<span class="sqlite-badge-dot"></span><span>Memuat SQLite WASM...</span>';
+      }
+
+      const initSql = await ensureSqlJsLoaded();
+      
+      const SQL = await initSql({
+        locateFile: (file) => {
+          if (file.endsWith('.wasm')) {
+            if (window.location.protocol === 'file:') {
+              return 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/' + file;
+            }
+            return 'js/' + file;
+          }
+          return file;
+        }
+      });
+
+      // 1. Cek versi data dan IndexedDB
+      const DATA_VERSION = 'v5_timestamps';
+      const storedVer = localStorage.getItem('CAT_DB_DATA_VERSION');
+      let binary = null;
+
+      if (storedVer === DATA_VERSION) {
+        binary = await getStoredSQLiteBinary();
+      } else {
+        console.log(`[SQLite JS] Versi data baru terdeteksi (${DATA_VERSION}). Memperbarui database dari file bawaan/seeding...`);
+      }
+
+      // 2. Jika belum ada atau versi baru, muat dari file database.sqlite via fetch
+      if (!binary) {
+        try {
+          const resp = await fetch('database.sqlite');
+          if (resp.ok) {
+            const buffer = await resp.arrayBuffer();
+            if (buffer && buffer.byteLength > 0) {
+              binary = new Uint8Array(buffer);
+              console.log('[SQLite JS] Berhasil memuat database.sqlite bawaan via fetch:', binary.byteLength, 'bytes');
+            }
+          }
+        } catch (fetchErr) {
+          console.warn('[SQLite JS] Tidak dapat fetch database.sqlite langsung, membuat database baru:', fetchErr.message);
+        }
+      }
+
+      // 3. Buat database instance
+      if (binary && binary.byteLength > 0) {
+        sqliteDB = new SQL.Database(binary);
+      } else {
+        sqliteDB = new SQL.Database();
+      }
+
+      // 4. Pastikan tabel tersedia & seed jika kosong
+      createTablesIfNotExist(sqliteDB);
+      seedQuestionsIfEmpty(sqliteDB);
+
+      // 5. Simpan binary terkini ke IndexedDB & catat versi data
+      await persistSQLiteDB();
+      localStorage.setItem('CAT_DB_DATA_VERSION', DATA_VERSION);
+
+      isSQLiteReady = true;
+      window.sqliteDB = sqliteDB;
+      window.SQLiteJS = {
+        db: sqliteDB,
+        isReady: true,
+        exportBinary: () => sqliteDB ? sqliteDB.export() : null,
+        queryRows,
+        queryOne
+      };
+      if (DOM.sqliteStatusBadge) {
+        DOM.sqliteStatusBadge.innerHTML = '<span class="sqlite-badge-dot" style="background:#10b981;"></span><span>SQLite JS (WASM)</span>';
+      }
+      console.log('[SQLite JS Engine] Siap digunakan 100% tanpa PHP.');
+      return sqliteDB;
+    } catch (e) {
+      console.error('[SQLite JS Engine] Inisialisasi gagal:', e);
+      if (DOM.sqliteStatusBadge) {
+        DOM.sqliteStatusBadge.innerHTML = '<span class="sqlite-badge-dot" style="background:#f59e0b;"></span><span>SQLite Fallback (In-Memory)</span>';
+      }
+      return null;
+    }
+  }
+
+  function queryRows(sql, params = []) {
+    if (!sqliteDB) return [];
+    try {
+      const stmt = sqliteDB.prepare(sql);
+      stmt.bind(params);
+      const rows = [];
+      while (stmt.step()) {
+        rows.push(stmt.getAsObject());
+      }
+      stmt.free();
+      return rows;
+    } catch (e) {
+      console.error('[SQLite JS] queryRows error:', e.message, sql, params);
+      return [];
+    }
+  }
+
+  function queryOne(sql, params = []) {
+    const rows = queryRows(sql, params);
+    return rows.length > 0 ? rows[0] : null;
+  }
+
+  function formatQuestionRow(r) {
+    const id = Number(r.id);
+    return {
+      id: id,
+      no: id,
+      kategori: r.kategori,
+      subkategori: r.subkategori,
+      soal: r.soal,
+      opsi: {
+        A: r.opsi_a || '',
+        B: r.opsi_b || '',
+        C: r.opsi_c || '',
+        D: r.opsi_d || '',
+        E: r.opsi_e || ''
+      },
+      bobot: {
+        A: Number(r.bobot_a || 0),
+        B: Number(r.bobot_b || 0),
+        C: Number(r.bobot_c || 0),
+        D: Number(r.bobot_d || 0),
+        E: Number(r.bobot_e || 0)
+      },
+      kunci: r.kunci,
+      has_image: Number(r.has_image || 0),
+      image_data: r.image_data || '',
+      media: r.image_data || '',
+      gambar: r.image_data || '',
+      sumber_nama: r.sumber_nama || '',
+      sumber_url: r.sumber_url || '',
+      sumber_halaman: r.sumber_halaman || '',
+      sumber_no_soal: r.sumber_no_soal || '',
+      sumber: r.sumber_nama ? (r.sumber_nama + (r.sumber_halaman ? ` (Hal: ${r.sumber_halaman})` : '')) : 'KepmenPAN-RB',
+      pembahasan: r.pembahasan || '',
+      analisis_opsi: {
+        A: r.analisis_a || '',
+        B: r.analisis_b || '',
+        C: r.analisis_c || '',
+        D: r.analisis_d || '',
+        E: r.analisis_e || ''
+      },
+      tips: r.tips || '',
+      video: r.video_url ? {
+        url: toYouTubeEmbedUrl(r.video_url, extractYouTubeStartSeconds(r.video_url)),
+        watchUrl: toYouTubeWatchUrl(r.video_url, extractYouTubeStartSeconds(r.video_url)),
+        title: r.video_title || `Video Pembahasan Soal #${id}`,
+        channel: r.video_channel || 'Edukasi CASN BKN',
+        startSeconds: extractYouTubeStartSeconds(r.video_url),
+        timestamp: formatTimestamp(extractYouTubeStartSeconds(r.video_url))
+      } : null,
+      is_active: Number(r.is_active !== undefined && r.is_active !== null ? r.is_active : 1),
+      created_at: r.created_at,
+      updated_at: r.updated_at
+    };
+  }
+
+  function exportDatabaseFile() {
+    if (!sqliteDB) {
+      alert('Database SQLite belum siap.');
+      return;
+    }
+    try {
+      const binary = sqliteDB.export();
+      const blob = new Blob([binary], { type: 'application/x-sqlite3' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'database.sqlite';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      console.log('[SQLite JS] Berhasil mengunduh database.sqlite.');
+    } catch (e) {
+      console.error('[SQLite JS] Export error:', e);
+      alert('Gagal mengekspor file database.sqlite: ' + e.message);
+    }
+  }
+
+  async function importDatabaseFile(file) {
+    if (!file) return;
+    try {
+      const buffer = await file.arrayBuffer();
+      const binary = new Uint8Array(buffer);
+      const initSql = await ensureSqlJsLoaded();
+      const SQL = await initSql({
+        locateFile: (f) => (window.location.protocol === 'file:' ? 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/' : 'js/') + f
+      });
+
+      const newDb = new SQL.Database(binary);
+      // Validasi tabel questions
+      const res = newDb.exec("SELECT COUNT(*) AS cnt FROM questions;");
+      if (!res || res.length === 0) {
+        throw new Error('File SQLite tidak memiliki tabel questions yang valid.');
+      }
+
+      sqliteDB = newDb;
+      createTablesIfNotExist(sqliteDB);
+      await persistSQLiteDB();
+      await loadActiveQuestions();
+
+      if (state.currentScreen === 'bank-soal') {
+        await loadAndRenderBankSoal();
+      } else if (state.currentScreen === 'history') {
+        await loadAndRenderHistory();
+      }
+
+      alert(`Database SQLite berhasil diimpor! Total ${res[0].values[0][0]} butir soal berhasil dimuat.`);
+    } catch (e) {
+      console.error('[SQLite JS] Import error:', e);
+      alert('Gagal mengimpor file SQLite: ' + e.message);
+    }
+  }
+
+  // --- SESSIONS SQLITE OPERATIONS (PURE JS) ---
+
+  async function saveSessionToSQLite(sessionData) {
+    if (sqliteDB) {
+      try {
+        const answersJson = JSON.stringify(sessionData.answers || {});
+        const resultsJson = JSON.stringify(sessionData.results || {});
+        const sessionName = sessionData.session_name || `Simulasi CAT ${new Date().toLocaleDateString('id-ID')}`;
+        const mode = sessionData.mode || 'simulasi';
+        const duration = sessionData.duration_seconds || 0;
+        const twkScore = sessionData.twk_score || 0;
+        const tiuScore = sessionData.tiu_score || 0;
+        const tkpScore = sessionData.tkp_score || 0;
+        const totalScore = sessionData.total_score || 0;
+        const passTwk = sessionData.pass_twk ? 1 : 0;
+        const passTiu = sessionData.pass_tiu ? 1 : 0;
+        const passTkp = sessionData.pass_tkp ? 1 : 0;
+        const passTotal = sessionData.pass_total ? 1 : 0;
+        const totalAnswered = sessionData.total_answered || 0;
+        const totalQuestions = sessionData.total_questions || 110;
+
+        const stmt = sqliteDB.prepare(`
+          INSERT INTO exam_sessions (
+            session_name, mode, duration_seconds,
+            twk_score, tiu_score, tkp_score, total_score,
+            pass_twk, pass_tiu, pass_tkp, pass_total,
+            total_answered, total_questions,
+            answers_json, results_json,
+            created_at
+          ) VALUES (
+            ?, ?, ?,
+            ?, ?, ?, ?,
+            ?, ?, ?, ?,
+            ?, ?,
+            ?, ?,
+            datetime('now', 'localtime')
+          );
+        `);
+        stmt.run([
+          sessionName, mode, duration,
+          twkScore, tiuScore, tkpScore, totalScore,
+          passTwk, passTiu, passTkp, passTotal,
+          totalAnswered, totalQuestions,
+          answersJson, resultsJson
+        ]);
+        stmt.free();
+
+        const lastIdRes = sqliteDB.exec("SELECT last_insert_rowid() AS id;");
+        const newId = (lastIdRes.length > 0 && lastIdRes[0].values.length > 0) ? lastIdRes[0].values[0][0] : Date.now();
+
+        await persistSQLiteDB();
+        state.activeSessionId = newId;
+        return newId;
+      } catch (e) {
+        console.warn('[SQLite JS] saveSessionToSQLite error:', e.message);
+      }
+    }
+
+    // Fallback: localStorage
+    try {
+      const raw = localStorage.getItem(CONFIG.HISTORY_FALLBACK_KEY);
+      const list = raw ? JSON.parse(raw) : [];
+      const newId = list.length > 0 ? Math.max(...list.map(s => s.id || 0)) + 1 : 1;
+      const record = {
+        id: newId,
+        ...sessionData,
+        created_at: new Date().toISOString().replace('T', ' ').substring(0, 19)
+      };
+      list.unshift(record);
+      localStorage.setItem(CONFIG.HISTORY_FALLBACK_KEY, JSON.stringify(list));
+      state.activeSessionId = newId;
+      return newId;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  async function fetchHistoryFromSQLite() {
+    if (sqliteDB) {
+      try {
+        const rows = queryRows("SELECT * FROM exam_sessions ORDER BY created_at DESC;");
+        return rows;
+      } catch (e) {
+        console.warn('[SQLite JS] fetchHistoryFromSQLite error:', e.message);
+      }
+    }
+
+    try {
+      const raw = localStorage.getItem(CONFIG.HISTORY_FALLBACK_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  async function deleteSessionFromSQLite(id) {
+    if (sqliteDB) {
+      try {
+        const stmt = sqliteDB.prepare("DELETE FROM exam_sessions WHERE id = ?;");
+        stmt.run([id]);
+        stmt.free();
+        await persistSQLiteDB();
+        return true;
+      } catch (e) {
+        console.warn('[SQLite JS] deleteSessionFromSQLite error:', e.message);
+      }
+    }
+
+    try {
+      const raw = localStorage.getItem(CONFIG.HISTORY_FALLBACK_KEY);
+      if (raw) {
+        let list = JSON.parse(raw);
+        list = list.filter(item => item.id !== id);
+        localStorage.setItem(CONFIG.HISTORY_FALLBACK_KEY, JSON.stringify(list));
+      }
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  async function resetAllHistoryInSQLite() {
+    if (sqliteDB) {
+      try {
+        sqliteDB.run("DELETE FROM exam_sessions; DELETE FROM sqlite_sequence WHERE name='exam_sessions';");
+        await persistSQLiteDB();
+        return true;
+      } catch (e) {
+        console.warn('[SQLite JS] resetAllHistoryInSQLite error:', e.message);
+      }
+    }
+
+    try {
+      localStorage.removeItem(CONFIG.HISTORY_FALLBACK_KEY);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  async function getSessionDetailFromSQLite(id) {
+    if (sqliteDB) {
+      try {
+        const r = queryOne("SELECT * FROM exam_sessions WHERE id = ?;", [id]);
+        if (r) {
+          let answers = {};
+          let results = null;
+          try { answers = JSON.parse(r.answers_json || '{}'); } catch (e) {}
+          try { results = JSON.parse(r.results_json || 'null'); } catch (e) {}
+          return {
+            id: r.id,
+            session_name: r.session_name,
+            mode: r.mode,
+            duration_seconds: r.duration_seconds,
+            twk_score: r.twk_score,
+            tiu_score: r.tiu_score,
+            tkp_score: r.tkp_score,
+            total_score: r.total_score,
+            pass_twk: r.pass_twk,
+            pass_tiu: r.pass_tiu,
+            pass_tkp: r.pass_tkp,
+            pass_total: r.pass_total,
+            total_answered: r.total_answered,
+            total_questions: r.total_questions,
+            answers: answers,
+            results: results,
+            created_at: r.created_at
+          };
+        }
+      } catch (e) {
+        console.warn('[SQLite JS] getSessionDetailFromSQLite error:', e.message);
+      }
+    }
+
+    try {
+      const raw = localStorage.getItem(CONFIG.HISTORY_FALLBACK_KEY);
+      if (raw) {
+        const list = JSON.parse(raw);
+        return list.find(item => item.id === id) || null;
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  // --- 14. BANK SOAL SQLITE CRUD OPERATIONS (PURE JS) ---
+
+  async function fetchBankSoalFromSQLite() {
+    if (sqliteDB) {
+      try {
+        let sql = "SELECT * FROM questions WHERE 1=1";
+        const params = [];
+
+        if (state.bankFilterCat && state.bankFilterCat !== 'all') {
+          sql += " AND kategori = ?";
+          params.push(state.bankFilterCat.toUpperCase());
+        }
+
+        if (state.bankFilterStatus && state.bankFilterStatus !== 'all') {
+          sql += " AND is_active = ?";
+          params.push(state.bankFilterStatus === 'active' ? 1 : 0);
+        }
+
+        if (state.bankSearchQuery) {
+          sql += " AND (soal LIKE ? OR subkategori LIKE ? OR sumber_nama LIKE ?)";
+          const term = `%${state.bankSearchQuery}%`;
+          params.push(term, term, term);
+        }
+
+        sql += " ORDER BY id ASC;";
+
+        const rows = queryRows(sql, params);
+        return rows.map(r => formatQuestionRow(r));
+      } catch (e) {
+        console.warn('[SQLite JS] fetchBankSoalFromSQLite error:', e.message);
+      }
+    }
+
+    // Fallback: window.SKD_QUESTIONS
+    let fallbackList = (window.SKD_QUESTIONS || []).map((q, idx) => normalizeQuestion(q, idx));
+    if (state.bankFilterCat && state.bankFilterCat !== 'all') {
+      fallbackList = fallbackList.filter(q => q.kategori === state.bankFilterCat);
+    }
+    if (state.bankFilterStatus && state.bankFilterStatus !== 'all') {
+      const isActiveFilter = state.bankFilterStatus === 'active';
+      fallbackList = fallbackList.filter(q => (q.is_active ? true : false) === isActiveFilter);
+    }
+    if (state.bankSearchQuery) {
+      const qLower = state.bankSearchQuery.toLowerCase();
+      fallbackList = fallbackList.filter(q => 
+        (q.soal && q.soal.toLowerCase().includes(qLower)) ||
+        (q.subkategori && q.subkategori.toLowerCase().includes(qLower)) ||
+        (q.sumber_nama && q.sumber_nama.toLowerCase().includes(qLower))
+      );
+    }
+    return fallbackList;
+  }
+
+  async function toggleQuestionStatusSQLite(id, isActive) {
+    if (sqliteDB) {
+      try {
+        const stmt = sqliteDB.prepare("UPDATE questions SET is_active = ?, updated_at = datetime('now', 'localtime') WHERE id = ?;");
+        stmt.run([isActive ? 1 : 0, id]);
+        stmt.free();
+        await persistSQLiteDB();
+        await loadActiveQuestions();
+        return true;
+      } catch (e) {
+        console.warn('[SQLite JS] toggleQuestionStatusSQLite error:', e.message);
+      }
+    }
+
+    // Fallback in-memory
+    const inMem = (window.SKD_QUESTIONS || []).find(q => q.id === id);
+    if (inMem) inMem.is_active = isActive ? 1 : 0;
+    await loadActiveQuestions();
+    return true;
+  }
+
+  async function saveQuestionToSQLite(questionPayload) {
+    if (sqliteDB) {
+      try {
+        const id = parseInt(questionPayload.id || 0, 10);
+        const kategori = (questionPayload.kategori || 'TWK').toUpperCase();
+        const subkategori = questionPayload.subkategori || '';
+        const soal = questionPayload.soal || '';
+        const opsi = questionPayload.opsi || {};
+        const bobot = questionPayload.bobot || {};
+        const kunci = (questionPayload.kunci || 'A').toUpperCase();
+        const hasImage = questionPayload.has_image ? 1 : 0;
+        const imageData = questionPayload.image_data || '';
+        const sumberNama = questionPayload.sumber_nama || '';
+        const sumberUrl = questionPayload.sumber_url || '';
+        const sumberHalaman = questionPayload.sumber_halaman || '';
+        const sumberNo = questionPayload.sumber_no_soal || '';
+        const pembahasan = questionPayload.pembahasan || '';
+        const analisis = questionPayload.analisis_opsi || {};
+        const tips = questionPayload.tips || '';
+        const videoUrl = questionPayload.video_url || '';
+        const videoTitle = questionPayload.video_title || '';
+        const videoChannel = questionPayload.video_channel || '';
+        const isActive = questionPayload.is_active ? 1 : 0;
+
+        if (id > 0) {
+          // Update
+          const stmt = sqliteDB.prepare(`
+            UPDATE questions SET
+              kategori = ?, subkategori = ?, soal = ?,
+              opsi_a = ?, opsi_b = ?, opsi_c = ?, opsi_d = ?, opsi_e = ?,
+              bobot_a = ?, bobot_b = ?, bobot_c = ?, bobot_d = ?, bobot_e = ?,
+              kunci = ?, has_image = ?, image_data = ?,
+              sumber_nama = ?, sumber_url = ?, sumber_halaman = ?, sumber_no_soal = ?,
+              pembahasan = ?,
+              analisis_a = ?, analisis_b = ?, analisis_c = ?, analisis_d = ?, analisis_e = ?,
+              tips = ?, video_url = ?, video_title = ?, video_channel = ?,
+              is_active = ?, updated_at = datetime('now', 'localtime')
+            WHERE id = ?;
+          `);
+          stmt.run([
+            kategori, subkategori, soal,
+            opsi['A'] || '', opsi['B'] || '', opsi['C'] || '', opsi['D'] || '', opsi['E'] || '',
+            bobot['A'] ?? 0, bobot['B'] ?? 0, bobot['C'] ?? 0, bobot['D'] ?? 0, bobot['E'] ?? 0,
+            kunci, hasImage, imageData,
+            sumberNama, sumberUrl, sumberHalaman, sumberNo,
+            pembahasan,
+            analisis['A'] || '', analisis['B'] || '', analisis['C'] || '', analisis['D'] || '', analisis['E'] || '',
+            tips, videoUrl, videoTitle, videoChannel,
+            isActive, id
+          ]);
+          stmt.free();
+        } else {
+          // Insert
+          const stmt = sqliteDB.prepare(`
+            INSERT INTO questions (
+              kategori, subkategori, soal,
+              opsi_a, opsi_b, opsi_c, opsi_d, opsi_e,
+              bobot_a, bobot_b, bobot_c, bobot_d, bobot_e,
+              kunci, has_image, image_data,
+              sumber_nama, sumber_url, sumber_halaman, sumber_no_soal,
+              pembahasan,
+              analisis_a, analisis_b, analisis_c, analisis_d, analisis_e,
+              tips, video_url, video_title, video_channel,
+              is_active
+            ) VALUES (
+              ?, ?, ?,
+              ?, ?, ?, ?, ?,
+              ?, ?, ?, ?, ?,
+              ?, ?, ?,
+              ?, ?, ?, ?,
+              ?,
+              ?, ?, ?, ?, ?,
+              ?, ?, ?, ?,
+              ?
+            );
+          `);
+          stmt.run([
+            kategori, subkategori, soal,
+            opsi['A'] || '', opsi['B'] || '', opsi['C'] || '', opsi['D'] || '', opsi['E'] || '',
+            bobot['A'] ?? 0, bobot['B'] ?? 0, bobot['C'] ?? 0, bobot['D'] ?? 0, bobot['E'] ?? 0,
+            kunci, hasImage, imageData,
+            sumberNama, sumberUrl, sumberHalaman, sumberNo,
+            pembahasan,
+            analisis['A'] || '', analisis['B'] || '', analisis['C'] || '', analisis['D'] || '', analisis['E'] || '',
+            tips, videoUrl, videoTitle, videoChannel,
+            isActive
+          ]);
+          stmt.free();
+        }
+
+        await persistSQLiteDB();
+        await loadActiveQuestions();
+        return id || 1;
+      } catch (e) {
+        console.warn('[SQLite JS] saveQuestionToSQLite error:', e.message);
+      }
+    }
+
+    // Fallback in-memory update
+    if (questionPayload.id) {
+      const idx = (window.SKD_QUESTIONS || []).findIndex(q => q.id === questionPayload.id);
+      if (idx !== -1) window.SKD_QUESTIONS[idx] = questionPayload;
+    } else {
+      const newId = (window.SKD_QUESTIONS || []).length + 1;
+      questionPayload.id = newId;
+      (window.SKD_QUESTIONS || []).push(questionPayload);
+    }
+    await loadActiveQuestions();
+    return questionPayload.id || 1;
+  }
+
+  async function deleteQuestionFromSQLite(id) {
+    if (sqliteDB) {
+      try {
+        const stmt = sqliteDB.prepare("DELETE FROM questions WHERE id = ?;");
+        stmt.run([id]);
+        stmt.free();
+        await persistSQLiteDB();
+        await loadActiveQuestions();
+        return true;
+      } catch (e) {
+        console.warn('[SQLite JS] deleteQuestionFromSQLite error:', e.message);
+      }
+    }
+
+    // Fallback in-memory
+    const idx = (window.SKD_QUESTIONS || []).findIndex(q => q.id === id);
+    if (idx !== -1) window.SKD_QUESTIONS.splice(idx, 1);
+    await loadActiveQuestions();
+    return true;
+  }
+
+  // --- 15. LOAD ACTIVE QUESTIONS (FOR TEST & STUDY) ---
+
+  async function loadActiveQuestions() {
+    if (sqliteDB) {
+      try {
+        const rows = queryRows("SELECT * FROM questions WHERE is_active = 1 ORDER BY id ASC;");
+        if (rows && rows.length > 0) {
+          state.questions = rows.map((r, idx) => normalizeQuestion(formatQuestionRow(r), idx));
+          console.log(`[CAT] Berhasil memuat ${state.questions.length} butir soal aktif dari SQLite JS.`);
+          renderSidebar();
+          return;
+        }
+      } catch (e) {
+        console.warn('[SQLite JS] loadActiveQuestions error:', e.message);
+      }
+    }
+
+    // Fallback: window.SKD_QUESTIONS
+    if (Array.isArray(window.SKD_QUESTIONS) && window.SKD_QUESTIONS.length > 0) {
+      const activeOnly = window.SKD_QUESTIONS.filter(q => q.is_active !== 0);
+      state.questions = activeOnly.map((q, idx) => normalizeQuestion(q, idx));
+      console.log(`[CAT] Berhasil memuat ${state.questions.length} butir soal aktif dari fallback questions.js.`);
+      renderSidebar();
+    }
+  }
+
+  // --- 16. BANK SOAL VIEW RENDERING & CONTROLLER ---
+
+  async function loadAndRenderBankSoal() {
+    if (!DOM.bankSoalTableBody) return;
+
+    DOM.bankSoalTableBody.innerHTML = `
+      <tr>
+        <td colspan="7" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+          Memuat data bank soal dari database SQLite...
+        </td>
+      </tr>
+    `;
+
+    const questionsList = await fetchBankSoalFromSQLite();
+    state.allBankQuestions = questionsList;
+
+    const total = questionsList.length;
+    const activeCount = questionsList.filter(q => q.is_active).length;
+    const inactiveCount = total - activeCount;
+
+    if (DOM.bankSoalCountBadge) {
+      DOM.bankSoalCountBadge.textContent = `Total: ${total} Soal (${activeCount} Aktif, ${inactiveCount} Nonaktif)`;
+    }
+
+    if (total === 0) {
+      if (DOM.bankSoalTable) DOM.bankSoalTable.style.display = 'none';
+      if (DOM.bankSoalEmptyState) DOM.bankSoalEmptyState.style.display = 'flex';
+      return;
+    }
+
+    if (DOM.bankSoalTable) DOM.bankSoalTable.style.display = 'table';
+    if (DOM.bankSoalEmptyState) DOM.bankSoalEmptyState.style.display = 'none';
+
+    DOM.bankSoalTableBody.innerHTML = '';
+
+    questionsList.forEach((q, idx) => {
+      const tr = document.createElement('tr');
+      const isActive = !!q.is_active;
+
+      // Badges
+      let mediaBadges = '';
+      if (q.has_image || q.media || q.image_data) {
+        mediaBadges += `<span class="badge-mini-media">SVG Gambar</span>`;
+      }
+      if (q.video || q.video_url) {
+        mediaBadges += `<span class="badge-mini-video">YouTube</span>`;
+      }
+
+      // Snippet text
+      const cleanSnippet = (q.soal || '').replace(/<[^>]*>?/gm, '').trim();
+      const snippetShort = cleanSnippet.length > 105 ? cleanSnippet.substring(0, 105) + '...' : cleanSnippet;
+
+      tr.innerHTML = `
+        <td style="text-align: center; font-weight: 700; color: var(--text-muted);">#${q.id}</td>
+        <td>
+          <span class="badge-cat-table ${q.kategori}">${q.kategori}</span>
+          <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 3px; font-weight: 500;">
+            ${escapeHTML(q.subkategori || '-')}
+          </div>
+        </td>
+        <td>
+          <div class="question-snippet-text">${escapeHTML(snippetShort)}</div>
+          ${mediaBadges ? `<div style="margin-top: 4px;">${mediaBadges}</div>` : ''}
+        </td>
+        <td style="text-align: center;">
+          <strong style="font-size: 0.95rem; color: var(--cat-primary);">${q.kategori === 'TKP' ? '1 s.d. 5' : 'Opsi ' + q.kunci}</strong>
+        </td>
+        <td>
+          <div style="font-weight: 600; font-size: 0.8rem; color: var(--text-main);">${escapeHTML(q.sumber_nama || q.sumber || 'KepmenPAN-RB')}</div>
+          <div style="font-size: 0.725rem; color: var(--text-muted);">
+            ${q.sumber_halaman ? 'Hal: ' + escapeHTML(q.sumber_halaman) : ''} 
+            ${q.sumber_no_soal ? '• ' + escapeHTML(q.sumber_no_soal) : ''}
+          </div>
+        </td>
+        <td style="text-align: center;">
+          <label class="toggle-switch-wrap" style="justify-content: center;" title="Klik untuk mengaktifkan / menonaktifkan soal ini">
+            <input type="checkbox" class="toggle-switch-input bank-status-toggle" data-id="${q.id}" ${isActive ? 'checked' : ''}>
+            <span class="toggle-slider"></span>
+            <span class="toggle-status-label">${isActive ? 'Aktif' : 'Nonaktif'}</span>
+          </label>
+        </td>
+        <td style="text-align: center;">
+          <div style="display: flex; gap: 0.35rem; justify-content: center; align-items: center;">
+            <button type="button" class="btn-icon-action btn-icon-preview" data-id="${q.id}" title="Lihat Detail & Analisis Lengkap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+            <button type="button" class="btn-icon-action btn-icon-edit" data-id="${q.id}" title="Edit Soal">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+            </button>
+            <button type="button" class="btn-icon-action btn-icon-delete" data-id="${q.id}" title="Hapus Soal">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              </svg>
+            </button>
+          </div>
+        </td>
+      `;
+
+      DOM.bankSoalTableBody.appendChild(tr);
+    });
+
+    // Attach Toggle Switches
+    DOM.bankSoalTableBody.querySelectorAll('.bank-status-toggle').forEach(input => {
+      input.addEventListener('change', async () => {
+        const qId = parseInt(input.getAttribute('data-id'), 10);
+        const newChecked = input.checked;
+        const label = input.parentElement.querySelector('.toggle-status-label');
+        if (label) label.textContent = newChecked ? 'Aktif' : 'Nonaktif';
+        await toggleQuestionStatusSQLite(qId, newChecked);
+        // Refresh count badge
+        const activeCountNow = DOM.bankSoalTableBody.querySelectorAll('.bank-status-toggle:checked').length;
+        const totalNow = DOM.bankSoalTableBody.querySelectorAll('.bank-status-toggle').length;
+        if (DOM.bankSoalCountBadge) {
+          DOM.bankSoalCountBadge.textContent = `Total: ${totalNow} Soal (${activeCountNow} Aktif, ${totalNow - activeCountNow} Nonaktif)`;
+        }
+      });
+    });
+
+    // Attach Action Buttons
+    DOM.bankSoalTableBody.querySelectorAll('.btn-icon-preview').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const qId = parseInt(btn.getAttribute('data-id'), 10);
+        const q = state.allBankQuestions.find(item => item.id === qId);
+        if (q) openQuestionDetail(q);
+      });
+    });
+
+    DOM.bankSoalTableBody.querySelectorAll('.btn-icon-edit').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const qId = parseInt(btn.getAttribute('data-id'), 10);
+        const q = state.allBankQuestions.find(item => item.id === qId);
+        if (q) openQuestionForm(q);
+      });
+    });
+
+    DOM.bankSoalTableBody.querySelectorAll('.btn-icon-delete').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const qId = parseInt(btn.getAttribute('data-id'), 10);
+        const q = state.allBankQuestions.find(item => item.id === qId);
+        if (q) openDeleteConfirm(q);
+      });
+    });
+  }
+
+  // --- 17. DETAIL PREVIEW MODAL CONTROLLER ---
+
+  function openQuestionDetail(q) {
+    state.currentDetailQuestionObj = q;
+
+    if (DOM.detailHeaderText) DOM.detailHeaderText.textContent = `Detail & Analisis Soal #${q.id}`;
+    if (DOM.detailBadgeId) DOM.detailBadgeId.textContent = `ID: #${q.id}`;
+    if (DOM.detailBadgeCat) DOM.detailBadgeCat.textContent = q.kategori;
+    if (DOM.detailBadgeSubcat) DOM.detailBadgeSubcat.textContent = q.subkategori || 'SKD CASN';
+
+    if (DOM.detailBadgeStatus) {
+      DOM.detailBadgeStatus.className = 'question-status-pill ' + (q.is_active ? 'answered' : 'unanswered');
+      DOM.detailBadgeStatus.textContent = q.is_active ? 'Status: Aktif' : 'Status: Nonaktif';
+    }
+
+    if (DOM.detailSoalText) DOM.detailSoalText.innerHTML = q.soal;
+
+    if (DOM.detailMediaContainer) {
+      if (q.has_image || q.media || q.image_data) {
+        DOM.detailMediaContainer.innerHTML = q.image_data || q.media;
+        DOM.detailMediaContainer.style.display = 'block';
+      } else {
+        DOM.detailMediaContainer.innerHTML = '';
+        DOM.detailMediaContainer.style.display = 'none';
+      }
+    }
+
+    // Render Options List
+    if (DOM.detailOptionsContainer) {
+      DOM.detailOptionsContainer.innerHTML = '';
+      const optionKeys = ['A', 'B', 'C', 'D', 'E'];
+      optionKeys.forEach(k => {
+        const isKey = (k === q.kunci);
+        const weight = (q.bobot && typeof q.bobot[k] === 'number') ? q.bobot[k] : (isKey ? 5 : 0);
+
+        const card = document.createElement('div');
+        card.className = 'option-card show-feedback' + (isKey ? ' is-correct-key' : '');
+        card.innerHTML = `
+          <span class="option-indicator">${k}</span>
+          <div class="option-text">${escapeHTML(q.opsi[k] || '')}</div>
+          <span class="option-score-pill">${q.kategori === 'TKP' ? '+' + weight : (isKey ? '+5' : '0')}</span>
+        `;
+        DOM.detailOptionsContainer.appendChild(card);
+      });
+    }
+
+    if (DOM.detailPembahasanText) DOM.detailPembahasanText.innerHTML = q.pembahasan || 'Pembahasan materi.';
+
+    // Option-by-Option Breakdown
+    if (DOM.detailAnalysisContainer) {
+      DOM.detailAnalysisContainer.innerHTML = '';
+      const optionKeys = ['A', 'B', 'C', 'D', 'E'];
+      optionKeys.forEach(k => {
+        const isKey = (k === q.kunci);
+        const weight = (q.bobot && typeof q.bobot[k] === 'number') ? q.bobot[k] : (isKey ? 5 : 0);
+        const optText = (q.analisis_opsi && q.analisis_opsi[k]) ? q.analisis_opsi[k] : '';
+
+        const item = document.createElement('div');
+        item.className = 'option-breakdown-item';
+        item.innerHTML = `
+          <span class="option-breakdown-letter ${isKey ? 'key' : ''}">${k}</span>
+          <div class="option-breakdown-desc">
+            <strong>Opsi ${k} (${q.kategori === 'TKP' ? 'Skor ' + weight : (isKey ? 'Kunci +5' : '0 Poin')}):</strong> 
+            ${escapeHTML(optText)}
+          </div>
+        `;
+        DOM.detailAnalysisContainer.appendChild(item);
+      });
+    }
+
+    if (DOM.detailTipsText) DOM.detailTipsText.innerHTML = q.tips || '-';
+
+    // Video Player (Tangguh Terhadap Error 153 & Dilengkapi Timestamp)
+    if (DOM.detailVideoContainer) {
+      if (q.video && q.video.url) {
+        DOM.detailVideoContainer.style.display = 'block';
+        const embedUrl = toYouTubeEmbedUrl(q.video.url, q.video.startSeconds);
+        if (DOM.detailVideoIframe) {
+          DOM.detailVideoIframe.referrerPolicy = 'strict-origin-when-cross-origin';
+          DOM.detailVideoIframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          DOM.detailVideoIframe.setAttribute('allowfullscreen', 'true');
+          if (DOM.detailVideoIframe.src !== embedUrl) {
+            DOM.detailVideoIframe.src = embedUrl;
+          }
+        }
+        if (DOM.detailVideoTitle) DOM.detailVideoTitle.textContent = q.video.title || `Video Pembahasan Soal #${q.id}`;
+        if (DOM.detailVideoChannel) DOM.detailVideoChannel.textContent = 'Channel: ' + (q.video.channel || 'Edukasi CASN');
+        if (DOM.detailVideoTimestamp) {
+          if (q.video.startSeconds > 0 || q.video.timestamp) {
+            const timeLabel = q.video.timestamp || formatTimestamp(q.video.startSeconds);
+            const topicLabel = q.video.topic_part ? ` - ${q.video.topic_part}` : '';
+            DOM.detailVideoTimestamp.textContent = `⏱️ Mulai Menit ${timeLabel}${topicLabel}`;
+            DOM.detailVideoTimestamp.style.display = 'inline-flex';
+          } else {
+            DOM.detailVideoTimestamp.style.display = 'none';
+          }
+        }
+        if (DOM.detailVideoLink) {
+          const watchUrl = q.video.watchUrl || toYouTubeWatchUrl(q.video.url, q.video.startSeconds);
+          DOM.detailVideoLink.href = watchUrl;
+          const textSpan = DOM.detailVideoLink.querySelector('span');
+          if (q.video.startSeconds > 0 || q.video.timestamp) {
+            const timeLabel = q.video.timestamp || formatTimestamp(q.video.startSeconds);
+            if (textSpan) textSpan.textContent = `Buka & Tonton Langsung pada Menit ${timeLabel} →`;
+          } else {
+            if (textSpan) textSpan.textContent = 'Buka & Tonton Langsung di YouTube →';
+          }
+        }
+      } else {
+        DOM.detailVideoContainer.style.display = 'none';
+        if (DOM.detailVideoIframe) DOM.detailVideoIframe.src = '';
+      }
+    }
+
+    // Source Metadata
+    if (DOM.detailSumberNama) DOM.detailSumberNama.textContent = q.sumber_nama || q.sumber || '-';
+    if (DOM.detailSumberUrl) {
+      if (q.sumber_url) {
+        DOM.detailSumberUrl.innerHTML = `<a href="${escapeHTML(q.sumber_url)}" target="_blank" rel="noopener noreferrer" style="color:var(--cat-primary); text-decoration:underline; word-break:break-all;">${escapeHTML(q.sumber_url)} &rarr;</a>`;
+      } else {
+        DOM.detailSumberUrl.textContent = '-';
+      }
+    }
+    if (DOM.detailSumberHalaman) DOM.detailSumberHalaman.textContent = q.sumber_halaman || '-';
+    if (DOM.detailSumberNo) DOM.detailSumberNo.textContent = q.sumber_no_soal || '-';
+
+    if (DOM.modalQuestionDetail) DOM.modalQuestionDetail.classList.add('open');
+  }
+
+  function closeQuestionDetail() {
+    if (DOM.modalQuestionDetail) DOM.modalQuestionDetail.classList.remove('open');
+    if (DOM.detailVideoIframe) DOM.detailVideoIframe.src = '';
+    state.currentDetailQuestionObj = null;
+  }
+
+  // --- 18. ADD / EDIT QUESTION FORM CONTROLLER ---
+
+  function openQuestionForm(q = null) {
+    state.editingQuestionId = q ? q.id : null;
+
+    if (DOM.formTitleText) {
+      DOM.formTitleText.textContent = q ? `Edit Butir Soal #${q.id}` : 'Tambah Soal Baru ke SQLite';
+    }
+
+    if (DOM.formQuestionId) DOM.formQuestionId.value = q ? q.id : '';
+    if (DOM.formKategori) DOM.formKategori.value = q ? q.kategori : 'TWK';
+    if (DOM.formSubkategori) DOM.formSubkategori.value = q ? (q.subkategori || '') : '';
+    if (DOM.formIsActive) DOM.formIsActive.checked = q ? (q.is_active ? true : false) : true;
+    if (DOM.formSoal) DOM.formSoal.value = q ? (q.soal || '') : '';
+
+    const hasImg = q ? (q.has_image || !emptyMedia(q.image_data || q.media)) : false;
+    if (DOM.formHasImage) DOM.formHasImage.checked = !!hasImg;
+    if (DOM.formImageData) DOM.formImageData.value = q ? (q.image_data || q.media || '') : '';
+
+    if (DOM.formKunci) DOM.formKunci.value = q ? q.kunci : 'A';
+
+    // Options A - E
+    const optionKeys = ['A', 'B', 'C', 'D', 'E'];
+    optionKeys.forEach(k => {
+      const optInput = document.getElementById(`form-opsi-${k}`);
+      const bobotInput = document.getElementById(`form-bobot-${k}`);
+      const analisisInput = document.getElementById(`form-analisis-${k}`);
+
+      if (optInput) optInput.value = q ? (q.opsi[k] || '') : '';
+      if (bobotInput) {
+        if (q) {
+          bobotInput.value = (q.bobot && typeof q.bobot[k] === 'number') ? q.bobot[k] : (k === q.kunci ? 5 : 0);
+        } else {
+          bobotInput.value = (k === 'A') ? 5 : 0;
+        }
+      }
+      if (analisisInput) analisisInput.value = q ? (q.analisis_opsi[k] || '') : '';
+    });
+
+    if (DOM.formPembahasan) DOM.formPembahasan.value = q ? (q.pembahasan || '') : '';
+    if (DOM.formTips) DOM.formTips.value = q ? (q.tips || '') : '';
+
+    // Video
+    if (DOM.formVideoUrl) DOM.formVideoUrl.value = q ? (q.video_url || (q.video ? q.video.url : '')) : '';
+    if (DOM.formVideoTitle) DOM.formVideoTitle.value = q ? (q.video_title || (q.video ? q.video.title : '')) : '';
+    if (DOM.formVideoChannel) DOM.formVideoChannel.value = q ? (q.video_channel || (q.video ? q.video.channel : '')) : '';
+    if (DOM.formVideoTimestamp) DOM.formVideoTimestamp.value = q && q.video ? (q.video.timestamp || '') : '';
+    if (DOM.formVideoStartSeconds) DOM.formVideoStartSeconds.value = q && q.video ? (q.video.startSeconds || '') : '';
+
+    // Source Metadata
+    if (DOM.formSumberNama) DOM.formSumberNama.value = q ? (q.sumber_nama || q.sumber || '') : 'KepmenPAN-RB No. 321 Tahun 2024';
+    if (DOM.formSumberUrl) DOM.formSumberUrl.value = q ? (q.sumber_url || '') : 'https://menpan.go.id';
+    if (DOM.formSumberHalaman) DOM.formSumberHalaman.value = q ? (q.sumber_halaman || '') : '';
+    if (DOM.formSumberNo) DOM.formSumberNo.value = q ? (q.sumber_no_soal || '') : '';
+
+    if (DOM.modalQuestionForm) DOM.modalQuestionForm.classList.add('open');
+  }
+
+  function closeQuestionForm() {
+    if (DOM.modalQuestionForm) DOM.modalQuestionForm.classList.remove('open');
+    state.editingQuestionId = null;
+  }
+
+  async function handleQuestionFormSubmit(e) {
+    e.preventDefault();
+
+    const id = state.editingQuestionId ? parseInt(state.editingQuestionId, 10) : 0;
+    const kategori = DOM.formKategori ? DOM.formKategori.value : 'TWK';
+    const subkategori = DOM.formSubkategori ? DOM.formSubkategori.value.trim() : '';
+    const isActive = DOM.formIsActive ? (DOM.formIsActive.checked ? 1 : 0) : 1;
+    const soal = DOM.formSoal ? DOM.formSoal.value.trim() : '';
+    const hasImage = DOM.formHasImage ? (DOM.formHasImage.checked ? 1 : 0) : 0;
+    const imageData = DOM.formImageData ? DOM.formImageData.value.trim() : '';
+    const kunci = DOM.formKunci ? DOM.formKunci.value : 'A';
+
+    const opsi = {
+      A: DOM.formOpsiA ? DOM.formOpsiA.value.trim() : '',
+      B: DOM.formOpsiB ? DOM.formOpsiB.value.trim() : '',
+      C: DOM.formOpsiC ? DOM.formOpsiC.value.trim() : '',
+      D: DOM.formOpsiD ? DOM.formOpsiD.value.trim() : '',
+      E: DOM.formOpsiE ? DOM.formOpsiE.value.trim() : ''
+    };
+
+    const bobot = {
+      A: parseInt(DOM.formBobotA ? DOM.formBobotA.value : 0, 10) || 0,
+      B: parseInt(DOM.formBobotB ? DOM.formBobotB.value : 0, 10) || 0,
+      C: parseInt(DOM.formBobotC ? DOM.formBobotC.value : 0, 10) || 0,
+      D: parseInt(DOM.formBobotD ? DOM.formBobotD.value : 0, 10) || 0,
+      E: parseInt(DOM.formBobotE ? DOM.formBobotE.value : 0, 10) || 0
+    };
+
+    const pembahasan = DOM.formPembahasan ? DOM.formPembahasan.value.trim() : '';
+    const analisisOps = {
+      A: DOM.formAnalisisA ? DOM.formAnalisisA.value.trim() : '',
+      B: DOM.formAnalisisB ? DOM.formAnalisisB.value.trim() : '',
+      C: DOM.formAnalisisC ? DOM.formAnalisisC.value.trim() : '',
+      D: DOM.formAnalisisD ? DOM.formAnalisisD.value.trim() : '',
+      E: DOM.formAnalisisE ? DOM.formAnalisisE.value.trim() : ''
+    };
+
+    const tips = DOM.formTips ? DOM.formTips.value.trim() : '';
+    const videoTimestamp = DOM.formVideoTimestamp ? DOM.formVideoTimestamp.value.trim() : '';
+    const videoStartSec = parseInt(DOM.formVideoStartSeconds ? DOM.formVideoStartSeconds.value : 0, 10) || parseTimestampToSeconds(videoTimestamp);
+    const videoUrl = DOM.formVideoUrl ? toYouTubeEmbedUrl(DOM.formVideoUrl.value.trim(), videoStartSec) : '';
+    const videoTitle = DOM.formVideoTitle ? DOM.formVideoTitle.value.trim() : '';
+    const videoChannel = DOM.formVideoChannel ? DOM.formVideoChannel.value.trim() : '';
+
+    const sumberNama = DOM.formSumberNama ? DOM.formSumberNama.value.trim() : '';
+    const sumberUrl = DOM.formSumberUrl ? DOM.formSumberUrl.value.trim() : '';
+    const sumberHalaman = DOM.formSumberHalaman ? DOM.formSumberHalaman.value.trim() : '';
+    const sumberNo = DOM.formSumberNo ? DOM.formSumberNo.value.trim() : '';
+
+    const payload = {
+      id,
+      kategori,
+      subkategori,
+      soal,
+      is_active: isActive,
+      has_image: hasImage,
+      image_data: imageData,
+      media: imageData,
+      kunci,
+      opsi,
+      bobot,
+      pembahasan,
+      analisis_opsi: analisisOps,
+      tips,
+      video_url: videoUrl,
+      video_title: videoTitle,
+      video_channel: videoChannel,
+      sumber_nama: sumberNama,
+      sumber_url: sumberUrl,
+      sumber_halaman: sumberHalaman,
+      sumber_no_soal: sumberNo
+    };
+
+    closeQuestionForm();
+    await saveQuestionToSQLite(payload);
+    await loadAndRenderBankSoal();
+  }
+
+  // --- 19. DELETE CONFIRMATION MODAL CONTROLLER ---
+
+  function openDeleteConfirm(q) {
+    state.deletingQuestionObj = q;
+    if (DOM.deleteQSnippet) {
+      const cleanSnippet = (q.soal || '').replace(/<[^>]*>?/gm, '').trim();
+      const snippetShort = cleanSnippet.length > 110 ? cleanSnippet.substring(0, 110) + '...' : cleanSnippet;
+      DOM.deleteQSnippet.innerHTML = `<strong>Soal #${q.id} (${escapeHTML(q.kategori)}):</strong> ${escapeHTML(snippetShort)}`;
+    }
+    if (DOM.modalConfirmDeleteQ) DOM.modalConfirmDeleteQ.classList.add('open');
+  }
+
+  function closeDeleteConfirm() {
+    if (DOM.modalConfirmDeleteQ) DOM.modalConfirmDeleteQ.classList.remove('open');
+    state.deletingQuestionObj = null;
+  }
+
+  async function handleConfirmDelete() {
+    if (!state.deletingQuestionObj) return;
+    const qId = state.deletingQuestionObj.id;
+    closeDeleteConfirm();
+    await deleteQuestionFromSQLite(qId);
+    await loadAndRenderBankSoal();
+  }
+
+  // --- 20. SESSION HISTORY SCREEN CONTROLLER ---
+
+  async function loadAndRenderHistory() {
+    if (!DOM.historyTableBody) return;
+    DOM.historyTableBody.innerHTML = `
+      <tr>
+        <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+          Memuat data riwayat dari database SQLite...
+        </td>
+      </tr>
+    `;
+
+    const sessions = await fetchHistoryFromSQLite();
+
+    const totalCount = sessions.length;
+    let passedCount = 0;
+    let highestScore = 0;
+    let sumScore = 0;
+
+    sessions.forEach(s => {
+      const total = Number(s.total_score || 0);
+      sumScore += total;
+      if (total > highestScore) highestScore = total;
+      if (Number(s.pass_total) === 1) passedCount++;
+    });
+
+    const passRate = totalCount > 0 ? Math.round((passedCount / totalCount) * 100) : 0;
+    const avgScore = totalCount > 0 ? Math.round(sumScore / totalCount) : 0;
+
+    if (DOM.statHistoryTotal) DOM.statHistoryTotal.textContent = totalCount;
+    if (DOM.statHistoryPassed) DOM.statHistoryPassed.textContent = `${passRate}%`;
+    if (DOM.statHistoryHighest) DOM.statHistoryHighest.textContent = highestScore;
+    if (DOM.statHistoryAvg) DOM.statHistoryAvg.textContent = avgScore;
+
+    if (totalCount === 0) {
+      if (DOM.historyTableContainer) DOM.historyTableContainer.style.display = 'none';
+      if (DOM.historyEmptyState) DOM.historyEmptyState.style.display = 'flex';
+      return;
+    }
+
+    if (DOM.historyTableContainer) DOM.historyTableContainer.style.display = 'block';
+    if (DOM.historyEmptyState) DOM.historyEmptyState.style.display = 'none';
+
+    DOM.historyTableBody.innerHTML = '';
+
+    sessions.forEach(s => {
+      const tr = document.createElement('tr');
+      const isPassed = Number(s.pass_total) === 1;
+
+      let dateDisplay = s.created_at || '-';
+      try {
+        const dt = new Date(s.created_at);
+        if (!isNaN(dt.getTime())) {
+          dateDisplay = `${dt.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}, ${dt.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })}`;
+        }
+      } catch (e) {}
+
+      tr.innerHTML = `
+        <td><strong>#${s.id}</strong></td>
+        <td>
+          <div style="font-weight: 600; color: var(--text-main);">${escapeHTML(dateDisplay)}</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">${Math.ceil((s.duration_seconds || 0) / 60)} Menit pengerjaan</div>
+        </td>
+        <td>
+          <span style="font-weight: 700; color: ${s.twk_score >= 65 ? 'var(--success)' : 'var(--danger)'};">
+            ${s.twk_score}
+          </span>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">/150</span>
+        </td>
+        <td>
+          <span style="font-weight: 700; color: ${s.tiu_score >= 80 ? 'var(--success)' : 'var(--danger)'};">
+            ${s.tiu_score}
+          </span>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">/175</span>
+        </td>
+        <td>
+          <span style="font-weight: 700; color: ${s.tkp_score >= 166 ? 'var(--success)' : 'var(--danger)'};">
+            ${s.tkp_score}
+          </span>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">/225</span>
+        </td>
+        <td>
+          <strong style="font-size: 1.05rem; color: var(--cat-primary);">${s.total_score}</strong>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">/ 550</span>
+        </td>
+        <td>
+          <span class="score-badge-status ${isPassed ? 'pass' : 'fail'}">
+            ${isPassed ? 'LULUS PG' : 'TIDAK LULUS'}
+          </span>
+        </td>
+        <td>
+          <div style="display: flex; gap: 0.35rem; align-items: center;">
+            <button type="button" class="btn-eval-session" data-session-id="${s.id}" title="Buka Evaluasi Lengkap Sesi Ini">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Buka Evaluasi</span>
+            </button>
+            <button type="button" class="btn-delete-session" data-session-id="${s.id}" title="Hapus Rekaman Sesi Ini">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              </svg>
+            </button>
+          </div>
+        </td>
+      `;
+
+      DOM.historyTableBody.appendChild(tr);
+    });
+
+    DOM.historyTableBody.querySelectorAll('.btn-eval-session').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = parseInt(btn.getAttribute('data-session-id'), 10);
+        openSavedSessionEvaluation(id);
+      });
+    });
+
+    DOM.historyTableBody.querySelectorAll('.btn-delete-session').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = parseInt(btn.getAttribute('data-session-id'), 10);
+        if (confirm(`Hapus rekaman sesi ujian #${id} dari database SQLite?`)) {
+          await deleteSessionFromSQLite(id);
+          loadAndRenderHistory();
+        }
+      });
+    });
+  }
+
+  async function openSavedSessionEvaluation(sessionId) {
+    const sessionDetail = await getSessionDetailFromSQLite(sessionId);
+    if (!sessionDetail) {
+      alert('Data sesi tidak ditemukan dalam database.');
+      return;
+    }
+
+    state.activeSessionId = sessionId;
+    state.activeSessionMeta = sessionDetail;
+    state.answers = sessionDetail.answers || {};
+    state.isFinished = true;
+    state.mode = 'review';
+
+    showScreen('exam');
+
+    if (DOM.tabModeReview) DOM.tabModeReview.style.display = 'inline-flex';
+    if (DOM.tabModeReview) DOM.tabModeReview.classList.add('active');
+    if (DOM.tabModeBelajar) DOM.tabModeBelajar.classList.remove('active');
+
+    if (DOM.reviewSessionInfoBanner) {
+      DOM.reviewSessionInfoBanner.style.display = 'flex';
+      const isPassed = Number(sessionDetail.pass_total) === 1;
+      let dateText = sessionDetail.created_at || '';
+      try {
+        const dt = new Date(sessionDetail.created_at);
+        if (!isNaN(dt.getTime())) {
+          dateText = dt.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+        }
+      } catch (e) {}
+
+      if (DOM.reviewSessionInfoText) {
+        DOM.reviewSessionInfoText.innerHTML = `
+          <strong>Evaluasi Sesi #${sessionDetail.id}</strong> (${escapeHTML(dateText)}): 
+          TWK: <strong>${sessionDetail.twk_score}</strong>, TIU: <strong>${sessionDetail.tiu_score}</strong>, TKP: <strong>${sessionDetail.tkp_score}</strong> • 
+          Total: <strong style="color:var(--cat-primary);">${sessionDetail.total_score}</strong> 
+          <span class="score-badge-status ${isPassed ? 'pass' : 'fail'}" style="margin-left:6px;">${isPassed ? 'LULUS PG' : 'TIDAK LULUS'}</span>
+        `;
+      }
+    }
+
+    if (DOM.questionCard) DOM.questionCard.style.display = 'none';
+    if (DOM.reviewSessionView) {
+      DOM.reviewSessionView.classList.add('active');
+      renderReviewSessionView();
+    }
+
+    renderSidebar();
+  }
+
+  // --- 21. START NEW SIMULATION & STUDY MODES ---
+
+  function startSimulationMode() {
+    clearActiveExamState();
+
+    state.mode = 'simulasi';
     state.answers = {};
     state.ragu = {};
     state.visited = {};
@@ -1330,69 +3072,222 @@
     state.timeRemaining = CONFIG.EXAM_DURATION_SECONDS;
     state.currentIndex = 0;
     state.isFinished = false;
-    state.mode = 'simulasi';
+    state.startTime = Date.now();
+    state.activeSessionId = null;
+    state.activeSessionMeta = null;
 
-    if (DOM.modalResult) DOM.modalResult.classList.remove('open');
+    document.body.classList.add('simulation-mode-active');
+
+    if (DOM.badgeSimLocked) DOM.badgeSimLocked.style.display = 'inline-flex';
+    if (DOM.timerBox) DOM.timerBox.style.display = 'flex';
+    if (DOM.btnFinishExam) DOM.btnFinishExam.style.display = 'inline-flex';
     if (DOM.tabModeReview) DOM.tabModeReview.style.display = 'none';
-    if (DOM.btnFinishExam && DOM.btnFinishExam.querySelector('span')) {
-      DOM.btnFinishExam.querySelector('span').textContent = 'Selesai Ujian';
-    }
+    if (DOM.reviewSessionInfoBanner) DOM.reviewSessionInfoBanner.style.display = 'none';
 
-    switchMode('simulasi');
+    showScreen('exam');
+
+    if (DOM.questionCard) DOM.questionCard.style.display = 'block';
+    if (DOM.reviewSessionView) DOM.reviewSessionView.classList.remove('active');
+
     startTimer();
     renderCurrentQuestion();
+    renderSidebar();
   }
 
-  // --- 12. MODE SWITCHING CONTROLLER ---
+  function startStudyMode() {
+    state.mode = 'belajar';
+    state.activeSessionId = null;
+    state.activeSessionMeta = null;
 
-  function switchMode(newMode) {
-    state.mode = newMode;
+    document.body.classList.remove('simulation-mode-active');
 
-    // Subnav tabs active class
-    if (DOM.tabModeSimulasi) DOM.tabModeSimulasi.classList.toggle('active', newMode === 'simulasi');
-    if (DOM.tabModeBelajar) DOM.tabModeBelajar.classList.toggle('active', newMode === 'belajar');
-    if (DOM.tabModeReview) DOM.tabModeReview.classList.toggle('active', newMode === 'review');
+    if (DOM.badgeSimLocked) DOM.badgeSimLocked.style.display = 'none';
+    if (DOM.timerBox) DOM.timerBox.style.display = 'none';
+    if (DOM.btnFinishExam) DOM.btnFinishExam.style.display = 'none';
+    if (DOM.tabModeReview) DOM.tabModeReview.style.display = 'none';
+    if (DOM.reviewSessionInfoBanner) DOM.reviewSessionInfoBanner.style.display = 'none';
 
-    // Banner Mode Belajar
-    if (DOM.bannerModeBelajar) {
-      if (newMode === 'belajar') {
-        DOM.bannerModeBelajar.classList.add('active');
-      } else {
-        DOM.bannerModeBelajar.classList.remove('active');
-      }
-    }
+    if (DOM.tabModeBelajar) DOM.tabModeBelajar.classList.add('active');
 
-    // Toggle Review Sesi View vs Normal Viewport
-    if (newMode === 'review') {
-      if (DOM.questionCard) DOM.questionCard.style.display = 'none';
-      if (DOM.reviewSessionView) {
-        DOM.reviewSessionView.classList.add('active');
-        renderReviewSessionView();
-      }
-    } else {
-      if (DOM.questionCard) DOM.questionCard.style.display = 'block';
-      if (DOM.reviewSessionView) {
-        DOM.reviewSessionView.classList.remove('active');
-      }
-    }
+    showScreen('exam');
 
-    updateTimerDisplay();
+    if (DOM.questionCard) DOM.questionCard.style.display = 'block';
+    if (DOM.reviewSessionView) DOM.reviewSessionView.classList.remove('active');
+
+    pauseTimer();
     renderCurrentQuestion();
-    saveState();
+    renderSidebar();
   }
 
-  // --- 13. EVENT LISTENERS SETUP ---
+  // --- 22. EVENT LISTENERS SETUP ---
 
   function initEventListeners() {
-    // Mode Tabs
-    if (DOM.tabModeSimulasi) {
-      DOM.tabModeSimulasi.addEventListener('click', () => switchMode('simulasi'));
+    // Top Header Navigation
+    if (DOM.brandHomeLink) {
+      DOM.brandHomeLink.addEventListener('click', () => {
+        if (state.mode === 'simulasi' && !state.isFinished && state.currentScreen === 'exam') {
+          if (confirm('Ujian simulasi sedang berlangsung. Apakah Anda ingin keluar ke Portal Utama? (Waktu dan jawaban tetap tersimpan)')) {
+            showScreen('landing');
+          }
+        } else {
+          showScreen('landing');
+        }
+      });
     }
+
+    if (DOM.btnHeaderHistory) {
+      DOM.btnHeaderHistory.addEventListener('click', () => {
+        if (state.mode === 'simulasi' && !state.isFinished && state.currentScreen === 'exam') {
+          if (confirm('Ujian simulasi sedang berlangsung. Buka riwayat sesi sekarang? (Simulasi akan dijeda)')) {
+            showScreen('history');
+          }
+        } else {
+          showScreen('history');
+        }
+      });
+    }
+
+    if (DOM.btnHeaderBankSoal) {
+      DOM.btnHeaderBankSoal.addEventListener('click', () => {
+        if (state.mode === 'simulasi' && !state.isFinished && state.currentScreen === 'exam') {
+          if (confirm('Ujian simulasi sedang berlangsung. Buka Manajemen Bank Soal sekarang?')) {
+            showScreen('bank-soal');
+          }
+        } else {
+          showScreen('bank-soal');
+        }
+      });
+    }
+
+    // Landing Screen Actions
+    if (DOM.btnStartSimulation) DOM.btnStartSimulation.addEventListener('click', startSimulationMode);
+    if (DOM.btnStartStudy) DOM.btnStartStudy.addEventListener('click', startStudyMode);
+    if (DOM.btnViewHistory) DOM.btnViewHistory.addEventListener('click', () => showScreen('history'));
+    if (DOM.btnViewBankSoal) DOM.btnViewBankSoal.addEventListener('click', () => showScreen('bank-soal'));
+
+    // Bank Soal Screen Events
+    if (DOM.btnBankSoalBack) DOM.btnBankSoalBack.addEventListener('click', () => showScreen('landing'));
+    if (DOM.btnAddQuestion) DOM.btnAddQuestion.addEventListener('click', () => openQuestionForm(null));
+
+    // SQLite Export & Import (Bank Soal Screen)
+    if (DOM.btnExportDb) DOM.btnExportDb.addEventListener('click', exportDatabaseFile);
+    if (DOM.btnImportDbTrigger) {
+      DOM.btnImportDbTrigger.addEventListener('click', () => {
+        if (DOM.inputImportDb) DOM.inputImportDb.click();
+      });
+    }
+    if (DOM.inputImportDb) {
+      DOM.inputImportDb.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) {
+          importDatabaseFile(e.target.files[0]);
+          e.target.value = '';
+        }
+      });
+    }
+
+    // SQLite Export & Import (History Screen)
+    if (DOM.btnHistoryExportDb) DOM.btnHistoryExportDb.addEventListener('click', exportDatabaseFile);
+    if (DOM.btnHistoryImportDbTrigger) {
+      DOM.btnHistoryImportDbTrigger.addEventListener('click', () => {
+        if (DOM.inputHistoryImportDb) DOM.inputHistoryImportDb.click();
+      });
+    }
+    if (DOM.inputHistoryImportDb) {
+      DOM.inputHistoryImportDb.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) {
+          importDatabaseFile(e.target.files[0]);
+          e.target.value = '';
+        }
+      });
+    }
+
+    if (DOM.bankSoalSearch) {
+      let searchTimeout;
+      DOM.bankSoalSearch.addEventListener('input', () => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          state.bankSearchQuery = DOM.bankSoalSearch.value.trim();
+          loadAndRenderBankSoal();
+        }, 300);
+      });
+    }
+
+    if (DOM.bankSoalFilterCat) {
+      DOM.bankSoalFilterCat.addEventListener('change', () => {
+        state.bankFilterCat = DOM.bankSoalFilterCat.value;
+        loadAndRenderBankSoal();
+      });
+    }
+
+    if (DOM.bankSoalFilterStatus) {
+      DOM.bankSoalFilterStatus.addEventListener('change', () => {
+        state.bankFilterStatus = DOM.bankSoalFilterStatus.value;
+        loadAndRenderBankSoal();
+      });
+    }
+
+    if (DOM.btnResetBankFilters) {
+      DOM.btnResetBankFilters.addEventListener('click', () => {
+        state.bankFilterCat = 'all';
+        state.bankFilterStatus = 'all';
+        state.bankSearchQuery = '';
+        if (DOM.bankSoalSearch) DOM.bankSoalSearch.value = '';
+        if (DOM.bankSoalFilterCat) DOM.bankSoalFilterCat.value = 'all';
+        if (DOM.bankSoalFilterStatus) DOM.bankSoalFilterStatus.value = 'all';
+        loadAndRenderBankSoal();
+      });
+    }
+
+    // Form Tambah/Edit Soal
+    if (DOM.formQuestion) DOM.formQuestion.addEventListener('submit', handleQuestionFormSubmit);
+    if (DOM.btnCancelForm) DOM.btnCancelForm.addEventListener('click', closeQuestionForm);
+    if (DOM.btnCloseFormX) DOM.btnCloseFormX.addEventListener('click', closeQuestionForm);
+
+    // Detail Preview Modal
+    if (DOM.btnCloseDetail) DOM.btnCloseDetail.addEventListener('click', closeQuestionDetail);
+    if (DOM.btnCloseDetailX) DOM.btnCloseDetailX.addEventListener('click', closeQuestionDetail);
+    if (DOM.btnDetailToEdit) {
+      DOM.btnDetailToEdit.addEventListener('click', () => {
+        const q = state.currentDetailQuestionObj;
+        closeQuestionDetail();
+        if (q) openQuestionForm(q);
+      });
+    }
+
+    // Delete Confirm Modal
+    if (DOM.btnCancelDeleteQ) DOM.btnCancelDeleteQ.addEventListener('click', closeDeleteConfirm);
+    if (DOM.btnConfirmDeleteQ) DOM.btnConfirmDeleteQ.addEventListener('click', handleConfirmDelete);
+
+    // Exam Subnav
+    if (DOM.btnExamBackHome) {
+      DOM.btnExamBackHome.addEventListener('click', () => {
+        if (state.mode === 'simulasi' && !state.isFinished) {
+          if (confirm('Ujian simulasi sedang berlangsung. Kembali ke Portal Utama?')) {
+            showScreen('landing');
+          }
+        } else {
+          showScreen('landing');
+        }
+      });
+    }
+
     if (DOM.tabModeBelajar) {
-      DOM.tabModeBelajar.addEventListener('click', () => switchMode('belajar'));
+      DOM.tabModeBelajar.addEventListener('click', () => {
+        if (state.mode !== 'simulasi' || state.isFinished) {
+          startStudyMode();
+        }
+      });
     }
+
     if (DOM.tabModeReview) {
-      DOM.tabModeReview.addEventListener('click', () => switchMode('review'));
+      DOM.tabModeReview.addEventListener('click', () => {
+        state.mode = 'review';
+        if (DOM.questionCard) DOM.questionCard.style.display = 'none';
+        if (DOM.reviewSessionView) {
+          DOM.reviewSessionView.classList.add('active');
+          renderReviewSessionView();
+        }
+      });
     }
 
     // Finish Exam Button
@@ -1406,26 +3301,27 @@
       });
     }
 
-    // Modal Confirmation Actions
-    if (DOM.btnCancelFinish) {
-      DOM.btnCancelFinish.addEventListener('click', closeConfirmFinishModal);
-    }
-    if (DOM.btnSubmitExamFinal) {
-      DOM.btnSubmitExamFinal.addEventListener('click', () => finishExam(false));
-    }
+    if (DOM.btnCancelFinish) DOM.btnCancelFinish.addEventListener('click', closeConfirmFinishModal);
+    if (DOM.btnSubmitExamFinal) DOM.btnSubmitExamFinal.addEventListener('click', () => finishExam(false));
 
-    // Modal backdrop click to close
-    [DOM.modalConfirmFinish, DOM.modalResult].forEach(modal => {
+    // Modal backdrops click-to-close
+    [
+      DOM.modalConfirmFinish,
+      DOM.modalResult,
+      DOM.modalQuestionDetail,
+      DOM.modalConfirmDeleteQ
+    ].forEach(modal => {
       if (modal) {
         modal.addEventListener('click', (e) => {
           if (e.target === modal) {
             modal.classList.remove('open');
+            if (DOM.detailVideoIframe) DOM.detailVideoIframe.src = '';
           }
         });
       }
     });
 
-    // Navigation Controls
+    // Question Navigation Controls
     if (DOM.btnPrev) {
       DOM.btnPrev.addEventListener('click', () => {
         if (state.currentIndex > 0) {
@@ -1441,7 +3337,6 @@
           state.currentIndex++;
           renderCurrentQuestion();
         } else {
-          // If on last question, open finish modal
           openConfirmFinishModal();
         }
       });
@@ -1456,7 +3351,7 @@
       });
     }
 
-    // Ragu-Ragu Button & Checkbox
+    // Ragu-Ragu Toggle
     const toggleRagu = () => {
       const q = state.questions[state.currentIndex];
       if (!q) return;
@@ -1466,16 +3361,12 @@
 
     if (DOM.btnRagu) {
       DOM.btnRagu.addEventListener('click', (e) => {
-        if (e.target !== DOM.checkboxRagu) {
-          toggleRagu();
-        }
+        if (e.target !== DOM.checkboxRagu) toggleRagu();
       });
     }
-    if (DOM.checkboxRagu) {
-      DOM.checkboxRagu.addEventListener('change', toggleRagu);
-    }
+    if (DOM.checkboxRagu) DOM.checkboxRagu.addEventListener('change', toggleRagu);
 
-    // Study Mode Controls
+    // Study Mode Actions
     if (DOM.btnToggleStudyPembahasan) {
       DOM.btnToggleStudyPembahasan.addEventListener('click', () => {
         if (!DOM.pembahasanBox) return;
@@ -1505,7 +3396,7 @@
       });
     }
 
-    // Subfilter Tabs for Question Grid (Sidebar)
+    // Sidebar Grid Range Subfilters
     if (DOM.gridSubfilterTabs) {
       DOM.gridSubfilterTabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -1517,7 +3408,7 @@
       });
     }
 
-    // Category Filter Badges in Subnav
+    // Subnav Category Filters
     if (DOM.categoryFilterBtns) {
       DOM.categoryFilterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1526,7 +3417,6 @@
           const filter = btn.getAttribute('data-category-filter') || 'all';
           state.categoryFilter = filter;
 
-          // Jump to first question of this category
           if (filter !== 'all') {
             const firstIdx = state.questions.findIndex(q => q.kategori === filter);
             if (firstIdx !== -1) {
@@ -1552,7 +3442,7 @@
       });
     }
 
-    // Button: Back to Exam from Review
+    // Review Back buttons
     if (DOM.btnBackToExamFromReview) {
       DOM.btnBackToExamFromReview.addEventListener('click', () => {
         if (DOM.questionCard) DOM.questionCard.style.display = 'block';
@@ -1561,25 +3451,52 @@
       });
     }
 
+    if (DOM.btnBackToHistoryFromReview) DOM.btnBackToHistoryFromReview.addEventListener('click', () => showScreen('history'));
+    if (DOM.btnBackToHomeFromReview) DOM.btnBackToHomeFromReview.addEventListener('click', () => showScreen('landing'));
+
+    // History Screen Buttons
+    if (DOM.btnHistoryBack) DOM.btnHistoryBack.addEventListener('click', () => showScreen('landing'));
+    if (DOM.btnEmptyStartSim) DOM.btnEmptyStartSim.addEventListener('click', startSimulationMode);
+
+    if (DOM.btnResetAllHistory) {
+      DOM.btnResetAllHistory.addEventListener('click', async () => {
+        if (confirm('PERHATIAN: Apakah Anda yakin ingin MENGHAPUS SELURUH riwayat ujian dari database SQLite? Data yang dihapus tidak dapat dipulihkan.')) {
+          await resetAllHistoryInSQLite();
+          loadAndRenderHistory();
+        }
+      });
+    }
+
     // Result Modal Actions
     if (DOM.btnOpenReview) {
       DOM.btnOpenReview.addEventListener('click', () => {
         if (DOM.modalResult) DOM.modalResult.classList.remove('open');
-        switchMode('review');
+        state.mode = 'review';
+        showScreen('exam');
+        if (DOM.questionCard) DOM.questionCard.style.display = 'none';
+        if (DOM.reviewSessionView) {
+          DOM.reviewSessionView.classList.add('active');
+          renderReviewSessionView();
+        }
       });
     }
 
-    if (DOM.btnPrintResult) {
-      DOM.btnPrintResult.addEventListener('click', () => {
-        window.print();
+    if (DOM.btnOpenHistoryFromCert) {
+      DOM.btnOpenHistoryFromCert.addEventListener('click', () => {
+        if (DOM.modalResult) DOM.modalResult.classList.remove('open');
+        showScreen('history');
       });
     }
 
+    if (DOM.btnPrintResult) DOM.btnPrintResult.addEventListener('click', () => window.print());
     if (DOM.btnRestartExam) {
-      DOM.btnRestartExam.addEventListener('click', restartExam);
+      DOM.btnRestartExam.addEventListener('click', () => {
+        if (DOM.modalResult) DOM.modalResult.classList.remove('open');
+        showScreen('landing');
+      });
     }
 
-    // Font Sizing
+    // Font Scaling
     const setFontSize = (sizeClass) => {
       document.body.classList.remove('font-sm', 'font-md', 'font-lg');
       document.body.classList.add(sizeClass);
@@ -1587,7 +3504,7 @@
       if (DOM.btnFontDec) DOM.btnFontDec.classList.toggle('active', sizeClass === 'font-sm');
       if (DOM.btnFontReset) DOM.btnFontReset.classList.toggle('active', sizeClass === 'font-md');
       if (DOM.btnFontInc) DOM.btnFontInc.classList.toggle('active', sizeClass === 'font-lg');
-      saveState();
+      saveActiveExamState();
     };
 
     if (DOM.btnFontDec) DOM.btnFontDec.addEventListener('click', () => setFontSize('font-sm'));
@@ -1596,7 +3513,6 @@
 
     // Keyboard Shortcuts Navigation
     window.addEventListener('keydown', (e) => {
-      // Don't trigger shortcuts inside text inputs or when confirmation modal is open
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
       if (DOM.modalConfirmFinish && DOM.modalConfirmFinish.classList.contains('open')) {
         if (e.key === 'Escape') closeConfirmFinishModal();
@@ -1606,6 +3522,20 @@
         if (e.key === 'Escape') DOM.modalResult.classList.remove('open');
         return;
       }
+      if (DOM.modalQuestionDetail && DOM.modalQuestionDetail.classList.contains('open')) {
+        if (e.key === 'Escape') closeQuestionDetail();
+        return;
+      }
+      if (DOM.modalQuestionForm && DOM.modalQuestionForm.classList.contains('open')) {
+        if (e.key === 'Escape') closeQuestionForm();
+        return;
+      }
+      if (DOM.modalConfirmDeleteQ && DOM.modalConfirmDeleteQ.classList.contains('open')) {
+        if (e.key === 'Escape') closeDeleteConfirm();
+        return;
+      }
+
+      if (state.currentScreen !== 'exam') return;
 
       const q = state.questions[state.currentIndex];
       if (!q) return;
@@ -1636,44 +3566,21 @@
     });
   }
 
-  // --- 14. INITIALIZATION ---
+  // --- 23. INITIALIZATION ---
 
-  function initializeApp() {
-    console.log('[CAT BKN] Menginisialisasi sistem ujian simulasi...');
+  async function initializeApp() {
+    console.log('[CAT ASSESSMENT] Menginisialisasi sistem ujian...');
 
-    // Load questions from window.SKD_QUESTIONS
-    let rawQuestions = window.SKD_QUESTIONS;
-
-    if (!Array.isArray(rawQuestions) || rawQuestions.length === 0) {
-      console.warn('[CAT BKN] window.SKD_QUESTIONS belum terdefinisi. Menunggu pemuatan file data/questions.js...');
-      let checkAttempts = 0;
-      const interval = setInterval(() => {
-        checkAttempts++;
-        if (Array.isArray(window.SKD_QUESTIONS) && window.SKD_QUESTIONS.length > 0) {
-          clearInterval(interval);
-          setupQuestions(window.SKD_QUESTIONS);
-        } else if (checkAttempts > 30) {
-          clearInterval(interval);
-          console.error('[CAT BKN] Gagal memuat data/questions.js setelah 30 percobaan.');
-        }
-      }, 200);
-      return;
-    }
-
-    setupQuestions(rawQuestions);
-  }
-
-  function setupQuestions(rawQuestions) {
-    state.questions = rawQuestions.map((q, idx) => normalizeQuestion(q, idx));
-    console.log(`[CAT BKN] Berhasil memuat ${state.questions.length} soal resmi SKD.`);
-
-    // Restore previous state if available
-    const hasPrevious = loadState();
-
-    // Initialize Event Handlers
     initEventListeners();
 
-    // Restore Font Size
+    // Inisialisasi Database SQLite JS (WASM) & IndexedDB Persistence
+    await initSQLiteEngine();
+
+    // Load active questions from SQLite (or fallback to questions.js)
+    await loadActiveQuestions();
+
+    const hasPrevious = loadActiveExamState();
+
     if (state.fontSize) {
       document.body.classList.remove('font-sm', 'font-md', 'font-lg');
       document.body.classList.add(state.fontSize);
@@ -1682,28 +3589,22 @@
       if (DOM.btnFontInc) DOM.btnFontInc.classList.toggle('active', state.fontSize === 'font-lg');
     }
 
-    // Set Candidate Initial Avatar
-    if (DOM.candidateAvatar) {
-      DOM.candidateAvatar.textContent = 'ASN';
-    }
+    if (DOM.candidateAvatar) DOM.candidateAvatar.textContent = 'ASN';
 
-    // Check Finished State
-    if (state.isFinished) {
-      if (DOM.tabModeReview) DOM.tabModeReview.style.display = 'inline-flex';
-      if (DOM.btnFinishExam && DOM.btnFinishExam.querySelector('span')) {
-        DOM.btnFinishExam.querySelector('span').textContent = 'Sertifikat Nilai';
-      }
-      switchMode('review');
-    } else {
-      switchMode(state.mode || 'simulasi');
+    // Resume exam if reload occurred during active simulation
+    if (hasPrevious && state.mode === 'simulasi' && !state.isFinished && state.timeRemaining > 0) {
+      showScreen('exam');
+      document.body.classList.add('simulation-mode-active');
+      if (DOM.badgeSimLocked) DOM.badgeSimLocked.style.display = 'inline-flex';
+      if (DOM.timerBox) DOM.timerBox.style.display = 'flex';
+      if (DOM.btnFinishExam) DOM.btnFinishExam.style.display = 'inline-flex';
       startTimer();
+      renderCurrentQuestion();
+    } else {
+      showScreen('landing');
     }
-
-    renderCurrentQuestion();
-    renderSidebar();
   }
 
-  // Execute on DOM Ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
   } else {
