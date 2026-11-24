@@ -17,6 +17,9 @@
     IDB_NAME: 'CAT_CASN_SQLITE_STORAGE',
     IDB_STORE: 'sqlite_store',
     IDB_KEY: 'database_file',
+    AUTH_SALT: 'CAT_SKD_2026_SALT_',
+    AUTH_HASH: '82f5bacfb16f052a221735719214613fa29d3110c5295ff5ba38195267d387bd',
+    RATE_LIMIT_KEY: 'CAT_AUTH_RATE_LIMIT',
     EXAM_DURATION_SECONDS: 100 * 60, // 100 minutes (6,000 seconds)
     PASSING_GRADES: {
       TWK: 65,  // Nilai Ambang Batas TWK
@@ -40,6 +43,7 @@
 
   // --- 2. GLOBAL APPLICATION STATE ---
   const state = {
+    isAuthenticated: false,       // In-memory only (not persisted in localStorage)
     currentScreen: 'landing',     // 'landing' | 'exam' | 'history' | 'bank-soal'
     mode: 'simulasi',             // 'simulasi' | 'belajar' | 'review'
     currentIndex: 0,              // 0-indexed across normalized questions
@@ -73,6 +77,16 @@
 
   // --- 3. DOM ELEMENT CACHE ---
   const DOM = {
+    // Auth Gate
+    authGateScreen: document.getElementById('auth-gate-screen'),
+    authGateForm: document.getElementById('auth-gate-form'),
+    authPasswordInput: document.getElementById('auth-password-input'),
+    btnTogglePassword: document.getElementById('btn-toggle-password'),
+    iconEyeShow: document.getElementById('icon-eye-show'),
+    iconEyeHide: document.getElementById('icon-eye-hide'),
+    authErrorMsg: document.getElementById('auth-error-msg'),
+    btnAuthSubmit: document.getElementById('btn-auth-submit'),
+
     // Screens
     landingScreen: document.getElementById('landing-screen'),
     examScreen: document.getElementById('exam-screen'),
@@ -1812,7 +1826,7 @@
       });
 
       // 1. Cek versi data dan IndexedDB
-      const DATA_VERSION = 'v5_timestamps';
+      const DATA_VERSION = 'v6_enriched_130';
       const storedVer = localStorage.getItem('CAT_DB_DATA_VERSION');
       let binary = null;
 
@@ -3566,11 +3580,337 @@
     });
   }
 
-  // --- 23. INITIALIZATION ---
+  // --- 23. INITIALIZATION & SECURITY GATE ---
+
+  function sha256Fallback(ascii) {
+    function rightRotate(value, amount) {
+      return (value >>> amount) | (value << (32 - amount));
+    }
+    const mathPow = Math.pow;
+    const maxWord = mathPow(2, 32);
+    const lengthProperty = 'length';
+    let i, j;
+    let result = '';
+    const words = [];
+    const asciiBitLength = ascii[lengthProperty] * 8;
+    let hash = sha256Fallback.h = sha256Fallback.h || [];
+    const k = sha256Fallback.k = sha256Fallback.k || [];
+    let primeCounter = k[lengthProperty];
+    const isComposite = {};
+    for (let candidate = 2; primeCounter < 64; candidate++) {
+      if (!isComposite[candidate]) {
+        for (i = 0; i < 313; i += candidate) isComposite[i] = candidate;
+        hash[primeCounter] = (mathPow(candidate, 0.5) * maxWord) | 0;
+        k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
+      }
+    }
+    ascii += '\x80';
+    while (ascii[lengthProperty] % 64 - 56) ascii += '\x00';
+    for (i = 0; i < ascii[lengthProperty]; i++) {
+      j = ascii.charCodeAt(i);
+      if (j >> 8) return;
+      words[i >> 2] |= j << ((3 - i) % 4) * 8;
+    }
+    words[words[lengthProperty]] = ((asciiBitLength / maxWord) | 0);
+    words[words[lengthProperty]] = (asciiBitLength);
+    for (j = 0; j < words[lengthProperty];) {
+      const w = words.slice(j, j += 16);
+      const oldHash = hash;
+      hash = hash.slice(0, 8);
+      for (i = 0; i < 64; i++) {
+        const w15 = w[i - 15], w2 = w[i - 2];
+        const a = hash[0], e = hash[4];
+        const temp1 = hash[7]
+          + (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25))
+          + ((e & hash[5]) ^ ((~e) & hash[6]))
+          + k[i]
+          + (w[i] = (i < 16) ? w[i] : (
+            w[i - 16]
+            + (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15 >>> 3))
+            + w[i - 7]
+            + (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2 >>> 10))
+          ) | 0);
+        const temp2 = (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22))
+          + ((a & hash[1]) ^ (a & hash[2]) ^ (hash[1] & hash[2]));
+        hash = [(temp1 + temp2) | 0].concat(hash);
+        hash[4] = (hash[4] + temp1) | 0;
+      }
+      for (i = 0; i < 8; i++) hash[i] = (hash[i] + oldHash[i]) | 0;
+    }
+    for (i = 0; i < 8; i++) {
+      for (j = 3; j + 1; j--) {
+        const b = (hash[i] >> (j * 8)) & 255;
+        result += ((b < 16) ? 0 : '') + b.toString(16);
+      }
+    }
+    return result;
+  }
+
+  async function sha256(str) {
+    if (window.crypto && window.crypto.subtle && typeof TextEncoder !== 'undefined') {
+      try {
+        const buf = new TextEncoder().encode(str);
+        const hashBuf = await window.crypto.subtle.digest('SHA-256', buf);
+        return Array.from(new Uint8Array(hashBuf)).map(b => b.toString(16).padStart(2, '0')).join('');
+      } catch (e) {
+        // Fallback to pure-JS SHA-256 (e.g. insecure file:// context)
+      }
+    }
+    const utf8 = unescape(encodeURIComponent(str));
+    return sha256Fallback(utf8);
+  }
+
+  function initAuthGate() {
+    if (!DOM.authGateScreen || !DOM.authGateForm) return;
+
+    state.isAuthenticated = false;
+    document.body.classList.add('auth-locked');
+    DOM.authGateScreen.classList.remove('unlocked');
+
+    // Detach protected DOM nodes from document.body until authenticated
+    const detachedAppNodes = [];
+    const protectedElements = Array.from(document.body.querySelectorAll('.cat-header, .app-screen, .modal-backdrop'));
+    protectedElements.forEach((el) => {
+      detachedAppNodes.push(el);
+      if (el.parentNode) el.parentNode.removeChild(el);
+    });
+
+    const reattachAppNodes = () => {
+      detachedAppNodes.forEach((el) => {
+        if (!document.body.contains(el)) {
+          document.body.appendChild(el);
+        }
+      });
+    };
+
+    // Anti-tampering MutationObserver while locked
+    const gateObserver = new MutationObserver(() => {
+      if (state.isAuthenticated) {
+        gateObserver.disconnect();
+        return;
+      }
+      if (!document.body.contains(DOM.authGateScreen)) {
+        document.body.prepend(DOM.authGateScreen);
+      }
+      if (DOM.authGateScreen.classList.contains('unlocked')) {
+        DOM.authGateScreen.classList.remove('unlocked');
+      }
+      if (!document.body.classList.contains('auth-locked')) {
+        document.body.classList.add('auth-locked');
+      }
+    });
+    gateObserver.observe(document.body, { childList: true, attributes: true, subtree: true });
+
+    // Disable right-click & DevTools shortcuts while on Auth Gate
+    const blockContextMenu = (e) => {
+      if (!state.isAuthenticated) e.preventDefault();
+    };
+    const blockDevToolsKeys = (e) => {
+      if (state.isAuthenticated) return;
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) ||
+        (e.ctrlKey && ['U', 'u'].includes(e.key))
+      ) {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener('contextmenu', blockContextMenu);
+    document.addEventListener('keydown', blockDevToolsKeys);
+
+    // Rate Limiter State (Server-Side enforced when http/https, localStorage fallback for file://)
+    let cooldownInterval = null;
+    let isServerEnforced = false;
+
+    const getRateLimit = () => {
+      try {
+        const raw = localStorage.getItem(CONFIG.RATE_LIMIT_KEY);
+        return raw ? JSON.parse(raw) : { failCount: 0, lockoutUntil: 0 };
+      } catch (e) {
+        return { failCount: 0, lockoutUntil: 0 };
+      }
+    };
+    const setRateLimit = (data) => {
+      try {
+        localStorage.setItem(CONFIG.RATE_LIMIT_KEY, JSON.stringify(data));
+      } catch (e) {}
+    };
+
+    const startCooldownUI = (lockoutUntil, useServerCheck = false) => {
+      if (cooldownInterval) clearInterval(cooldownInterval);
+      if (DOM.authPasswordInput) DOM.authPasswordInput.disabled = true;
+      if (DOM.btnAuthSubmit) DOM.btnAuthSubmit.disabled = true;
+
+      const tick = async () => {
+        const remainingMs = lockoutUntil - Date.now();
+        if (remainingMs <= 0) {
+          clearInterval(cooldownInterval);
+          cooldownInterval = null;
+          if (useServerCheck) {
+            try {
+              const resp = await fetch('/api/auth-status');
+              if (resp.ok) {
+                const st = await resp.json();
+                if (st.locked && st.lockoutSeconds > 0) {
+                  startCooldownUI(Date.now() + st.lockoutSeconds * 1000, true);
+                  return;
+                }
+              }
+            } catch (e) {}
+          } else {
+            setRateLimit({ failCount: 0, lockoutUntil: 0 });
+          }
+          if (DOM.authPasswordInput) {
+            DOM.authPasswordInput.disabled = false;
+            DOM.authPasswordInput.value = '';
+          }
+          if (DOM.btnAuthSubmit) DOM.btnAuthSubmit.disabled = false;
+          if (DOM.authErrorMsg) DOM.authErrorMsg.style.display = 'none';
+          return;
+        }
+        const totalSec = Math.ceil(remainingMs / 1000);
+        const mins = String(Math.floor(totalSec / 60)).padStart(2, '0');
+        const secs = String(totalSec % 60).padStart(2, '0');
+        if (DOM.authErrorMsg) {
+          DOM.authErrorMsg.textContent = `Terlalu banyak percobaan salah (5x). Coba lagi dalam ${mins}:${secs}`;
+          DOM.authErrorMsg.style.display = 'block';
+        }
+      };
+      tick();
+      cooldownInterval = setInterval(tick, 1000);
+    };
+
+    // Check Server-Side Rate Limiter first (if http/https)
+    const checkInitialAuthStatus = async () => {
+      if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+        try {
+          const resp = await fetch('/api/auth-status');
+          if (resp.ok) {
+            const data = await resp.json();
+            if (data && data.serverEnforced) {
+              isServerEnforced = true;
+              if (data.locked && data.lockoutSeconds > 0) {
+                startCooldownUI(Date.now() + data.lockoutSeconds * 1000, true);
+              }
+              return;
+            }
+          }
+        } catch (e) {}
+      }
+      // Fallback to localStorage
+      const initialRL = getRateLimit();
+      if (initialRL.lockoutUntil && initialRL.lockoutUntil > Date.now()) {
+        startCooldownUI(initialRL.lockoutUntil, false);
+      }
+    };
+    checkInitialAuthStatus();
+
+    if (DOM.btnTogglePassword && DOM.authPasswordInput) {
+      DOM.btnTogglePassword.addEventListener('click', () => {
+        const isPassword = DOM.authPasswordInput.type === 'password';
+        DOM.authPasswordInput.type = isPassword ? 'text' : 'password';
+        if (DOM.iconEyeShow) DOM.iconEyeShow.style.display = isPassword ? 'none' : 'block';
+        if (DOM.iconEyeHide) DOM.iconEyeHide.style.display = isPassword ? 'block' : 'none';
+      });
+    }
+
+    if (DOM.authPasswordInput && DOM.authErrorMsg) {
+      DOM.authPasswordInput.addEventListener('input', () => {
+        const rl = getRateLimit();
+        if (!rl.lockoutUntil || rl.lockoutUntil <= Date.now()) {
+          DOM.authErrorMsg.style.display = 'none';
+        }
+      });
+    }
+
+    DOM.authGateForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const entered = DOM.authPasswordInput ? DOM.authPasswordInput.value : '';
+      const computedHash = await sha256(CONFIG.AUTH_SALT + entered);
+
+      const unlockSuccess = () => {
+        state.isAuthenticated = true;
+        gateObserver.disconnect();
+        document.removeEventListener('contextmenu', blockContextMenu);
+        document.removeEventListener('keydown', blockDevToolsKeys);
+        setRateLimit({ failCount: 0, lockoutUntil: 0 });
+        if (cooldownInterval) clearInterval(cooldownInterval);
+
+        reattachAppNodes();
+        document.body.classList.remove('auth-locked');
+        DOM.authGateScreen.classList.add('unlocked');
+        if (DOM.authErrorMsg) DOM.authErrorMsg.style.display = 'none';
+      };
+
+      // Try Server-Side Auth if http/https
+      if (isServerEnforced || window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+        try {
+          const resp = await fetch('/api/auth', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ hash: computedHash })
+          });
+          const resData = await resp.json();
+          if (resp.ok && resData.ok) {
+            unlockSuccess();
+            return;
+          }
+          if (resp.status === 429 || resData.locked) {
+            startCooldownUI(Date.now() + (resData.lockoutSeconds || 300) * 1000, true);
+            return;
+          }
+          if (resp.status === 401) {
+            const rem = resData.remainingAttempts !== undefined ? resData.remainingAttempts : 0;
+            if (DOM.authErrorMsg) {
+              DOM.authErrorMsg.textContent = `Password salah! Sisa percobaan: ${rem}x`;
+              DOM.authErrorMsg.style.display = 'block';
+            }
+            if (DOM.authPasswordInput) {
+              DOM.authPasswordInput.focus();
+              DOM.authPasswordInput.select();
+            }
+            return;
+          }
+        } catch (err) {
+          // Fallback to client-side if server endpoint unavailable
+        }
+      }
+
+      // Client-side fallback (file://)
+      const rl = getRateLimit();
+      if (rl.lockoutUntil && rl.lockoutUntil > Date.now()) {
+        startCooldownUI(rl.lockoutUntil, false);
+        return;
+      }
+
+      if (computedHash === CONFIG.AUTH_HASH) {
+        unlockSuccess();
+      } else {
+        const nextFail = (rl.failCount || 0) + 1;
+        if (nextFail >= 5) {
+          const lockoutUntil = Date.now() + 5 * 60 * 1000;
+          setRateLimit({ failCount: nextFail, lockoutUntil });
+          startCooldownUI(lockoutUntil, false);
+        } else {
+          setRateLimit({ failCount: nextFail, lockoutUntil: 0 });
+          const remaining = 5 - nextFail;
+          if (DOM.authErrorMsg) {
+            DOM.authErrorMsg.textContent = `Password salah! Sisa percobaan: ${remaining}x`;
+            DOM.authErrorMsg.style.display = 'block';
+          }
+          if (DOM.authPasswordInput) {
+            DOM.authPasswordInput.focus();
+            DOM.authPasswordInput.select();
+          }
+        }
+      }
+    });
+  }
 
   async function initializeApp() {
     console.log('[CAT ASSESSMENT] Menginisialisasi sistem ujian...');
 
+    initAuthGate();
     initEventListeners();
 
     // Inisialisasi Database SQLite JS (WASM) & IndexedDB Persistence

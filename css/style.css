@@ -3253,6 +3253,147 @@ body.simulation-mode-active .sim-locked-badge {
 }
 
 /* ==========================================================================
+   12. PASSWORD GATE OVERLAY (#auth-gate-screen)
+   ========================================================================== */
+body.auth-locked {
+  overflow: hidden;
+}
+
+body.auth-locked > .cat-header,
+body.auth-locked > .app-screen,
+body.auth-locked > .modal-backdrop {
+  display: none !important;
+}
+
+.auth-gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, var(--cat-primary-dark) 0%, var(--cat-primary) 55%, var(--cat-secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.auth-gate-overlay.unlocked {
+  display: none !important;
+}
+
+.auth-gate-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  max-width: 420px;
+  width: 100%;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+  border-top: 5px solid var(--accent-gold);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideDown 250ms ease-out;
+}
+
+.auth-gate-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auth-gate-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: var(--cat-primary);
+  border: 2px solid #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.auth-gate-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--cat-primary-dark);
+}
+
+.auth-gate-subtitle {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.auth-gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-password-input {
+  padding-right: 2.75rem;
+  font-size: 0.95rem;
+  height: 44px;
+}
+
+.btn-toggle-password {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.btn-toggle-password:hover {
+  background: #f1f5f9;
+  color: var(--cat-primary);
+}
+
+.auth-hint-text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.auth-hint-text strong {
+  color: var(--cat-primary);
+}
+
+.auth-error-msg {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
    11. RESPONSIVENESS & MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 1100px) {
