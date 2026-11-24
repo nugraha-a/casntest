@@ -1721,7 +1721,26 @@
     `);
   }
 
-  function seedQuestionsIfEmpty(db) {
+  function loadFallbackQuestionsScript() {
+    if (Array.isArray(window.SKD_QUESTIONS) && window.SKD_QUESTIONS.length > 0) {
+      return Promise.resolve();
+    }
+    return new Promise((resolve) => {
+      const existing = document.querySelector('script[src*="data/questions.js"]');
+      if (existing) {
+        existing.addEventListener('load', () => resolve(), { once: true });
+        existing.addEventListener('error', () => resolve(), { once: true });
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = 'data/questions.js?v=20261124g';
+      script.onload = () => resolve();
+      script.onerror = () => resolve();
+      document.head.appendChild(script);
+    });
+  }
+
+  async function seedQuestionsIfEmpty(db) {
     try {
       const res = db.exec("SELECT COUNT(*) AS cnt FROM questions;");
       const count = (res.length > 0 && res[0].values.length > 0) ? res[0].values[0][0] : 0;
@@ -1731,6 +1750,7 @@
     } catch (e) {
     }
 
+    await loadFallbackQuestionsScript();
     const list = window.SKD_QUESTIONS || [];
     if (!Array.isArray(list) || list.length === 0) {
       return;
@@ -1868,7 +1888,7 @@
 
       // 4. Pastikan tabel tersedia & seed jika kosong
       createTablesIfNotExist(sqliteDB);
-      seedQuestionsIfEmpty(sqliteDB);
+      await seedQuestionsIfEmpty(sqliteDB);
 
       // 5. Simpan binary terkini ke IndexedDB & catat versi data
       await persistSQLiteDB();
@@ -2422,7 +2442,8 @@
       }
     }
 
-    // Fallback: window.SKD_QUESTIONS
+    // Fallback: window.SKD_QUESTIONS (lazy-load only if SQLite unavailable)
+    await loadFallbackQuestionsScript();
     if (Array.isArray(window.SKD_QUESTIONS) && window.SKD_QUESTIONS.length > 0) {
       const activeOnly = window.SKD_QUESTIONS.filter(q => q.is_active !== 0);
       state.questions = activeOnly.map((q, idx) => normalizeQuestion(q, idx));
@@ -3801,9 +3822,11 @@
       cooldownInterval = setInterval(tick, 1000);
     };
 
-    // Check Server-Side Rate Limiter first (if http/https)
+    // Check Server-Side Rate Limiter ONLY if localStorage recorded prior failure/lockout (saves Vercel invocations)
     const checkInitialAuthStatus = async () => {
-      if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+      const initialRL = getRateLimit();
+      if ((initialRL.failCount > 0 || initialRL.lockoutUntil > 0) &&
+          (window.location.protocol === 'http:' || window.location.protocol === 'https:')) {
         try {
           const resp = await fetch('/api/auth-status');
           if (resp.ok) {
@@ -3819,7 +3842,6 @@
         } catch (e) {}
       }
       // Fallback to localStorage
-      const initialRL = getRateLimit();
       if (initialRL.lockoutUntil && initialRL.lockoutUntil > Date.now()) {
         startCooldownUI(initialRL.lockoutUntil, false);
       }
