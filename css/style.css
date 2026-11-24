@@ -3689,6 +3689,277 @@ main,
 }
 
 /* ==========================================================================
+   14. MOBILE-FIRST EXAM UX: COMPACT HEADER, DRAWER, THUMB BAR & STACKED CARDS
+   ========================================================================== */
+.mobile-drawer-header,
+.mobile-drawer-backdrop,
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .cat-main-container {
+    padding-bottom: 84px;
+  }
+
+  .question-card-footer {
+    display: none;
+  }
+
+  .mobile-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(2px);
+    z-index: 1190;
+    display: none;
+  }
+
+  .mobile-drawer-backdrop.open {
+    display: block;
+  }
+
+  .sidebar-viewport {
+    position: fixed;
+    inset: auto 0 0 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: 78vh;
+    background: #ffffff;
+    border-radius: 20px 20px 0 0;
+    z-index: 1200;
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    padding: 0.75rem 1rem 1.5rem 1rem;
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar-viewport.open {
+    transform: translateY(0);
+  }
+
+  .mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.65rem;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 5;
+  }
+
+  .mobile-drawer-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--cat-primary-dark);
+  }
+
+  .btn-close-mobile-drawer {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: var(--text-main);
+    font-size: 1.35rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 48px 1fr 1.2fr 1.2fr;
+    gap: 0.45rem;
+    padding: 0.55rem 0.75rem calc(0.55rem + env(safe-area-inset-bottom)) 0.75rem;
+  }
+
+  .mobile-bar-btn {
+    min-height: 44px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-strong);
+    background: #f8fafc;
+    color: var(--text-main);
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .mobile-bar-ragu {
+    background: #fffbeb;
+    border-color: #fbbf24;
+    color: #b45309;
+  }
+
+  .mobile-bar-ragu.is-ragu {
+    background: #f59e0b;
+    border-color: #d97706;
+    color: #ffffff;
+  }
+
+  .mobile-bar-grid {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: var(--cat-primary);
+  }
+
+  .mobile-bar-next {
+    background: var(--cat-primary);
+    border-color: var(--cat-primary-dark);
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1-Row Compact Header */
+  .cat-header {
+    min-height: 52px;
+    height: auto;
+    padding: 0.4rem 0.75rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .brand-title-sub,
+  .header-candidate {
+    display: none !important;
+  }
+
+  .brand-shield-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-title-main {
+    font-size: 0.875rem;
+    gap: 0.3rem;
+  }
+
+  .header-actions {
+    width: auto;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+  }
+
+  .btn-header-nav,
+  .btn-finish-exam {
+    min-height: 36px;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.725rem;
+  }
+
+  .timer-box {
+    min-height: 36px;
+    padding: 0.25rem 0.55rem;
+    gap: 0.3rem;
+  }
+
+  .timer-label {
+    display: none;
+  }
+
+  .timer-countdown {
+    font-size: 0.95rem;
+  }
+
+  /* 1-Row Horizontal Scrollable Subnav */
+  .cat-subnav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.45rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .cat-subnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subnav-left-group,
+  .category-filter-wrap,
+  .accessibility-controls {
+    width: auto;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+
+  .accessibility-label {
+    display: none;
+  }
+
+  /* Stacked Card Layout for History & Bank Soal Tables */
+  .history-table thead,
+  .bank-soal-table thead {
+    display: none;
+  }
+
+  .history-table,
+  .history-table tbody,
+  .bank-soal-table,
+  .bank-soal-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .history-table tr,
+  .bank-soal-table tr {
+    display: block;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    box-shadow: var(--shadow-xs);
+  }
+
+  .history-table td,
+  .bank-soal-table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.35rem 0;
+    border-bottom: 1px dashed #f1f5f9;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .history-table td:last-child,
+  .bank-soal-table td:last-child {
+    border-bottom: none;
+    padding-top: 0.6rem;
+    justify-content: flex-end;
+  }
+
+  .history-table-wrapper,
+  .bank-soal-table-wrap {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/* ==========================================================================
    11. RESPONSIVENESS & MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 1100px) {

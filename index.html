@@ -6,7 +6,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>CAT Assessment System - SKD CASN</title>
   <meta name="description" content="Sistem Simulasi CAT Terpadu - Seleksi Kompetensi Dasar (SKD) CASN CPNS & PPPK dengan Mode Simulasi Ujian Terkunci, Mode Belajar Mandiri, dan Riwayat Evaluasi Sesi.">
-  <link rel="stylesheet" href="css/style.css?v=20261124d">
+  <link rel="stylesheet" href="css/style.css?v=20261124e">
   <style>
     /* Critical Auth Gate CSS (mencegah konten bocor / cache lama) */
     body.auth-locked { overflow: hidden !important; }
@@ -722,8 +722,13 @@
 
       </section>
 
-      <!-- Kolom Kanan: Pengawas & Grid Nomor Soal -->
+      <!-- Kolom Kanan: Pengawas & Grid Nomor Soal (Bottom Sheet Drawer di Mobile) -->
+      <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
       <aside class="sidebar-viewport" id="sidebar-viewport">
+        <div class="mobile-drawer-header" id="mobile-drawer-header">
+          <span class="mobile-drawer-title">Navigasi Nomor Soal</span>
+          <button type="button" class="btn-close-mobile-drawer" id="btn-close-mobile-drawer" aria-label="Tutup Daftar Soal">&times;</button>
+        </div>
         
         <!-- Webcam Proctoring Card -->
         <div class="sidebar-card webcam-card">
@@ -812,6 +817,24 @@
 
       </aside>
     </main>
+
+    <!-- Sticky Bottom Action Bar (Thumb Zone Mobile <= 900px) -->
+    <div class="mobile-bottom-bar" id="mobile-bottom-bar">
+      <button type="button" class="mobile-bar-btn" id="btn-mobile-prev" aria-label="Soal Sebelumnya">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button type="button" class="mobile-bar-btn mobile-bar-ragu" id="btn-mobile-ragu">
+        <span>? Ragu</span>
+      </button>
+      <button type="button" class="mobile-bar-btn mobile-bar-grid" id="btn-mobile-grid-drawer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        <span id="mobile-grid-counter">1/110</span>
+      </button>
+      <button type="button" class="mobile-bar-btn mobile-bar-next" id="btn-mobile-next">
+        <span>Lanjut</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
   </div>
 
   <!-- ======================================================================
@@ -1637,6 +1660,6 @@
 
   <!-- Dataset & Application Engine -->
   <script src="data/questions.js?v=20261124"></script>
-  <script src="js/app.js?v=20261124c"></script>
+  <script src="js/app.js?v=20261124e"></script>
 </body>
 </html>

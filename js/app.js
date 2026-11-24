@@ -180,6 +180,17 @@
     reviewQuestionsList: document.getElementById('review-questions-list'),
     btnBackToExamFromReview: document.getElementById('btn-back-to-exam-from-review'),
 
+    // Mobile Drawer & Bottom Action Bar
+    sidebarViewport: document.getElementById('sidebar-viewport'),
+    mobileDrawerBackdrop: document.getElementById('mobile-drawer-backdrop'),
+    btnCloseMobileDrawer: document.getElementById('btn-close-mobile-drawer'),
+    mobileBottomBar: document.getElementById('mobile-bottom-bar'),
+    btnMobilePrev: document.getElementById('btn-mobile-prev'),
+    btnMobileRagu: document.getElementById('btn-mobile-ragu'),
+    btnMobileGridDrawer: document.getElementById('btn-mobile-grid-drawer'),
+    mobileGridCounter: document.getElementById('mobile-grid-counter'),
+    btnMobileNext: document.getElementById('btn-mobile-next'),
+
     // Sidebar & Question Grid
     statAnswered: document.getElementById('stat-answered'),
     statRagu: document.getElementById('stat-ragu'),
@@ -636,7 +647,6 @@
       };
       localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(payload));
     } catch (e) {
-      console.warn('Gagal menyimpan state aktif ke localStorage:', e);
     }
   }
 
@@ -661,7 +671,6 @@
         return true;
       }
     } catch (e) {
-      console.warn('Gagal memuat state aktif dari localStorage:', e);
     }
     return false;
   }
@@ -670,7 +679,6 @@
     try {
       localStorage.removeItem(CONFIG.STORAGE_KEY);
     } catch (e) {
-      console.warn('Gagal membersihkan state aktif dari localStorage:', e);
     }
   }
 
@@ -902,6 +910,15 @@
 
     if (DOM.btnPrev) {
       DOM.btnPrev.disabled = (state.currentIndex === 0);
+    }
+    if (DOM.btnMobilePrev) {
+      DOM.btnMobilePrev.disabled = (state.currentIndex === 0);
+    }
+    if (DOM.mobileGridCounter) {
+      DOM.mobileGridCounter.textContent = `${state.currentIndex + 1}/${state.questions.length}`;
+    }
+    if (DOM.btnMobileRagu) {
+      DOM.btnMobileRagu.classList.toggle('active', !!state.ragu[q.id]);
     }
     if (DOM.btnNext) {
       if (state.currentIndex === state.questions.length - 1) {
@@ -1204,6 +1221,7 @@
           DOM.questionCard.style.display = 'block';
         }
         renderCurrentQuestion();
+        closeMobileDrawer();
       });
 
       DOM.questionGrid.appendChild(btn);
@@ -1590,7 +1608,6 @@
         req.onerror = () => resolve(null);
       });
     } catch (e) {
-      console.warn('[SQLite IDB] Gagal membaca binary dari IndexedDB:', e.message);
       return null;
     }
   }
@@ -1606,7 +1623,6 @@
         req.onerror = () => reject(req.error);
       });
     } catch (e) {
-      console.warn('[SQLite IDB] Gagal menyimpan binary ke IndexedDB:', e.message);
       return false;
     }
   }
@@ -1618,7 +1634,6 @@
       await saveStoredSQLiteBinary(binary);
       return true;
     } catch (e) {
-      console.warn('[SQLite IDB] Persist error:', e.message);
       return false;
     }
   }
@@ -1711,20 +1726,16 @@
       const res = db.exec("SELECT COUNT(*) AS cnt FROM questions;");
       const count = (res.length > 0 && res[0].values.length > 0) ? res[0].values[0][0] : 0;
       if (count > 0) {
-        console.log(`[SQLite JS] Tabel questions sudah terisi ${count} butir soal.`);
         return;
       }
     } catch (e) {
-      console.warn('[SQLite JS] Check questions count error:', e.message);
     }
 
     const list = window.SKD_QUESTIONS || [];
     if (!Array.isArray(list) || list.length === 0) {
-      console.warn('[SQLite JS] window.SKD_QUESTIONS kosong, seeding ditunda.');
       return;
     }
 
-    console.log(`[SQLite JS] Mengisi data awal (seeding) ${list.length} butir soal ke SQLite...`);
     db.run("BEGIN TRANSACTION;");
     const stmt = db.prepare(`
       INSERT INTO questions (
@@ -1802,7 +1813,6 @@
 
     stmt.free();
     db.run("COMMIT;");
-    console.log(`[SQLite JS] Seeding selesai! ${list.length} butir soal tersimpan.`);
   }
 
   async function initSQLiteEngine() {
@@ -1833,7 +1843,6 @@
       if (storedVer === DATA_VERSION) {
         binary = await getStoredSQLiteBinary();
       } else {
-        console.log(`[SQLite JS] Versi data baru terdeteksi (${DATA_VERSION}). Memperbarui database dari file bawaan/seeding...`);
       }
 
       // 2. Jika belum ada atau versi baru, muat dari file database.sqlite via fetch
@@ -1844,11 +1853,9 @@
             const buffer = await resp.arrayBuffer();
             if (buffer && buffer.byteLength > 0) {
               binary = new Uint8Array(buffer);
-              console.log('[SQLite JS] Berhasil memuat database.sqlite bawaan via fetch:', binary.byteLength, 'bytes');
             }
           }
         } catch (fetchErr) {
-          console.warn('[SQLite JS] Tidak dapat fetch database.sqlite langsung, membuat database baru:', fetchErr.message);
         }
       }
 
@@ -1879,10 +1886,8 @@
       if (DOM.sqliteStatusBadge) {
         DOM.sqliteStatusBadge.innerHTML = '<span class="sqlite-badge-dot" style="background:#10b981;"></span><span>SQLite JS (WASM)</span>';
       }
-      console.log('[SQLite JS Engine] Siap digunakan 100% tanpa PHP.');
       return sqliteDB;
     } catch (e) {
-      console.error('[SQLite JS Engine] Inisialisasi gagal:', e);
       if (DOM.sqliteStatusBadge) {
         DOM.sqliteStatusBadge.innerHTML = '<span class="sqlite-badge-dot" style="background:#f59e0b;"></span><span>SQLite Fallback (In-Memory)</span>';
       }
@@ -1902,7 +1907,6 @@
       stmt.free();
       return rows;
     } catch (e) {
-      console.error('[SQLite JS] queryRows error:', e.message, sql, params);
       return [];
     }
   }
@@ -1983,9 +1987,7 @@
       a.click();
       document.body.removeChild(a);
       setTimeout(() => URL.revokeObjectURL(url), 1000);
-      console.log('[SQLite JS] Berhasil mengunduh database.sqlite.');
     } catch (e) {
-      console.error('[SQLite JS] Export error:', e);
       alert('Gagal mengekspor file database.sqlite: ' + e.message);
     }
   }
@@ -2020,7 +2022,6 @@
 
       alert(`Database SQLite berhasil diimpor! Total ${res[0].values[0][0]} butir soal berhasil dimuat.`);
     } catch (e) {
-      console.error('[SQLite JS] Import error:', e);
       alert('Gagal mengimpor file SQLite: ' + e.message);
     }
   }
@@ -2079,7 +2080,6 @@
         state.activeSessionId = newId;
         return newId;
       } catch (e) {
-        console.warn('[SQLite JS] saveSessionToSQLite error:', e.message);
       }
     }
 
@@ -2108,7 +2108,6 @@
         const rows = queryRows("SELECT * FROM exam_sessions ORDER BY created_at DESC;");
         return rows;
       } catch (e) {
-        console.warn('[SQLite JS] fetchHistoryFromSQLite error:', e.message);
       }
     }
 
@@ -2129,7 +2128,6 @@
         await persistSQLiteDB();
         return true;
       } catch (e) {
-        console.warn('[SQLite JS] deleteSessionFromSQLite error:', e.message);
       }
     }
 
@@ -2153,7 +2151,6 @@
         await persistSQLiteDB();
         return true;
       } catch (e) {
-        console.warn('[SQLite JS] resetAllHistoryInSQLite error:', e.message);
       }
     }
 
@@ -2195,7 +2192,6 @@
           };
         }
       } catch (e) {
-        console.warn('[SQLite JS] getSessionDetailFromSQLite error:', e.message);
       }
     }
 
@@ -2238,7 +2234,6 @@
         const rows = queryRows(sql, params);
         return rows.map(r => formatQuestionRow(r));
       } catch (e) {
-        console.warn('[SQLite JS] fetchBankSoalFromSQLite error:', e.message);
       }
     }
 
@@ -2272,7 +2267,6 @@
         await loadActiveQuestions();
         return true;
       } catch (e) {
-        console.warn('[SQLite JS] toggleQuestionStatusSQLite error:', e.message);
       }
     }
 
@@ -2377,7 +2371,6 @@
         await loadActiveQuestions();
         return id || 1;
       } catch (e) {
-        console.warn('[SQLite JS] saveQuestionToSQLite error:', e.message);
       }
     }
 
@@ -2404,7 +2397,6 @@
         await loadActiveQuestions();
         return true;
       } catch (e) {
-        console.warn('[SQLite JS] deleteQuestionFromSQLite error:', e.message);
       }
     }
 
@@ -2423,12 +2415,10 @@
         const rows = queryRows("SELECT * FROM questions WHERE is_active = 1 ORDER BY id ASC;");
         if (rows && rows.length > 0) {
           state.questions = rows.map((r, idx) => normalizeQuestion(formatQuestionRow(r), idx));
-          console.log(`[CAT] Berhasil memuat ${state.questions.length} butir soal aktif dari SQLite JS.`);
           renderSidebar();
           return;
         }
       } catch (e) {
-        console.warn('[SQLite JS] loadActiveQuestions error:', e.message);
       }
     }
 
@@ -2436,7 +2426,6 @@
     if (Array.isArray(window.SKD_QUESTIONS) && window.SKD_QUESTIONS.length > 0) {
       const activeOnly = window.SKD_QUESTIONS.filter(q => q.is_active !== 0);
       state.questions = activeOnly.map((q, idx) => normalizeQuestion(q, idx));
-      console.log(`[CAT] Berhasil memuat ${state.questions.length} butir soal aktif dari fallback questions.js.`);
       renderSidebar();
     }
   }
@@ -3133,6 +3122,16 @@
     renderSidebar();
   }
 
+  function openMobileDrawer() {
+    if (DOM.sidebarViewport) DOM.sidebarViewport.classList.add('open');
+    if (DOM.mobileDrawerBackdrop) DOM.mobileDrawerBackdrop.classList.add('open');
+  }
+
+  function closeMobileDrawer() {
+    if (DOM.sidebarViewport) DOM.sidebarViewport.classList.remove('open');
+    if (DOM.mobileDrawerBackdrop) DOM.mobileDrawerBackdrop.classList.remove('open');
+  }
+
   // --- 22. EVENT LISTENERS SETUP ---
 
   function initEventListeners() {
@@ -3345,6 +3344,26 @@
       });
     }
 
+    // Mobile Drawer & Bottom Bar Controls
+    if (DOM.btnMobileGridDrawer) {
+      DOM.btnMobileGridDrawer.addEventListener('click', openMobileDrawer);
+    }
+    if (DOM.btnCloseMobileDrawer) {
+      DOM.btnCloseMobileDrawer.addEventListener('click', closeMobileDrawer);
+    }
+    if (DOM.mobileDrawerBackdrop) {
+      DOM.mobileDrawerBackdrop.addEventListener('click', closeMobileDrawer);
+    }
+    if (DOM.btnMobilePrev && DOM.btnPrev) {
+      DOM.btnMobilePrev.addEventListener('click', () => DOM.btnPrev.click());
+    }
+    if (DOM.btnMobileNext && DOM.btnNext) {
+      DOM.btnMobileNext.addEventListener('click', () => DOM.btnNext.click());
+    }
+    if (DOM.btnMobileRagu && DOM.btnRagu) {
+      DOM.btnMobileRagu.addEventListener('click', () => DOM.btnRagu.click());
+    }
+
     if (DOM.btnNext) {
       DOM.btnNext.addEventListener('click', () => {
         if (state.currentIndex < state.questions.length - 1) {
@@ -3407,6 +3426,7 @@
         delete state.answers[q.id];
         if (DOM.pembahasanBox) DOM.pembahasanBox.classList.remove('visible');
         renderCurrentQuestion();
+        closeMobileDrawer();
       });
     }
 
@@ -3462,6 +3482,7 @@
         if (DOM.questionCard) DOM.questionCard.style.display = 'block';
         if (DOM.reviewSessionView) DOM.reviewSessionView.classList.remove('active');
         renderCurrentQuestion();
+        closeMobileDrawer();
       });
     }
 
@@ -3908,7 +3929,6 @@
   }
 
   async function initializeApp() {
-    console.log('[CAT ASSESSMENT] Menginisialisasi sistem ujian...');
 
     initAuthGate();
     initEventListeners();
