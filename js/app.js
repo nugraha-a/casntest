@@ -354,6 +354,14 @@
       .replace(/'/g, '&#039;');
   }
 
+  function renderOptionContent(val) {
+    const str = String(val || '').trim();
+    if (/^assets\/bkn\/[^\s"'<>]+\.(jpg|jpeg|png|webp)$/i.test(str)) {
+      return `<img src="${escapeHTML(str)}" class="option-image-thumb" alt="Pilihan Gambar" loading="lazy">`;
+    }
+    return escapeHTML(str);
+  }
+
   function extractYouTubeVideoId(url) {
     if (!url || typeof url !== 'string') return '';
     const match = url.match(/(?:embed\/|watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/);
@@ -1012,7 +1020,7 @@
 
       const textDiv = document.createElement('div');
       textDiv.className = 'option-text';
-      textDiv.innerHTML = optionText;
+      textDiv.innerHTML = renderOptionContent(optionText);
 
       const scorePill = document.createElement('span');
       scorePill.className = 'option-score-pill';
@@ -1321,7 +1329,7 @@
         optionsHtml += `
           <div class="${rowClass}">
             <span class="review-option-letter">${k}</span>
-            <div class="review-option-text">${escapeHTML(q.opsi[k])}</div>
+            <div class="review-option-text">${renderOptionContent(q.opsi[k])}</div>
             <span style="font-size:0.75rem; font-weight:800; padding:2px 8px; border-radius:8px; background:${isKey ? '#d1fae5; color:#065f46;' : '#f1f5f9; color:#64748b;'}">${pillText}</span>
           </div>
         `;
@@ -1733,7 +1741,7 @@
         return;
       }
       const script = document.createElement('script');
-      script.src = 'data/questions.js?v=20261126';
+      script.src = 'data/questions.js?v=20261126b';
       script.onload = () => resolve();
       script.onerror = () => resolve();
       document.head.appendChild(script);
@@ -1856,7 +1864,7 @@
       });
 
       // 1. Cek versi data dan IndexedDB
-      const DATA_VERSION = 'v7_kepmenpan674_2026';
+      const DATA_VERSION = 'v8_bkn_240';
       const storedVer = localStorage.getItem('CAT_DB_DATA_VERSION');
       let binary = null;
 
@@ -1868,7 +1876,7 @@
       // 2. Jika belum ada atau versi baru, muat dari file database.sqlite via fetch
       if (!binary) {
         try {
-          const resp = await fetch('database.sqlite');
+          const resp = await fetch(`database.sqlite?v=${DATA_VERSION}`);
           if (resp.ok) {
             const buffer = await resp.arrayBuffer();
             if (buffer && buffer.byteLength > 0) {
@@ -2641,7 +2649,7 @@
         card.className = 'option-card show-feedback' + (isKey ? ' is-correct-key' : '');
         card.innerHTML = `
           <span class="option-indicator">${k}</span>
-          <div class="option-text">${escapeHTML(q.opsi[k] || '')}</div>
+          <div class="option-text">${renderOptionContent(q.opsi[k] || '')}</div>
           <span class="option-score-pill">${q.kategori === 'TKP' ? '+' + weight : (isKey ? '+5' : '0')}</span>
         `;
         DOM.detailOptionsContainer.appendChild(card);
