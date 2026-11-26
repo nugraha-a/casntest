@@ -1,6 +1,6 @@
 /**
  * BANK SOAL RESMI SKD CASN / CPNS (TWK, TIU, TKP)
- * Standar CAT BKN & PermenPAN-RB No. 321 Tahun 2024
+ * Standar CAT BKN & KepmenPAN-RB No. 674 Tahun 2026 (20 November 2026)
  * Diperkaya dengan Materi, Rumus Cepat, Dasar Hukum & Soal HOTS dari bahan_soal1 & bahan_soal2
  * Video Embeds: youtube-nocookie.com dengan Timestamp Spesifik (MM:SS & startSeconds)
  * Total: 130 Soal (36 TWK, 42 TIU, 52 TKP)
@@ -11,7 +11,7 @@ window.SKD_QUESTIONS = [
     "id": 1,
     "no": 1,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Pengamalan Sila ke-1)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Pengamalan Sila ke-1)",
     "soal": "Di sebuah lingkungan instansi pemerintah yang memiliki pegawai dari beragam latar belakang agama, panitia perayaan hari besar keagamaan salah satu agama mayoritas meminta seluruh pegawai tanpa terkecuali untuk mengenakan atribut keagamaan tertentu selama jam kerja guna memeriahkan suasana. Beberapa pegawai minoritas merasa keberatan dan terbebani nuraninya. Berdasarkan nilai luhur Pancasila, khususnya Sila Pertama, sikap yang paling mencerminkan pengamalan yang tepat adalah...",
     "opsi": {
       "A": "Mewajibkan semua pegawai mematuhi anjuran panitia demi menjaga kekompakan dan keseragaman citra instansi pemerintah.",
@@ -58,7 +58,7 @@ window.SKD_QUESTIONS = [
     "id": 2,
     "no": 2,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Pengamalan Sila ke-2)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Pengamalan Sila ke-2)",
     "soal": "Terjadi bencana alam gempa bumi dahsyat di sebuah kabupaten terpencil. Sekelompok sukarelawan ASN ditugaskan menyalurkan bantuan logistik darurat ke tenda-tenda pengungsian. Di lokasi, tim relawan mendapati adanya perbedaan perlakuan bantuan oleh oknum aparat desa setempat yang mengutamakan kerabat dan kelompoknya sendiri. Sikap relawan ASN yang selaras dengan nilai Sila Kedua Pancasila adalah...",
     "opsi": {
       "A": "Mengabaikan tindakan aparat desa tersebut demi menjaga keharmonisan hubungan koordinasi di lapangan.",
@@ -105,7 +105,7 @@ window.SKD_QUESTIONS = [
     "id": 3,
     "no": 3,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Pengamalan Sila ke-3)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Pengamalan Sila ke-3)",
     "soal": "Menjelang pemilihan umum serentak, marak beredar konten disinformasi dan polarisasi berbasis kedaerahan di media sosial yang berpotensi memecah belah kerukunan masyarakat. Sebagai seorang calon aparatur sipil negara, tindakan yang mencerminkan pengamalan Sila Ketiga Pancasila di ruang digital adalah...",
     "opsi": {
       "A": "Ikut mengomentari postingan yang provokatif dengan kata-kata kasar untuk membela kandidat dari daerah asalnya.",
@@ -152,7 +152,7 @@ window.SKD_QUESTIONS = [
     "id": 4,
     "no": 4,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Pengamalan Sila ke-4)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Pengamalan Sila ke-4)",
     "soal": "Dalam rapat penyusunan Rencana Kerja Pemerintah Daerah (RKPD), terjadi perbedaan pendapat yang sangat tajam antara pimpinan bagian anggaran dan staf perencana lapangan mengenai alokasi dana perbaikan drainase desa. Perdebatan berlangsung alot hingga pimpinan menawarkan voting cepat tanpa memberi ruang bagi staf lapangan untuk menyampaikan bukti teknis foto genangan air. Berdasarkan Sila Keempat Pancasila, langkah terbaik yang seharusnya diambil adalah...",
     "opsi": {
       "A": "Menerima keputusan voting karena prinsip demokrasi mutlak ditentukan oleh suara mayoritas.",
@@ -199,7 +199,7 @@ window.SKD_QUESTIONS = [
     "id": 5,
     "no": 5,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Pengamalan Sila ke-5)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Pengamalan Sila ke-5)",
     "soal": "Sebagai seorang pejabat pembuat komitmen (PPK) di dinas sosial, Anda mengelola program bantuan modal usaha bagi keluarga prasejahtera. Seorang pengusaha kenalan dekat keluarga Anda menawarkan komisi 10% jika perusahaannya dimenangkan dalam pengadaan barang paket bantuan, padahal spesifikasi barang yang dia tawarkan berkualitas di bawah standar. Sikap yang mencerminkan Sila Kelima Pancasila adalah...",
     "opsi": {
       "A": "Menerima tawaran tersebut dengan syarat sebagian komisi disumbangkan kembali ke panti asuhan.",
@@ -246,7 +246,7 @@ window.SKD_QUESTIONS = [
     "id": 6,
     "no": 6,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Sejarah Perumusan)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Sejarah Perumusan)",
     "soal": "Pada tanggal 18 Agustus 1945, terjadi momentum krusial dalam sidang PPKI ketika kalimat 'Ketuhanan dengan kewajiban menjalankan syariat Islam bagi pemeluk-pemeluknya' dalam Piagam Jakarta diubah menjadi 'Ketuhanan Yang Maha Esa'. Latar belakang utama dan hikmah kebangsaan di balik perubahan konsensus ini adalah...",
     "opsi": {
       "A": "Adanya desakan intervensi dari pemerintah militer Jepang sebelum menyerah tanpa syarat kepada Sekutu.",
@@ -293,7 +293,7 @@ window.SKD_QUESTIONS = [
     "id": 7,
     "no": 7,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Ideologi Terbuka)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Ideologi Terbuka)",
     "soal": "Pancasila berkedudukan sebagai ideologi terbuka bagi bangsa Indonesia. Karakteristik keterbukaan Pancasila ditunjukkan oleh adanya tiga dimensi utama: dimensi realitas, dimensi idealisme, dan dimensi fleksibilitas (normatif). Maksud dari dimensi fleksibilitas adalah...",
     "opsi": {
       "A": "Nilai-nilai dasar Pancasila dapat diubah dan diganti setiap kali terjadi pergantian rezim pemerintahan.",
@@ -340,7 +340,7 @@ window.SKD_QUESTIONS = [
     "id": 8,
     "no": 8,
     "kategori": "TWK",
-    "subkategori": "Pancasila (Paradigma Pembangunan)",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila (Paradigma Pembangunan)",
     "soal": "Pemerintah sedang merancang pembangunan Ibu Kota Nusantara (IKN) dengan konsep kota pintar berkelanjutan (smart green city). Dalam perspektif Pancasila sebagai paradigma pembangunan nasional, orientasi utama pembangunan infrastruktur dan tata kelola tersebut harus diletakkan pada...",
     "opsi": {
       "A": "Kecepatan pembangunan demi mengundang keuntungan investasi korporasi multinasional semata.",
@@ -387,7 +387,7 @@ window.SKD_QUESTIONS = [
     "id": 9,
     "no": 9,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 (Amandemen & Sistematika)",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 (Amandemen & Sistematika)",
     "soal": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 telah mengalami empat kali rangkaian amandemen pada kurun waktu 1999 hingga 2002. Salah satu kesepakatan dasar yang dirumuskan oleh Panitia Ad Hoc MPR dalam melakukan perubahan UUD 1945 adalah...",
     "opsi": {
       "A": "Mengubah Pembukaan UUD 1945 agar disesuaikan dengan piagam hak asasi manusia internasional.",
@@ -434,7 +434,7 @@ window.SKD_QUESTIONS = [
     "id": 10,
     "no": 10,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 (Lembaga Negara & Kewenangan)",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 (Lembaga Negara & Kewenangan)",
     "soal": "Berdasarkan Pasal 24C Ayat (1) UUD NRI 1945 pasca amandemen, Mahkamah Konstitusi memiliki empat wewenang peradilan tingkat pertama dan terakhir yang putusannya bersifat final, serta satu kewajiban konstitusional. Salah satu wewenang resmi Mahkamah Konstitusi tersebut adalah...",
     "opsi": {
       "A": "Menguji peraturan perundang-undangan di bawah undang-undang terhadap undang-undang.",
@@ -481,7 +481,7 @@ window.SKD_QUESTIONS = [
     "id": 11,
     "no": 11,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 (Hak Asasi Manusia)",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 (Hak Asasi Manusia)",
     "soal": "Dalam Pasal 28I Ayat (1) UUD NRI 1945 diatur mengenai kelompok hak asasi manusia yang dikategorikan sebagai hak yang tidak dapat dikurangi dalam keadaan apa pun (non-derogable rights). Yang termasuk ke dalam kelompok hak tersebut adalah...",
     "opsi": {
       "A": "Hak untuk memilih dan dipilih dalam pemilihan umum legislatif.",
@@ -528,7 +528,7 @@ window.SKD_QUESTIONS = [
     "id": 12,
     "no": 12,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 (Kewarganegaraan & Asas Hukum)",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 (Kewarganegaraan & Asas Hukum)",
     "soal": "Pasal 27 Ayat (1) UUD 1945 menyatakan bahwa segala warga negara bersamaan kedudukannya di dalam hukum dan pemerintahan dan wajib menjunjung hukum dan pemerintahan itu dengan tidak ada kecualinya. Asas fundamental yang ditegaskan dalam pasal tersebut adalah...",
     "opsi": {
       "A": "Asas kedaulatan rakyat mutlak tanpa batas peradilan.",
@@ -575,7 +575,7 @@ window.SKD_QUESTIONS = [
     "id": 13,
     "no": 13,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 (Sistem Pemerintahan & Otonomi Daerah)",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 (Sistem Pemerintahan & Otonomi Daerah)",
     "soal": "Menurut ketentuan Pasal 18 Ayat (5) UUD NRI 1945, pemerintahan daerah menjalankan otonomi seluas-luasnya, kecuali urusan pemerintahan yang oleh undang-undang ditentukan sebagai urusan Pemerintah Pusat. Berdasarkan UU No. 23 Tahun 2014 tentang Pemerintahan Daerah, urusan absolut yang mutlak menjadi kewenangan pemerintah pusat meliputi...",
     "opsi": {
       "A": "Kesehatan, pendidikan, dan penataan ruang daerah.",
@@ -622,7 +622,7 @@ window.SKD_QUESTIONS = [
     "id": 14,
     "no": 14,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 (Perekonomian & Kesejahteraan Sosial)",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 (Perekonomian & Kesejahteraan Sosial)",
     "soal": "Pasal 33 Ayat (3) UUD NRI 1945 menggariskan bahwa 'Bumi dan air dan kekayaan alam yang terkandung di dalamnya dikuasai oleh negara dan dipergunakan untuk sebesar-besar kemakmuran rakyat'. Berdasarkan tafsir resmi Mahkamah Konstitusi, makna frasa 'dikuasai oleh negara' dalam pasal tersebut mencakup lima fungsi negara, yaitu...",
     "opsi": {
       "A": "Menjual, menggadaikan, memprivatisasi, menyewakan, dan melelang kepada pihak asing.",
@@ -669,7 +669,7 @@ window.SKD_QUESTIONS = [
     "id": 15,
     "no": 15,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 (Pertahanan & Keamanan Negara)",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 (Pertahanan & Keamanan Negara)",
     "soal": "Sistem pertahanan dan keamanan negara Republik Indonesia yang termaktub dalam Pasal 30 Ayat (2) UUD NRI 1945 menggunakan doktrin Sishankamrata (Sistem Pertahanan dan Keamanan Rakyat Semesta). Komposisi dan peran kekuatan dalam sistem pertahanan tersebut adalah...",
     "opsi": {
       "A": "TNI dan POLRI sebagai kekuatan utama, serta rakyat sebagai kekuatan pendukung.",
@@ -716,7 +716,7 @@ window.SKD_QUESTIONS = [
     "id": 16,
     "no": 16,
     "kategori": "TWK",
-    "subkategori": "NKRI (Wawasan Nusantara)",
+    "subkategori": "Empat Konsensus Kebangsaan - NKRI (Wawasan Nusantara)",
     "soal": "Wawasan Nusantara merupakan cara pandang bangsa Indonesia mengenai diri dan lingkungannya yang serba beragam dan bernilai strategis dengan mengutamakan persatuan dan kesatuan bangsa serta kesatuan wilayah. Tiga unsur pokok (komponen) pembentuk konsepsi Wawasan Nusantara adalah...",
     "opsi": {
       "A": "Demokrasi, Monarki, dan Tirani.",
@@ -763,7 +763,7 @@ window.SKD_QUESTIONS = [
     "id": 17,
     "no": 17,
     "kategori": "TWK",
-    "subkategori": "NKRI (Bentuk Negara & Sistem Pemerintahan)",
+    "subkategori": "Empat Konsensus Kebangsaan - NKRI (Bentuk Negara & Sistem Pemerintahan)",
     "soal": "Pasal 1 Ayat (1) UUD NRI 1945 menetapkan bahwa 'Negara Indonesia ialah Negara Kesatuan, yang berbentuk Republik'. Ciri utama sistem pemerintahan presidensial murni yang dianut oleh Republik Indonesia pasca amandemen UUD 1945 adalah...",
     "opsi": {
       "A": "Presiden bertanggung jawab langsung kepada parlemen dan dapat dijatuhkan melalui mosi tidak percaya setiap saat.",
@@ -810,7 +810,7 @@ window.SKD_QUESTIONS = [
     "id": 18,
     "no": 18,
     "kategori": "TWK",
-    "subkategori": "NKRI (Batas Wilayah Negara & Deklarasi Djuanda)",
+    "subkategori": "Empat Konsensus Kebangsaan - NKRI (Batas Wilayah Negara & Deklarasi Djuanda)",
     "soal": "Sebelum 13 Desember 1957, luas wilayah laut Indonesia tunduk pada ordonansi kolonial Hindia Belanda (Territoriale Zee en Maritieme Kringen Ordonnantie 1939) yang menetapkan batas laut teritorial hanya selebar 3 mil laut dari garis air rendah masing-masing pulau, sehingga laut di antara pulau-pulau Indonesia dianggap sebagai laut bebas/internasional. Tonggak sejarah monumental yang mematahkan konsep kolonial tersebut dan menyatukan seluruh kepulauan Indonesia menjadi satu kesatuan wilayah yang utuh adalah...",
     "opsi": {
       "A": "Perjanjian Linggarjati 1946.",
@@ -857,7 +857,7 @@ window.SKD_QUESTIONS = [
     "id": 19,
     "no": 19,
     "kategori": "TWK",
-    "subkategori": "NKRI (Asas Penyelenggaraan Pemerintahan Daerah)",
+    "subkategori": "Empat Konsensus Kebangsaan - NKRI (Asas Penyelenggaraan Pemerintahan Daerah)",
     "soal": "Dalam penyelenggaraan pemerintahan Negara Kesatuan Republik Indonesia dikenal adanya pelimpahan sebagian urusan pemerintahan yang menjadi kewenangan Pemerintah Pusat kepada Gubernur selaku wakil Pemerintah Pusat di wilayah provinsi. Asas pelimpahan wewenang tersebut dinamakan...",
     "opsi": {
       "A": "Desentralisasi.",
@@ -904,7 +904,7 @@ window.SKD_QUESTIONS = [
     "id": 20,
     "no": 20,
     "kategori": "TWK",
-    "subkategori": "NKRI (Politik Luar Negeri Bebas Aktif)",
+    "subkategori": "Empat Konsensus Kebangsaan - NKRI (Politik Luar Negeri Bebas Aktif)",
     "soal": "Landasan konstitusional politik luar negeri Indonesia tercantum dalam Pembukaan UUD 1945 alinea IV: '...ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial'. Makna konkret dari prinsip politik luar negeri 'Bebas dan Aktif' yang digagas oleh Mohammad Hatta ('Mendayung Antara Dua Karang') adalah...",
     "opsi": {
       "A": "Indonesia bersikap pasif dan mengisolasi diri dari segala dinamika konflik regional dan global.",
@@ -951,7 +951,7 @@ window.SKD_QUESTIONS = [
     "id": 21,
     "no": 21,
     "kategori": "TWK",
-    "subkategori": "Bhinneka Tunggal Ika (Sejarah & Filosofi)",
+    "subkategori": "Empat Konsensus Kebangsaan - Bhinneka Tunggal Ika (Sejarah & Filosofi)",
     "soal": "Semboyan 'Bhinneka Tunggal Ika' yang tertulis pada pita cengkeraman burung lambang Garuda Pancasila diambil dari karya sastra klasik nusantara, yaitu...",
     "opsi": {
       "A": "Kitab Negarakertagama karangan Mpu Prapanca pada masa kejayaan Kerajaan Singasari.",
@@ -998,7 +998,7 @@ window.SKD_QUESTIONS = [
     "id": 22,
     "no": 22,
     "kategori": "TWK",
-    "subkategori": "Bhinneka Tunggal Ika (Menghadapi Etnosentrisme)",
+    "subkategori": "Empat Konsensus Kebangsaan - Bhinneka Tunggal Ika (Menghadapi Etnosentrisme)",
     "soal": "Dalam sebuah instansi pelayanan publik, seorang pejabat rekrutmen hanya mau meloloskan calon peserta magang yang berasal dari suku dan daerah kelahirannya sendiri, serta memandang rendah pelamar dari suku lain karena menganggap budaya sukunya paling unggul dan pekerja keras. Perilaku pejabat tersebut mencerminkan sikap negatif...",
     "opsi": {
       "A": "Etnosentrisme sempit.",
@@ -1045,7 +1045,7 @@ window.SKD_QUESTIONS = [
     "id": 23,
     "no": 23,
     "kategori": "TWK",
-    "subkategori": "Bhinneka Tunggal Ika (Moderasi Beragama)",
+    "subkategori": "Empat Konsensus Kebangsaan - Bhinneka Tunggal Ika (Moderasi Beragama)",
     "soal": "Kementerian Agama bersama BKN mencanangkan empat indikator utama Moderasi Beragama dalam kerangka Bhinneka Tunggal Ika guna memperkuat ketahanan nasional ASN dari ancaman radikalisme dan intoleransi. Keempat indikator utama tersebut adalah...",
     "opsi": {
       "A": "Keseragaman ritual, penghapusan rumah ibadah, kepatuhan dogma, dan isolasi sosial.",
@@ -1092,7 +1092,7 @@ window.SKD_QUESTIONS = [
     "id": 24,
     "no": 24,
     "kategori": "TWK",
-    "subkategori": "Bhinneka Tunggal Ika (Integrasi Nasional)",
+    "subkategori": "Empat Konsensus Kebangsaan - Bhinneka Tunggal Ika (Integrasi Nasional)",
     "soal": "Terjadinya perselisihan antar-warga pendatang dan warga lokal di suatu daerah transmigrasi yang dipicu oleh kesalahpahaman penggunaan lahan perkebunan. Sebagai aparatur sipil negara yang bertugas di wilayah tersebut, langkah integratif yang paling tepat dalam meredam konflik horizontal adalah...",
     "opsi": {
       "A": "Meminta seluruh warga pendatang untuk segera dipindahkan ke pulau lain agar tidak menimbulkan beban sosial.",
@@ -1374,16 +1374,16 @@ window.SKD_QUESTIONS = [
     "id": 30,
     "no": 30,
     "kategori": "TWK",
-    "subkategori": "Bahasa Indonesia (PUEBI & Tata Naskah Dinas)",
-    "soal": "Dalam penyusunan surat dinas resmi di lingkungan kementerian, seorang konseptor dituntut menggunakan kalimat efektif dan kaidah ejaan bahasa Indonesia yang baku sesuai pedoman tata naskah dinas instansi pemerintah. Manakah di antara kalimat berikut yang merupakan kalimat efektif dan memenuhi kaidah tata bahasa baku?",
+    "subkategori": "Bahasa Indonesia (Pemahaman Bacaan)",
+    "soal": "Bacalah kutipan teks berikut dengan saksama!\n\n\"Transformasi digital dalam birokrasi Indonesia melalui Sistem Pemerintahan Berbasis Elektronik (SPBE) bukan sekadar memindahkan dokumen fisik menjadi berkas elektronik. Lebih dari itu, SPBE menuntut integrasi data lintas instansi agar masyarakat tidak perlu lagi mengunggah dokumen kependudukan yang sama berulang kali di berbagai loket layanan. Namun, tantangan terbesar implementasi SPBE di daerah adalah kesenjangan infrastruktur jaringan dan resistensi budaya kerja konvensional.\"\n\nInformasi utama yang paling tepat dari paragraf tersebut adalah...",
     "opsi": {
-      "A": "Berdasarkan pada hasil audit investigasi tersebut membuktikan bahwa adanya indikasi penyimpangan anggaran.",
-      "B": "Hasil audit investigasi membuktikan adanya indikasi penyimpangan anggaran kegiatan tersebut.",
-      "C": "Untuk daripada pelaksanaan kegiatan workshop itu daripada itu memerlukan koordinasi antar bagian.",
-      "D": "Dalam rapat pimpinan tadi pagi memutuskan tentang penundaan jadwal seleksi calon aparatur sipil negara.",
-      "E": "Para peserta ujian daripada seluruh daerah-daerah saling bersalam-salaman satu sama lainnya."
+      "A": "SPBE hanya bertujuan mengurangi penggunaan kertas di kantor pemerintah",
+      "B": "Masyarakat wajib membawa dokumen fisik saat mengakses layanan SPBE",
+      "C": "SPBE menuntut integrasi data lintas instansi, namun masih menghadapi tantangan infrastruktur dan budaya kerja di daerah",
+      "D": "Seluruh daerah di Indonesia telah memiliki infrastruktur jaringan yang merata",
+      "E": "Dokumen kependudukan tidak lagi diperlukan dalam pelayanan publik"
     },
-    "kunci": "B",
+    "kunci": "C",
     "bobot": {
       "A": 0,
       "B": 5,
@@ -1391,15 +1391,15 @@ window.SKD_QUESTIONS = [
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Kalimat efektif harus memiliki struktur yang lengkap (minimal Subjek dan Predikat yang jelas), tidak bertele-tele (hemat kata), logis, dan tidak rancu. Analisis opsi: Opsi B memiliki Subjek yang jelas ('Hasil audit investigasi'), Predikat transitif ('membuktikan'), dan Objek ('adanya indikasi penyimpangan anggaran kegiatan tersebut'). Opsi A salah karena diawali preposisi 'Berdasarkan pada...' yang membuat kalimat kehilangan Subjek gramatikal. Opsi C menggunakan kata mubazir dan rancu ('Untuk daripada...'). Opsi D kehilangan subjek karena diawali keterangan 'Dalam rapat...'. Opsi E pleonasme jamak ('Para peserta...', 'seluruh daerah-daerah', 'saling bersalam-salaman satu sama lainnya'). [Pengayaan Materi: Mengacu pada EYD Edisi V (Kepka BSKAP No. 042/H/KR/2022), perhatikan kaidah kalimat efektif (kesepadanan subjek-predikat, kehematan kata, kesejajaran bentuk) serta penulisan huruf kapital/miring.]",
+    "pembahasan": "Paragraf tersebut menjelaskan hakikat SPBE (integrasi data lintas instansi untuk efisiensi layanan) sekaligus tantangan utamanya di daerah (kesenjangan infrastruktur dan resistensi budaya kerja). [Pengayaan Materi: Sesuai KepmenPAN-RB No. 674 Tahun 2026, subtes Bahasa Indonesia berfokus pada kemampuan menangkap informasi tersurat/tersirat dari bacaan teks panjang.]",
     "analisis_opsi": {
-      "A": "Salah, kalimat tidak memiliki subjek (terhalang oleh preposisi gabungan 'Berdasarkan pada').",
-      "B": "Benar (Kunci Jawaban), struktur gramatikal S-P-O lengkap, lugas, hemat kata, dan baku sesuai EYD/PUEBI.",
-      "C": "Salah, kerancuan kata perangkai ('Untuk daripada pelaksanaan...').",
-      "D": "Salah, kalimat tidak bersubjek (terhalang keterangan 'Dalam rapat pimpinan tadi pagi').",
-      "E": "Salah, pleonasme berlebihan (pemborosan kata jamak bertumpuk-tumpuk)."
+      "A": "Salah. Teks menegaskan SPBE bukan sekadar memindahkan dokumen fisik.",
+      "B": "Salah. Bertentangan dengan tujuan integrasi data.",
+      "C": "Benar. Merangkum gagasan pokok dan tantangan utama secara utuh.",
+      "D": "Salah. Teks justru menyebut adanya kesenjangan infrastruktur.",
+      "E": "Salah. Dokumen tetap diperlukan namun terintegrasi secara digital."
     },
-    "tips": "Ciri Kalimat Efektif: 1. Subjek & Predikat jelas (jangan mengawali Subjek dengan kata depan seperti 'Berdasarkan', 'Dalam', 'Bagi'), 2. Hemat kata (hindari pleonasme seperti 'para hadirin sekalian'), 3. Makna logis & lugas. Trik TWK Bahasa: Cek struktur S-P terlebih dahulu; kalimat yang diawali preposisi (di, ke, dari, bagi, untuk) tidak memiliki subjek.",
+    "tips": "Untuk soal pemahaman bacaan, cari kalimat utama dan kata kunci kontras ('Namun', 'Lebih dari itu'). [Referensi Modul: bahan_soal1/(1) Ide Pokok Paragraf.pdf]",
     "has_image": 0,
     "gambar": null,
     "sumber": "Pedoman Umum Ejaan Bahasa Indonesia Permendikbudristek No. 18/2021 & Tata Naskah Dinas | Ref: bahan_soal1/(1) Ejaan kata.pdf & bahan_soal2/MATERI TWK/BAHASA INDONESIA.pdf (Bab IV Hal. 42)",
@@ -1421,14 +1421,14 @@ window.SKD_QUESTIONS = [
     "id": 31,
     "no": 31,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Verbal - Analogi Kata",
-    "soal": "KERTAS : BUKU = BENANG : ...",
+    "subkategori": "Kemampuan Verbal - Penalaran Induktif",
+    "soal": "Sebuah penelitian di instansi pemerintah menunjukkan bahwa pada bulan Januari, keterlambatan pegawai menurun 15% setelah diberlakukan jam kerja fleksibel. Pada bulan Februari, tingkat kepatuhan presensi meningkat menjadi 96%. Pada bulan Maret, produktivitas penyelesaian berkas layanan naik 20%. Simpulan induktif yang paling tepat berdasarkan pola data tersebut adalah...",
     "opsi": {
-      "A": "JARUM",
-      "B": "KAIN",
-      "C": "JAHIT",
-      "D": "KAPAS",
-      "E": "SUTRA"
+      "A": "Jam kerja fleksibel pasti menghilangkan seluruh keterlambatan di semua kementerian",
+      "B": "Penerapan jam kerja fleksibel cenderung berdampak positif terhadap kedisiplinan dan produktivitas pegawai di instansi tersebut",
+      "C": "Pegawai hanya bekerja produktif pada bulan Maret saja",
+      "D": "Kenaikan produktivitas 20% disebabkan oleh penambahan jumlah pegawai baru",
+      "E": "Presensi pegawai pada bulan Januari lebih tinggi daripada bulan Februari"
     },
     "kunci": "B",
     "bobot": {
@@ -1438,15 +1438,15 @@ window.SKD_QUESTIONS = [
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Hubungan analogi pada premis adalah 'bahan penyusun membentuk benda utuh'. Lembaran-lembaran kertas yang disatukan dan dijilid membentuk sebuah buku. Begitu pula untaian benang yang ditenun secara terpadu membentuk sehelai kain. Hubungan ini setara secara gramatikal dan konseptual (Bahan baku penyusun : Benda jadi). [Pengayaan Materi: Pada soal analogi verbal, tentukan hubungan kata paling spesifik (bahan-produk, alat-profesi, sebab-akibat, derajat intensitas) dan pastikan arah hubungannya konsisten (kiri ke kanan).]",
+    "pembahasan": "Penalaran induktif menarik kesimpulan umum (generalisasi) dari fakta-fakta khusus yang diamati. Dari tiga bulan pengamatan (keterlambatan turun, kepatuhan naik, produktivitas naik setelah jam kerja fleksibel), simpulan induktif yang logis dan tidak berlebihan (tidak menggunakan kata mutlak 'pasti/semua') adalah opsi B. [Pengayaan Materi: Sesuai kisi-kisi KepmenPAN-RB No. 674 Tahun 2026, Penalaran Induktif menguji kemampuan menarik kesimpulan umum dari serangkaian data/fakta empiris.]",
     "analisis_opsi": {
-      "A": "Salah, jarum adalah alat untuk menjahit benang, bukan hasil bentukan kumpulan benang.",
-      "B": "Benar (Kunci Jawaban), lembaran kertas disusun membentuk buku, untaian benang ditenun membentuk kain.",
-      "C": "Salah, jahit adalah kata kerja (aktivitas pengerjaan), bukan benda wujud akhir.",
-      "D": "Salah, kapas adalah bahan asal untuk membuat benang (hubungan terbalik asal-usul).",
-      "E": "Salah, sutra adalah jenis serat/bahan benang tertentu, bukan produk jadi seperti kain."
+      "A": "Salah. Terlalu mutlak ('pasti', 'semua kementerian') melampaui data sampel.",
+      "B": "Benar. Generalisasi yang proporsional ('cenderung berdampak positif') sesuai tren 3 bulan.",
+      "C": "Salah. Bertentangan dengan tren peningkatan sejak Januari dan Februari.",
+      "D": "Salah. Tidak ada fakta mengenai penambahan pegawai baru.",
+      "E": "Salah. Fakta menyatakan Februari mencapai 96% (meningkat)."
     },
-    "tips": "Buatlah kalimat perantara yang tepat: 'Banyak [Kata 1] yang dirangkai menghasilkan [Kata 2]'. Kertas dirangkai membentuk buku, benang dirangkai membentuk kain. Trik TIU: Buat kalimat penghubung yang tepat untuk pasangan kata pertama, lalu terapkan kalimat yang sama persis pada pasangan kedua.",
+    "tips": "Dalam Penalaran Induktif, hindari opsi yang mengandung kata mutlak ('pasti', 'selalu', 'semua') jika data hanya berupa tren/sampel; pilih kata probabilistik ('cenderung', 'berpotensi').",
     "has_image": 0,
     "gambar": null,
     "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi | Ref: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf (Modul Verbal Hal. 11)",
@@ -1471,7 +1471,7 @@ window.SKD_QUESTIONS = [
       "startSeconds": 75,
       "title": "Trik Menyelesaikan Soal Analogi Kata & Hubungan Objek TIU CPNS",
       "channel": "Privat Al Faiz",
-      "topic_part": "Pembahasan Analogi Hubungan Bahan Baku dan Produk Hasil",
+      "topic_part": "Trik Penalaran Induktif: Menarik Generalisasi Logis dari Tren Data",
       "url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=75&rel=0",
       "watchUrl": "https://www.youtube.com/watch?v=bCDoV2dB3kc&t=75s",
       "thumbnail": "https://img.youtube.com/vi/bCDoV2dB3kc/hqdefault.jpg"
@@ -1481,23 +1481,23 @@ window.SKD_QUESTIONS = [
     "video_channel": "Privat Al Faiz",
     "video_timestamp": "01:15",
     "video_start_seconds": 75,
-    "video_topic_part": "Pembahasan Analogi Hubungan Bahan Baku dan Produk Hasil",
+    "video_topic_part": "Trik Penalaran Induktif: Menarik Generalisasi Logis dari Tren Data",
     "is_active": 1
   },
   {
     "id": 32,
     "no": 32,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Verbal - Analogi Kata",
-    "soal": "STETOSKOP : DOKTER = OSILOSKOP : ...",
+    "subkategori": "Kemampuan Verbal - Penalaran Induktif",
+    "soal": "Data kepegawaian mencatat: (1) Pegawai A yang rutin mengikuti pelatihan digitalisasi mampu menyelesaikan laporan 2 kali lebih cepat; (2) Pegawai B yang mengikuti pelatihan serupa berhasil memangkas kesalahan input hingga 0%; (3) Pegawai C yang aktif dalam lokakarya SPBE memperoleh nilai kinerja sangat baik. Simpulan induktif yang paling tepat adalah...",
     "opsi": {
-      "A": "PASIEN",
-      "B": "RUMAH SAKIT",
-      "C": "TEKNISI ELEKTRONIKA",
-      "D": "APOTEKER",
-      "E": "ASTRONOM"
+      "A": "Pelatihan peningkatan kompetensi digital berkorelasi positif terhadap kecepatan, akurasi, dan kinerja pegawai",
+      "B": "Pegawai yang tidak mengikuti pelatihan pasti akan diberhentikan",
+      "C": "Hanya Pegawai A, B, dan C yang berhak mendapat tunjangan kinerja",
+      "D": "Kesalahan input 0% hanya dapat dicapai oleh Pegawai B seorang diri",
+      "E": "Lokakarya SPBE tidak berpengaruh terhadap kualitas laporan"
     },
-    "kunci": "C",
+    "kunci": "A",
     "bobot": {
       "A": 0,
       "B": 0,
@@ -1505,15 +1505,15 @@ window.SKD_QUESTIONS = [
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Hubungan analogi adalah 'Alat instrumen diagnostik utama yang digunakan oleh suatu profesi'. Stetoskop adalah instrumen khusus yang digunakan oleh dokter untuk mendengarkan denyut jantung/suara organ tubuh pasien. Osiloskop adalah instrumen pengukuran gelombang sinyal listrik yang digunakan oleh teknisi elektronika / insinyur kelistrikan untuk menganalisis rangkaian elektronik. [Pengayaan Materi: Pada soal analogi verbal, tentukan hubungan kata paling spesifik (bahan-produk, alat-profesi, sebab-akibat, derajat intensitas) dan pastikan arah hubungannya konsisten (kiri ke kanan).]",
+    "pembahasan": "Ketiga fakta khusus (Pegawai A lebih cepat, Pegawai B lebih akurat, Pegawai C kinerja sangat baik setelah mengikuti pelatihan digital/SPBE) mengarah pada satu pola umum: pelatihan kompetensi digital berkorelasi positif dengan peningkatan kinerja. [Pengayaan Materi: Penalaran Induktif pola generalisasi dari beberapa kasus individu.]",
     "analisis_opsi": {
-      "A": "Salah, pasien adalah objek yang diperiksa oleh dokter, bukan pengguna alat.",
-      "B": "Salah, rumah sakit adalah tempat kerja, bukan profesi pelaku pengoperasian instrumen.",
-      "C": "Benar (Kunci Jawaban), teknisi elektronika menggunakan osiloskop untuk mengamati sinyal tegangan/frekuensi gelombang.",
-      "D": "Salah, apoteker bekerja meracik obat dan tidak menggunakan osiloskop dalam profesinya.",
-      "E": "Salah, astronom menggunakan teleskop untuk mengamati benda langit, bukan osiloskop."
+      "A": "Benar. Merangkum ketiga indikator (kecepatan, akurasi, kinerja) secara tepat.",
+      "B": "Salah. Tidak ada premis tentang pemberhentian pegawai.",
+      "C": "Salah. Tidak ada pembahasan mengenai tunjangan kinerja.",
+      "D": "Salah. Terlalu sempit dan bertentangan dengan semangat generalisasi induktif.",
+      "E": "Salah. Bertentangan dengan fakta Pegawai C."
     },
-    "tips": "Identifikasi hubungan: [Alat diagnostik/ukur spesifik] digunakan oleh [Profesi khusus]. Trik TIU: Buat kalimat penghubung yang tepat untuk pasangan kata pertama, lalu terapkan kalimat yang sama persis pada pasangan kedua.",
+    "tips": "Gabungkan kata kunci dari setiap kasus khusus menjadi satu payung konsep umum.",
     "has_image": 0,
     "gambar": null,
     "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi | Ref: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf (Modul Verbal Hal. 12)",
@@ -1538,7 +1538,7 @@ window.SKD_QUESTIONS = [
       "startSeconds": 160,
       "title": "Analogi Profesi dan Instrumen Alat Kerja CPNS (Part 11)",
       "channel": "Privat Al Faiz",
-      "topic_part": "Pembahasan Analogi Instrumen / Alat Kerja & Profesi Terkait",
+      "topic_part": "Penalaran Induktif: Generalisasi dari Beberapa Kasus Individu",
       "url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=160&rel=0",
       "watchUrl": "https://www.youtube.com/watch?v=Eau9uJJOH-c&t=160s",
       "thumbnail": "https://img.youtube.com/vi/Eau9uJJOH-c/hqdefault.jpg"
@@ -1548,21 +1548,21 @@ window.SKD_QUESTIONS = [
     "video_channel": "Privat Al Faiz",
     "video_timestamp": "02:40",
     "video_start_seconds": 160,
-    "video_topic_part": "Pembahasan Analogi Instrumen / Alat Kerja & Profesi Terkait",
+    "video_topic_part": "Penalaran Induktif: Generalisasi dari Beberapa Kasus Individu",
     "is_active": 1
   },
   {
     "id": 33,
     "no": 33,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Verbal - Analogi Kata",
-    "soal": "KEMARAU : KEKERINGAN = HUJAN : ...",
+    "subkategori": "Kemampuan Verbal - Penalaran Induktif",
+    "soal": "Pengamatan terhadap lima kantor pelayanan terpadu di Kota X menunjukkan bahwa kantor yang menyediakan loket prioritas lansia, ruang laktasi, dan jalur disabilitas mendapatkan Indeks Kepuasan Masyarakat (IKM) di atas 90. Sementara itu, dua kantor yang belum menyediakan fasilitas tersebut memperoleh IKM di bawah 75. Simpulan induktif yang paling tepat adalah...",
     "opsi": {
-      "A": "PAYUNG",
-      "B": "BANJIR",
-      "C": "AWAN",
-      "D": "PETIR",
-      "E": "PELANGI"
+      "A": "Seluruh kantor di Indonesia wajib memiliki IKM di atas 90",
+      "B": "Ketersediaan fasilitas pelayanan inklusif bagi kelompok rentan berhubungan erat dengan tingginya Indeks Kepuasan Masyarakat",
+      "C": "Kantor tanpa ruang laktasi tidak pernah dikunjungi masyarakat",
+      "D": "IKM di bawah 75 disebabkan oleh kurangnya jumlah loket reguler",
+      "E": "Fasilitas disabilitas lebih penting daripada keramahan petugas"
     },
     "kunci": "B",
     "bobot": {
@@ -1572,15 +1572,15 @@ window.SKD_QUESTIONS = [
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Hubungan analogi adalah 'Fenomena alam yang berlebihan mengakibatkan dampak bencana tertentu' (Sebab : Akibat negatif alamiah). Musim kemarau yang berkepanjangan menyebabkan bencana kekeringan. Demikian pula, peristiwa hujan deras yang terus-menerus menyebabkan terjadinya bencana banjir. [Pengayaan Materi: Pada soal analogi verbal, tentukan hubungan kata paling spesifik (bahan-produk, alat-profesi, sebab-akibat, derajat intensitas) dan pastikan arah hubungannya konsisten (kiri ke kanan).]",
+    "pembahasan": "Perbandingan dua kelompok sampel (5 kantor dengan fasilitas inklusif -> IKM > 90 vs 2 kantor tanpa fasilitas -> IKM < 75) menunjukkan hubungan kausal/korelasional induktif antara fasilitas inklusif dan tingginya IKM. [Pengayaan Materi: Metode perbedaan (Method of Difference) dalam penalaran induktif.]",
     "analisis_opsi": {
-      "A": "Salah, payung adalah alat pelindung dari hujan, bukan dampak peristiwa.",
-      "B": "Benar (Kunci Jawaban), kemarau berlebih menyebabkan kekeringan, hujan berlebih menyebabkan banjir.",
-      "C": "Salah, awan adalah asal mula/pembentuk hujan, bukan dampak.",
-      "D": "Salah, petir adalah fenomena penyerta kilat cuaca, bukan akibat utama genangan air.",
-      "E": "Salah, pelangi adalah fenomena optik pembiasan cahaya, bukan akibat bencana dari hujan."
+      "A": "Salah. Melampaui ruang lingkup pengamatan di Kota X.",
+      "B": "Benar. Menyimpulkan hubungan antara fasilitas inklusif dan IKM sesuai data.",
+      "C": "Salah. Pernyataan ekstrem ('tidak pernah dikunjungi') tidak didukung data.",
+      "D": "Salah. Faktor pembeda dalam data adalah fasilitas inklusif, bukan loket reguler.",
+      "E": "Salah. Tidak ada perbandingan dengan keramahan petugas."
     },
-    "tips": "Perhatikan pola kausalitas (Sebab -> Akibat). Kemarau menyebabkan kekeringan, hujan menyebabkan banjir. Trik TIU: Buat kalimat penghubung yang tepat untuk pasangan kata pertama, lalu terapkan kalimat yang sama persis pada pasangan kedua.",
+    "tips": "Jika ada dua kelompok data dengan hasil kontras, cari variabel pembeda utamanya.",
     "has_image": 0,
     "gambar": null,
     "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi | Ref: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf (Modul Verbal Hal. 13)",
@@ -1605,7 +1605,7 @@ window.SKD_QUESTIONS = [
       "startSeconds": 262,
       "title": "Analogi Kausalitas Sebab Akibat Fenomena Alam TIU CPNS",
       "channel": "Privat Al Faiz",
-      "topic_part": "Trik Analogi Sebab-Akibat (Kausalitas) dan Hubungan Fenomena",
+      "topic_part": "Penalaran Induktif: Metode Perbedaan Dua Kelompok Sampel",
       "url": "https://www.youtube-nocookie.com/embed/bCDoV2dB3kc?start=262&rel=0",
       "watchUrl": "https://www.youtube.com/watch?v=bCDoV2dB3kc&t=262s",
       "thumbnail": "https://img.youtube.com/vi/bCDoV2dB3kc/hqdefault.jpg"
@@ -1615,23 +1615,23 @@ window.SKD_QUESTIONS = [
     "video_channel": "Privat Al Faiz",
     "video_timestamp": "04:22",
     "video_start_seconds": 262,
-    "video_topic_part": "Trik Analogi Sebab-Akibat (Kausalitas) dan Hubungan Fenomena",
+    "video_topic_part": "Penalaran Induktif: Metode Perbedaan Dua Kelompok Sampel",
     "is_active": 1
   },
   {
     "id": 34,
     "no": 34,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Verbal - Analogi Kata",
-    "soal": "HANGAT : PANAS = GERIMIS : ...",
+    "subkategori": "Kemampuan Verbal - Penalaran Induktif",
+    "soal": "Pada tahun 2023, anggaran belanja kertas di Dinas Z sebesar Rp120 juta. Tahun 2024, setelah menerapkan tanda tangan elektronik (TTE), anggaran kertas turun menjadi Rp70 juta. Tahun 2025, setelah seluruh surat masuk-keluar berbasis aplikasi e-Office, anggaran kertas turun lagi menjadi Rp25 juta. Simpulan induktif yang paling tepat adalah...",
     "opsi": {
-      "A": "BASAH",
-      "B": "DINGIN",
-      "C": "BADAI",
-      "D": "LEBAT",
-      "E": "KABUT"
+      "A": "Pada tahun 2026 Dinas Z tidak akan menggunakan listrik sama sekali",
+      "B": "Transformasi digital persuratan (TTE dan e-Office) secara bertahap mampu menekan biaya belanja kertas di Dinas Z",
+      "C": "Aplikasi e-Office lebih mahal daripada anggaran kertas tahun 2023",
+      "D": "Penggunaan TTE tidak memberikan dampak penghematan apa pun",
+      "E": "Seluruh dinas di provinsi lain mengalami penurunan anggaran yang sama persis"
     },
-    "kunci": "D",
+    "kunci": "B",
     "bobot": {
       "A": 0,
       "B": 0,
@@ -1639,15 +1639,15 @@ window.SKD_QUESTIONS = [
       "D": 5,
       "E": 0
     },
-    "pembahasan": "Hubungan analogi adalah 'Tingkatan derajat intensitas intens' (Intensitas rendah ke intensitas tinggi pada parameter yang sejenis). Suhu hangat bila intensitasnya ditingkatkan menjadi panas. Demikian pula curahan hujan berskala gerimis (tetesan kecil) bila intensitasnya ditingkatkan menjadi lebat (hujan lebat). [Pengayaan Materi: Pada soal analogi verbal, tentukan hubungan kata paling spesifik (bahan-produk, alat-profesi, sebab-akibat, derajat intensitas) dan pastikan arah hubungannya konsisten (kiri ke kanan).]",
+    "pembahasan": "Tren penurunan berturut-turut (120 juta -> 70 juta -> 25 juta) seiring penerapan TTE dan e-Office menunjukkan kesimpulan induktif bahwa digitalisasi persuratan menekan biaya kertas secara bertahap. [Pengayaan Materi: Sesuai KepmenPAN-RB No. 674 Tahun 2026.]",
     "analisis_opsi": {
-      "A": "Salah, basah adalah kondisi akibat terkena air, bukan tingkatan intensitas curah hujan.",
-      "B": "Salah, dingin adalah antonim dari panas, tidak searah dengan peningkatan intensitas.",
-      "C": "Salah, badai mencakup faktor angin kencang berputar yang melampaui sekadar presipitasi hujan.",
-      "D": "Benar (Kunci Jawaban), tingkatan intensitas curah hujan: dari gerimis (rendah) menuju lebat (tinggi), sejajar dengan hangat ke panas.",
-      "E": "Salah, kabut adalah uap air melayang di permukaan tanah, bukan hujan deras."
+      "A": "Salah. Tidak relevan (membahas listrik).",
+      "B": "Benar. Menggambarkan tren penurunan biaya akibat transformasi digital secara akurat.",
+      "C": "Salah. Tidak ada data biaya pengadaan aplikasi e-Office.",
+      "D": "Salah. Faktanya anggaran turun Rp50 juta setelah TTE diterapkan.",
+      "E": "Salah. Data hanya mencakup Dinas Z."
     },
-    "tips": "Cek tingkatan intensitas: Hangat -> Panas (suhu makin tinggi); Gerimis -> Lebat (curah hujan makin deras). Trik TIU: Buat kalimat penghubung yang tepat untuk pasangan kata pertama, lalu terapkan kalimat yang sama persis pada pasangan kedua.",
+    "tips": "Perhatikan kronologi waktu dan variabel intervensi (TTE & e-Office) untuk menyimpulkan tren.",
     "has_image": 0,
     "gambar": null,
     "sumber": "Bank Soal Resmi Simulasi CAT BKN - Kemampuan Verbal Analogi | Ref: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf (Modul Verbal Hal. 14)",
@@ -1672,7 +1672,7 @@ window.SKD_QUESTIONS = [
       "startSeconds": 375,
       "title": "Trik Analogi Derajat Intensitas Kata & Logika Verbal TIU",
       "channel": "Privat Al Faiz",
-      "topic_part": "Trik Analogi Tingkatan / Derajat Intensitas Kata Bertingkat",
+      "topic_part": "Penalaran Induktif: Analisis Tren Kronologis Berbasis Data",
       "url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=375&rel=0",
       "watchUrl": "https://www.youtube.com/watch?v=Eau9uJJOH-c&t=375s",
       "thumbnail": "https://img.youtube.com/vi/Eau9uJJOH-c/hqdefault.jpg"
@@ -1682,7 +1682,7 @@ window.SKD_QUESTIONS = [
     "video_channel": "Privat Al Faiz",
     "video_timestamp": "06:15",
     "video_start_seconds": 375,
-    "video_topic_part": "Trik Analogi Tingkatan / Derajat Intensitas Kata Bertingkat",
+    "video_topic_part": "Penalaran Induktif: Analisis Tren Kronologis Berbasis Data",
     "is_active": 1
   },
   {
@@ -3498,16 +3498,16 @@ window.SKD_QUESTIONS = [
     "id": 62,
     "no": 62,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Figural - Ketidaksamaan Gambar",
-    "soal": "Dari lima gambar bangun datar berikut, manakah satu gambar yang TIDAK SESUAI atau berbeda pola kelompoknya (ketidaksamaan gambar)?",
+    "subkategori": "Kemampuan Figural - Penalaran Matriks",
+    "soal": "Perhatikan matriks gambar 2x2 berikut. Tentukan gambar yang paling tepat untuk mengisi sel bertanda tanya (?) berdasarkan pola baris dan kolom!",
     "opsi": {
-      "A": "Bujursangkar (persegi) dengan 4 sumbu simetri lipat.",
-      "B": "Segitiga sama sisi dengan 3 sumbu simetri lipat.",
-      "C": "Segienam beraturan dengan 6 sumbu simetri lipat.",
-      "D": "Segilima beraturan dengan 5 sumbu simetri lipat.",
-      "E": "Trapesium sembarang dengan 2 sumbu simetri lipat."
+      "A": "Segitiga hitam penuh dengan titik putih di tengahnya",
+      "B": "Segitiga putih kosong tanpa titik",
+      "C": "Lingkaran hitam penuh dengan titik putih di tengahnya",
+      "D": "Persegi hitam penuh dengan titik hitam",
+      "E": "Segitiga putih dengan garis tepi putus-putus"
     },
-    "kunci": "E",
+    "kunci": "A",
     "bobot": {
       "A": 0,
       "B": 0,
@@ -3515,17 +3515,17 @@ window.SKD_QUESTIONS = [
       "D": 0,
       "E": 5
     },
-    "pembahasan": "Konsep pengelompokan gambar ini didasarkan pada 'Bangun Datar Beraturan' (Regular Polygons) dan simetri lipatnya:\n- Opsi A, B, C, dan D semuanya merupakan bangun segi banyak beraturan yang memiliki panjang sisi dan sudut yang sama besar, sehingga jumlah sumbu simetri lipatnya sama persis dengan jumlah sisinya (Segitiga sama sisi = 3, Bujursangkar = 4, Segilima beraturan = 5, Segienam beraturan = 6).\n- Sebaliknya, Trapesium sembarang pada Opsi E adalah bangun tidak beraturan dan sama sekali TIDAK MEMILIKI sumbu simetri lipat (sumbu simetri lipat = 0). Pernyataan pada opsi E salah dan merupakan gambar yang menyimpang dari pola kelompok. [Pengayaan Materi: Amati satu elemen kunci (titik, arsiran, arah panah) per langkah untuk melacak rotasi (45/90/180 derajat) atau pencerminan (mirroring).]",
+    "pembahasan": "Pada matriks 2x2: Baris 1 menunjukkan perubahan dari Lingkaran putih bertitik hitam -> Lingkaran hitam penuh bertitik putih (inversi warna bangun dan titik). Baris 2 dimulai dengan Segitiga putih bertitik hitam. Maka sel kanan bawah (?) harus mengalami inversi warna yang sama: Segitiga hitam penuh dengan titik putih di tengahnya. [Pengayaan Materi: Sesuai KepmenPAN-RB No. 674 Tahun 2026, Ketidaksamaan Gambar diganti dengan Penalaran Matriks 2x2 atau 3x3.]",
     "analisis_opsi": {
-      "A": "Salah (masuk pola), bujursangkar adalah poligon beraturan dengan 4 simetri.",
-      "B": "Salah (masuk pola), segitiga sama sisi poligon beraturan dengan 3 simetri.",
-      "C": "Salah (masuk pola), segienam beraturan memiliki 6 simetri.",
-      "D": "Salah (masuk pola), segilima beraturan memiliki 5 simetri.",
-      "E": "Benar (Kunci Jawaban), trapesium sembarang bukan poligon beraturan dan tidak memiliki 2 sumbu simetri lipat (tidak sesuai kelompok)."
+      "A": "Benar. Mempertahankan bentuk segitiga (baris 2) dan melakukan inversi warna (kolom 2).",
+      "B": "Salah. Tidak mengalami inversi warna dan menghilangkan titik.",
+      "C": "Salah. Bentuk berubah menjadi lingkaran (milik baris 1).",
+      "D": "Salah. Bentuk persegi tidak ada dalam matriks.",
+      "E": "Salah. Tidak sesuai aturan inversi warna."
     },
-    "tips": "Trik Soal Ketidaksamaan Gambar: Cek 3 parameter utama: 1. Simetri lipat & putar, 2. Keteraturan sisi/sudut (poligon beraturan vs sembarang), 3. Arah orientasi/rotasi searah jarum jam. [Referensi Modul: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf]",
-    "has_image": 0,
-    "gambar": null,
+    "tips": "Pada matriks figural 2x2, baca pola secara horizontal (perubahan bentuk/warna) dan vertikal (konsistensi atau rotasi).",
+    "has_image": 1,
+    "gambar": "<svg viewBox=\"0 0 260 220\" width=\"260\" height=\"220\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;\">\n  <rect x=\"20\" y=\"15\" width=\"95\" height=\"85\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/>\n  <circle cx=\"67\" cy=\"57\" r=\"22\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2.5\"/>\n  <circle cx=\"67\" cy=\"57\" r=\"6\" fill=\"#1e293b\"/>\n\n  <rect x=\"135\" y=\"15\" width=\"95\" height=\"85\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/>\n  <circle cx=\"182\" cy=\"57\" r=\"22\" fill=\"#1e293b\" stroke=\"#1e293b\" stroke-width=\"2.5\"/>\n  <circle cx=\"182\" cy=\"57\" r=\"6\" fill=\"#ffffff\"/>\n\n  <rect x=\"20\" y=\"115\" width=\"95\" height=\"85\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/>\n  <polygon points=\"67,132 43,178 91,178\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2.5\"/>\n  <circle cx=\"67\" cy=\"162\" r=\"5\" fill=\"#1e293b\"/>\n\n  <rect x=\"135\" y=\"115\" width=\"95\" height=\"85\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\" stroke-dasharray=\"5,3\"/>\n  <text x=\"182\" y=\"168\" font-family=\"sans-serif\" font-size=\"34\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">?</text>\n</svg>",
     "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf (Modul Figural Hal. 77)",
     "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf",
     "sumber_url": "https://cat.bkn.go.id/simulasi/",
@@ -3548,7 +3548,7 @@ window.SKD_QUESTIONS = [
       "startSeconds": 130,
       "title": "Trik Menemukan Gambar Berbeda (Ketidaksamaan Gambar) Figural",
       "channel": "Agus Arta",
-      "topic_part": "Klasifikasi Karakteristik Bentuk Dasar & Hubungan Garis Simetri",
+      "topic_part": "Trik Penalaran Matriks Figural 2x2: Inversi Warna & Konsistensi Bentuk",
       "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=130&rel=0",
       "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=130s",
       "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
@@ -3558,23 +3558,23 @@ window.SKD_QUESTIONS = [
     "video_channel": "Agus Arta",
     "video_timestamp": "02:10",
     "video_start_seconds": 130,
-    "video_topic_part": "Klasifikasi Karakteristik Bentuk Dasar & Hubungan Garis Simetri",
+    "video_topic_part": "Trik Penalaran Matriks Figural 2x2: Inversi Warna & Konsistensi Bentuk",
     "is_active": 1
   },
   {
     "id": 63,
     "no": 63,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Figural - Ketidaksamaan Gambar",
-    "soal": "Terdapat lima gambar huruf/simbol berbentuk L asimetris. Empat gambar di antaranya merupakan hasil rotasi 2 dimensi dari gambar yang sama, sedangkan satu gambar merupakan hasil pencerminan (refleksi/mirror). Gambar manakah yang merupakan hasil pencerminan tersebut?",
+    "subkategori": "Kemampuan Figural - Penalaran Matriks",
+    "soal": "Perhatikan matriks gambar 3x3 berikut. Tentukan isi sel pojok kanan bawah (?) yang paling tepat untuk melengkapi pola baris dan kolom!",
     "opsi": {
-      "A": "Huruf L dalam posisi tegak standar (kaki horizontal mengarah ke kanan).",
-      "B": "Huruf L diputar 90 derajat searah jarum jam (kaki horizontal menjadi vertikal ke bawah di sebelah kanan).",
-      "C": "Huruf L diputar 180 derajat (terbalik dengan kaki horizontal mengarah ke kiri di bagian atas).",
-      "D": "Huruf L hasil pencerminan horizontal (kaki horizontal mengarah ke kiri di bagian bawah).",
-      "E": "Huruf L diputar 270 derajat searah jarum jam."
+      "A": "3 buah persegi hitam berjajar",
+      "B": "4 buah persegi hitam berjajar",
+      "C": "3 buah lingkaran hitam berjajar",
+      "D": "1 buah persegi putih kosong",
+      "E": "3 buah garis vertikal"
     },
-    "kunci": "D",
+    "kunci": "A",
     "bobot": {
       "A": 0,
       "B": 0,
@@ -3582,17 +3582,17 @@ window.SKD_QUESTIONS = [
       "D": 5,
       "E": 0
     },
-    "pembahasan": "Dalam tes figural ketidaksamaan, seringkali jebakan dibuat antara 'Rotasi' dan 'Pencerminan' (Refleksi):\n- Gambar A, B, C, dan E dapat saling bertransformasi hanya dengan diputar pada bidang datar 2 dimensi (rotasi 0°, 90°, 180°, 270°) tanpa harus membalik bangun.\n- Pada Gambar D, kaki L mengarah ke kiri di bagian bawah. Bentuk ini tidak akan pernah bisa didapat hanya dengan memutar gambar A di bidang 2D, melainkan harus dicerminkan (flip horizontal) atau diangkat dari bidang kertas. Jadi gambar D adalah gambar yang berbeda (hasil refleksi). [Pengayaan Materi: Amati satu elemen kunci (titik, arsiran, arah panah) per langkah untuk melacak rotasi (45/90/180 derajat) atau pencerminan (mirroring).]",
+    "pembahasan": "Analisis Matriks 3x3: Setiap baris memiliki jenis objek yang sama (Baris 1: Garis vertikal; Baris 2: Lingkaran hitam; Baris 3: Persegi hitam). Setiap kolom menunjukkan jumlah objek yang bertambah +1 (Kolom 1: 1 objek; Kolom 2: 2 objek; Kolom 3: 3 objek). Maka sel baris 3 kolom 3 (?) harus berisi 3 buah persegi hitam berjajar. [Pengayaan Materi: Penalaran Matriks 3x3 menguji identifikasi dua aturan simultan: jenis objek per baris dan kuantitas per kolom.]",
     "analisis_opsi": {
-      "A": "Salah, gambar acuan standar rotasi 0 derajat.",
-      "B": "Salah, hasil rotasi murni 90 derajat searah jarum jam.",
-      "C": "Salah, hasil rotasi murni 180 derajat.",
-      "D": "Benar (Kunci Jawaban), merupakan hasil pencerminan (refleksi/flip), bukan rotasi 2 dimensi seperti 4 pilihan lainnya.",
-      "E": "Salah, hasil rotasi murni 270 derajat."
+      "A": "Benar. Jenis objek Baris 3 (persegi hitam) dengan kuantitas Kolom 3 (3 buah).",
+      "B": "Salah. Jumlahnya 4 tidak sesuai pola kolom 3.",
+      "C": "Salah. Lingkaran adalah objek Baris 2.",
+      "D": "Salah. Jumlah dan warna tidak sesuai pola.",
+      "E": "Salah. Garis vertikal adalah objek Baris 1."
     },
-    "tips": "Bedakan Rotasi vs Refleksi: Rotasi hanya memutar arah tanpa mengubah tangan (kanan tetap kanan). Refleksi/Cermin membalik orientasi (kanan menjadi kiri). Trik TIU Figural: Fokus pada satu komponen kecil terlebih dahulu untuk mengeliminasi 3-4 opsi salah secara instan.",
-    "has_image": 0,
-    "gambar": null,
+    "tips": "Pada matriks 3x3, pisahkan aturan Baris (jenis/bentuk) dan aturan Kolom (jumlah/rotasi).",
+    "has_image": 1,
+    "gambar": "<svg viewBox=\"0 0 300 270\" width=\"300\" height=\"270\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;\">\n  <!-- Row 1: 1, 2, 3 garis vertikal -->\n  <rect x=\"15\" y=\"12\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <line x1=\"55\" y1=\"27\" x2=\"55\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"3\"/>\n\n  <rect x=\"110\" y=\"12\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <line x1=\"142\" y1=\"27\" x2=\"142\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"3\"/>\n  <line x1=\"158\" y1=\"27\" x2=\"158\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"3\"/>\n\n  <rect x=\"205\" y=\"12\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <line x1=\"230\" y1=\"27\" x2=\"230\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"3\"/>\n  <line x1=\"245\" y1=\"27\" x2=\"245\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"3\"/>\n  <line x1=\"260\" y1=\"27\" x2=\"260\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"3\"/>\n\n  <!-- Row 2: 1, 2, 3 lingkaran -->\n  <rect x=\"15\" y=\"97\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <circle cx=\"55\" cy=\"134\" r=\"10\" fill=\"#0f172a\"/>\n\n  <rect x=\"110\" y=\"97\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <circle cx=\"136\" cy=\"134\" r=\"9\" fill=\"#0f172a\"/>\n  <circle cx=\"164\" cy=\"134\" r=\"9\" fill=\"#0f172a\"/>\n\n  <rect x=\"205\" y=\"97\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <circle cx=\"225\" cy=\"134\" r=\"8\" fill=\"#0f172a\"/>\n  <circle cx=\"245\" cy=\"134\" r=\"8\" fill=\"#0f172a\"/>\n  <circle cx=\"265\" cy=\"134\" r=\"8\" fill=\"#0f172a\"/>\n\n  <!-- Row 3: 1, 2, ? persegi -->\n  <rect x=\"15\" y=\"182\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <rect x=\"45\" y=\"210\" width=\"20\" height=\"20\" fill=\"#0f172a\"/>\n\n  <rect x=\"110\" y=\"182\" width=\"80\" height=\"75\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <rect x=\"126\" y=\"210\" width=\"18\" height=\"18\" fill=\"#0f172a\"/>\n  <rect x=\"156\" y=\"210\" width=\"18\" height=\"18\" fill=\"#0f172a\"/>\n\n  <rect x=\"205\" y=\"182\" width=\"80\" height=\"75\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\" stroke-dasharray=\"5,3\"/>\n  <text x=\"245\" y=\"232\" font-family=\"sans-serif\" font-size=\"34\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">?</text>\n</svg>",
     "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf (Modul Figural Hal. 78)",
     "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf",
     "sumber_url": "https://cat.bkn.go.id/simulasi/",
@@ -3615,7 +3615,7 @@ window.SKD_QUESTIONS = [
       "startSeconds": 335,
       "title": "Trik Membedakan Rotasi dan Pencerminan (Mirroring) Soal Figural",
       "channel": "Agus Arta",
-      "topic_part": "Teknik Membedakan Bangun Hasil Rotasi vs Hasil Pencerminan (Mirror)",
+      "topic_part": "Trik Penalaran Matriks Figural 3x3: Pola Baris & Kolom Simultan",
       "url": "https://www.youtube-nocookie.com/embed/mKgvPC4yDoc?start=335&rel=0",
       "watchUrl": "https://www.youtube.com/watch?v=mKgvPC4yDoc&t=335s",
       "thumbnail": "https://img.youtube.com/vi/mKgvPC4yDoc/hqdefault.jpg"
@@ -3625,7 +3625,7 @@ window.SKD_QUESTIONS = [
     "video_channel": "Agus Arta",
     "video_timestamp": "05:35",
     "video_start_seconds": 335,
-    "video_topic_part": "Teknik Membedakan Bangun Hasil Rotasi vs Hasil Pencerminan (Mirror)",
+    "video_topic_part": "Trik Penalaran Matriks Figural 3x3: Pola Baris & Kolom Simultan",
     "is_active": 1
   },
   {
@@ -4800,7 +4800,7 @@ window.SKD_QUESTIONS = [
     "id": 88,
     "no": 88,
     "kategori": "TKP",
-    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
     "soal": "Kementerian Anda baru saja meluncurkan aplikasi Sistem Pemerintahan Berbasis Elektronik (SPBE) baru untuk memangkas proses manual pengajuan cuti dan pelaporan kinerja. Namun, sejumlah pegawai senior menolak menggunakan aplikasi tersebut dengan alasan rumit, merasa sudah terbiasa dengan tanda tangan kertas basah, dan meminta Anda untuk memproses berkas mereka secara manual. Sikap Anda adalah...",
     "opsi": {
       "A": "Membuat video panduan tutorial singkat di grup WhatsApp kantor dan menawarkan bantuan tatap muka bagi pegawai yang masih mengalami kendala teknis.",
@@ -4847,7 +4847,7 @@ window.SKD_QUESTIONS = [
     "id": 89,
     "no": 89,
     "kategori": "TKP",
-    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
     "soal": "Anda mengelola server database kepegawaian dan kependudukan. Seorang teman lama satu angkatan sekolah yang kini bekerja di perusahaan asuransi swasta menghubungi Anda dan meminta akses nomor kontak serta data riwayat kesehatan warga untuk keperluan penawaran polis dengan imbalan komisi besar. Sikap Anda adalah...",
     "opsi": {
       "A": "Menolak secara halus dengan alasan sistem sedang diaudit ketat oleh pihak inspektorat sehingga tidak memungkinkan memberikan data.",
@@ -4894,7 +4894,7 @@ window.SKD_QUESTIONS = [
     "id": 90,
     "no": 90,
     "kategori": "TKP",
-    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
     "soal": "Dua jam sebelum batas waktu penutupan pengunggahan laporan keuangan daerah ke sistem kementerian pusat, koneksi internet kantor dinas Anda tiba-tiba terputus akibat pohon tumbang yang menimpa tiang fiber optic. Anda adalah operator yang bertanggung jawab mengunggah berkas tersebut. Tindakan cepat dan tepat Anda adalah...",
     "opsi": {
       "A": "Segera menyalakan tethering hotspot data seluler cadangan dari perangkat seluler Anda atau memanfaatkan jaringan internet di kantor dinas terdekat/fasilitas publik yang stabil, memastikan koneksi aman, dan segera menuntaskan pengunggahan laporan sebelum batas waktu berakhir.",
@@ -4941,7 +4941,7 @@ window.SKD_QUESTIONS = [
     "id": 91,
     "no": 91,
     "kategori": "TKP",
-    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
     "soal": "Perkembangan kecerdasan buatan generatif (Generative AI) saat ini sangat pesat dan mulai banyak dimanfaatkan untuk efisiensi perumusan naskah dinas, ringkasan riset, dan analisis data. Sikap profesional Anda dalam menyikapi perkembangan teknologi AI ini adalah...",
     "opsi": {
       "A": "Menggunakan AI sesekali jika tugas menumpuk tanpa mempelajari prinsip etika keamanan data yang terkandung di dalamnya.",
@@ -4988,32 +4988,32 @@ window.SKD_QUESTIONS = [
     "id": 92,
     "no": 92,
     "kategori": "TKP",
-    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
-    "soal": "Di grup WhatsApp keluarga besar Anda, beredar sebuah tautan berita dengan judul bombastis yang mengklaim bahwa air minum kemasan merek tertentu mengandung racun berbahaya, yang disertai ajakan untuk memboikot dan membagikan ke seluruh kontak. Setelah Anda mengecek di website resmi BPOM dan Kominfo, informasi tersebut dinyatakan 100% hoaks. Sikap Anda adalah...",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
+    "soal": "Anda diminta pimpinan menyusun draf naskah kebijakan teknis dengan tenggat waktu singkat. Anda memanfaatkan Generative AI (seperti ChatGPT/Claude/Gemini) untuk membantu menyusun kerangka awal. Langkah paling tepat dan etis yang Anda lakukan sebelum menyerahkan dokumen tersebut adalah...",
     "opsi": {
-      "A": "Diam saja dan tidak berkomentar apa pun karena merasa urusan berita palsu di grup keluarga bukan tanggung jawab Anda.",
-      "B": "Ikut membagikan berita bohong tersebut ke grup WhatsApp rekan kantor untuk sekadar mengecek kebenarannya.",
-      "C": "Menjelaskan secara santun di grup keluarga bahwa informasi tersebut hoaks, melampirkan tangkapan layar tautan resmi klarifikasi BPOM/Kominfo, dan mengajak keluarga untuk selalu menyaring berita sebelum membagikan (saring sebelum sharing).",
-      "D": "Membagikan tautan artikel klarifikasi dari portal Kominfo ke grup keluarga dan berpesan agar tidak membagikan berita tersebut ke grup lain.",
-      "E": "Menghubungi anggota keluarga yang membagikan tautan via pesan pribadi (japri) untuk memberitahu bahwa kabar tersebut bohong."
+      "A": "Langsung menyalin seluruh hasil AI tanpa membaca ulang karena dianggap sudah pasti benar",
+      "B": "Memeriksa ulang akurasi data, memverifikasi dasar hukum/pasal yang dikutip AI, menyunting gaya bahasa dinas, dan memastikan tidak ada data rahasia negara yang diinput",
+      "C": "Menolak menggunakan AI sama sekali meskipun beban kerja menumpuk",
+      "D": "Mengunggah seluruh dokumen rahasia negara ke AI agar hasilnya lebih lengkap",
+      "E": "Menyerahkan hasil AI mentah kepada rekan kerja untuk diperbaiki sendiri"
     },
-    "kunci": "C",
+    "kunci": "B",
     "bobot": {
       "A": 2,
-      "B": 1,
-      "C": 5,
-      "D": 4,
-      "E": 3
+      "B": 5,
+      "C": 3,
+      "D": 1,
+      "E": 4
     },
-    "pembahasan": "Indikator Literasi Digital dan Edukasi Publik: ASN adalah agen literasi yang wajib meluruskan kabar bohong dengan rujukan otoritas resmi (BPOM/Kominfo) secara santun dan mendidik (Poin 5). [Pengayaan Materi: Indikator TIK: adaptif terhadap teknologi baru, menjaga keamanan data/siber ASN, serta memanfaatkan sistem digital untuk efisiensi kerja.]",
+    "pembahasan": "Pemanfaatan Generative AI di lingkungan ASN harus mengedepankan prinsip verifikasi faktual (mencegah halusinasi AI pada pasal/data), menjaga kerahasiaan data negara, serta akuntabilitas penuh pegawai. [Pengayaan Materi: Sesuai KepmenPAN-RB No. 674 Tahun 2026, TIK mencakup Adaptasi terhadap Perkembangan TIK termasuk etika Generative AI.]",
     "analisis_opsi": {
-      "A": "Poin 2: Apatis dan membiarkan pembodohan informasi terus beredar di lingkungan terdekat.",
-      "B": "Poin 1: Menjadi penyebar disinformasi (hoaks) yang melanggar etika digital dan UU ITE.",
-      "C": "Poin 5: Bertanggung jawab sebagai agen literasi digital, mengklarifikasi dengan data rujukan resmi, santun, dan mendidik.",
-      "D": "Poin 4: Cepat memberikan bantahan fakta yang valid untuk meredam kepanikan anggota keluarga.",
-      "E": "Poin 3: Bijak menjaga privasi pengirim berita, namun anggota keluarga lain di grup masih berpotensi mempercayai hoaks tersebut jika tidak diklarifikasi di grup."
+      "A": "Poin 2: Berisiko tinggi memuat halusinasi/kesalahan fakta AI.",
+      "B": "Poin 5: Adaptif teknologi, akuntabel, memverifikasi fakta, dan menjaga keamanan data.",
+      "C": "Poin 3: Kurang adaptif terhadap perkembangan TIK.",
+      "D": "Poin 1: Pelanggaran berat keamanan informasi dan kerahasiaan negara.",
+      "E": "Poin 4: Kurang bertanggung jawab atas tugas sendiri."
     },
-    "tips": "Menangkal Hoaks: Saring sebelum sharing! Berikan bukti klarifikasi dari portal resmi pemerintah secara santun. Trik TKP: Pilih opsi yang mau belajar teknologi baru dengan cepat dan menjaga kerahasiaan data instansi.",
+    "tips": "Etika Generative AI ASN: Gunakan untuk efisiensi, WAJIB verifikasi fakta/hukum, DILARANG input data rahasia instansi.",
     "has_image": 0,
     "gambar": null,
     "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN | Ref: bahan_soal2/MATERI TKP/TKP TIK.pdf & Perpres No. 95/2018 (SPBE) (Hal. 32)",
@@ -5035,32 +5035,32 @@ window.SKD_QUESTIONS = [
     "id": 93,
     "no": 93,
     "kategori": "TKP",
-    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
-    "soal": "Sebagai admin pengelola website portal layanan publik pemda, Anda menemukan adanya kelemahan celah keamanan (bug vulnerability) yang memungkinkan orang luar melihat riwayat unduhan berkas warga. Anda belum memiliki sertifikasi peretasan etis, tetapi Anda memahami risiko kebocorannya. Langkah Anda adalah...",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
+    "soal": "Seorang rekan kerja di unit Anda menggunakan Generative AI untuk membuat ringkasan rapat internal yang berisi data sensitif kepegawaian dan rencana strategis instansi pada akun AI publik gratis. Sikap Anda adalah...",
     "opsi": {
-      "A": "Mengunggah temuan celah keamanan tersebut ke forum media sosial publik untuk membuktikan kelemahan sistem pemda.",
-      "B": "Membiarkan saja celah tersebut karena menganggap website daerah jarang menjadi target serangan peretas profesional.",
-      "C": "Melaporkan temuan bug tersebut pada rapat staf bulanan berikutnya kepada seluruh rekan kerja.",
-      "D": "Segera mendokumentasikan temuan celah keamanan tersebut secara rahasia, melaporkannya kepada Kepala Tim Keamanan Siber/Pimpinan Dinas, dan berkoordinasi dengan Tim Tanggap Insiden Siber (CSIRT) daerah untuk segera melakukan patching penutupan celah keamanan.",
-      "E": "Menonaktifkan sementara fitur unduhan berkas publik yang rentan dan segera berkoordinasi dengan vendor pengembang web kantor untuk memperbaiki skripnya."
+      "A": "Ikut mengunggah data sensitif ke akun publik tersebut agar pekerjaan cepat selesai",
+      "B": "Mengingatkannya secara santun mengenai risiko kebocoran data sensitif pada AI publik serta menyarankan penggunaan metode anonimisasi data atau sistem internal yang aman",
+      "C": "Membiarkannya karena bukan tanggung jawab Anda",
+      "D": "Memarahinya di depan umum agar tidak mengulanginya",
+      "E": "Melaporkannya langsung ke media sosial"
     },
-    "kunci": "D",
+    "kunci": "B",
     "bobot": {
       "A": 1,
-      "B": 2,
+      "B": 5,
       "C": 3,
-      "D": 5,
+      "D": 2,
       "E": 4
     },
-    "pembahasan": "Indikator Manajemen Keamanan Informasi: Penemuan celah keamanan digital harus ditangani melalui protokol resmi (responsible disclosure) ke CSIRT dan pimpinan (Poin 5) untuk patching segera. [Pengayaan Materi: Indikator TIK: adaptif terhadap teknologi baru, menjaga keamanan data/siber ASN, serta memanfaatkan sistem digital untuk efisiensi kerja.]",
+    "pembahasan": "ASN wajib menjaga keamanan informasi dan data sensitif instansi saat memanfaatkan layanan Generative AI publik, serta saling mengingatkan rekan kerja dengan etika kolaboratif. [Pengayaan Materi: Adaptasi TIK & Keamanan Siber ASN.]",
     "analisis_opsi": {
-      "A": "Poin 1: Kecerobohan berat yang mengundang peretas jahat mengeksploitasi data publik masyarakat.",
-      "B": "Poin 2: Meremehkan risiko keamanan siber (complacency) yang dapat berakibat fatal pada pencurian data warga.",
-      "C": "Poin 3: Berniat melaporkan, namun menunda penanganan celah keamanan siber berisiko dieksploitasi pihak jahat.",
-      "D": "Poin 5: Sangat profesional, taat protokol pelaporan resmi, tanggap risiko, dan proaktif mengamankan aset TIK negara.",
-      "E": "Poin 4: Tindakan mitigasi darurat yang cepat memutus celah akses sembari menunggu perbaikan permanen."
+      "A": "Poin 1: Ikut membocorkan data sensitif instansi.",
+      "B": "Poin 5: Edukatif, melindungi keamanan data, dan memberikan solusi aman (anonimisasi).",
+      "C": "Poin 3: Apatis terhadap risiko keamanan siber kantor.",
+      "D": "Poin 2: Cara menegur tidak etis dan merusak keharmonisan.",
+      "E": "Poin 4: Tidak tepat membawa masalah internal ke media sosial."
     },
-    "tips": "Bug/Celah Keamanan: Dokumentasikan rahasia + Lapor CSIRT/Pimpinan segera + Lakukan patching penutupan celah. Trik TKP: Pilih opsi yang mau belajar teknologi baru dengan cepat dan menjaga kerahasiaan data instansi.",
+    "tips": "Jaga kerahasiaan data sensitif/PII sebelum memasukkan prompt ke AI publik.",
     "has_image": 0,
     "gambar": null,
     "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN | Ref: bahan_soal2/MATERI TKP/TKP TIK.pdf & Perpres No. 95/2018 (SPBE) (Hal. 33)",
@@ -5082,32 +5082,32 @@ window.SKD_QUESTIONS = [
     "id": 94,
     "no": 94,
     "kategori": "TKP",
-    "subkategori": "Teknologi Informasi & Komunikasi (TIK)",
-    "soal": "Kantor Anda beralih dari penyimpanan arsip fisik di lemari besi ke penyimpanan arsip digital berbasis komputasi awan (Cloud Storage). Banyak berkas penting yang perlu discan dan diindeks secara metadata. Anda ditunjuk sebagai koordinator migrasi arsip. Upaya yang Anda lakukan agar proses migrasi berjalan efektif dan aman adalah...",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
+    "soal": "Instansi Anda berencana mengadakan pelatihan pemanfaatan Generative AI (ChatGPT, Gemini, Claude) untuk meningkatkan produktivitas administrasi perkantoran. Namun, beberapa pegawai senior khawatir AI akan menggantikan peran mereka. Sebagai ASN yang adaptif, sikap Anda adalah...",
     "opsi": {
-      "A": "Membagi tim kerja ke dalam tugas scanning, penamaan file standar, dan pengunggahan ke cloud resmi dinas secara terjadwal.",
-      "B": "Menyerahkan seluruh pekerjaan migrasi digital kepada siswa magang tanpa bimbingan dan verifikasi standar keamanan.",
-      "C": "Melakukan pemindaian berkas secara bertahap setiap ada waktu luang di kantor tanpa membuat struktur folder khusus.",
-      "D": "Menyimpan berkas-berkas penting tersebut di akun cloud pribadi gratisan tanpa proteksi sandi yang memadai.",
-      "E": "Menyusun SOP digitalisasi arsip, membuat struktur folder dan metadata indeks yang sistematis, menerapkan kontrol akses hak pengguna (role-based access) dan autentikasi dua faktor (2FA), serta melakukan pencadangan (backup) berkala di server terenkripsi."
+      "A": "Menertawakan kekhawatiran mereka karena dianggap gagap teknologi",
+      "B": "Menjelaskan dengan ramah bahwa AI adalah alat bantu (co-pilot) untuk mempercepat pekerjaan rutin, bukan pengganti integritas dan pertimbangan manusia, serta mengajak mereka belajar bersama",
+      "C": "Mengusulkan agar pelatihan dibatalkan saja",
+      "D": "Hanya mengikuti pelatihan untuk diri sendiri tanpa peduli rekan lain",
+      "E": "Menyampaikan bahwa pegawai senior memang tidak perlu ikut pelatihan"
     },
-    "kunci": "E",
+    "kunci": "B",
     "bobot": {
-      "A": 4,
-      "B": 2,
-      "C": 3,
-      "D": 1,
-      "E": 5
+      "A": 1,
+      "B": 5,
+      "C": 2,
+      "D": 4,
+      "E": 3
     },
-    "pembahasan": "Indikator Tata Kelola Data dan Kearsipan Digital: Migrasi komputasi awan membutuhkan struktur metadata rapi, pembatasan hak akses (RBAC), enkripsi 2FA, dan backup teratur (Poin 5) sesuai standar ANRI. [Pengayaan Materi: Indikator TIK: adaptif terhadap teknologi baru, menjaga keamanan data/siber ASN, serta memanfaatkan sistem digital untuk efisiensi kerja.]",
+    "pembahasan": "ASN yang adaptif terhadap perkembangan TIK mampu merangkul rekan kerja lintas generasi, meluruskan persepsi tentang Generative AI sebagai alat bantu (human-in-the-loop), dan mendorong pembelajaran kolaboratif. [Pengayaan Materi: KepmenPAN-RB No. 674 Tahun 2026.]",
     "analisis_opsi": {
-      "A": "Poin 4: Manajemen pembagian kerja yang baik dan terarah untuk mengejar target volume migrasi berkas.",
-      "B": "Poin 2: Kurang bertanggung jawab terhadap dokumen penting dan rawan terjadi salah penempatan atau kebocoran data.",
-      "C": "Poin 3: Ada upaya mendigitalkan arsip, namun tanpa indeks metadata yang rapi berkas akan sulit dicari kembali.",
-      "D": "Poin 1: Pelanggaran serius standar keamanan informasi negara dan kearsipan institusi pemerintah.",
-      "E": "Poin 5: Komprehensif, aman, sistematis, mematuhi standar kearsipan digital, dan menjamin integritas data institusi."
+      "A": "Poin 1: Tidak empati dan merusak lingkungan kerja harmonis.",
+      "B": "Poin 5: Adaptif, komunikatif, menenangkan kekhawatiran, dan kolaboratif.",
+      "C": "Poin 2: Menghambat inovasi dan transformasi digital instansi.",
+      "D": "Poin 4: Adaptif secara pribadi namun kurang kolaboratif.",
+      "E": "Poin 3: Diskriminatif terhadap pegawai senior."
     },
-    "tips": "Migrasi Cloud Storage: SOP metadata sistematis + Hak akses role-based 2FA + Enkripsi & Backup berkala. Trik TKP: Pilih opsi yang mau belajar teknologi baru dengan cepat dan menjaga kerahasiaan data instansi.",
+    "tips": "Posisikan AI sebagai alat bantu (co-pilot) di bawah kendali integritas ASN.",
     "has_image": 0,
     "gambar": null,
     "sumber": "Perpres No. 95 Tahun 2018 tentang SPBE & Framework Keamanan BSSN | Ref: bahan_soal2/MATERI TKP/TKP TIK.pdf & Perpres No. 95/2018 (SPBE) (Hal. 34)",
@@ -5881,7 +5881,7 @@ window.SKD_QUESTIONS = [
     "id": 111,
     "no": 111,
     "kategori": "TWK",
-    "subkategori": "Pancasila - Pengamalan Sila",
+    "subkategori": "Empat Konsensus Kebangsaan - Pancasila - Pengamalan Sila",
     "soal": "Dalam rapat musyawarah desa, terjadi perbedaan pendapat yang tajam mengenai lokasi pembangunan fasilitas umum. Kepala desa memutuskan untuk menunda pemungutan suara dan mengajak warga berdialog kembali agar tercapai mufakat tanpa ada pihak yang merasa dirugikan. Sikap kepala desa tersebut mencerminkan pengamalan Pancasila terutama sila...",
     "opsi": {
       "A": "Ketuhanan Yang Maha Esa",
@@ -5927,7 +5927,7 @@ window.SKD_QUESTIONS = [
     "id": 112,
     "no": 112,
     "kategori": "TWK",
-    "subkategori": "UUD 1945 - Lembaga Negara",
+    "subkategori": "Empat Konsensus Kebangsaan - UUD 1945 - Lembaga Negara",
     "soal": "Berdasarkan Pasal 24C ayat (1) UUD 1945, lembaga negara yang berwenang mengadili pada tingkat pertama dan terakhir yang putusannya bersifat final untuk menguji undang-undang terhadap Undang-Undang Dasar serta memutus pembubaran partai politik adalah...",
     "opsi": {
       "A": "Mahkamah Agung (MA)",
@@ -6065,7 +6065,7 @@ window.SKD_QUESTIONS = [
     "id": 115,
     "no": 115,
     "kategori": "TWK",
-    "subkategori": "NKRI & Bhinneka Tunggal Ika",
+    "subkategori": "Empat Konsensus Kebangsaan - NKRI & Bhinneka Tunggal Ika",
     "soal": "Semboyan 'Bhinneka Tunggal Ika Tan Hana Dharma Mangrwa' yang dikutip dari Kitab Sutasoma karya Mpu Tantular memiliki makna filosofis bagi bangsa Indonesia, yaitu...",
     "opsi": {
       "A": "Menyeragamkan seluruh budaya daerah menjadi satu budaya nasional",
@@ -6111,16 +6111,16 @@ window.SKD_QUESTIONS = [
     "id": 116,
     "no": 116,
     "kategori": "TWK",
-    "subkategori": "Bahasa Indonesia - Kalimat Efektif",
-    "soal": "Manakah di antara kalimat berikut yang merupakan kalimat efektif sesuai kaidah EYD Edisi V?",
+    "subkategori": "Bahasa Indonesia (Pemahaman Bacaan)",
+    "soal": "Bacalah teks berikut!\n\n\"Pemanfaatan kecerdasan buatan (AI) dalam pelayanan publik mulai diterapkan di beberapa pemerintah daerah untuk mempercepat verifikasi berkas perizinan dan menjawab pertanyaan warga melalui asisten virtual. Meskipun demikian, pakar tata kelola mengingatkan bahwa keputusan akhir yang menyangkut hak hukum warga negara tetap harus berada di tangan pejabat berwenang guna menjamin akuntabilitas dan keadilan.\"\n\nSimpulan yang paling sesuai dengan isi teks di atas adalah...",
     "opsi": {
-      "A": "Bagi seluruh peserta ujian dimohon untuk segera memasuki ruangan.",
-      "B": "Para hadirin sekalian dimohon berdiri untuk menyanyikan lagu Indonesia Raya.",
-      "C": "Pemerintah terus berupaya meningkatkan kualitas pelayanan publik di seluruh daerah.",
-      "D": "Meskipun hari hujan deras, namun ia tetap berangkat bekerja tepat waktu.",
-      "E": "Adik saling berpelukan dengan kakak setelah lama tidak berjumpa."
+      "A": "AI dapat menggantikan sepenuhnya peran pejabat publik dalam mengambil keputusan hukum",
+      "B": "Penggunaan AI membantu efisiensi layanan publik, tetapi akuntabilitas keputusan akhir tetap menjadi tanggung jawab pejabat berwenang",
+      "C": "Pemerintah daerah dilarang menggunakan asisten virtual untuk melayani warga",
+      "D": "Verifikasi berkas perizinan menjadi lebih lambat setelah menggunakan AI",
+      "E": "Pakar tata kelola menolak segala bentuk modernisasi birokrasi"
     },
-    "kunci": "C",
+    "kunci": "B",
     "bobot": {
       "A": 0,
       "B": 0,
@@ -6128,15 +6128,15 @@ window.SKD_QUESTIONS = [
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Kalimat C memiliki struktur Subjek ('Pemerintah') dan Predikat ('terus berupaya meningkatkan') yang jelas, hemat kata, dan tidak menggunakan konjungsi ganda. [Pengayaan Materi: Opsi A tidak bersubjek karena kata 'Bagi'; Opsi B pleonasme ('Para' + 'sekalian'); Opsi D konjungsi ganda ('Meskipun' + 'namun'); Opsi E pleonasme ('saling' + 'ber-an').]",
+    "pembahasan": "Teks memaparkan manfaat AI (mempercepat verifikasi & asisten virtual) dan batasan etisnya (keputusan akhir tetap di tangan pejabat berwenang demi akuntabilitas). [Pengayaan Materi: Sesuai KepmenPAN-RB No. 674 Tahun 2026.]",
     "analisis_opsi": {
-      "A": "Salah. Tidak memiliki subjek karena diawali preposisi 'Bagi'.",
-      "B": "Salah. Tidak hemat (pleonasme): 'Para hadirin sekalian' cukup 'Hadirin'.",
-      "C": "Benar. Memenuhi syarat kesepadanan, kehematan, dan kelogisan kalimat efektif.",
-      "D": "Salah. Penggunaan konjungsi ganda 'Meskipun' dan 'namun' dalam satu kalimat.",
-      "E": "Salah. Kata 'saling' tidak perlu digabung dengan imbuhan resiprokal 'ber-an'."
+      "A": "Salah. Bertentangan dengan kalimat kedua.",
+      "B": "Benar. Menangkap kedua sisi informasi teks secara akurat.",
+      "C": "Salah. Teks menyebut beberapa pemda sudah menerapkannya.",
+      "D": "Salah. Teks menyebut mempercepat, bukan memperlambat.",
+      "E": "Salah. Pakar hanya mengingatkan soal akuntabilitas, bukan menolak modernisasi."
     },
-    "tips": "Cek 3 penyakit utama kalimat tidak efektif: preposisi di awal subjek, pleonasme (para + sekalian), dan konjungsi ganda (meskipun + tetapi/namun). [Referensi Modul: bahan_soal1/(1) SALAH - KALIMAT TIDAK EFEKTIF.pdf]",
+    "tips": "Pastikan simpulan bacaan mencakup klausa sebelum dan sesudah konjungsi pertentangan ('Meskipun demikian'). [Referensi Modul: bahan_soal1/(1) Simpulan Teks.pdf]",
     "has_image": 0,
     "gambar": null,
     "sumber_nama": "EYD V & Kalimat Efektif | Ref: bahan_soal1/(1) SALAH - KALIMAT TIDAK EFEKTIF.pdf",
@@ -6553,16 +6553,16 @@ window.SKD_QUESTIONS = [
     "id": 123,
     "no": 123,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Verbal - Analogi Kata",
-    "soal": "KOMPAS : ARAH = TERMOMETER : ...",
+    "subkategori": "Kemampuan Verbal - Penalaran Induktif",
+    "soal": "Hasil evaluasi layanan pengaduan publik menunjukkan: pengaduan yang direspons kurang dari 2 jam memiliki tingkat penyelesaian damai 92%; pengaduan yang direspons antara 2–12 jam memiliki tingkat penyelesaian 78%; sedangkan pengaduan yang direspons lebih dari 24 jam hanya memiliki tingkat penyelesaian 45%. Simpulan induktif yang paling tepat adalah...",
     "opsi": {
-      "A": "Cuaca",
-      "B": "Suhu",
-      "C": "Tekanan",
-      "D": "Kelembapan",
-      "E": "Panas"
+      "A": "Semakin cepat waktu respons terhadap pengaduan publik, semakin tinggi tingkat penyelesaiannya",
+      "B": "Pengaduan yang masuk di atas jam kerja sebaiknya diabaikan",
+      "C": "Tingkat penyelesaian 45% sudah memenuhi standar pelayanan prima",
+      "D": "Waktu respons tidak memengaruhi kepuasan pelapor",
+      "E": "Semua pengaduan harus diselesaikan dalam waktu tepat 12 jam"
     },
-    "kunci": "B",
+    "kunci": "A",
     "bobot": {
       "A": 0,
       "B": 5,
@@ -6570,15 +6570,15 @@ window.SKD_QUESTIONS = [
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Kompas adalah alat ukur/penunjuk untuk menentukan arah. Secara analog, termometer adalah alat ukur untuk menentukan suhu. [Pengayaan Materi: Hubungan alat ukur dan besaran yang diukur.]",
+    "pembahasan": "Data menunjukkan korelasi terbalik antara waktu respons dan tingkat penyelesaian (<2 jam: 92%, 2-12 jam: 78%, >24 jam: 45%). Semakin cepat respons, semakin tinggi tingkat penyelesaian. [Pengayaan Materi: Penalaran Induktif pola variasi seiring (Concomitant Variation).]",
     "analisis_opsi": {
-      "A": "Salah. Cuaca terlalu luas, bukan besaran spesifik yang diukur termometer.",
-      "B": "Benar. Termometer mengukur suhu, sebagaimana kompas menunjukkan arah.",
-      "C": "Salah. Tekanan diukur dengan barometer/manometer.",
-      "D": "Salah. Kelembapan diukur dengan higrometer.",
-      "E": "Salah. Panas adalah sensasi/energi, bukan besaran suhu."
+      "A": "Benar. Merangkum hubungan proporsional antarvariabel sesuai data.",
+      "B": "Salah. Bertentangan dengan prinsip pelayanan publik.",
+      "C": "Salah. Tidak ada pernyataan bahwa 45% adalah standar prima.",
+      "D": "Salah. Justru data menunjukkan pengaruh yang sangat kuat.",
+      "E": "Salah. Kesimpulan yang keliru."
     },
-    "tips": "Gunakan kalimat penghubung: 'X adalah alat untuk mengukur/menunjukkan Y'. [Referensi Modul: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf]",
+    "tips": "Gunakan pola 'Semakin X, semakin Y' untuk data bertingkat.",
     "has_image": 0,
     "gambar": null,
     "sumber_nama": "Modul Verbal Analogi TIU | Ref: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf",
@@ -6605,14 +6605,14 @@ window.SKD_QUESTIONS = [
       "channel": "Privat Al Faiz",
       "timestamp": "02:40",
       "startSeconds": 160,
-      "topic_part": "Pembahasan Analogi Instrumen / Alat Kerja & Besaran Terkait"
+      "topic_part": "Penalaran Induktif: Pola Variasi Seiring (Concomitant Variation)"
     },
     "video_url": "https://www.youtube-nocookie.com/embed/Eau9uJJOH-c?start=160&rel=0",
     "video_title": "Analogi Profesi dan Instrumen Alat Kerja CPNS (Part 11)",
     "video_channel": "Privat Al Faiz",
     "video_timestamp": "02:40",
     "video_start_seconds": 160,
-    "video_topic_part": "Pembahasan Analogi Instrumen / Alat Kerja & Besaran Terkait",
+    "video_topic_part": "Penalaran Induktif: Pola Variasi Seiring (Concomitant Variation)",
     "is_active": 1
   },
   {
@@ -6757,7 +6757,7 @@ window.SKD_QUESTIONS = [
     "id": 127,
     "no": 127,
     "kategori": "TKP",
-    "subkategori": "TIK (Teknologi Informasi & Komunikasi)",
+    "subkategori": "Adaptasi terhadap Perkembangan TIK",
     "soal": "Instansi Anda baru saja meluncurkan sistem presensi dan pelaporan kinerja berbasis aplikasi digital baru. Banyak rekan kerja senior yang kesulitan mengoperasikannya. Sebagai pegawai yang lebih menguasai teknologi, tindakan Anda adalah...",
     "opsi": {
       "A": "Menggunakan aplikasi tersebut untuk diri sendiri saja agar pekerjaan cepat selesai",

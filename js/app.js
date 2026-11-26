@@ -2,7 +2,7 @@
  * ============================================================================
  * CAT ASSESSMENT SYSTEM - SKD CASN
  * Core Application Engine, Scoring Logic, SQLite History & Bank Soal CRUD
- * Conforms to PermenPAN-RB No. 321/2024 Standards
+ * Conforms to KepmenPAN-RB No. 674 Tahun 2026 Standards
  * ============================================================================
  */
 
@@ -499,7 +499,7 @@
 
     const tips = raw.tips || raw.trik || raw.rumus || 'Gunakan eliminasi opsi yang tidak logis dan cermati kata kunci pokok soal.';
     
-    const sumberNama = raw.sumber_nama || raw.sumber || 'KepmenPAN-RB No. 321';
+    const sumberNama = raw.sumber_nama || raw.sumber || 'KepmenPAN-RB No. 674 Tahun 2026';
     const sumberUrl = raw.sumber_url || 'https://menpan.go.id';
     const sumberHalaman = raw.sumber_halaman || '';
     const sumberNoSoal = raw.sumber_no_soal || `Butir #${id}`;
@@ -1733,7 +1733,7 @@
         return;
       }
       const script = document.createElement('script');
-      script.src = 'data/questions.js?v=20261124g';
+      script.src = 'data/questions.js?v=20261126';
       script.onload = () => resolve();
       script.onerror = () => resolve();
       document.head.appendChild(script);
@@ -1792,7 +1792,7 @@
       const hasImage = (q.has_image || q.gambar || q.media) ? 1 : 0;
       const imageData = q.gambar || q.media || q.image_data || null;
 
-      const sumberNama = q.sumber_nama || q.sumber || 'KepmenPAN-RB No. 321 Tahun 2024';
+      const sumberNama = q.sumber_nama || q.sumber || 'KepmenPAN-RB No. 674 Tahun 2026';
       const sumberUrl = q.sumber_url || 'https://menpan.go.id';
       const sumberHalaman = q.sumber_halaman || 'Lampiran Materi';
       const sumberNoSoal = q.sumber_no_soal || `Butir ${id}`;
@@ -1856,7 +1856,7 @@
       });
 
       // 1. Cek versi data dan IndexedDB
-      const DATA_VERSION = 'v6_enriched_130';
+      const DATA_VERSION = 'v7_kepmenpan674_2026';
       const storedVer = localStorage.getItem('CAT_DB_DATA_VERSION');
       let binary = null;
 
@@ -2787,7 +2787,7 @@
     if (DOM.formVideoStartSeconds) DOM.formVideoStartSeconds.value = q && q.video ? (q.video.startSeconds || '') : '';
 
     // Source Metadata
-    if (DOM.formSumberNama) DOM.formSumberNama.value = q ? (q.sumber_nama || q.sumber || '') : 'KepmenPAN-RB No. 321 Tahun 2024';
+    if (DOM.formSumberNama) DOM.formSumberNama.value = q ? (q.sumber_nama || q.sumber || '') : 'KepmenPAN-RB No. 674 Tahun 2026';
     if (DOM.formSumberUrl) DOM.formSumberUrl.value = q ? (q.sumber_url || '') : 'https://menpan.go.id';
     if (DOM.formSumberHalaman) DOM.formSumberHalaman.value = q ? (q.sumber_halaman || '') : '';
     if (DOM.formSumberNo) DOM.formSumberNo.value = q ? (q.sumber_no_soal || '') : '';
