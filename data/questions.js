@@ -3367,31 +3367,31 @@ window.SKD_QUESTIONS = [
     "subkategori": "Kemampuan Figural - Serial Gambar",
     "soal": "Perhatikan serial pola perubahan bentuk gambar berikut. Gambar berikutnya yang paling tepat melanjutkan pola serial tersebut adalah...",
     "opsi": {
-      "A": "Panah menunjuk ke arah Jam 9 (Barat) dengan lingkaran hitam di pangkal panah.",
-      "B": "Panah menunjuk ke arah Jam 6 (Selatan) dengan lingkaran putih di ujung panah.",
-      "C": "Panah menunjuk ke arah Jam 12 (Utara) dengan segitiga di ujungnya.",
-      "D": "Panah menunjuk ke arah Jam 3 (Timur) dengan lingkaran bergaris.",
-      "E": "Panah menunjuk ke arah Jam 9 (Barat) dengan lingkaran putih di ujungnya."
+      "A": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='66' height='66' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='38.0' y1='20' x2='38.0' y2='53' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='38.0,65 31.0,51 45.0,51' fill='#0f4c81'/><circle cx='38.0' cy='59' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2.2'/></svg>",
+      "B": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='66' height='66' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='20' y1='38.0' x2='53' y2='38.0' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='65,38.0 51,31.0 51,45.0' fill='#0f4c81'/><circle cx='21' cy='38.0' r='6' fill='#0f4c81' stroke='#0f4c81' stroke-width='2.2'/></svg>",
+      "C": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='66' height='66' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='60' y1='38.0' x2='27' y2='38.0' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='15,38.0 29,31.0 29,45.0' fill='#0f4c81'/><circle cx='59' cy='38.0' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2.2'/></svg>",
+      "D": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='66' height='66' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='60' y1='38.0' x2='27' y2='38.0' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='15,38.0 29,31.0 29,45.0' fill='#0f4c81'/><circle cx='21' cy='38.0' r='6' fill='#0f4c81' stroke='#0f4c81' stroke-width='2.2'/></svg>",
+      "E": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='66' height='66' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='38.0' y1='60' x2='38.0' y2='27' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='38.0,15 31.0,29 45.0,29' fill='#0f4c81'/><circle cx='38.0' cy='59' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2.2'/></svg>"
     },
-    "kunci": "A",
+    "kunci": "C",
     "bobot": {
-      "A": 5,
+      "A": 0,
       "B": 0,
-      "C": 0,
+      "C": 5,
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Analisis dua aturan serial gambar yang bergerak simultan:\n1. Rotasi Arah Panah: Panah berputar searah jarum jam sebesar 90 derajat secara berurutan:\n- Gambar 1: Menghadap Jam 12 (Utara)\n- Gambar 2: Menghadap Jam 3 (Timur)\n- Gambar 3: Menghadap Jam 6 (Selatan)\nMaka Gambar 4 harus berputar 90 derajat lagi menghadap Jam 9 (Barat).\n2. Elemen Bulatan Tambahan: Lingkaran berpindah posisi antara ujung dan pangkal panah secara selang-seling serta berubah warna (hitam-putih-hitam). Pada langkah ke-4 posisinya berada di pangkal dan berwarna hitam solid. Oleh karena itu, opsi A adalah kelanjutan pola yang paling tepat. [Pengayaan Materi: Amati satu elemen kunci (titik, arsiran, arah panah) per langkah untuk melacak rotasi (45/90/180 derajat) atau pencerminan (mirroring).]",
+    "pembahasan": "Analisis dua aturan serial gambar yang bergerak simultan:\n1. Rotasi Arah Panah: Panah berputar searah jarum jam sebesar 90 derajat secara berurutan: Gambar 1 menghadap Jam 12 (Atas), Gambar 2 menghadap Jam 3 (Kanan), Gambar 3 menghadap Jam 6 (Bawah). Maka Gambar 4 wajib berputar 90 derajat lagi menghadap Jam 9 (Kiri).\n2. Elemen Lingkaran Tambahan: Lingkaran berpindah posisi antara ujung dan pangkal panah secara selang-seling serta berganti warna (Ujung Hitam → Pangkal Putih → Ujung Hitam → Pangkal Putih). Pada langkah ke-4 posisinya berada di pangkal (kanan) dan berwarna putih (Opsi C).",
     "analisis_opsi": {
-      "A": "Benar (Kunci Jawaban), rotasi 90 derajat searah jarum jam menghasilkan arah Jam 9 (Barat) dan posisi lingkaran hitam sesuai siklus.",
-      "B": "Salah, arah panah tidak berputar dari langkah ke-3.",
-      "C": "Salah, bentuk ornamen berubah menjadi segitiga yang tidak ada dalam deret.",
-      "D": "Salah, arah Jam 3 merupakan bentuk langkah ke-2.",
-      "E": "Salah, warna dan posisi lingkaran tidak memenuhi aturan perubahan."
+      "A": "Salah, arah panah kembali ke bawah (Jam 6), bukan berputar 90° ke kiri.",
+      "B": "Salah, arah panah menghadap kanan (langkah ke-2) dan lingkaran berwarna hitam.",
+      "C": "Benar (Kunci Jawaban), panah berputar 90° searah jarum jam menghadap Jam 9 (kiri) dengan lingkaran putih di pangkal.",
+      "D": "Salah, lingkaran berada di ujung panah dan berwarna hitam (melanggar pola selang-seling).",
+      "E": "Salah, panah menghadap atas (posisi awal langkah ke-1)."
     },
     "tips": "Analisis Figural Serial: Pisahkan pengamatan menjadi 2 fokus: 1. Arah rotasi/sudut putar (searah atau berlawanan jarum jam), 2. Perubahan elemen minor (warna, jumlah sisi, posisi). Trik TIU Figural: Fokus pada satu komponen kecil terlebih dahulu untuk mengeliminasi 3-4 opsi salah secara instan.",
     "has_image": 1,
-    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='40' y1='60' x2='40' y2='20' stroke='#0f4c81' stroke-width='4' marker-end='url(#arrow)'/><circle cx='40' cy='20' r='6' fill='#0f4c81'/><rect x='85' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='100' y1='40' x2='140' y2='40' stroke='#0f4c81' stroke-width='4'/><circle cx='105' cy='40' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2'/><rect x='165' y='5' width='70' height='70' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='200' y1='20' x2='200' y2='60' stroke='#0f4c81' stroke-width='4'/><circle cx='200' cy='60' r='6' fill='#0f4c81'/><rect x='245' y='5' width='70' height='70' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='4' stroke-width='2'/><text x='275' y='45' font-size='20' fill='#64748b' text-anchor='middle'>?</text></svg>",
+    "gambar": "<svg width='320' height='80' viewBox='0 0 320 80' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='70' height='70' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='40.0' y1='60' x2='40.0' y2='27' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='40.0,15 33.0,29 47.0,29' fill='#0f4c81'/><circle cx='40.0' cy='21' r='6' fill='#0f4c81' stroke='#0f4c81' stroke-width='2.2'/><rect x='85' y='5' width='70' height='70' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='100' y1='40.0' x2='133' y2='40.0' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='145,40.0 131,33.0 131,47.0' fill='#0f4c81'/><circle cx='101' cy='40.0' r='6' fill='#ffffff' stroke='#0f4c81' stroke-width='2.2'/><rect x='165' y='5' width='70' height='70' rx='6' fill='#f8fafc' stroke='#0f4c81' stroke-width='2'/><line x1='200.0' y1='20' x2='200.0' y2='53' stroke='#0f4c81' stroke-width='3.5' stroke-linecap='round'/><polygon points='200.0,65 193.0,51 207.0,51' fill='#0f4c81'/><circle cx='200.0' cy='59' r='6' fill='#0f4c81' stroke='#0f4c81' stroke-width='2.2'/><rect x='245' y='5' width='70' height='70' rx='6' fill='#fef3c7' stroke='#d97706' stroke-width='2' stroke-dasharray='4,3'/><text x='280' y='48' font-family='sans-serif' font-size='24' font-weight='bold' fill='#b45309' text-anchor='middle'>?</text></svg>",
     "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf (Modul Figural Hal. 75)",
     "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf",
     "sumber_url": "https://cat.bkn.go.id/simulasi/",
@@ -3434,27 +3434,27 @@ window.SKD_QUESTIONS = [
     "subkategori": "Kemampuan Figural - Serial Gambar",
     "soal": "Perhatikan serial bangun geometri bertingkat: Segitiga (3 sisi) dengan 1 titik hitam di dalam -> Segiempat (4 sisi) dengan 2 titik hitam -> Segilima (5 sisi) dengan 3 titik hitam. Gambar berikutnya yang paling tepat adalah...",
     "opsi": {
-      "A": "Segienam (heksagon) dengan 4 titik hitam di dalamnya.",
-      "B": "Segitiga dengan 4 titik putih.",
-      "C": "Segidelapan (oktagon) dengan 5 titik hitam.",
-      "D": "Lingkaran dengan 3 titik hitam.",
-      "E": "Segilima dengan 4 titik hitam."
+      "A": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='68' height='68' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><polygon points='38,14 14,62 62,62' fill='none' stroke='#0f4c81' stroke-width='2.5'/><circle cx='28' cy='50' r='3.5' fill='#ffffff' stroke='#0f4c81' stroke-width='1.8'/><circle cx='38' cy='50' r='3.5' fill='#ffffff' stroke='#0f4c81' stroke-width='1.8'/><circle cx='48' cy='50' r='3.5' fill='#ffffff' stroke='#0f4c81' stroke-width='1.8'/><circle cx='38' cy='38' r='3.5' fill='#ffffff' stroke='#0f4c81' stroke-width='1.8'/></svg>",
+      "B": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='68' height='68' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><polygon points='38,12 63,30 53,62 23,62 13,30' fill='none' stroke='#0f4c81' stroke-width='2.5'/><circle cx='25' cy='42' r='3.2' fill='#0f4c81'/><circle cx='34' cy='42' r='3.2' fill='#0f4c81'/><circle cx='43' cy='42' r='3.2' fill='#0f4c81'/><circle cx='52' cy='42' r='3.2' fill='#0f4c81'/></svg>",
+      "C": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='68' height='68' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><circle cx='38' cy='38' r='24' fill='none' stroke='#0f4c81' stroke-width='2.5'/><circle cx='28' cy='38' r='3.5' fill='#0f4c81'/><circle cx='38' cy='38' r='3.5' fill='#0f4c81'/><circle cx='48' cy='38' r='3.5' fill='#0f4c81'/></svg>",
+      "D": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='68' height='68' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><polygon points='38,12 61,25 61,51 38,64 15,51 15,25' fill='none' stroke='#0f4c81' stroke-width='2.5'/><circle cx='31' cy='32' r='3.5' fill='#0f4c81'/><circle cx='45' cy='32' r='3.5' fill='#0f4c81'/><circle cx='31' cy='45' r='3.5' fill='#0f4c81'/><circle cx='45' cy='45' r='3.5' fill='#0f4c81'/></svg>",
+      "E": "<svg width='76' height='76' viewBox='0 0 76 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='68' height='68' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><polygon points='28,13 48,13 62,27 62,48 48,62 28,62 14,48 14,27' fill='none' stroke='#0f4c81' stroke-width='2.5'/><circle cx='26' cy='32' r='3' fill='#0f4c81'/><circle cx='38' cy='32' r='3' fill='#0f4c81'/><circle cx='50' cy='32' r='3' fill='#0f4c81'/><circle cx='32' cy='45' r='3' fill='#0f4c81'/><circle cx='44' cy='45' r='3' fill='#0f4c81'/></svg>"
     },
-    "kunci": "A",
+    "kunci": "D",
     "bobot": {
-      "A": 5,
+      "A": 0,
       "B": 0,
       "C": 0,
-      "D": 0,
+      "D": 5,
       "E": 0
     },
     "pembahasan": "Pola serial terdiri dari dua pertambahan konsisten bertingkat:\n1. Jumlah sisi bangun poligon luar: 3 (segitiga) -> 4 (segiempat) -> 5 (segilima) -> suku berikutnya harus berupa bangun bersisi 6 (segienam / heksagon).\n2. Jumlah titik di dalam bangun: 1 titik -> 2 titik -> 3 titik -> suku berikutnya harus memiliki 4 titik hitam di dalamnya.\nOleh karena itu, kombinasi bangun berikutnya adalah segienam dengan 4 titik hitam. [Pengayaan Materi: Amati satu elemen kunci (titik, arsiran, arah panah) per langkah untuk melacak rotasi (45/90/180 derajat) atau pencerminan (mirroring).]",
     "analisis_opsi": {
-      "A": "Benar (Kunci Jawaban), jumlah sisi bertambah 1 (5+1=6 sisi) dan jumlah titik bertambah 1 (3+1=4 titik).",
-      "B": "Salah, bentuk bangun mundur ke segitiga.",
-      "C": "Salah, melompat ke 8 sisi bukan 6 sisi.",
-      "D": "Salah, lingkaran tidak memiliki sudut/sisi lurus poligon.",
-      "E": "Salah, jumlah sisi bangun tidak bertambah."
+      "A": "Salah, bangun tetap segitiga dengan titik putih.",
+      "B": "Salah, bangun hanya segilima (kurang satu sisi) meski sudah 4 titik.",
+      "C": "Salah, berbentuk lingkaran dengan 3 titik hitam.",
+      "D": "Benar (Kunci Jawaban), bangun bertambah sisi menjadi Segienam (heksagon) dan berisi tepat 4 titik hitam.",
+      "E": "Salah, berbentuk segidelapan dengan 5 titik hitam (melompati segienam)."
     },
     "tips": "Trik Hitung Sisi & Titik: Catat angka pasangan (3 sisi, 1 titik) -> (4 sisi, 2 titik) -> (5 sisi, 3 titik) -> Selanjutnya pasti (6 sisi, 4 titik). [Referensi Modul: bahan_soal1/587266685-Soal-Kemampuan-Figural-3-full.pdf & bahan_soal2/MATERI TIU/FIGURAL.pdf]",
     "has_image": 1,
@@ -3501,27 +3501,27 @@ window.SKD_QUESTIONS = [
     "subkategori": "Kemampuan Figural - Penalaran Matriks",
     "soal": "Perhatikan matriks gambar 2x2 berikut. Tentukan gambar yang paling tepat untuk mengisi sel bertanda tanya (?) berdasarkan pola baris dan kolom!",
     "opsi": {
-      "A": "Segitiga hitam penuh dengan titik putih di tengahnya",
-      "B": "Segitiga putih kosong tanpa titik",
-      "C": "Lingkaran hitam penuh dengan titik putih di tengahnya",
-      "D": "Persegi hitam penuh dengan titik hitam",
-      "E": "Segitiga putih dengan garis tepi putus-putus"
+      "A": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><polygon points='44,16 20,60 68,60' fill='none' stroke='#1e293b' stroke-width='2.5'/></svg>",
+      "B": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><polygon points='44,16 20,60 68,60' fill='#1e293b' stroke='#1e293b' stroke-width='2.5'/><circle cx='44' cy='45' r='5.5' fill='#ffffff'/></svg>",
+      "C": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><circle cx='44' cy='38' r='22' fill='#1e293b'/><circle cx='44' cy='38' r='5.5' fill='#ffffff'/></svg>",
+      "D": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><rect x='24' y='18' width='40' height='40' fill='#1e293b'/><circle cx='44' cy='38' r='5.5' fill='#ffffff'/></svg>",
+      "E": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><polygon points='44,16 20,60 68,60' fill='none' stroke='#1e293b' stroke-width='2.5' stroke-dasharray='5,3'/></svg>"
     },
-    "kunci": "A",
+    "kunci": "B",
     "bobot": {
       "A": 0,
-      "B": 0,
+      "B": 5,
       "C": 0,
       "D": 0,
-      "E": 5
+      "E": 0
     },
     "pembahasan": "Pada matriks 2x2: Baris 1 menunjukkan perubahan dari Lingkaran putih bertitik hitam -> Lingkaran hitam penuh bertitik putih (inversi warna bangun dan titik). Baris 2 dimulai dengan Segitiga putih bertitik hitam. Maka sel kanan bawah (?) harus mengalami inversi warna yang sama: Segitiga hitam penuh dengan titik putih di tengahnya. [Pengayaan Materi: Sesuai KepmenPAN-RB No. 674 Tahun 2026, Ketidaksamaan Gambar diganti dengan Penalaran Matriks 2x2 atau 3x3.]",
     "analisis_opsi": {
-      "A": "Benar. Mempertahankan bentuk segitiga (baris 2) dan melakukan inversi warna (kolom 2).",
-      "B": "Salah. Tidak mengalami inversi warna dan menghilangkan titik.",
-      "C": "Salah. Bentuk berubah menjadi lingkaran (milik baris 1).",
-      "D": "Salah. Bentuk persegi tidak ada dalam matriks.",
-      "E": "Salah. Tidak sesuai aturan inversi warna."
+      "A": "Salah, segitiga tetap putih dan kehilangan titik pusat.",
+      "B": "Benar (Kunci Jawaban), menerapkan inversi warna baris pertama: segitiga menjadi hitam penuh dengan titik putih di tengah.",
+      "C": "Salah, bentuk bangun keliru kembali menjadi lingkaran.",
+      "D": "Salah, bentuk bangun berubah menjadi persegi.",
+      "E": "Salah, garis tepi putus-putus dan tidak mengalami inversi warna."
     },
     "tips": "Pada matriks figural 2x2, baca pola secara horizontal (perubahan bentuk/warna) dan vertikal (konsistensi atau rotasi).",
     "has_image": 1,
@@ -3568,27 +3568,27 @@ window.SKD_QUESTIONS = [
     "subkategori": "Kemampuan Figural - Penalaran Matriks",
     "soal": "Perhatikan matriks gambar 3x3 berikut. Tentukan isi sel pojok kanan bawah (?) yang paling tepat untuk melengkapi pola baris dan kolom!",
     "opsi": {
-      "A": "3 buah persegi hitam berjajar",
-      "B": "4 buah persegi hitam berjajar",
-      "C": "3 buah lingkaran hitam berjajar",
-      "D": "1 buah persegi putih kosong",
-      "E": "3 buah garis vertikal"
+      "A": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><circle cx='24' cy='38' r='7' fill='#0f172a'/><circle cx='44' cy='38' r='7' fill='#0f172a'/><circle cx='64' cy='38' r='7' fill='#0f172a'/></svg>",
+      "B": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><rect x='11' y='31' width='13' height='13' fill='#0f172a'/><rect x='29' y='31' width='13' height='13' fill='#0f172a'/><rect x='47' y='31' width='13' height='13' fill='#0f172a'/><rect x='65' y='31' width='13' height='13' fill='#0f172a'/></svg>",
+      "C": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><line x1='28' y1='18' x2='28' y2='58' stroke='#0f172a' stroke-width='3'/><line x1='44' y1='18' x2='44' y2='58' stroke='#0f172a' stroke-width='3'/><line x1='60' y1='18' x2='60' y2='58' stroke='#0f172a' stroke-width='3'/></svg>",
+      "D": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><rect x='33' y='27' width='22' height='22' fill='none' stroke='#0f172a' stroke-width='2.5'/></svg>",
+      "E": "<svg width='88' height='76' viewBox='0 0 88 76' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='80' height='68' rx='6' fill='#f8fafc' stroke='#334155' stroke-width='1.8'/><rect x='14' y='30' width='15' height='15' fill='#0f172a'/><rect x='36' y='30' width='15' height='15' fill='#0f172a'/><rect x='58' y='30' width='15' height='15' fill='#0f172a'/></svg>"
     },
-    "kunci": "A",
+    "kunci": "E",
     "bobot": {
       "A": 0,
       "B": 0,
       "C": 0,
-      "D": 5,
-      "E": 0
+      "D": 0,
+      "E": 5
     },
     "pembahasan": "Analisis Matriks 3x3: Setiap baris memiliki jenis objek yang sama (Baris 1: Garis vertikal; Baris 2: Lingkaran hitam; Baris 3: Persegi hitam). Setiap kolom menunjukkan jumlah objek yang bertambah +1 (Kolom 1: 1 objek; Kolom 2: 2 objek; Kolom 3: 3 objek). Maka sel baris 3 kolom 3 (?) harus berisi 3 buah persegi hitam berjajar. [Pengayaan Materi: Penalaran Matriks 3x3 menguji identifikasi dua aturan simultan: jenis objek per baris dan kuantitas per kolom.]",
     "analisis_opsi": {
-      "A": "Benar. Jenis objek Baris 3 (persegi hitam) dengan kuantitas Kolom 3 (3 buah).",
-      "B": "Salah. Jumlahnya 4 tidak sesuai pola kolom 3.",
-      "C": "Salah. Lingkaran adalah objek Baris 2.",
-      "D": "Salah. Jumlah dan warna tidak sesuai pola.",
-      "E": "Salah. Garis vertikal adalah objek Baris 1."
+      "A": "Salah, elemen berbentuk lingkaran (pola baris ke-2), bukan persegi.",
+      "B": "Salah, berisi 4 buah persegi hitam (kolom ke-3 berjumlah tepat 3 elemen).",
+      "C": "Salah, berbentuk 3 garis vertikal (pola baris ke-1).",
+      "D": "Salah, hanya berisi 1 persegi putih kosong.",
+      "E": "Benar (Kunci Jawaban), tepat mengikuti pola baris ke-3 (persegi hitam) dan kolom ke-3 (berjumlah 3 buah)."
     },
     "tips": "Pada matriks 3x3, pisahkan aturan Baris (jenis/bentuk) dan aturan Kolom (jumlah/rotasi).",
     "has_image": 1,
@@ -3633,33 +3633,33 @@ window.SKD_QUESTIONS = [
     "no": 64,
     "kategori": "TIU",
     "subkategori": "Kemampuan Figural - Analogi Gambar",
-    "soal": "Hubungan analogi gambar: Bangun luar berupa Lingkaran besar dan bangun dalam berupa Segitiga kecil hitam -> berubah menjadi Bangun luar Segitiga besar dan bangun dalam Lingkaran kecil putih. Jika premis kedua berupa Bangun luar Persegi besar dan bangun dalam Bintang kecil hitam, maka padanan gambar perubahannya adalah...",
+    "soal": "Perhatikan analogi hubungan perubahan gambar berikut. Gambar yang paling tepat untuk mengisi tanda tanya (?) adalah...",
     "opsi": {
-      "A": "Bangun luar Bintang besar dan bangun dalam Persegi kecil putih.",
-      "B": "Bangun luar Lingkaran besar dan bangun dalam Persegi kecil hitam.",
-      "C": "Bangun luar Persegi besar dan bangun dalam Bintang kecil putih.",
-      "D": "Bangun luar Bintang besar dan bangun dalam Segitiga kecil hitam.",
-      "E": "Dua buah persegi kecil saling bersinggungan."
+      "A": "<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='72' height='72' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><circle cx='40' cy='40' r='25' fill='none' stroke='#0f4c81' stroke-width='2.2'/><rect x='30' y='30' width='20' height='20' fill='#0f4c81'/></svg>",
+      "B": "<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='72' height='72' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><rect x='15' y='15' width='50' height='50' fill='none' stroke='#0f4c81' stroke-width='2.2'/><polygon points='40,28 43,35 51,35 45,40 47,48 40,43 33,48 35,40 29,35 37,35' fill='#ffffff' stroke='#0f4c81' stroke-width='1.8'/></svg>",
+      "C": "<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='72' height='72' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><polygon points='40,12 47,29 65,29 51,40 56,58 40,47 24,58 29,40 15,29 33,29' fill='none' stroke='#0f4c81' stroke-width='2.2'/><rect x='31' y='31' width='18' height='18' fill='#ffffff' stroke='#0f4c81' stroke-width='2'/></svg>",
+      "D": "<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='72' height='72' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><polygon points='40,12 47,29 65,29 51,40 56,58 40,47 24,58 29,40 15,29 33,29' fill='none' stroke='#0f4c81' stroke-width='2.2'/><polygon points='40,30 30,48 50,48' fill='#0f4c81'/></svg>",
+      "E": "<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='4' width='72' height='72' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><rect x='16' y='26' width='26' height='26' fill='none' stroke='#0f4c81' stroke-width='2'/><rect x='38' y='28' width='26' height='26' fill='none' stroke='#0f4c81' stroke-width='2'/></svg>"
     },
-    "kunci": "A",
+    "kunci": "C",
     "bobot": {
-      "A": 5,
+      "A": 0,
       "B": 0,
-      "C": 0,
+      "C": 5,
       "D": 0,
       "E": 0
     },
-    "pembahasan": "Analisis aturan analogi perubahan dari Gambar 1 ke Gambar 2:\n1. Bangun yang semula di dalam membesar menjadi bangun di luar.\n2. Bangun yang semula di luar mengecil dan masuk ke dalam.\n3. Warna arsiran elemen yang berpindah ke dalam berubah dari hitam pekat (solid) menjadi putih bersih (inversi warna).\nTerapkan aturan yang sama pada premis kedua (Luar Persegi, Dalam Bintang hitam):\n1. Bintang membesar menjadi bangun luar.\n2. Persegi mengecil menjadi bangun di dalam.\n3. Warna persegi di dalam menjadi putih bersih.\nHasil akhirnya adalah: Bangun luar Bintang besar dan bangun dalam Persegi kecil putih. [Pengayaan Materi: Pada soal analogi verbal, tentukan hubungan kata paling spesifik (bahan-produk, alat-profesi, sebab-akibat, derajat intensitas) dan pastikan arah hubungannya konsisten (kiri ke kanan).]",
+    "pembahasan": "Analisis aturan analogi perubahan dari Gambar 1 ke Gambar 2:\n1. Bangun yang semula di dalam membesar menjadi bangun luar (Segitiga keluar membesar).\n2. Bangun yang semula di luar mengecil masuk ke dalam (Lingkaran masuk mengecil).\n3. Bangun yang masuk ke dalam berubah warna dari hitam penuh menjadi putih outline.\nTerapkan aturan yang sama pada pasangan kedua (Luar Persegi besar, Dalam Bintang kecil hitam):\n1. Bintang membesar menjadi bangun luar.\n2. Persegi mengecil masuk menjadi bangun dalam.\n3. Persegi di dalam berwarna putih outline (Opsi C).",
     "analisis_opsi": {
-      "A": "Benar (Kunci Jawaban), posisi bangun bertukar tempat (luar jadi dalam, dalam jadi luar) dan warna bangun dalam berubah menjadi putih.",
-      "B": "Salah, memunculkan lingkaran yang tidak ada pada pasangan premis kedua.",
-      "C": "Salah, posisi bangun tidak bertukar tempat.",
-      "D": "Salah, segitiga bukan bagian dari pasangan premis kedua.",
-      "E": "Salah, menyimpang dari aturan penukaran analogi bangun."
+      "A": "Salah, memunculkan lingkaran yang tidak ada pada pasangan premis kedua serta persegi hitam.",
+      "B": "Salah, posisi persegi dan bintang tidak bertukar tempat.",
+      "C": "Benar (Kunci Jawaban), bintang membesar di luar dan persegi mengecil di dalam dengan warna putih outline.",
+      "D": "Salah, segitiga bukan bagian dari pasangan gambar kedua.",
+      "E": "Salah, menampilkan dua persegi bersinggungan yang menyimpang dari aturan analogi."
     },
     "tips": "Formula Analogi Gambar: Identifikasi 3 hal: 1. Posisi bertukar (Luar <-> Dalam), 2. Ukuran berubah (Besar <-> Kecil), 3. Warna/arsiran berinversi (Hitam <-> Putih). Trik TIU: Buat kalimat penghubung yang tepat untuk pasangan kata pertama, lalu terapkan kalimat yang sama persis pada pasangan kedua.",
-    "has_image": 0,
-    "gambar": null,
+    "has_image": 1,
+    "gambar": "<svg width='360' height='86' viewBox='0 0 360 86' xmlns='http://www.w3.org/2000/svg' style='background:#fff;border:1px solid #cbd5e1;border-radius:8px;'><rect x='8' y='8' width='70' height='70' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><circle cx='43' cy='43' r='26' fill='none' stroke='#0f4c81' stroke-width='2.2'/><polygon points='43,29 30,53 56,53' fill='#0f4c81'/><text x='86' y='50' font-family='sans-serif' font-size='20' font-weight='bold' fill='#0f4c81' text-anchor='middle'>:</text><rect x='96' y='8' width='70' height='70' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><polygon points='131,15 104,64 158,64' fill='none' stroke='#0f4c81' stroke-width='2.2'/><circle cx='131' cy='47' r='11' fill='#ffffff' stroke='#0f4c81' stroke-width='2'/><text x='180' y='50' font-family='sans-serif' font-size='20' font-weight='bold' fill='#334155' text-anchor='middle'>=</text><rect x='194' y='8' width='70' height='70' rx='6' fill='#f8fafc' stroke='#cbd5e1' stroke-width='1.5'/><rect x='204' y='18' width='50' height='50' fill='none' stroke='#0f4c81' stroke-width='2.2'/><polygon points='229,31 232,38 240,38 234,43 236,51 229,46 222,51 224,43 218,38 226,38' fill='#0f4c81'/><text x='272' y='50' font-family='sans-serif' font-size='20' font-weight='bold' fill='#0f4c81' text-anchor='middle'>:</text><rect x='282' y='8' width='70' height='70' rx='6' fill='#fef3c7' stroke='#d97706' stroke-width='2' stroke-dasharray='4,3'/><text x='317' y='52' font-family='sans-serif' font-size='24' font-weight='bold' fill='#b45309' text-anchor='middle'>?</text></svg>",
     "sumber": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf (Modul Figural Hal. 79)",
     "sumber_nama": "Panduan Uji Penalaran Spasial Figural & Bangun Ruang BKN | Ref: bahan_soal2/MATERI TIU/KHUSUS SOAL TIU/ANALISA SOAL TIU.pdf",
     "sumber_url": "https://cat.bkn.go.id/simulasi/",

@@ -4152,6 +4152,18 @@ main,
   display: block;
 }
 
+.option-svg-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-svg-wrap svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 480px) {
   .option-image-thumb {
     max-width: 130px;

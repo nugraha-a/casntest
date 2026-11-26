@@ -359,6 +359,9 @@
     if (/^assets\/bkn\/[^\s"'<>]+\.(jpg|jpeg|png|webp)$/i.test(str)) {
       return `<img src="${escapeHTML(str)}" class="option-image-thumb" alt="Pilihan Gambar" loading="lazy">`;
     }
+    if (/^<svg[\s>]/i.test(str) && /<\/svg>$/i.test(str) && !/<script|on\w+\s*=/i.test(str)) {
+      return `<div class="option-svg-wrap">${str}</div>`;
+    }
     return escapeHTML(str);
   }
 
@@ -1741,7 +1744,7 @@
         return;
       }
       const script = document.createElement('script');
-      script.src = 'data/questions.js?v=20261126b';
+      script.src = 'data/questions.js?v=20261126c';
       script.onload = () => resolve();
       script.onerror = () => resolve();
       document.head.appendChild(script);
@@ -1864,7 +1867,7 @@
       });
 
       // 1. Cek versi data dan IndexedDB
-      const DATA_VERSION = 'v8_bkn_240';
+      const DATA_VERSION = 'v9_figural_svg_opts';
       const storedVer = localStorage.getItem('CAT_DB_DATA_VERSION');
       let binary = null;
 
