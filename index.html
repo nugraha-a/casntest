@@ -6,7 +6,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>CAT Assessment System - SKD CASN</title>
   <meta name="description" content="Sistem Simulasi CAT Terpadu - Seleksi Kompetensi Dasar (SKD) CASN CPNS & PPPK dengan Mode Simulasi Ujian Terkunci, Mode Belajar Mandiri, dan Riwayat Evaluasi Sesi.">
-  <link rel="stylesheet" href="css/style.css?v=20261126c">
+  <link rel="stylesheet" href="css/style.css?v=20261126d">
   <style>
     /* Critical Auth Gate CSS (mencegah konten bocor / cache lama) */
     body.auth-locked { overflow: hidden !important; }
@@ -208,6 +208,17 @@
               <span>Playable video YouTube untuk numerik/logika</span>
             </li>
           </ul>
+          <div class="portal-config-box">
+            <div class="portal-config-row">
+              <label class="portal-config-label" for="study-package-select">Pilih Paket Soal Belajar:</label>
+              <select class="portal-select" id="study-package-select">
+                <option value="all">Semua Bank Soal Aktif (240 Soal)</option>
+                <option value="standar_2026_pool">Pool Resmi 674/2026 (236 Soal)</option>
+                <option value="fokus_2026">Fokus Kisi-Kisi Baru 2026 — ID 1–130 (130 Soal)</option>
+                <option value="bkn_v2">Arsip Resmi CAT BKN v2.0 (110 Soal)</option>
+              </select>
+            </div>
+          </div>
           <button type="button" class="btn-portal-action btn-portal-study" id="btn-start-study">
             <span>Masuk Mode Belajar &rarr;</span>
           </button>
@@ -225,24 +236,53 @@
           </div>
           <h2 class="portal-card-title">Simulasi Ujian CAT</h2>
           <p class="portal-card-desc">
-            Replikasi persis ujian riil: waktu 100 menit, 110 butir soal, navigasi grid, penanda ragu-ragu, dan auto-submit saat waktu habis. Mode belajar dinonaktifkan sepenuhnya agar fokus ujian 100%.
+            Replikasi persis ujian riil dengan timer &amp; auto-submit wajib. Pilih paket ujian (Standar 674/2026 atau Arsip BKN v2.0), jalur kebutuhan (Umum, Cum Laude/Diaspora, Disabilitas/Papua), serta durasi resmi.
           </p>
           <ul class="portal-card-features">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Timer 100 Menit + Auto-Submit wajib</span>
+              <span>Komposisi resmi 110 Soal (30 TWK, 35 TIU, 45 TKP)</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Mode belajar terkunci & disembunyikan</span>
+              <span>Mode belajar terkunci &amp; bebas gangguan</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Penilaian resmi PG (TWK 65, TIU 80, TKP 166)</span>
+              <span>Evaluasi Passing Grade sesuai Lampiran II</span>
             </li>
           </ul>
+          <div class="portal-config-box">
+            <div class="portal-config-row">
+              <label class="portal-config-label" for="sim-package-select">Paket Soal Simulasi:</label>
+              <select class="portal-select" id="sim-package-select">
+                <option value="standar_2026">Standar 674/2026 (110 Soal: 30 TWK, 35 TIU, 45 TKP)</option>
+                <option value="standar_2026_random">Standar 674/2026 Acak (110 Soal dari Pool 236)</option>
+                <option value="bkn_v2">Arsip Resmi CAT BKN v2.0 (110 Soal Asli)</option>
+                <option value="all">Marathon Bank Soal Lengkap (240 Soal Aktif)</option>
+              </select>
+            </div>
+            <div class="portal-config-split">
+              <div class="portal-config-row">
+                <label class="portal-config-label" for="sim-track-select">Jalur Kebutuhan (PG):</label>
+                <select class="portal-select" id="sim-track-select">
+                  <option value="umum">Umum (65 / 80 / 166)</option>
+                  <option value="cumlaude_diaspora">Cum Laude / Diaspora (≥311, TIU ≥85)</option>
+                  <option value="disabilitas_papua">Disabilitas / Papua (≥286, TIU ≥60)</option>
+                </select>
+              </div>
+              <div class="portal-config-row">
+                <label class="portal-config-label" for="sim-duration-select">Durasi Timer:</label>
+                <select class="portal-select" id="sim-duration-select">
+                  <option value="6000">100 Menit (Standar)</option>
+                  <option value="7800">130 Menit (Sensorik Netra)</option>
+                  <option value="13200">220 Menit (Marathon 240)</option>
+                </select>
+              </div>
+            </div>
+          </div>
           <button type="button" class="btn-portal-action btn-portal-sim" id="btn-start-simulation">
-            <span>Mulai Simulasi Ujian (100 Menit) &rarr;</span>
+            <span id="btn-start-sim-label">Mulai Simulasi (110 Soal • 100 Menit) &rarr;</span>
           </button>
         </article>
 
@@ -316,27 +356,44 @@
 
       <!-- Passing Grade Quick Info Bar -->
       <aside class="landing-pg-info-bar">
-        <div class="pg-info-left">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cat-primary)" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-          <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-main);">Nilai Ambang Batas Resmi SKD (KepmenPAN-RB No. 674 Tahun 2026):</span>
+        <div class="pg-info-top-row">
+          <div class="pg-info-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cat-primary)" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span style="font-size: 0.875rem; font-weight: 700; color: var(--text-main);">Nilai Ambang Batas &amp; Kisi-Kisi Resmi SKD (KepmenPAN-RB No. 674 Tahun 2026)</span>
+          </div>
+          <button type="button" class="btn-nav btn-kisi-guide" id="btn-open-kisi-modal">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <span>Panduan Kisi-Kisi &amp; Indikator 674/2026</span>
+          </button>
         </div>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <div class="pg-badges-wrap">
           <div class="pg-badge-item">
-            <span>TWK (30 Soal):</span>
-            <strong>Passing Grade 65</strong>
+            <span>Umum — TWK (30):</span>
+            <strong>&ge; 65</strong>
           </div>
           <div class="pg-badge-item">
-            <span>TIU (35 Soal):</span>
-            <strong>Passing Grade 80</strong>
+            <span>Umum — TIU (35):</span>
+            <strong>&ge; 80</strong>
           </div>
           <div class="pg-badge-item">
-            <span>TKP (45 Soal):</span>
-            <strong>Passing Grade 166</strong>
+            <span>Umum — TKP (45):</span>
+            <strong>&ge; 166</strong>
+          </div>
+          <div class="pg-badge-item" style="background: #f0fdf4; border-color: #bbf7d0;">
+            <span>Cum Laude / Diaspora:</span>
+            <strong style="color: #15803d;">Total &ge; 311 • TIU &ge; 85</strong>
+          </div>
+          <div class="pg-badge-item" style="background: #fefce8; border-color: #fde047;">
+            <span>Disabilitas / Papua:</span>
+            <strong style="color: #a16207;">Total &ge; 286 • TIU &ge; 60 (Netra 130 mnt)</strong>
           </div>
           <div class="pg-badge-item" style="background: #eff6ff; border-color: #bfdbfe;">
-            <span>Total Maks:</span>
+            <span>Maksimum (110 Soal):</span>
             <strong>550 Poin</strong>
           </div>
         </div>
@@ -367,7 +424,7 @@
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
           </svg>
-          <span>Simulasi Terkunci (100 Menit)</span>
+          <span id="badge-sim-locked-text">Simulasi Terkunci (100 Menit)</span>
         </div>
 
         <!-- Mode Tabs (Hanya Tampil di Mode Belajar atau Review, Terkunci di Simulasi) -->
@@ -379,6 +436,17 @@
             </svg>
             <span>Mode Belajar Mandiri</span>
             <span class="mode-badge">Bahas Langsung</span>
+          </button>
+
+          <select class="subnav-package-select study-mode-only" id="study-subnav-package" aria-label="Pilih Paket Soal Mode Belajar" title="Ganti paket soal belajar">
+            <option value="all">Paket: Semua (240)</option>
+            <option value="standar_2026_pool">Paket: 674/2026 (236)</option>
+            <option value="fokus_2026">Paket: Fokus Baru (130)</option>
+            <option value="bkn_v2">Paket: CAT BKN v2.0 (110)</option>
+          </select>
+
+          <button type="button" class="btn-subnav-guide study-mode-only" id="btn-exam-open-kisi" title="Buka Panduan Kisi-Kisi &amp; Indikator KepmenPAN-RB 674/2026">
+            <span>Indikator 674/2026</span>
           </button>
 
           <button type="button" class="mode-tab-btn" id="tab-mode-review" data-mode="review" role="tab" aria-selected="false" style="display: none;">
@@ -453,6 +521,7 @@
                 <span id="badge-category-text">TWK - Nasionalisme</span>
               </span>
               <span class="badge-question-weight" id="badge-question-weight">Bobot: Benar 5, Salah 0</span>
+              <span class="badge-legacy-note" id="badge-legacy-note" style="display: none;">Arsip BKN v2.0 (Pra-2026)</span>
             </div>
             <div class="question-status-group">
               <span class="question-status-pill unanswered" id="question-status-pill">Belum Dijawab</span>
@@ -913,11 +982,11 @@
           <thead>
             <tr>
               <th>ID Sesi</th>
-              <th>Tanggal & Waktu</th>
-              <th>TWK (PG: 65)</th>
-              <th>TIU (PG: 80)</th>
-              <th>TKP (PG: 166)</th>
-              <th>Total Skor (Max 550)</th>
+              <th>Waktu &amp; Paket/Jalur</th>
+              <th>TWK</th>
+              <th>TIU</th>
+              <th>TKP</th>
+              <th>Total Skor</th>
               <th>Status Kelulusan</th>
               <th>Aksi Evaluasi</th>
             </tr>
@@ -1153,6 +1222,10 @@
             <span class="cert-info-label">Durasi Ujian:</span>
             <span class="cert-info-val" id="cert-exam-duration">100 Menit</span>
           </div>
+          <div class="cert-info-item">
+            <span class="cert-info-label">Jalur &amp; Paket Ujian:</span>
+            <span class="cert-info-val" id="cert-exam-track">Kebutuhan Umum • Standar 674/2026</span>
+          </div>
         </div>
 
         <div class="score-table-wrap">
@@ -1171,8 +1244,8 @@
                 <td style="text-align: left; padding-left: 1rem;">
                   <strong>Tes Wawasan Kebangsaan (TWK)</strong>
                 </td>
-                <td>30 Soal</td>
-                <td><strong>65</strong></td>
+                <td id="score-cnt-twk">30 Soal</td>
+                <td><strong id="score-pg-twk">65</strong></td>
                 <td><span id="score-val-twk" style="font-size: 1.1rem; font-weight: 800;">0</span></td>
                 <td><span class="score-badge-status fail" id="badge-status-twk">TIDAK LULUS</span></td>
               </tr>
@@ -1180,8 +1253,8 @@
                 <td style="text-align: left; padding-left: 1rem;">
                   <strong>Tes Inteligensi Umum (TIU)</strong>
                 </td>
-                <td>35 Soal</td>
-                <td><strong>80</strong></td>
+                <td id="score-cnt-tiu">35 Soal</td>
+                <td><strong id="score-pg-tiu">80</strong></td>
                 <td><span id="score-val-tiu" style="font-size: 1.1rem; font-weight: 800;">0</span></td>
                 <td><span class="score-badge-status fail" id="badge-status-tiu">TIDAK LULUS</span></td>
               </tr>
@@ -1189,8 +1262,8 @@
                 <td style="text-align: left; padding-left: 1rem;">
                   <strong>Tes Karakteristik Pribadi (TKP)</strong>
                 </td>
-                <td>45 Soal</td>
-                <td><strong>166</strong></td>
+                <td id="score-cnt-tkp">45 Soal</td>
+                <td><strong id="score-pg-tkp">166</strong></td>
                 <td><span id="score-val-tkp" style="font-size: 1.1rem; font-weight: 800;">0</span></td>
                 <td><span class="score-badge-status fail" id="badge-status-tkp">TIDAK LULUS</span></td>
               </tr>
@@ -1198,9 +1271,9 @@
                 <td style="text-align: left; padding-left: 1rem;">
                   <strong>TOTAL SKOR SKD</strong>
                 </td>
-                <td><strong>110 Soal</strong></td>
-                <td><strong>311 (Kumulatif)</strong></td>
-                <td><span id="score-val-total" style="font-size: 1.3rem; font-weight: 900; color: var(--cat-primary);">0</span> / 550</td>
+                <td><strong id="score-cnt-total">110 Soal</strong></td>
+                <td><strong id="score-pg-total">311 (Kumulatif)</strong></td>
+                <td><span id="score-val-total" style="font-size: 1.3rem; font-weight: 900; color: var(--cat-primary);">0</span> / <span id="score-max-total">550</span></td>
                 <td><span class="score-badge-status fail" id="badge-status-total">TIDAK MEMENUHI</span></td>
               </tr>
             </tbody>
@@ -1650,6 +1723,74 @@
     </div>
   </div>
 
+  <!-- ======================================================================
+       MODAL 6: PANDUAN KISI-KISI & INDIKATOR RESMI KEPMENPAN-RB 674/2026
+       ====================================================================== -->
+  <div class="modal-backdrop" id="modal-kisi-kisi" role="dialog" aria-modal="true" aria-labelledby="kisi-modal-title">
+    <div class="modal-dialog modal-detail-dialog">
+      <header class="form-modal-header">
+        <h3 class="form-modal-title" id="kisi-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          <span>Kisi-Kisi &amp; Indikator Resmi KepmenPAN-RB No. 674 Tahun 2026</span>
+        </h3>
+        <button type="button" class="btn-modal-close" id="btn-close-kisi-x" aria-label="Tutup Panduan">&times;</button>
+      </header>
+
+      <div class="detail-modal-body">
+        <div class="kisi-section-card">
+          <div class="kisi-section-title">A. Tes Wawasan Kebangsaan (TWK — 30 Soal, Maks 150, PG Umum 65)</div>
+          <ul class="kisi-list">
+            <li><strong>1. Nasionalisme:</strong> Memahami, menghayati, dan mengaktualisasikan sikap cinta tanah air, kesadaran berbangsa &amp; bernegara, penghargaan keberagaman, komitmen persatuan &amp; kesatuan demi cita-cita nasional dengan mempertahankan identitas nasional.</li>
+            <li><strong>2. Integritas:</strong> Keselarasan pikiran, perkataan, sikap, dan tindakan berdasarkan kejujuran, tanggung jawab, konsistensi, keteguhan moral, serta komitmen terhadap kepentingan bangsa dan negara.</li>
+            <li><strong>3. Bela Negara:</strong> Kecintaan tanah air, kesadaran berbangsa &amp; bernegara, kesetiaan Pancasila, kerelaan berkorban, kemampuan awal bela negara sesuai peran, tanggung jawab, dan peraturan perundangan guna menjaga kedaulatan, keutuhan wilayah, dan keselamatan bangsa.</li>
+            <li><strong>4. Empat Konsensus Kebangsaan</strong> <em>(pengganti Pilar Negara)</em>: Pancasila (dasar &amp; ideologi), UUD 1945 (hukum dasar tertulis), NKRI (bentuk negara), dan Bhinneka Tunggal Ika (semboyan persatuan dalam keberagaman).</li>
+            <li><strong>5. Bahasa Indonesia</strong> <em>(pengganti Bahasa Negara)</em>: Pengetahuan kebahasaan dan kemampuan berbahasa Indonesia untuk memahami, menggunakan, mengevaluasi, dan merefleksi informasi dalam kehidupan bermasyarakat, berbangsa, dan bernegara.</li>
+          </ul>
+        </div>
+
+        <div class="kisi-section-card">
+          <div class="kisi-section-title">B. Tes Inteligensi Umum (TIU — 35 Soal, Maks 175, PG Umum 80)</div>
+          <ul class="kisi-list">
+            <li><strong>1. Kemampuan Verbal:</strong> Silogisme, <strong>Penalaran Induktif</strong> <em>(baru: mencari pola/prinsip umum)</em>, dan Analitis <em>(diperinci: menganalisis informasi berdasarkan syarat dan batasan)</em>. <em>Catatan: Analogi verbal dihapus.</em></li>
+            <li><strong>2. Kemampuan Numerik:</strong> Berhitung, Deret Angka, Perbandingan Kuantitatif <em>(menganalisis 2 atau 3 data)</em>, dan Soal Cerita.</li>
+            <li><strong>3. Kemampuan Figural:</strong> Serial gambar, Analogi gambar, dan <strong>Penalaran Matriks</strong> <em>(baru: memahami pola melalui berbagai macam perspektif)</em>. <em>Catatan: Ketidaksamaan gambar dihapus.</em></li>
+          </ul>
+        </div>
+
+        <div class="kisi-section-card">
+          <div class="kisi-section-title">C. Tes Karakteristik Pribadi (TKP — 45 Soal, Maks 225, PG Umum 166)</div>
+          <ul class="kisi-list">
+            <li><strong>1. Pelayanan Publik:</strong> Keramahan, kecekatan, efektivitas, efisiensi tanpa pamrih, serta perbaikan kualitas pelayanan publik secara berkesinambungan.</li>
+            <li><strong>2. Jejaring Kerja:</strong> Membangun &amp; memelihara hubungan kerja serta berkolaborasi efektif internal/eksternal dengan melibatkan peran aktif berbagai pihak.</li>
+            <li><strong>3. Sosial Budaya:</strong> Menjaga hubungan positif, menghargai keragaman sosial budaya, menciptakan komunitas kerja yang harmonis dan terintegrasi.</li>
+            <li><strong>4. Adaptasi terhadap Perkembangan TIK:</strong> Penyesuaian, penerimaan, dan pemanfaatan perkembangan TIK secara bijak berdasarkan prinsip etis.</li>
+            <li><strong>5. Profesionalisme:</strong> Melaksanakan tugas dan fungsi secara efektif berdasarkan keahlian, akuntabilitas, integritas, dan komitmen berkontribusi bagi organisasi.</li>
+            <li><strong>6. Anti Radikalisme:</strong> Bertindak bijak dan menolak sikap/tindakan kekerasan atau paksaan terhadap keyakinan agama, politik, atau aliran, serta menerima perbedaan ideologi yang tidak bertentangan dengan ideologi bangsa.</li>
+          </ul>
+        </div>
+
+        <div class="kisi-section-card" style="background: #f8fafc;">
+          <div class="kisi-section-title">D. Durasi, Nilai Ambang Batas (Lampiran II), &amp; Penggunaan Nilai SKD 2024</div>
+          <ul class="kisi-list">
+            <li><strong>Durasi Ujian:</strong> 100 menit (Umum) atau <strong>130 menit</strong> (pelamar penyandang disabilitas sensorik netra pada kebutuhan khusus disabilitas).</li>
+            <li><strong>Kebutuhan Umum:</strong> TWK &ge; 65, TIU &ge; 80, TKP &ge; 166.</li>
+            <li><strong>Cum Laude &amp; Diaspora:</strong> Nilai Kumulatif &ge; 311 dan TIU &ge; 85.</li>
+            <li><strong>Disabilitas &amp; Putra/Putri Papua:</strong> Nilai Kumulatif &ge; 286 dan TIU &ge; 60.</li>
+            <li><strong>Olahragawan Berprestasi:</strong> Nilai terendah pelamar kebutuhan khusus olahragawan berprestasi.</li>
+            <li><strong>Nilai SKD TA 2024:</strong> Boleh dipakai kembali pada SKD 2026 apabila NIK sama, kualifikasi jenjang pendidikan sama, memenuhi Passing Grade 2026 sesuai jenis kebutuhan, lulus seleksi administrasi 2026, dan tidak mengikuti SKD 2026.</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="form-modal-footer">
+        <button type="button" class="btn-primary-action" id="btn-close-kisi">Tutup Panduan</button>
+      </footer>
+    </div>
+  </div>
+
   <!-- SQLite WebAssembly Driver (Local with CDN fallback) -->
   <script src="js/sql-wasm.js"></script>
   <script>
@@ -1659,6 +1800,6 @@
   </script>
 
   <!-- Application Engine (questions.js lazy-loaded only if SQLite fallback needed) -->
-  <script src="js/app.js?v=20261126c"></script>
+  <script src="js/app.js?v=20261126d"></script>
 </body>
 </html>

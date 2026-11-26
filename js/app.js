@@ -21,6 +21,49 @@
     AUTH_HASH: '82f5bacfb16f052a221735719214613fa29d3110c5295ff5ba38195267d387bd',
     RATE_LIMIT_KEY: 'CAT_AUTH_RATE_LIMIT',
     EXAM_DURATION_SECONDS: 100 * 60, // 100 minutes (6,000 seconds)
+    TRACKS: {
+      umum: {
+        id: 'umum',
+        label: 'Kebutuhan Umum',
+        shortLabel: 'Umum',
+        twk: 65,
+        tiu: 80,
+        tkp: 166,
+        total: 311,
+        requiresAllSubtests: true,
+        desc: 'TWK >= 65, TIU >= 80, TKP >= 166'
+      },
+      cumlaude_diaspora: {
+        id: 'cumlaude_diaspora',
+        label: 'Cum Laude / Diaspora',
+        shortLabel: 'Cum Laude / Diaspora',
+        twk: null,
+        tiu: 85,
+        tkp: null,
+        total: 311,
+        requiresAllSubtests: false,
+        desc: 'Kumulatif >= 311 dan TIU >= 85'
+      },
+      disabilitas_papua: {
+        id: 'disabilitas_papua',
+        label: 'Disabilitas / Putra-Putri Papua',
+        shortLabel: 'Disabilitas / Papua',
+        twk: null,
+        tiu: 60,
+        tkp: null,
+        total: 286,
+        requiresAllSubtests: false,
+        desc: 'Kumulatif >= 286 dan TIU >= 60'
+      }
+    },
+    PACKAGES: {
+      standar_2026: { label: 'Standar 674/2026 (110 Soal)', shortLabel: 'Standar 674/2026' },
+      standar_2026_random: { label: 'Standar 674/2026 Acak (110 Soal)', shortLabel: 'Standar 674/2026 Acak' },
+      standar_2026_pool: { label: 'Pool Resmi 674/2026 (236 Soal)', shortLabel: 'Pool 674/2026' },
+      fokus_2026: { label: 'Fokus Kisi-Kisi Baru 2026 (130 Soal)', shortLabel: 'Fokus 2026 (1–130)' },
+      bkn_v2: { label: 'Arsip Resmi CAT BKN v2.0 (110 Soal)', shortLabel: 'Arsip CAT BKN v2.0' },
+      all: { label: 'Semua Bank Soal Aktif', shortLabel: 'Marathon Lengkap' }
+    },
     PASSING_GRADES: {
       TWK: 65,  // Nilai Ambang Batas TWK
       TIU: 80,  // Nilai Ambang Batas TIU
@@ -47,7 +90,12 @@
     currentScreen: 'landing',     // 'landing' | 'exam' | 'history' | 'bank-soal'
     mode: 'simulasi',             // 'simulasi' | 'belajar' | 'review'
     currentIndex: 0,              // 0-indexed across normalized questions
-    questions: [],                // Normalized active questions list for simulation/study
+    allActiveQuestions: [],       // Full active questions list from SQLite
+    questions: [],                // Active packet questions list for simulation/study
+    examPackage: 'standar_2026',  // 'standar_2026' | 'standar_2026_random' | 'bkn_v2' | 'all'
+    studyPackage: 'all',          // 'all' | 'standar_2026_pool' | 'fokus_2026' | 'bkn_v2'
+    track: 'umum',                // 'umum' | 'cumlaude_diaspora' | 'disabilitas_papua'
+    examDurationSeconds: CONFIG.EXAM_DURATION_SECONDS,
     allBankQuestions: [],         // Full questions list (active + inactive) for Bank Soal
     answers: {},                  // { [qId]: 'A' | 'B' | 'C' | 'D' | 'E' }
     ragu: {},                     // { [qId]: boolean }
@@ -107,15 +155,24 @@
 
     // Landing Screen Elements
     btnStartStudy: document.getElementById('btn-start-study'),
+    studyPackageSelect: document.getElementById('study-package-select'),
     btnStartSimulation: document.getElementById('btn-start-simulation'),
+    btnStartSimLabel: document.getElementById('btn-start-sim-label'),
+    simPackageSelect: document.getElementById('sim-package-select'),
+    simTrackSelect: document.getElementById('sim-track-select'),
+    simDurationSelect: document.getElementById('sim-duration-select'),
+    btnOpenKisiModal: document.getElementById('btn-open-kisi-modal'),
     btnViewHistory: document.getElementById('btn-view-history'),
     btnViewBankSoal: document.getElementById('btn-view-bank-soal'),
 
     // Exam Subnav & Mode Lock
     btnExamBackHome: document.getElementById('btn-exam-back-home'),
     badgeSimLocked: document.getElementById('badge-sim-locked'),
+    badgeSimLockedText: document.getElementById('badge-sim-locked-text'),
     modeTabsWrap: document.getElementById('mode-tabs-wrap'),
     tabModeBelajar: document.getElementById('tab-mode-belajar'),
+    studySubnavPackage: document.getElementById('study-subnav-package'),
+    btnExamOpenKisi: document.getElementById('btn-exam-open-kisi'),
     tabModeReview: document.getElementById('tab-mode-review'),
     categoryFilterBtns: document.querySelectorAll('[data-category-filter]'),
     countFilterAll: document.getElementById('count-filter-all'),
@@ -134,6 +191,7 @@
     badgeQuestionCategory: document.getElementById('badge-question-category'),
     badgeCategoryText: document.getElementById('badge-category-text'),
     badgeQuestionWeight: document.getElementById('badge-question-weight'),
+    badgeLegacyNote: document.getElementById('badge-legacy-note'),
     questionStatusPill: document.getElementById('question-status-pill'),
     questionText: document.getElementById('question-text'),
     questionMedia: document.getElementById('question-media'),
@@ -325,6 +383,16 @@
     certCandidateId: document.getElementById('cert-candidate-id'),
     certExamDate: document.getElementById('cert-exam-date'),
     certExamDuration: document.getElementById('cert-exam-duration'),
+    certExamTrack: document.getElementById('cert-exam-track'),
+    scoreCntTwk: document.getElementById('score-cnt-twk'),
+    scorePgTwk: document.getElementById('score-pg-twk'),
+    scoreCntTiu: document.getElementById('score-cnt-tiu'),
+    scorePgTiu: document.getElementById('score-pg-tiu'),
+    scoreCntTkp: document.getElementById('score-cnt-tkp'),
+    scorePgTkp: document.getElementById('score-pg-tkp'),
+    scoreCntTotal: document.getElementById('score-cnt-total'),
+    scorePgTotal: document.getElementById('score-pg-total'),
+    scoreMaxTotal: document.getElementById('score-max-total'),
     scoreValTwk: document.getElementById('score-val-twk'),
     scoreValTiu: document.getElementById('score-val-tiu'),
     scoreValTkp: document.getElementById('score-val-tkp'),
@@ -339,7 +407,12 @@
     btnOpenReview: document.getElementById('btn-open-review'),
     btnOpenHistoryFromCert: document.getElementById('btn-open-history-from-cert'),
     btnPrintResult: document.getElementById('btn-print-result'),
-    btnRestartExam: document.getElementById('btn-restart-exam')
+    btnRestartExam: document.getElementById('btn-restart-exam'),
+
+    // Modal Panduan Kisi-Kisi 674/2026
+    modalKisiKisi: document.getElementById('modal-kisi-kisi'),
+    btnCloseKisiX: document.getElementById('btn-close-kisi-x'),
+    btnCloseKisi: document.getElementById('btn-close-kisi')
   };
 
   // --- 4. UTILITIES & HELPERS ---
@@ -646,6 +719,11 @@
         ragu: state.ragu,
         visited: state.visited,
         timeRemaining: state.timeRemaining,
+        examDurationSeconds: state.examDurationSeconds,
+        examPackage: state.examPackage,
+        studyPackage: state.studyPackage,
+        track: state.track,
+        questionIds: state.questions.map(q => q.id),
         currentIndex: state.currentIndex,
         isFinished: state.isFinished,
         mode: state.mode,
@@ -670,7 +748,11 @@
         state.answers = data.answers || {};
         state.ragu = data.ragu || {};
         state.visited = data.visited || {};
-        state.timeRemaining = typeof data.timeRemaining === 'number' ? data.timeRemaining : CONFIG.EXAM_DURATION_SECONDS;
+        state.examDurationSeconds = typeof data.examDurationSeconds === 'number' ? data.examDurationSeconds : CONFIG.EXAM_DURATION_SECONDS;
+        state.timeRemaining = typeof data.timeRemaining === 'number' ? data.timeRemaining : state.examDurationSeconds;
+        state.examPackage = data.examPackage || 'standar_2026';
+        state.studyPackage = data.studyPackage || 'all';
+        state.track = data.track || 'umum';
         state.currentIndex = typeof data.currentIndex === 'number' ? data.currentIndex : 0;
         state.isFinished = !!data.isFinished;
         state.mode = data.mode || 'simulasi';
@@ -679,6 +761,12 @@
         state.studyRevealed = data.studyRevealed || {};
         state.startTime = data.startTime || Date.now();
         state.finishTime = data.finishTime || null;
+        if (Array.isArray(data.questionIds) && data.questionIds.length > 0 && state.allActiveQuestions.length > 0) {
+          const restored = restoreQuestionSetByIds(data.questionIds);
+          if (restored.length > 0) {
+            state.questions = restored;
+          }
+        }
         return true;
       }
     } catch (e) {
@@ -693,12 +781,101 @@
     }
   }
 
-  // --- 7. SCORING ENGINE (PERMENPAN-RB) ---
+  function isDeprecated2026(q) {
+    const sub = String((q && q.subkategori) || '');
+    return /antonim|sinonim|analogi\s*verbal|klasifikasi|ketidaksamaan/i.test(sub);
+  }
 
-  function calculateScores() {
+  function shuffleList(arr) {
+    const copy = arr.slice();
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = copy[i];
+      copy[i] = copy[j];
+      copy[j] = tmp;
+    }
+    return copy;
+  }
+
+  function buildQuestionSet(packageKey, sourcePool) {
+    const pool = Array.isArray(sourcePool) && sourcePool.length > 0
+      ? sourcePool
+      : state.allActiveQuestions;
+
+    if (!pool || pool.length === 0) return [];
+
+    if (packageKey === 'bkn_v2') {
+      const bkn = pool.filter(q => q.id >= 131 && q.id <= 240);
+      return bkn.length > 0 ? bkn : pool.slice();
+    }
+
+    if (packageKey === 'fokus_2026') {
+      const fokus = pool.filter(q => q.id >= 1 && q.id <= 130);
+      return fokus.length > 0 ? fokus : pool.filter(q => !isDeprecated2026(q));
+    }
+
+    if (packageKey === 'standar_2026_pool') {
+      return pool.filter(q => !isDeprecated2026(q));
+    }
+
+    if (packageKey === 'standar_2026' || packageKey === 'standar_2026_random') {
+      const compliant = pool.filter(q => !isDeprecated2026(q));
+      const isRandom = packageKey === 'standar_2026_random';
+      let twk = compliant.filter(q => q.kategori === 'TWK');
+      let tiu = compliant.filter(q => q.kategori === 'TIU');
+      let tkp = compliant.filter(q => q.kategori === 'TKP');
+
+      if (isRandom) {
+        twk = shuffleList(twk);
+        tiu = shuffleList(tiu);
+        tkp = shuffleList(tkp);
+      }
+
+      return [
+        ...twk.slice(0, CONFIG.COUNTS.TWK),
+        ...tiu.slice(0, CONFIG.COUNTS.TIU),
+        ...tkp.slice(0, CONFIG.COUNTS.TKP)
+      ];
+    }
+
+    return pool.slice();
+  }
+
+  function restoreQuestionSetByIds(ids, extraPool) {
+    if (!Array.isArray(ids) || ids.length === 0) return [];
+    const lookup = new Map();
+    const register = (list) => {
+      if (!Array.isArray(list)) return;
+      list.forEach(q => {
+        if (q && q.id !== undefined && !lookup.has(Number(q.id))) {
+          lookup.set(Number(q.id), q);
+        }
+      });
+    };
+    register(state.allActiveQuestions);
+    register(state.allBankQuestions);
+    register(extraPool);
+
+    const out = [];
+    ids.forEach(rawId => {
+      const q = lookup.get(Number(rawId));
+      if (q) out.push(q);
+    });
+    return out;
+  }
+
+  // --- 7. SCORING ENGINE (KEPMENPAN-RB NO. 674/2026) ---
+
+  function calculateScores(trackOverride) {
+    const trackKey = trackOverride || state.track || 'umum';
+    const trackCfg = CONFIG.TRACKS[trackKey] || CONFIG.TRACKS.umum;
+
     let twkScore = 0;
     let tiuScore = 0;
     let tkpScore = 0;
+    let twkCount = 0;
+    let tiuCount = 0;
+    let tkpCount = 0;
     let twkCorrectCount = 0;
     let tiuCorrectCount = 0;
     let tkpMaxCount = 0;
@@ -712,6 +889,7 @@
       if (userChoice) answeredCount++;
 
       if (q.kategori === 'TWK') {
+        twkCount++;
         if (userChoice && userChoice === q.kunci) {
           scoreEarned = 5;
           isCorrect = true;
@@ -722,6 +900,7 @@
         }
         twkScore += scoreEarned;
       } else if (q.kategori === 'TIU') {
+        tiuCount++;
         if (userChoice && userChoice === q.kunci) {
           scoreEarned = 5;
           isCorrect = true;
@@ -732,6 +911,7 @@
         }
         tiuScore += scoreEarned;
       } else if (q.kategori === 'TKP') {
+        tkpCount++;
         if (userChoice && q.bobot && typeof q.bobot[userChoice] === 'number') {
           scoreEarned = q.bobot[userChoice];
         } else if (userChoice) {
@@ -761,19 +941,41 @@
     });
 
     const totalScore = twkScore + tiuScore + tkpScore;
-    const passTWK = twkScore >= CONFIG.PASSING_GRADES.TWK;
-    const passTIU = tiuScore >= CONFIG.PASSING_GRADES.TIU;
-    const passTKP = tkpScore >= CONFIG.PASSING_GRADES.TKP;
-    const passTotal = passTWK && passTIU && passTKP;
+    let passTWK = false;
+    let passTIU = false;
+    let passTKP = false;
+    let passCumul = false;
+    let passTotal = false;
+
+    if (trackCfg.requiresAllSubtests) {
+      passTWK = twkScore >= trackCfg.twk;
+      passTIU = tiuScore >= trackCfg.tiu;
+      passTKP = tkpScore >= trackCfg.tkp;
+      passCumul = totalScore >= trackCfg.total;
+      passTotal = passTWK && passTIU && passTKP;
+    } else {
+      passTWK = true; // Tidak ada batas terpisah pada jalur khusus
+      passTIU = tiuScore >= trackCfg.tiu;
+      passTKP = true; // Tidak ada batas terpisah pada jalur khusus
+      passCumul = totalScore >= trackCfg.total;
+      passTotal = passCumul && passTIU;
+    }
 
     return {
+      trackKey,
+      trackCfg,
       twkScore,
       tiuScore,
       tkpScore,
       totalScore,
+      twkCount,
+      tiuCount,
+      tkpCount,
+      maxScoreTotal: state.questions.length * 5,
       passTWK,
       passTIU,
       passTKP,
+      passCumul,
       passTotal,
       twkCorrectCount,
       tiuCorrectCount,
@@ -802,7 +1004,8 @@
         updateTimerDisplay();
         clearInterval(state.timerInterval);
         state.timerInterval = null;
-        alert('WAKTU 100 MENIT TELAH HABIS!\nSistem otomatis mengunci dan mengirim lembar jawaban Anda untuk dinilai.');
+        const limitMinutes = Math.round((state.examDurationSeconds || CONFIG.EXAM_DURATION_SECONDS) / 60);
+        alert(`WAKTU ${limitMinutes} MENIT TELAH HABIS!\nSistem otomatis mengunci dan mengirim lembar jawaban Anda untuk dinilai.`);
         finishExam(true);
         return;
       }
@@ -874,13 +1077,20 @@
     }
 
     if (DOM.badgeQuestionWeight) {
+      const trackCfg = CONFIG.TRACKS[state.track] || CONFIG.TRACKS.umum;
       if (q.kategori === 'TWK') {
-        DOM.badgeQuestionWeight.textContent = 'Bobot: Benar +5, Salah 0 (Ambang Batas: 65)';
+        const pgInfo = trackCfg.twk !== null ? `Ambang Batas: ${trackCfg.twk}` : `Jalur ${trackCfg.shortLabel}`;
+        DOM.badgeQuestionWeight.textContent = `Bobot: Benar +5, Salah 0 (${pgInfo})`;
       } else if (q.kategori === 'TIU') {
-        DOM.badgeQuestionWeight.textContent = 'Bobot: Benar +5, Salah 0 (Ambang Batas: 80)';
+        DOM.badgeQuestionWeight.textContent = `Bobot: Benar +5, Salah 0 (Ambang Batas: ${trackCfg.tiu})`;
       } else {
-        DOM.badgeQuestionWeight.textContent = 'Bobot: Nilai 1 s.d. 5, Kosong 0 (Ambang Batas: 166)';
+        const pgInfo = trackCfg.tkp !== null ? `Ambang Batas: ${trackCfg.tkp}` : `Jalur ${trackCfg.shortLabel}`;
+        DOM.badgeQuestionWeight.textContent = `Bobot: Nilai 1 s.d. 5, Kosong 0 (${pgInfo})`;
       }
+    }
+
+    if (DOM.badgeLegacyNote) {
+      DOM.badgeLegacyNote.style.display = isDeprecated2026(q) ? 'inline-flex' : 'none';
     }
 
     const isAnswered = !!state.answers[q.id];
@@ -1494,21 +1704,43 @@
     pauseTimer();
 
     const results = calculateScores();
+    const trackCfg = results.trackCfg;
+    const pkgMeta = CONFIG.PACKAGES[state.examPackage] || { shortLabel: 'Standar 674/2026' };
+
+    if (DOM.certExamTrack) {
+      DOM.certExamTrack.textContent = `${trackCfg.label} • ${pkgMeta.shortLabel}`;
+    }
+
+    if (DOM.scoreCntTwk) DOM.scoreCntTwk.textContent = `${results.twkCount} Soal`;
+    if (DOM.scoreCntTiu) DOM.scoreCntTiu.textContent = `${results.tiuCount} Soal`;
+    if (DOM.scoreCntTkp) DOM.scoreCntTkp.textContent = `${results.tkpCount} Soal`;
+    if (DOM.scoreCntTotal) DOM.scoreCntTotal.textContent = `${state.questions.length} Soal`;
+
+    if (DOM.scorePgTwk) DOM.scorePgTwk.textContent = trackCfg.twk !== null ? trackCfg.twk : 'Ikut Kumulatif';
+    if (DOM.scorePgTiu) DOM.scorePgTiu.textContent = trackCfg.tiu;
+    if (DOM.scorePgTkp) DOM.scorePgTkp.textContent = trackCfg.tkp !== null ? trackCfg.tkp : 'Ikut Kumulatif';
+    if (DOM.scorePgTotal) DOM.scorePgTotal.textContent = `${trackCfg.total} (Kumulatif)`;
+    if (DOM.scoreMaxTotal) DOM.scoreMaxTotal.textContent = results.maxScoreTotal;
 
     if (DOM.scoreValTwk) DOM.scoreValTwk.textContent = results.twkScore;
     if (DOM.scoreValTiu) DOM.scoreValTiu.textContent = results.tiuScore;
     if (DOM.scoreValTkp) DOM.scoreValTkp.textContent = results.tkpScore;
     if (DOM.scoreValTotal) DOM.scoreValTotal.textContent = results.totalScore;
 
-    const setStatusBadge = (el, passed) => {
+    const setStatusBadge = (el, passed, hasSeparatePg) => {
       if (!el) return;
+      if (!hasSeparatePg) {
+        el.className = 'score-badge-status pass';
+        el.textContent = 'IKUT KUMULATIF';
+        return;
+      }
       el.className = 'score-badge-status ' + (passed ? 'pass' : 'fail');
       el.textContent = passed ? 'MEMENUHI PG' : 'TIDAK LULUS';
     };
 
-    setStatusBadge(DOM.badgeStatusTwk, results.passTWK);
-    setStatusBadge(DOM.badgeStatusTiu, results.passTIU);
-    setStatusBadge(DOM.badgeStatusTkp, results.passTKP);
+    setStatusBadge(DOM.badgeStatusTwk, results.passTWK, trackCfg.twk !== null);
+    setStatusBadge(DOM.badgeStatusTiu, results.passTIU, true);
+    setStatusBadge(DOM.badgeStatusTkp, results.passTKP, trackCfg.tkp !== null);
 
     if (DOM.badgeStatusTotal) {
       DOM.badgeStatusTotal.className = 'score-badge-status ' + (results.passTotal ? 'pass' : 'fail');
@@ -1521,32 +1753,44 @@
 
     if (DOM.finalStatusTitle) {
       DOM.finalStatusTitle.textContent = results.passTotal
-        ? 'SELAMAT! MEMENUHI NILAI AMBANG BATAS SKD'
-        : 'TIDAK MEMENUHI NILAI AMBANG BATAS SKD';
+        ? `SELAMAT! MEMENUHI AMBANG BATAS (${trackCfg.shortLabel.toUpperCase()})`
+        : `TIDAK MEMENUHI AMBANG BATAS (${trackCfg.shortLabel.toUpperCase()})`;
     }
 
     if (DOM.finalStatusDesc) {
       if (results.passTotal) {
-        DOM.finalStatusDesc.textContent =
-          `Nilai Anda memenuhi seluruh passing grade PermenPAN-RB (TWK: ${results.twkScore}/${CONFIG.PASSING_GRADES.TWK}, TIU: ${results.tiuScore}/${CONFIG.PASSING_GRADES.TIU}, TKP: ${results.tkpScore}/${CONFIG.PASSING_GRADES.TKP}). Berpeluang besar lolos ke tahapan SKB!`;
+        if (trackCfg.requiresAllSubtests) {
+          DOM.finalStatusDesc.textContent =
+            `Nilai Anda memenuhi seluruh passing grade KepmenPAN-RB 674/2026 jalur ${trackCfg.label} (TWK: ${results.twkScore}/${trackCfg.twk}, TIU: ${results.tiuScore}/${trackCfg.tiu}, TKP: ${results.tkpScore}/${trackCfg.tkp}). Berpeluang lolos ke tahapan SKB!`;
+        } else {
+          DOM.finalStatusDesc.textContent =
+            `Nilai Anda memenuhi ambang batas jalur ${trackCfg.label} (Total Kumulatif: ${results.totalScore} ≥ ${trackCfg.total}, TIU: ${results.tiuScore} ≥ ${trackCfg.tiu}). Berpeluang lolos ke tahapan SKB!`;
+        }
       } else {
         const failedAreas = [];
-        if (!results.passTWK) failedAreas.push(`TWK (${results.twkScore} < ${CONFIG.PASSING_GRADES.TWK})`);
-        if (!results.passTIU) failedAreas.push(`TIU (${results.tiuScore} < ${CONFIG.PASSING_GRADES.TIU})`);
-        if (!results.passTKP) failedAreas.push(`TKP (${results.tkpScore} < ${CONFIG.PASSING_GRADES.TKP})`);
+        if (trackCfg.requiresAllSubtests) {
+          if (!results.passTWK) failedAreas.push(`TWK (${results.twkScore} < ${trackCfg.twk})`);
+          if (!results.passTIU) failedAreas.push(`TIU (${results.tiuScore} < ${trackCfg.tiu})`);
+          if (!results.passTKP) failedAreas.push(`TKP (${results.tkpScore} < ${trackCfg.tkp})`);
+        } else {
+          if (!results.passCumul) failedAreas.push(`Total Kumulatif (${results.totalScore} < ${trackCfg.total})`);
+          if (!results.passTIU) failedAreas.push(`TIU (${results.tiuScore} < ${trackCfg.tiu})`);
+        }
 
         DOM.finalStatusDesc.textContent =
-          `Peserta dinyatakan BELUM MEMENUHI karena perolehan nilai pada sub-tes berikut masih di bawah passing grade: ${failedAreas.join(', ')}.`;
+          `Peserta dinyatakan BELUM MEMENUHI pada jalur ${trackCfg.label} karena kriteria berikut di bawah passing grade: ${failedAreas.join(', ')}.`;
       }
     }
 
     if (DOM.certExamDate) {
       DOM.certExamDate.textContent = formatIndonesianDate();
     }
-    const timeSpentSec = Math.max(0, CONFIG.EXAM_DURATION_SECONDS - state.timeRemaining);
+    const configuredDuration = state.examDurationSeconds || CONFIG.EXAM_DURATION_SECONDS;
+    const timeSpentSec = Math.max(0, configuredDuration - state.timeRemaining);
     if (DOM.certExamDuration) {
       const spentMin = Math.ceil(timeSpentSec / 60);
-      DOM.certExamDuration.textContent = `${spentMin} Menit (${timeSpentSec} detik)`;
+      const limitMin = Math.round(configuredDuration / 60);
+      DOM.certExamDuration.textContent = `${spentMin} / ${limitMin} Menit (${timeSpentSec} dtk)`;
     }
 
     if (DOM.modalResult) {
@@ -1558,8 +1802,11 @@
     }
 
     saveSessionToSQLite({
-      session_name: `Simulasi CAT SKD - ${formatIndonesianDate()}`,
+      session_name: `${pkgMeta.shortLabel} (${trackCfg.shortLabel}) - ${formatIndonesianDate()}`,
       mode: 'simulasi',
+      track: results.trackKey,
+      exam_package: state.examPackage,
+      question_ids: state.questions.map(q => q.id),
       duration_seconds: timeSpentSec,
       twk_score: results.twkScore,
       tiu_score: results.tiuScore,
@@ -1730,6 +1977,24 @@
       CREATE INDEX IF NOT EXISTS idx_questions_kategori ON questions(kategori);
       CREATE INDEX IF NOT EXISTS idx_questions_active ON questions(is_active);
     `);
+
+    // Migrasi kolom baru exam_sessions untuk database lama / impor
+    try {
+      const infoRes = db.exec("PRAGMA table_info(exam_sessions);");
+      const existingCols = (infoRes.length > 0 && infoRes[0].values)
+        ? infoRes[0].values.map(row => row[1])
+        : [];
+      if (!existingCols.includes('track')) {
+        db.run("ALTER TABLE exam_sessions ADD COLUMN track TEXT DEFAULT 'umum';");
+      }
+      if (!existingCols.includes('exam_package')) {
+        db.run("ALTER TABLE exam_sessions ADD COLUMN exam_package TEXT DEFAULT 'standar_2026';");
+      }
+      if (!existingCols.includes('question_ids_json')) {
+        db.run("ALTER TABLE exam_sessions ADD COLUMN question_ids_json TEXT;");
+      }
+    } catch (e) {
+    }
   }
 
   function loadFallbackQuestionsScript() {
@@ -1744,7 +2009,7 @@
         return;
       }
       const script = document.createElement('script');
-      script.src = 'data/questions.js?v=20261126c';
+      script.src = 'data/questions.js?v=20261126d';
       script.onload = () => resolve();
       script.onerror = () => resolve();
       document.head.appendChild(script);
@@ -1867,13 +2132,28 @@
       });
 
       // 1. Cek versi data dan IndexedDB
-      const DATA_VERSION = 'v9_figural_svg_opts';
+      const DATA_VERSION = 'v10_674_2026_modes';
       const storedVer = localStorage.getItem('CAT_DB_DATA_VERSION');
       let binary = null;
+      let previousSessionsBackup = [];
 
       if (storedVer === DATA_VERSION) {
         binary = await getStoredSQLiteBinary();
       } else {
+        // Backup riwayat exam_sessions sebelum memuat database.sqlite versi terbaru
+        try {
+          const oldBinary = await getStoredSQLiteBinary();
+          if (oldBinary && oldBinary.byteLength > 0) {
+            const oldDb = new SQL.Database(oldBinary);
+            createTablesIfNotExist(oldDb);
+            const res = oldDb.exec("SELECT session_name, mode, duration_seconds, twk_score, tiu_score, tkp_score, total_score, pass_twk, pass_tiu, pass_tkp, pass_total, total_answered, total_questions, answers_json, results_json, track, exam_package, question_ids_json, created_at FROM exam_sessions ORDER BY id ASC;");
+            if (res && res.length > 0 && res[0].values) {
+              previousSessionsBackup = res[0].values;
+            }
+            oldDb.close();
+          }
+        } catch (migErr) {
+        }
       }
 
       // 2. Jika belum ada atau versi baru, muat dari file database.sqlite via fetch
@@ -1900,6 +2180,32 @@
       // 4. Pastikan tabel tersedia & seed jika kosong
       createTablesIfNotExist(sqliteDB);
       await seedQuestionsIfEmpty(sqliteDB);
+
+      // Pulihkan riwayat sesi lama apabila baru saja upgrade DATA_VERSION
+      if (previousSessionsBackup.length > 0) {
+        try {
+          const cntRes = sqliteDB.exec("SELECT COUNT(*) FROM exam_sessions;");
+          const curCnt = (cntRes.length > 0 && cntRes[0].values.length > 0) ? cntRes[0].values[0][0] : 0;
+          if (curCnt === 0) {
+            sqliteDB.run("BEGIN TRANSACTION;");
+            const migStmt = sqliteDB.prepare(`
+              INSERT INTO exam_sessions (
+                session_name, mode, duration_seconds,
+                twk_score, tiu_score, tkp_score, total_score,
+                pass_twk, pass_tiu, pass_tkp, pass_total,
+                total_answered, total_questions,
+                answers_json, results_json,
+                track, exam_package, question_ids_json,
+                created_at
+              ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            `);
+            previousSessionsBackup.forEach(rowVals => migStmt.run(rowVals));
+            migStmt.free();
+            sqliteDB.run("COMMIT;");
+          }
+        } catch (restoreErr) {
+        }
+      }
 
       // 5. Simpan binary terkini ke IndexedDB & catat versi data
       await persistSQLiteDB();
@@ -2064,8 +2370,11 @@
       try {
         const answersJson = JSON.stringify(sessionData.answers || {});
         const resultsJson = JSON.stringify(sessionData.results || {});
+        const questionIdsJson = JSON.stringify(sessionData.question_ids || []);
         const sessionName = sessionData.session_name || `Simulasi CAT ${new Date().toLocaleDateString('id-ID')}`;
         const mode = sessionData.mode || 'simulasi';
+        const track = sessionData.track || 'umum';
+        const examPackage = sessionData.exam_package || 'standar_2026';
         const duration = sessionData.duration_seconds || 0;
         const twkScore = sessionData.twk_score || 0;
         const tiuScore = sessionData.tiu_score || 0;
@@ -2085,6 +2394,7 @@
             pass_twk, pass_tiu, pass_tkp, pass_total,
             total_answered, total_questions,
             answers_json, results_json,
+            track, exam_package, question_ids_json,
             created_at
           ) VALUES (
             ?, ?, ?,
@@ -2092,6 +2402,7 @@
             ?, ?, ?, ?,
             ?, ?,
             ?, ?,
+            ?, ?, ?,
             datetime('now', 'localtime')
           );
         `);
@@ -2100,7 +2411,8 @@
           twkScore, tiuScore, tkpScore, totalScore,
           passTwk, passTiu, passTkp, passTotal,
           totalAnswered, totalQuestions,
-          answersJson, resultsJson
+          answersJson, resultsJson,
+          track, examPackage, questionIdsJson
         ]);
         stmt.free();
 
@@ -2200,12 +2512,17 @@
         if (r) {
           let answers = {};
           let results = null;
+          let questionIds = null;
           try { answers = JSON.parse(r.answers_json || '{}'); } catch (e) {}
           try { results = JSON.parse(r.results_json || 'null'); } catch (e) {}
+          try { questionIds = JSON.parse(r.question_ids_json || 'null'); } catch (e) {}
           return {
             id: r.id,
             session_name: r.session_name,
             mode: r.mode,
+            track: r.track || 'umum',
+            exam_package: r.exam_package || 'standar_2026',
+            question_ids: Array.isArray(questionIds) ? questionIds : null,
             duration_seconds: r.duration_seconds,
             twk_score: r.twk_score,
             tiu_score: r.tiu_score,
@@ -2441,23 +2758,32 @@
   // --- 15. LOAD ACTIVE QUESTIONS (FOR TEST & STUDY) ---
 
   async function loadActiveQuestions() {
+    let loaded = [];
     if (sqliteDB) {
       try {
         const rows = queryRows("SELECT * FROM questions WHERE is_active = 1 ORDER BY id ASC;");
         if (rows && rows.length > 0) {
-          state.questions = rows.map((r, idx) => normalizeQuestion(formatQuestionRow(r), idx));
-          renderSidebar();
-          return;
+          loaded = rows.map((r, idx) => normalizeQuestion(formatQuestionRow(r), idx));
         }
       } catch (e) {
       }
     }
 
-    // Fallback: window.SKD_QUESTIONS (lazy-load only if SQLite unavailable)
-    await loadFallbackQuestionsScript();
-    if (Array.isArray(window.SKD_QUESTIONS) && window.SKD_QUESTIONS.length > 0) {
-      const activeOnly = window.SKD_QUESTIONS.filter(q => q.is_active !== 0);
-      state.questions = activeOnly.map((q, idx) => normalizeQuestion(q, idx));
+    if (loaded.length === 0) {
+      // Fallback: window.SKD_QUESTIONS (lazy-load only if SQLite unavailable)
+      await loadFallbackQuestionsScript();
+      if (Array.isArray(window.SKD_QUESTIONS) && window.SKD_QUESTIONS.length > 0) {
+        const activeOnly = window.SKD_QUESTIONS.filter(q => q.is_active !== 0);
+        loaded = activeOnly.map((q, idx) => normalizeQuestion(q, idx));
+      }
+    }
+
+    if (loaded.length > 0) {
+      state.allActiveQuestions = loaded;
+      if (!state.questions || state.questions.length === 0) {
+        const pkg = state.mode === 'belajar' ? state.studyPackage : state.examPackage;
+        state.questions = buildQuestionSet(pkg, loaded);
+      }
       renderSidebar();
     }
   }
@@ -2508,6 +2834,9 @@
       }
       if (q.video || q.video_url) {
         mediaBadges += `<span class="badge-mini-video">YouTube</span>`;
+      }
+      if (isDeprecated2026(q)) {
+        mediaBadges += `<span class="badge-legacy-note" style="margin-left:4px;">Arsip Pra-2026</span>`;
       }
 
       // Snippet text
@@ -2962,6 +3291,17 @@
     sessions.forEach(s => {
       const tr = document.createElement('tr');
       const isPassed = Number(s.pass_total) === 1;
+      const trackCfg = CONFIG.TRACKS[s.track || 'umum'] || CONFIG.TRACKS.umum;
+      const pkgMeta = CONFIG.PACKAGES[s.exam_package || 'standar_2026'] || { shortLabel: 'CAT SKD' };
+      const maxTotal = (Number(s.total_questions) || 110) * 5;
+
+      const twkColor = trackCfg.twk !== null
+        ? (s.twk_score >= trackCfg.twk ? 'var(--success)' : 'var(--danger)')
+        : 'var(--text-main)';
+      const tiuColor = s.tiu_score >= trackCfg.tiu ? 'var(--success)' : 'var(--danger)';
+      const tkpColor = trackCfg.tkp !== null
+        ? (s.tkp_score >= trackCfg.tkp ? 'var(--success)' : 'var(--danger)')
+        : 'var(--text-main)';
 
       let dateDisplay = s.created_at || '-';
       try {
@@ -2975,29 +3315,26 @@
         <td><strong>#${s.id}</strong></td>
         <td>
           <div style="font-weight: 600; color: var(--text-main);">${escapeHTML(dateDisplay)}</div>
-          <div style="font-size: 0.75rem; color: var(--text-muted);">${Math.ceil((s.duration_seconds || 0) / 60)} Menit pengerjaan</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">${escapeHTML(pkgMeta.shortLabel)} • ${escapeHTML(trackCfg.shortLabel)} • ${Math.ceil((s.duration_seconds || 0) / 60)} mnt</div>
         </td>
         <td>
-          <span style="font-weight: 700; color: ${s.twk_score >= 65 ? 'var(--success)' : 'var(--danger)'};">
+          <span style="font-weight: 700; color: ${twkColor};">
             ${s.twk_score}
           </span>
-          <span style="font-size: 0.72rem; color: var(--text-muted);">/150</span>
         </td>
         <td>
-          <span style="font-weight: 700; color: ${s.tiu_score >= 80 ? 'var(--success)' : 'var(--danger)'};">
+          <span style="font-weight: 700; color: ${tiuColor};">
             ${s.tiu_score}
           </span>
-          <span style="font-size: 0.72rem; color: var(--text-muted);">/175</span>
         </td>
         <td>
-          <span style="font-weight: 700; color: ${s.tkp_score >= 166 ? 'var(--success)' : 'var(--danger)'};">
+          <span style="font-weight: 700; color: ${tkpColor};">
             ${s.tkp_score}
           </span>
-          <span style="font-size: 0.72rem; color: var(--text-muted);">/225</span>
         </td>
         <td>
           <strong style="font-size: 1.05rem; color: var(--cat-primary);">${s.total_score}</strong>
-          <span style="font-size: 0.75rem; color: var(--text-muted);">/ 550</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">/ ${maxTotal}</span>
         </td>
         <td>
           <span class="score-badge-status ${isPassed ? 'pass' : 'fail'}">
@@ -3053,9 +3390,26 @@
 
     state.activeSessionId = sessionId;
     state.activeSessionMeta = sessionDetail;
+    state.track = sessionDetail.track || 'umum';
+    state.examPackage = sessionDetail.exam_package || 'standar_2026';
     state.answers = sessionDetail.answers || {};
     state.isFinished = true;
     state.mode = 'review';
+
+    // Rekonstruksi tepat soal yang dikerjakan pada sesi ini
+    let targetIds = sessionDetail.question_ids;
+    if ((!targetIds || targetIds.length === 0) && Array.isArray(sessionDetail.results) && sessionDetail.results.length > 0) {
+      targetIds = sessionDetail.results.map(r => r.id);
+    }
+    if (Array.isArray(targetIds) && targetIds.length > 0) {
+      const bankPool = state.allBankQuestions.length > 0 ? state.allBankQuestions : await fetchBankSoalFromSQLite();
+      const restored = restoreQuestionSetByIds(targetIds, bankPool);
+      if (restored.length > 0) {
+        state.questions = restored;
+      }
+    } else if (state.allActiveQuestions.length > 0) {
+      state.questions = state.allActiveQuestions.slice();
+    }
 
     showScreen('exam');
 
@@ -3066,6 +3420,8 @@
     if (DOM.reviewSessionInfoBanner) {
       DOM.reviewSessionInfoBanner.style.display = 'flex';
       const isPassed = Number(sessionDetail.pass_total) === 1;
+      const trackCfg = CONFIG.TRACKS[state.track] || CONFIG.TRACKS.umum;
+      const pkgMeta = CONFIG.PACKAGES[state.examPackage] || { shortLabel: 'CAT SKD' };
       let dateText = sessionDetail.created_at || '';
       try {
         const dt = new Date(sessionDetail.created_at);
@@ -3076,7 +3432,7 @@
 
       if (DOM.reviewSessionInfoText) {
         DOM.reviewSessionInfoText.innerHTML = `
-          <strong>Evaluasi Sesi #${sessionDetail.id}</strong> (${escapeHTML(dateText)}): 
+          <strong>Evaluasi Sesi #${sessionDetail.id}</strong> (${escapeHTML(dateText)} • ${escapeHTML(pkgMeta.shortLabel)} • Jalur ${escapeHTML(trackCfg.shortLabel)}):
           TWK: <strong>${sessionDetail.twk_score}</strong>, TIU: <strong>${sessionDetail.tiu_score}</strong>, TKP: <strong>${sessionDetail.tkp_score}</strong> • 
           Total: <strong style="color:var(--cat-primary);">${sessionDetail.total_score}</strong> 
           <span class="score-badge-status ${isPassed ? 'pass' : 'fail'}" style="margin-left:6px;">${isPassed ? 'LULUS PG' : 'TIDAK LULUS'}</span>
@@ -3095,8 +3451,43 @@
 
   // --- 21. START NEW SIMULATION & STUDY MODES ---
 
+  function updateLandingSimConfigUI() {
+    const pkgKey = DOM.simPackageSelect ? DOM.simPackageSelect.value : state.examPackage;
+    const trackKey = DOM.simTrackSelect ? DOM.simTrackSelect.value : state.track;
+    const durSec = DOM.simDurationSelect ? parseInt(DOM.simDurationSelect.value, 10) : state.examDurationSeconds;
+
+    state.examPackage = pkgKey;
+    state.track = trackKey;
+    state.examDurationSeconds = !isNaN(durSec) && durSec > 0 ? durSec : CONFIG.EXAM_DURATION_SECONDS;
+
+    const previewSet = state.allActiveQuestions.length > 0
+      ? buildQuestionSet(pkgKey, state.allActiveQuestions)
+      : [];
+    const totalCount = previewSet.length > 0
+      ? previewSet.length
+      : (pkgKey === 'all' ? 240 : 110);
+    const mins = Math.round(state.examDurationSeconds / 60);
+
+    if (DOM.btnStartSimLabel) {
+      DOM.btnStartSimLabel.textContent = `Mulai Simulasi (${totalCount} Soal • ${mins} Menit) →`;
+    }
+  }
+
   function startSimulationMode() {
     clearActiveExamState();
+
+    const pkgKey = DOM.simPackageSelect ? DOM.simPackageSelect.value : (state.examPackage || 'standar_2026');
+    const trackKey = DOM.simTrackSelect ? DOM.simTrackSelect.value : (state.track || 'umum');
+    const durSec = DOM.simDurationSelect ? parseInt(DOM.simDurationSelect.value, 10) : (state.examDurationSeconds || CONFIG.EXAM_DURATION_SECONDS);
+
+    state.examPackage = pkgKey;
+    state.track = trackKey;
+    state.examDurationSeconds = !isNaN(durSec) && durSec > 0 ? durSec : CONFIG.EXAM_DURATION_SECONDS;
+
+    const built = buildQuestionSet(pkgKey, state.allActiveQuestions);
+    if (built.length > 0) {
+      state.questions = built;
+    }
 
     state.mode = 'simulasi';
     state.answers = {};
@@ -3104,12 +3495,18 @@
     state.visited = {};
     state.studyAnswers = {};
     state.studyRevealed = {};
-    state.timeRemaining = CONFIG.EXAM_DURATION_SECONDS;
+    state.timeRemaining = state.examDurationSeconds;
     state.currentIndex = 0;
     state.isFinished = false;
     state.startTime = Date.now();
     state.activeSessionId = null;
     state.activeSessionMeta = null;
+
+    const trackCfg = CONFIG.TRACKS[state.track] || CONFIG.TRACKS.umum;
+    const mins = Math.round(state.examDurationSeconds / 60);
+    if (DOM.badgeSimLockedText) {
+      DOM.badgeSimLockedText.textContent = `Simulasi Terkunci (${state.questions.length} Soal • ${mins} Menit • ${trackCfg.shortLabel})`;
+    }
 
     document.body.classList.add('simulation-mode-active');
 
@@ -3129,7 +3526,43 @@
     renderSidebar();
   }
 
+  function switchStudyPackage(packageKey) {
+    state.studyPackage = packageKey || 'all';
+    if (DOM.studyPackageSelect && DOM.studyPackageSelect.value !== state.studyPackage) {
+      DOM.studyPackageSelect.value = state.studyPackage;
+    }
+    if (DOM.studySubnavPackage && DOM.studySubnavPackage.value !== state.studyPackage) {
+      DOM.studySubnavPackage.value = state.studyPackage;
+    }
+    const built = buildQuestionSet(state.studyPackage, state.allActiveQuestions);
+    if (built.length > 0) {
+      state.questions = built;
+    }
+    state.currentIndex = 0;
+    state.gridRangeFilter = 'all';
+    if (DOM.gridSubfilterTabs) {
+      DOM.gridSubfilterTabs.forEach(t => t.classList.toggle('active', t.getAttribute('data-grid-range') === 'all'));
+    }
+    if (DOM.categoryFilterBtns) {
+      DOM.categoryFilterBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-category-filter') === 'all'));
+    }
+    renderCurrentQuestion();
+    renderSidebar();
+  }
+
   function startStudyMode() {
+    const pkgKey = DOM.studyPackageSelect ? DOM.studyPackageSelect.value : (state.studyPackage || 'all');
+    state.studyPackage = pkgKey;
+    if (DOM.studySubnavPackage) DOM.studySubnavPackage.value = pkgKey;
+
+    const built = buildQuestionSet(pkgKey, state.allActiveQuestions);
+    if (built.length > 0) {
+      state.questions = built;
+    }
+    if (state.currentIndex >= state.questions.length) {
+      state.currentIndex = 0;
+    }
+
     state.mode = 'belajar';
     state.activeSessionId = null;
     state.activeSessionMeta = null;
@@ -3152,6 +3585,14 @@
     pauseTimer();
     renderCurrentQuestion();
     renderSidebar();
+  }
+
+  function openKisiModal() {
+    if (DOM.modalKisiKisi) DOM.modalKisiKisi.classList.add('open');
+  }
+
+  function closeKisiModal() {
+    if (DOM.modalKisiKisi) DOM.modalKisiKisi.classList.remove('open');
   }
 
   function openMobileDrawer() {
@@ -3204,11 +3645,51 @@
       });
     }
 
-    // Landing Screen Actions
+    // Landing Screen Actions & Mode Selectors
     if (DOM.btnStartSimulation) DOM.btnStartSimulation.addEventListener('click', startSimulationMode);
     if (DOM.btnStartStudy) DOM.btnStartStudy.addEventListener('click', startStudyMode);
     if (DOM.btnViewHistory) DOM.btnViewHistory.addEventListener('click', () => showScreen('history'));
     if (DOM.btnViewBankSoal) DOM.btnViewBankSoal.addEventListener('click', () => showScreen('bank-soal'));
+    if (DOM.btnOpenKisiModal) DOM.btnOpenKisiModal.addEventListener('click', openKisiModal);
+    if (DOM.btnExamOpenKisi) DOM.btnExamOpenKisi.addEventListener('click', openKisiModal);
+    if (DOM.btnCloseKisiX) DOM.btnCloseKisiX.addEventListener('click', closeKisiModal);
+    if (DOM.btnCloseKisi) DOM.btnCloseKisi.addEventListener('click', closeKisiModal);
+
+    if (DOM.studyPackageSelect) {
+      DOM.studyPackageSelect.addEventListener('change', () => {
+        state.studyPackage = DOM.studyPackageSelect.value || 'all';
+        if (DOM.studySubnavPackage) DOM.studySubnavPackage.value = state.studyPackage;
+      });
+    }
+
+    if (DOM.studySubnavPackage) {
+      DOM.studySubnavPackage.addEventListener('change', () => {
+        if (state.mode === 'belajar') {
+          switchStudyPackage(DOM.studySubnavPackage.value);
+        }
+      });
+    }
+
+    if (DOM.simPackageSelect) {
+      DOM.simPackageSelect.addEventListener('change', () => {
+        if (DOM.simPackageSelect.value === 'all' && DOM.simDurationSelect && DOM.simDurationSelect.value === '6000') {
+          DOM.simDurationSelect.value = '13200';
+        } else if (DOM.simPackageSelect.value !== 'all' && DOM.simDurationSelect && DOM.simDurationSelect.value === '13200') {
+          DOM.simDurationSelect.value = (DOM.simTrackSelect && DOM.simTrackSelect.value === 'disabilitas_papua') ? '7800' : '6000';
+        }
+        updateLandingSimConfigUI();
+      });
+    }
+
+    if (DOM.simTrackSelect) {
+      DOM.simTrackSelect.addEventListener('change', () => {
+        updateLandingSimConfigUI();
+      });
+    }
+
+    if (DOM.simDurationSelect) {
+      DOM.simDurationSelect.addEventListener('change', updateLandingSimConfigUI);
+    }
 
     // Bank Soal Screen Events
     if (DOM.btnBankSoalBack) DOM.btnBankSoalBack.addEventListener('click', () => showScreen('landing'));
@@ -3354,7 +3835,8 @@
       DOM.modalConfirmFinish,
       DOM.modalResult,
       DOM.modalQuestionDetail,
-      DOM.modalConfirmDeleteQ
+      DOM.modalConfirmDeleteQ,
+      DOM.modalKisiKisi
     ].forEach(modal => {
       if (modal) {
         modal.addEventListener('click', (e) => {
@@ -3599,6 +4081,10 @@
       }
       if (DOM.modalConfirmDeleteQ && DOM.modalConfirmDeleteQ.classList.contains('open')) {
         if (e.key === 'Escape') closeDeleteConfirm();
+        return;
+      }
+      if (DOM.modalKisiKisi && DOM.modalKisiKisi.classList.contains('open')) {
+        if (e.key === 'Escape') closeKisiModal();
         return;
       }
 
@@ -3984,8 +4470,24 @@
 
     if (DOM.candidateAvatar) DOM.candidateAvatar.textContent = 'ASN';
 
+    // Sinkronkan kontrol dropdown dari state sebelum update label
+    if (hasPrevious) {
+      if (DOM.simPackageSelect && state.examPackage) DOM.simPackageSelect.value = state.examPackage;
+      if (DOM.simTrackSelect && state.track) DOM.simTrackSelect.value = state.track;
+      if (DOM.simDurationSelect && state.examDurationSeconds) DOM.simDurationSelect.value = String(state.examDurationSeconds);
+      if (DOM.studyPackageSelect && state.studyPackage) DOM.studyPackageSelect.value = state.studyPackage;
+      if (DOM.studySubnavPackage && state.studyPackage) DOM.studySubnavPackage.value = state.studyPackage;
+    }
+
+    updateLandingSimConfigUI();
+
     // Resume exam if reload occurred during active simulation
     if (hasPrevious && state.mode === 'simulasi' && !state.isFinished && state.timeRemaining > 0) {
+      const trackCfg = CONFIG.TRACKS[state.track] || CONFIG.TRACKS.umum;
+      const mins = Math.round((state.examDurationSeconds || CONFIG.EXAM_DURATION_SECONDS) / 60);
+      if (DOM.badgeSimLockedText) {
+        DOM.badgeSimLockedText.textContent = `Simulasi Terkunci (${state.questions.length} Soal • ${mins} Menit • ${trackCfg.shortLabel})`;
+      }
       showScreen('exam');
       document.body.classList.add('simulation-mode-active');
       if (DOM.badgeSimLocked) DOM.badgeSimLocked.style.display = 'inline-flex';
@@ -3993,6 +4495,7 @@
       if (DOM.btnFinishExam) DOM.btnFinishExam.style.display = 'inline-flex';
       startTimer();
       renderCurrentQuestion();
+      renderSidebar();
     } else {
       showScreen('landing');
     }

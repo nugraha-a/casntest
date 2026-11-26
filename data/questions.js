@@ -8986,7 +8986,7 @@ window.SKD_QUESTIONS = [
     "id": 176,
     "no": 176,
     "kategori": "TIU",
-    "subkategori": "Kemampuan Figural - Klasifikasi / Konsistensi Bangun",
+    "subkategori": "Kemampuan Figural - Klasifikasi / Konsistensi Bangun (Simulasi CAT BKN v2.0)",
     "soal": "Pilihlah gambar yang tepat!",
     "opsi": {
       "A": "assets/bkn/Q46_opt_A.jpg",
@@ -9003,7 +9003,7 @@ window.SKD_QUESTIONS = [
       "D": 5,
       "E": 0
     },
-    "pembahasan": "Perhatikan ketiga gambar pada soal: Persegi panjang/persegi (4 sisi), Belah ketupat (4 sisi), dan Trapesium sama kaki (4 sisi). Ketiganya memiliki kesamaan kategori geometris, yaitu bangun datar segi empat polos (memiliki tepat 4 sisi tanpa garis potong internal). Maka gambar yang tepat melanjutkan kelompok tersebut adalah Jajar Genjang polos yang juga bersisi 4 (Opsi D).",
+    "pembahasan": "Perhatikan ketiga gambar pada soal: Persegi panjang/persegi (4 sisi), Belah ketupat (4 sisi), dan Trapesium sama kaki (4 sisi). Ketiganya memiliki kesamaan kategori geometris, yaitu bangun datar segi empat polos (memiliki tepat 4 sisi tanpa garis potong internal). Maka gambar yang tepat melanjutkan kelompok tersebut adalah Jajar Genjang polos yang juga bersisi 4 (Opsi D). (Catatan: Soal ini berasal langsung dari pool Simulasi Resmi CAT BKN v2.0; pada kisi-kisi terbaru KepmenPAN-RB No. 674 Tahun 2026, kemampuan figural difokuskan pada serial, analogi, dan penalaran matriks).",
     "analisis_opsi": {
       "A": "Salah, segitiga hanya memiliki 3 sisi.",
       "B": "Salah, segilima (pentagon) memiliki 5 sisi.",
